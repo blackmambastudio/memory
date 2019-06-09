@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenarios/Remember.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotate"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Polygon2D:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "rotate"
+anims/rotate = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 172.029, 170.359 )
+rotation = 2.55673
+polygon = PoolVector2Array( 121.361, 60.2321, 39.5219, 138.731, -105.784, 177.145, -162.57, 71.9233, -169.251, -101.776, -72.3804, -160.232, 84.6168, -128.499, 119.691, -68.372 )
+
