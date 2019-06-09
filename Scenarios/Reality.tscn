@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenarios/Reality.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Reference.jpg" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Memory.tscn" type="PackedScene" id=3]
 
 [node name="Reality" type="Control"]
 anchor_right = 1.0
@@ -18,8 +17,4 @@ anchor_bottom = 1.0
 position = Vector2( 651.2, 351.772 )
 scale = Vector2( 1.09185, 1.09185 )
 texture = ExtResource( 2 )
-
-[node name="Memory" parent="." instance=ExtResource( 3 )]
-margin_left = 0.0
-margin_right = 0.0
 
