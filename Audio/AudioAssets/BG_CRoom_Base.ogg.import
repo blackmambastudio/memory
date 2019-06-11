@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BG_CRoom_Base.ogg-e276d12d39c2e8338d3bcc895f2b5169.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/BG_CRoom_Base.ogg"
+dest_files=[ "res://.import/BG_CRoom_Base.ogg-e276d12d39c2e8338d3bcc895f2b5169.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
