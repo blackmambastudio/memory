@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenarios/Memory/Elements/Element.gd" type="Script" id=1]
+
+[node name="Element" type="TextureButton"]
+use_parent_material = true
+margin_right = 50.0
+margin_bottom = 50.0
+expand = true
+stretch_mode = 4
+script = ExtResource( 1 )
+

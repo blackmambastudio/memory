@@ -8,6 +8,3 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-
-func _process(delta):
-	OS.set_window_title("Memory | fps: " + str(Engine.get_frames_per_second()))

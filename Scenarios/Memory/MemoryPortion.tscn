@@ -30,86 +30,9 @@ __meta__ = {
 anims/rotate = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
+position = Vector2( 824.817, 267.363 )
 rotation = 0.952851
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D2" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 1.44339
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D3" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 1.93382
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D4" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 2.42426
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D5" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 2.82918
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D6" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 3.2341
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D7" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 3.63901
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D8" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 4.04393
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D9" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 4.44884
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D10" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 4.85376
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -158.741, -56.8262, 126.857, -29.4588 )
-
-[node name="Polygon2D11" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 5.25868
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -224.161, -46.7241, 175.877, -28.7162 )
-
-[node name="Polygon2D12" type="Polygon2D" parent="."]
-position = Vector2( 639.909, 320.832 )
-rotation = 5.66359
-scale = Vector2( 1.00777, 1 )
-color = Color( 1, 1, 1, 0.784314 )
-polygon = PoolVector2Array( 3.0202, 45.8959, -135.987, -41.9864, 175.877, -28.7162 )
+scale = Vector2( 1.00777, 1.59184 )
+color = Color( 1, 1, 1, 0.937255 )
+polygon = PoolVector2Array( -11.9089, 470.687, -552.432, 320.159, 12.485, -269.935, 437.771, 32.9161 )
 
