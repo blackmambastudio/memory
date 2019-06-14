@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tools/DialogEditor/DialogEditor.gd" type="Script" id=1]
+
+[node name="DialogEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_offset = Vector2( 0, -55 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CreateConversationNode" type="Button" parent="."]
+margin_left = 42.9709
+margin_top = 629.83
+margin_right = 182.971
+margin_bottom = 649.83
+text = "create node"
+
+[node name="CreateOptionNode" type="Button" parent="."]
+margin_left = 218.538
+margin_top = 631.375
+margin_right = 358.538
+margin_bottom = 651.375
+text = "create option"
+
+[node name="Save" type="Button" parent="."]
+margin_left = 994.0
+margin_top = 639.0
+margin_right = 1066.0
+margin_bottom = 659.0
+rect_pivot_offset = Vector2( 36, -269 )
+text = "Save"
+
+[node name="SaveAs" type="Button" parent="."]
+margin_left = 906.465
+margin_top = 640.108
+margin_right = 978.465
+margin_bottom = 660.108
+rect_pivot_offset = Vector2( 36, -269 )
+text = "Save as"
+
+[node name="Load" type="Button" parent="."]
+margin_left = 1081.17
+margin_top = 638.317
+margin_right = 1153.17
+margin_bottom = 658.317
+rect_pivot_offset = Vector2( 36, -269 )
+text = "Load"
+
+[node name="LoadDialog" type="FileDialog" parent="."]
+margin_left = 359.0
+margin_top = 321.0
+margin_right = 784.0
+margin_bottom = 522.0
+window_title = "Load a Conversation"
+resizable = true
+mode = 0
+filters = PoolStringArray( "*.txt" )
+current_dir = "res://Levels"
+current_file = "dialogs.txt"
+current_path = "res://Levels/dialogs.txt"
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+margin_left = 469.0
+margin_top = 233.0
+margin_right = 877.0
+margin_bottom = 408.0
+filters = PoolStringArray( "*.txt" )
+current_dir = "res://Levels"
+current_file = "dialogs.txt"
+current_path = "res://Levels/dialogs.txt"
+

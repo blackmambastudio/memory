@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenarios/Reality.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Reference.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/unknown.png" type="Texture" id=2]
 
 [node name="Reality" type="Control"]
 anchor_right = 1.0
@@ -10,11 +10,12 @@ rect_clip_content = true
 script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Reference" type="Sprite" parent="Panel"]
-position = Vector2( 651.2, 351.772 )
-scale = Vector2( 1.09185, 1.09185 )
+[node name="unknown" type="Sprite" parent="."]
+position = Vector2( 640.902, 350.548 )
+scale = Vector2( 1.07906, 1.07906 )
 texture = ExtResource( 2 )
 
