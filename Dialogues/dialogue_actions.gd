@@ -12,7 +12,7 @@ func handle(request):
 		"Dialogue/clear":
 			self.Dialogue.cls()
 		"Dialogue/end":
-			self.Dialogue.solve(request.text_id)
+			self.Dialogue.solve()
 		_:
 			return false
 	
