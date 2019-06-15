@@ -1,12 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Tools/DialogEditor/DialogNode.gd" type="Script" id=1]
+[ext_resource path="res://Tools/DialogEditor/TextFieldStyle.tres" type="StyleBox" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 9.0
+content_margin_right = 7.0
+content_margin_top = 25.0
+bg_color = Color( 0.356863, 0.278431, 0.305882, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
 
 [node name="DialogNode" type="GraphNode"]
 modulate = Color( 0.862745, 0.952941, 1, 1 )
 margin_top = 1.0
 margin_right = 240.0
-margin_bottom = 301.0
+margin_bottom = 321.0
+custom_styles/frame = SubResource( 1 )
+custom_colors/title_color = Color( 0.929412, 0.913725, 0.729412, 1 )
+custom_constants/separation = 3
 title = "Conversation"
 show_close = true
 resizable = true
@@ -58,70 +77,105 @@ slot/7/left_color = Color( 1, 1, 1, 1 )
 slot/7/right_enabled = false
 slot/7/right_type = 0
 slot/7/right_color = Color( 1, 1, 1, 1 )
+slot/8/left_enabled = false
+slot/8/left_type = 0
+slot/8/left_color = Color( 1, 1, 1, 1 )
+slot/8/right_enabled = false
+slot/8/right_type = 0
+slot/8/right_color = Color( 1, 1, 1, 1 )
+slot/9/left_enabled = false
+slot/9/left_type = 0
+slot/9/left_color = Color( 1, 1, 1, 1 )
+slot/9/right_enabled = false
+slot/9/right_type = 0
+slot/9/right_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 1 )
 actor_selected = -1
 
 [node name="label_actor" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 24.0
-margin_right = 224.0
-margin_bottom = 38.0
+margin_left = 9.0
+margin_top = 25.0
+margin_right = 233.0
+margin_bottom = 39.0
 text = "Actor"
 
 [node name="actor" type="OptionButton" parent="."]
-margin_left = 16.0
-margin_top = 38.0
-margin_right = 224.0
-margin_bottom = 58.0
+margin_left = 9.0
+margin_top = 39.0
+margin_right = 233.0
+margin_bottom = 59.0
 rect_min_size = Vector2( 0, 20 )
 text = "Cecilia"
 items = [ "Cecilia", null, false, 0, null, "Dr Nick", null, false, 1, null, "Lucia", null, false, 2, null, "Claire", null, false, 3, null ]
 selected = 0
 
 [node name="label_es" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 59.0
-margin_right = 224.0
-margin_bottom = 73.0
+margin_left = 9.0
+margin_top = 62.0
+margin_right = 233.0
+margin_bottom = 76.0
 text = "Español"
 
 [node name="dialog_es" type="TextEdit" parent="."]
-margin_left = 16.0
-margin_top = 74.0
-margin_right = 224.0
-margin_bottom = 124.0
-rect_min_size = Vector2( 0, 50 )
+margin_left = 9.0
+margin_top = 79.0
+margin_right = 233.0
+margin_bottom = 119.0
+rect_min_size = Vector2( 0, 40 )
+focus_neighbour_left = NodePath("../actor")
+focus_neighbour_top = NodePath("../actor")
+focus_neighbour_right = NodePath("../dialog_en")
+focus_neighbour_bottom = NodePath("../dialog_en")
+focus_next = NodePath("../dialog_en")
+focus_previous = NodePath("../actor")
+custom_styles/normal = ExtResource( 2 )
 text = "tu dialogo aquí"
 wrap_enabled = true
 
 [node name="label_en" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 125.0
-margin_right = 224.0
-margin_bottom = 139.0
+margin_left = 9.0
+margin_top = 122.0
+margin_right = 233.0
+margin_bottom = 136.0
 text = "English"
 
 [node name="dialog_en" type="TextEdit" parent="."]
-margin_left = 16.0
-margin_top = 140.0
-margin_right = 224.0
-margin_bottom = 190.0
-rect_min_size = Vector2( 0, 50 )
+margin_left = 9.0
+margin_top = 139.0
+margin_right = 233.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/normal = ExtResource( 2 )
 text = "put your dialogue here"
 wrap_enabled = true
 
 [node name="label_action" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 191.0
-margin_right = 224.0
-margin_bottom = 205.0
+margin_left = 9.0
+margin_top = 182.0
+margin_right = 233.0
+margin_bottom = 196.0
 text = "Action"
 
 [node name="action" type="TextEdit" parent="."]
-margin_left = 16.0
-margin_top = 206.0
-margin_right = 224.0
-margin_bottom = 256.0
+margin_left = 9.0
+margin_top = 199.0
+margin_right = 233.0
+margin_bottom = 249.0
 rect_min_size = Vector2( 0, 50 )
+custom_styles/normal = ExtResource( 2 )
 wrap_enabled = true
+
+[node name="label_timeout" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 252.0
+margin_right = 233.0
+margin_bottom = 266.0
+text = "Timeout"
+
+[node name="timeout" type="SpinBox" parent="."]
+margin_left = 9.0
+margin_top = 269.0
+margin_right = 233.0
+margin_bottom = 293.0
+step = 0.1
 

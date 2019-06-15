@@ -16,7 +16,7 @@ func _ready():
 	self.actionHandler.set_dialogue(self)
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
-	self.dialog_tree = self.parse_dialogue(_get_dialogue_schema("res://Levels/test2.data"))
+	self.dialog_tree = self.parse_dialogue(_get_dialogue_schema("res://Levels/test.data"))
 
 	ActionRouter.request({
 		"action":"Dialogue/display",
@@ -27,7 +27,7 @@ func _ready():
 func set_text(text_id):
 	self.current_text_id = text_id
 	var text_object = self.get_text_object(text_id)
-	$Panel/Text.text = text_object.actor + ": " + text_object.text
+	$Panel/Text.text = text_object.actor + ": " + text_object.text_en
 	$Timer.set_wait_time(text_object.timeout)
 	$Timer.start()
 	_on_timeout_action = text_object.on_timeout

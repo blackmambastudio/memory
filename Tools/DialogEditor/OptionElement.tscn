@@ -1,58 +1,83 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Tools/DialogEditor/DialogNode.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tools/DialogEditor/OptionElement.gd" type="Script" id=2]
 
-[node name="OptionElement" index="0" instance=ExtResource( 1 )]
-title = "OptionB"
-slot/8/left_enabled = false
-slot/8/left_type = 0
-slot/8/left_color = Color( 1, 1, 1, 1 )
-slot/8/right_enabled = false
-slot/8/right_type = 0
-slot/8/right_color = Color( 1, 1, 1, 1 )
-slot/9/left_enabled = false
-slot/9/left_type = 0
-slot/9/left_color = Color( 1, 1, 1, 1 )
-slot/9/right_enabled = false
-slot/9/right_type = 0
-slot/9/right_color = Color( 1, 1, 1, 1 )
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 9.0
+content_margin_right = 7.0
+content_margin_top = 25.0
+bg_color = Color( 0.286275, 0.290196, 0.384314, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+
+[node name="OptionElement" instance=ExtResource( 1 )]
+custom_styles/frame = SubResource( 1 )
+custom_colors/title_color = Color( 0.937255, 0.552941, 0.552941, 1 )
+title = "Memory - "
+slot/10/left_enabled = false
+slot/10/left_type = 0
+slot/10/left_color = Color( 1, 1, 1, 1 )
+slot/10/right_enabled = false
+slot/10/right_type = 0
+slot/10/right_color = Color( 1, 1, 1, 1 )
+slot/11/left_enabled = false
+slot/11/left_type = 0
+slot/11/left_color = Color( 1, 1, 1, 1 )
+slot/11/right_enabled = false
+slot/11/right_type = 0
+slot/11/right_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="." index="2"]
-margin_left = 16.0
-margin_top = 59.0
-margin_right = 224.0
-margin_bottom = 73.0
+margin_left = 9.0
+margin_top = 62.0
+margin_right = 233.0
+margin_bottom = 76.0
 text = "Item"
 
 [node name="OptionButton" type="OptionButton" parent="." index="3"]
-margin_left = 16.0
-margin_top = 74.0
-margin_right = 224.0
-margin_bottom = 94.0
+margin_left = 9.0
+margin_top = 79.0
+margin_right = 233.0
+margin_bottom = 99.0
 
 [node name="label_es" parent="." index="4"]
-margin_top = 95.0
-margin_bottom = 109.0
+margin_top = 102.0
+margin_bottom = 116.0
 
 [node name="dialog_es" parent="." index="5"]
-margin_top = 110.0
-margin_bottom = 160.0
+margin_top = 119.0
+margin_bottom = 159.0
 
 [node name="label_en" parent="." index="6"]
-margin_top = 161.0
-margin_bottom = 175.0
+margin_top = 162.0
+margin_bottom = 176.0
 
 [node name="dialog_en" parent="." index="7"]
-margin_top = 176.0
-margin_bottom = 226.0
+margin_top = 179.0
+margin_bottom = 219.0
 
 [node name="label_action" parent="." index="8"]
-margin_top = 227.0
-margin_bottom = 241.0
+margin_top = 222.0
+margin_bottom = 236.0
 
 [node name="action" parent="." index="9"]
-margin_top = 242.0
-margin_bottom = 292.0
+margin_top = 239.0
+margin_bottom = 289.0
+
+[node name="label_timeout" parent="." index="10"]
+margin_top = 292.0
+margin_bottom = 306.0
+
+[node name="timeout" parent="." index="11"]
+margin_top = 309.0
+margin_bottom = 333.0
 

@@ -4,6 +4,7 @@ extends GraphNode
 export (String) var en_text = 'put your dialogue here'
 export (String) var es_text = 'tu dialogo aquí'
 export (int) var actor_selected = 0
+export (float) var timeout = 2.0
 
 var actors = [
 	'Cecilia',
@@ -20,11 +21,14 @@ func _ready():
 	$dialog_es.text = self.es_text
 	$dialog_en.connect("text_changed", self, "_on_update_text")
 	$dialog_es.connect("text_changed", self, "_on_update_text")
+	
+	$timeout.value = self.timeout
 	$actor.clear()
 	for actor in actors:
 		$actor.add_item(actor)
 		
 	$actor.select(self.actor_selected)
+	self.title = 'conversation - ' + actors[self.actor_selected]
 	$actor.connect("item_selected", self, "_on_set_actor")
 
 
@@ -40,16 +44,24 @@ func _on_update_text():
 
 func _on_set_actor(id):
 	self.actor_selected = id
+	self.title = 'conversation - ' + actors[id]
 
 func _to_string_node(next_nodes):
-	return self.name + "|dialog|" + actors[self.actor_selected] + '|' + self.en_text + "|" + self.es_text + "|" + str(next_nodes)
+	return self.name + \
+		"|dialog|" + \
+		actors[self.actor_selected] + '|' + \
+		self.en_text + "|" + \
+		self.es_text + "|" + \
+		str(self.timeout)+ "|" + \
+		str(next_nodes)
 
 static func _to_tree(string):
 	var data = string.split("|")
 	return {
 		"type": data[1],
 		"actor": data[2],
-		"text": data[3],
-		"timeout": 2,
-	"next": data[5].replace("[", "").replace("]","").split(",")
+		"text_en": data[3],
+		"text_es": data[4],
+		"timeout": float(data[5]),
+	"next": data[6].replace("[", "").replace("]","").split(",")
 	}
