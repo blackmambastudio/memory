@@ -1,0 +1,5 @@
+DialogNode|dialog|Claire|Who are you?|tu dialogo aquí|[@DialogNode@250, @DialogNode@298, @DialogNode@274]
+@DialogNode@250|dialog|Lucia|Im another person from platanal|tu dialogo aquí|[@DialogNode@322]
+@DialogNode@274|dialog|Lucia|none of your business|tu dialogo aquí|[@DialogNode@322]
+@DialogNode@298|dialog|Lucia|Im your best friend|tu dialogo aquí|[@DialogNode@322]
+@DialogNode@322|dialog|Claire|good bye|tu dialogo aquí|[]

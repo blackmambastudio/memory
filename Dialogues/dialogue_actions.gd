@@ -11,6 +11,8 @@ func handle(request):
 			self.Dialogue.set_text(request.text_id)
 		"Dialogue/clear":
 			self.Dialogue.cls()
+		"Dialogue/end":
+			self.Dialogue.solve(request.text_id)
 		_:
 			return false
 	

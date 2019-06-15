@@ -1,33 +1,42 @@
-tool
-extends GraphNode
+extends "res://Tools/DialogEditor/DialogNode.gd"
 
-export (String) var en_text = 'english dialogue'
-export (String) var es_text = 'dialogo en español'
-export (int) var option_selected = -1
+export (int) var option_selected = 0
+
+var options = [
+	"peluca",
+	"id",
+	"costume"
+]
 
 func _ready():
-	connect("close_request", self, "_on_control_close_request")
-	connect("resize_request", self, "_on_resize_request")
-	set_slot(0, true, 0, Color(1,1,1,1), true, 0, Color(0,1,1,1))
-	$dialog_en.text = self.en_text
-	$dialog_es.text = self.es_text
-	$dialog_en.connect("text_changed", self, "_on_update_text")
-	$dialog_es.connect("text_changed", self, "_on_update_text")
-	$OptionButton.add_item("peluca", 0)
-	$OptionButton.add_item("fotografia", 1)
-	$OptionButton.add_item("traje", 2)
+	$OptionButton.clear()
+	for option in options:
+		$OptionButton.add_item(option)
+	
+	$OptionButton.select(self.option_selected)
+	
 	$OptionButton.select(self.option_selected)
 	$OptionButton.connect("item_selected", self, "_on_set_option")
 
-func _on_control_close_request():
-	queue_free()
-
-func _on_resize_request(new_minsize):
-	rect_size = new_minsize
-
-func _on_update_text():
-	self.es_text = $dialog_es.text
-	self.en_text = $dialog_en.text
-
 func _on_set_option(id):
 	self.option_selected = id
+
+func _to_string_node(next_nodes):
+	return self.name + \
+		"|option|" +  \
+		self.actors[self.actor_selected] + '|' + \
+		self.options[self.option_selected] + '|' + \
+		self.en_text + "|" + \
+		self.es_text  + "|" + \
+		str(next_nodes)
+
+static func _to_tree(string):
+	var data = string.split("|")
+	return {
+		"type": data[1],
+		"actor": data[2],
+		"option": data[3],
+		"text": data[4],
+		"timeout": 1,
+		"next": data[6].replace("[", "").replace("]","").split(",")
+	}

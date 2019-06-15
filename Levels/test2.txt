@@ -1,0 +1,2 @@
+res://Levels/test2.scn
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@250","to_port":0},{"from":"DialogNode","from_port":0,"to":"@DialogNode@298","to_port":0},{"from":"DialogNode","from_port":0,"to":"@DialogNode@274","to_port":0},{"from":"@DialogNode@298","from_port":0,"to":"@DialogNode@322","to_port":0},{"from":"@DialogNode@250","from_port":0,"to":"@DialogNode@322","to_port":0},{"from":"@DialogNode@274","from_port":0,"to":"@DialogNode@322","to_port":0}]

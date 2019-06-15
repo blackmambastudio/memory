@@ -13,14 +13,16 @@ func _ready():
 	$Save.connect("button_down", self, "check_save")
 	$SaveAs.connect("button_down", $SaveDialog, "popup")
 	$Load.connect("button_down", $LoadDialog, "popup")
+	$Export.connect("button_down", self, "export_level")
 	$GraphEdit.connect("connection_request", self, "_on_connection_request")
-	
+	$GraphEdit.connect("disconnection_request", self, "_on_disconnection_request")
 	$LoadDialog.connect("file_selected", self, "load_dialogs")
 	$SaveDialog.connect("file_selected", self, "save_as")
 
 
 func save_as(file):
 	self.save_dialogs(file)
+
 
 func create_node(typeNode):
 	var node = typeNode.instance()
@@ -32,9 +34,15 @@ func create_node(typeNode):
 	gEdit.add_child(node)
 	node.owner = gEdit
 
+
 func _on_connection_request(from, from_slot, to, to_slot):
 	var gEdit = get_node(gEditName)
 	gEdit.connect_node(from, from_slot, to, to_slot)
+
+
+func _on_disconnection_request(from, from_slot, to, to_slot):
+	var gEdit = get_node(gEditName)
+	gEdit.disconnect_node(from, from_slot, to, to_slot)
 
 
 func load_dialogs(file):
@@ -48,12 +56,14 @@ func load_dialogs(file):
 	save_game.open(file, File.READ)
 	
 	var fileNameScn = save_game.get_line()
+	print("to load ",fileNameScn)
 	var Edit = load(fileNameScn)
 	var algo = Edit.instance()
 	add_child(algo)
 	move_child(algo,1)
 	gEditName = algo.name
 	algo.connect("connection_request", self, "_on_connection_request")
+	algo.connect("disconnection_request", self, "_on_disconnection_request")
 	
 	var connections = parse_json(save_game.get_line())
 	for connection in connections:
@@ -61,6 +71,7 @@ func load_dialogs(file):
 	
 	save_game.close()
 	self.current_file = file
+	$Export.disabled = false
 	
 
 func save_dialogs(file):
@@ -76,6 +87,7 @@ func save_dialogs(file):
 	save_game.store_line(to_json(gEdit.get_connection_list()))
 	save_game.close()
 	self.current_file = file
+	$Export.disabled = false
 
 
 func check_save():
@@ -84,3 +96,24 @@ func check_save():
 	else:
 		save_dialogs(self.current_file)
 
+
+func export_level():
+	var gEdit = get_node(gEditName)
+	var nodes = {}
+	for node in gEdit.get_connection_list():
+		if not nodes.has(node.from):
+			nodes[node.from]=[]
+		nodes[node.from].append(node.to)
+	
+	var file = self.current_file.replace('txt', 'data')
+	var save_game = File.new()
+	save_game.open(file, File.WRITE)
+	for node in gEdit.get_children():
+		if not node is GraphNode: continue
+		var next_nodes = []
+		if nodes.has(node.name):
+			next_nodes = nodes[node.name]
+		save_game.store_line(node._to_string_node(next_nodes))
+	
+	save_game.close()
+	
