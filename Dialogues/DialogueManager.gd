@@ -1,5 +1,6 @@
 extends Control
 onready var ActionRouter = get_node("/root/ActionRouter")
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 const DialogueActions = preload("dialogue_actions.gd")
 onready var actionHandler = DialogueActions.new()
@@ -15,11 +16,14 @@ func _ready():
 	$Timer.connect("timeout", self, "timeout")
 
 	self.add_dialogue_graph("res://Levels/testFilter.data")
+	
+	VariableBoard.register("health", 5.5)
 
 
 func add_dialogue_graph(path_file):
 	var dialogue_graph = Dialogue.new(path_file)
 	dialogue_graph.set_action_router(ActionRouter)
+	dialogue_graph.set_variable_board(VariableBoard)
 	dialogue_graph.connect("finish", self, "_on_dialogue_finished")
 	self.dialogue_stack.append(dialogue_graph)
 	self.dialogue_instance = dialogue_graph

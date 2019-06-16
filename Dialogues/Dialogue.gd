@@ -8,12 +8,16 @@ var graph = {}
 var current_block_id
 var status = 'NONE'
 var ActionRouter
+var VariableBoard
 
 func _init(file):
 	self.graph = DialogueParser.parse_dialogue(file)
 
 func set_action_router(actionRouter):
 	self.ActionRouter = actionRouter
+
+func set_variable_board(VariableBoard):
+	self.VariableBoard = VariableBoard
 
 func get_root():
 	var nodes = self.graph.keys()
@@ -81,16 +85,16 @@ func solve():
 		self.set_current_block(next_blocks[0])
 
 	if candidate.type == "filter":
-		var health = 5.6
 		for next in next_blocks:
 			var filter = self.get_text_object(next)
-			if filter.condition == '0' and str(health) == filter.value:
+			var variable_value = self.VariableBoard.get_value(filter.variable)
+			if filter.condition == '0' and str(variable_value) == filter.value:
 				self.set_current_block(next)
 				break
-			if filter.condition == '1' and health > float(filter.value):
+			if filter.condition == '1' and variable_value > float(filter.value):
 				self.set_current_block(next)
 				break
-			if filter.condition == '2' and health < float(filter.value):
+			if filter.condition == '2' and variable_value < float(filter.value):
 				self.set_current_block(next)
 				break
 		self.solve()
