@@ -10,7 +10,6 @@ var status = 'NONE'
 var ActionRouter
 
 func _init(file):
-	print("new dialogue class created")
 	self.graph = DialogueParser.parse_dialogue(file)
 
 func set_action_router(actionRouter):
@@ -21,7 +20,7 @@ func get_root():
 	for key in self.graph.keys():
 		var node = self.graph[key]
 		for n in node.next:
-			nodes.erase(n)
+			nodes.erase(n.strip_edges())
 	return nodes[0]
 
 
@@ -80,6 +79,21 @@ func solve():
 		})
 		self.status = 'PAUSED'
 		self.set_current_block(next_blocks[0])
+
+	if candidate.type == "filter":
+		var health = 5.6
+		for next in next_blocks:
+			var filter = self.get_text_object(next)
+			if filter.condition == '0' and str(health) == filter.value:
+				self.set_current_block(next)
+				break
+			if filter.condition == '1' and health > float(filter.value):
+				self.set_current_block(next)
+				break
+			if filter.condition == '2' and health < float(filter.value):
+				self.set_current_block(next)
+				break
+		self.solve()
 
 
 func set_current_block(text_id):

@@ -1,0 +1,8 @@
+@FilterNode@246|filter|health|0|5|[@DialogNode@321]
+DialogNode|dialog|Dr Nick|How do you feel?|tu dialogo aquí|2|[FilterNode, @FilterNode@246, @FilterNode@263]
+@DialogNode@292|dialog|Cecilia|I'm feeling so ill|tu dialogo aquí|2|[@DialogNode@379]
+FilterNode|filter|health|2|5|[@DialogNode@292]
+@DialogNode@321|dialog|Cecilia|Not so good...|tu dialogo aquí|2|[@DialogNode@379]
+@FilterNode@263|filter|health|1|5|[@DialogNode@350]
+@DialogNode@350|dialog|Cecilia|Pretty nice!|tu dialogo aquí|2|[@DialogNode@379]
+@DialogNode@379|dialog|Dr Nick|Ok... let me check you|tu dialogo aquí|2|[]

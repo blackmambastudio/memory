@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 ActionRouter="*res://ActionRouter.tscn"
+VariableBoard="*res://VariableBoard.tscn"
 
 [debug]
 

@@ -3,6 +3,7 @@ class_name DialogueParser
 const DialogNode = preload("res://Tools/DialogEditor/DialogNode.gd")
 const OptionElement = preload("res://Tools/DialogEditor/OptionElement.gd")
 const EmbeddedGraph = preload("res://Tools/DialogEditor/EmbeddedDialogue.gd")
+const FilterNode = preload("res://Tools/DialogEditor/FilterNode.gd")
 
 static func _get_dialogue_schema(file):
 	var dialogue_data = File.new()
@@ -29,6 +30,8 @@ static func parse_dialogue(file):
 			object = OptionElement._to_tree(dialogue)
 		elif data[1] == 'embedded':
 			object = EmbeddedGraph._to_tree(dialogue)
+		elif data[1] == 'filter':
+			object = FilterNode._to_tree(dialogue)
 		tree[data[0]] = object
 	
 	for key in tree.keys():
