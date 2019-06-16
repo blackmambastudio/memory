@@ -1,0 +1,7 @@
+@FilterNode@239|filter|peluca|equals|modified|[@DialogNode@417]
+DialogNode|dialog|Lucia|What do you do in Hunuragha?|tu dialogo aquí|2|[OptionElement]
+OptionElement|option|Claire|peluca|...|tu dialogo aquí|2|[FilterNode, @FilterNode@239]
+FilterNode|filter|peluca|equals|real|[@DialogNode@388]
+@DialogNode@388|dialog|Cecilia|I was a clown!|tu dialogo aquí|2|[@DialogNode@446]
+@DialogNode@417|dialog|Cecilia|I don't want to talk about about it...|tu dialogo aquí|2|[@DialogNode@446]
+@DialogNode@446|dialog|Claire|What about you?|tu dialogo aquí|2|[]

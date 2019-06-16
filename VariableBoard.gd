@@ -20,6 +20,8 @@ func set_value(variable, value):
 
 
 func get_value(variable):
+	if not board.has(variable):
+		return null
 	return board[variable]
 
 func handle(request):

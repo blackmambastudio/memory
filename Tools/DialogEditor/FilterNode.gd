@@ -50,7 +50,7 @@ func _to_string_node(next_nodes):
 	return self.name + \
 		"|filter|" + \
 		variable + '|' + \
-		str(condition_index) + '|' + \
+		options[condition_index] + '|' + \
 		value + '|' + \
 		str(next_nodes)
 

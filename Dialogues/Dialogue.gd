@@ -49,6 +49,7 @@ func _on_item_selected(item):
 					"text_id": next
 				})
 
+
 func resume():
 	self.status = 'NONE'
 	self.solve()
@@ -88,13 +89,18 @@ func solve():
 		for next in next_blocks:
 			var filter = self.get_text_object(next)
 			var variable_value = self.VariableBoard.get_value(filter.variable)
-			if filter.condition == '0' and str(variable_value) == filter.value:
+
+			if variable_value == null:
 				self.set_current_block(next)
 				break
-			if filter.condition == '1' and variable_value > float(filter.value):
+			
+			if filter.condition == 'equals' and str(variable_value) == filter.value:
 				self.set_current_block(next)
 				break
-			if filter.condition == '2' and variable_value < float(filter.value):
+			if filter.condition == 'greater' and variable_value > float(filter.value):
+				self.set_current_block(next)
+				break
+			if filter.condition == 'less' and variable_value < float(filter.value):
 				self.set_current_block(next)
 				break
 		self.solve()

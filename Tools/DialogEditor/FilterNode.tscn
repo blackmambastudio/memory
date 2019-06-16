@@ -6,6 +6,8 @@
 margin_right = 240.0
 margin_bottom = 160.0
 title = "Filter -"
+show_close = true
+resizable = true
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color( 1, 1, 1, 1 )

@@ -1,0 +1,2 @@
+res://Levels/testFilter2.scn
+[{"from":"DialogNode","from_port":0,"to":"OptionElement","to_port":0},{"from":"OptionElement","from_port":0,"to":"FilterNode","to_port":0},{"from":"OptionElement","from_port":0,"to":"@FilterNode@239","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@388","to_port":0},{"from":"@FilterNode@239","from_port":0,"to":"@DialogNode@417","to_port":0},{"from":"@DialogNode@388","from_port":0,"to":"@DialogNode@446","to_port":0},{"from":"@DialogNode@417","from_port":0,"to":"@DialogNode@446","to_port":0}]
