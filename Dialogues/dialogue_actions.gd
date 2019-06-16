@@ -13,6 +13,8 @@ func handle(request):
 			self.Dialogue.cls()
 		"Dialogue/end":
 			self.Dialogue.solve()
+		"Dialogue/stack":
+			self.Dialogue.add_dialogue_graph(request.path)
 		_:
 			return false
 	

@@ -1,9 +1,10 @@
 class_name Dialogue
 const DialogueParser = preload("DialogueParser.gd")
 
+signal finish
+
 # represents the conversational graph
 var graph = {}
-var current_block
 var current_block_id
 var status = 'NONE'
 var ActionRouter
@@ -45,13 +46,17 @@ func _on_item_selected(item):
 					"text_id": next
 				})
 
+func resume():
+	self.status = 'NONE'
+	self.solve()
+	pass
 
 func solve():
 	var block = self.get_text_object(self.current_block_id)
 	var next_blocks = get_next_blocks(block)
 	if len(next_blocks) == 0:
 		# should emit a dialogue finished
-		ActionRouter.request({"action":"Dialogue/cls"})
+		emit_signal('finish')
 		return
 
 	var candidate = get_text_object(next_blocks[0])
@@ -67,7 +72,14 @@ func solve():
 
 	if candidate.type == 'option':
 		self.status = 'WAITING_INPUT'
-
+	
+	if candidate.type == 'embedded':
+		ActionRouter.request({
+			"action":"Dialogue/stack",
+			"path": candidate.file
+		})
+		self.status = 'PAUSED'
+		self.set_current_block(next_blocks[0])
 
 
 func set_current_block(text_id):

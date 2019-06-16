@@ -1,6 +1,7 @@
 extends Control
-var sgn = load("res://Tools/DialogEditor/DialogNode.tscn")
-var optionNode = load("res://Tools/DialogEditor/OptionElement.tscn")
+var DialogNode = load("res://Tools/DialogEditor/DialogNode.tscn")
+var OptionNode = load("res://Tools/DialogEditor/OptionElement.tscn")
+var EmbeddedNode = load("res://Tools/DialogEditor/EmbeddedDialogue.tscn")
 
 var current_file = ''
 
@@ -8,8 +9,9 @@ var gEditName = 'GraphEdit'
 onready var gEdit = get_node(gEditName)
 
 func _ready():
-	$CreateConversationNode.connect("button_down", self, "create_node", [sgn])
-	$CreateOptionNode.connect("button_down", self, "create_node", [optionNode])
+	$CreateConversationNode.connect("button_down", self, "create_node", [DialogNode])
+	$CreateOptionNode.connect("button_down", self, "create_node", [OptionNode])
+	$CreateEmbeddedNode.connect("button_down", self, "create_node", [EmbeddedNode])
 	$Save.connect("button_down", self, "check_save")
 	$SaveAs.connect("button_down", $SaveDialog, "popup")
 	$Load.connect("button_down", $LoadDialog, "popup")
@@ -56,7 +58,7 @@ func load_dialogs(file):
 	save_game.open(file, File.READ)
 	
 	var fileNameScn = save_game.get_line()
-	print("to load ",fileNameScn)
+
 	var Edit = load(fileNameScn)
 	var algo = Edit.instance()
 	add_child(algo)

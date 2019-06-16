@@ -1,0 +1,3 @@
+DialogNode|dialog|Claire|What am I doing here?|tu dialogo aquí|2|[EmbeddedDialogue]
+EmbeddedDialogue|embedded|res://Levels/test2.data|[@DialogNode@242]
+@DialogNode@242|dialog|Claire|return to the normal|tu dialogo aquí|2|[]

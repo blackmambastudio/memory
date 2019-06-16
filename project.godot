@@ -15,25 +15,13 @@ _global_script_classes=[ {
 "path": "res://Dialogues/Dialogue.gd"
 }, {
 "base": "Reference",
-"class": "DialogueBlock",
-"language": "GDScript",
-"path": "res://Dialogues/blocks/dialogueBlock.gd"
-}, {
-"base": "Reference",
 "class": "DialogueParser",
 "language": "GDScript",
 "path": "res://Dialogues/DialogueParser.gd"
-}, {
-"base": "Reference",
-"class": "OptionBlock",
-"language": "GDScript",
-"path": "res://Dialogues/blocks/OptionBlock.gd"
 } ]
 _global_script_class_icons={
 "Dialogue": "",
-"DialogueBlock": "",
-"DialogueParser": "",
-"OptionBlock": ""
+"DialogueParser": ""
 }
 
 [application]

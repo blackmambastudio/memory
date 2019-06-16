@@ -32,6 +32,13 @@ margin_right = 358.538
 margin_bottom = 651.375
 text = "create option"
 
+[node name="CreateEmbeddedNode" type="Button" parent="."]
+margin_left = 384.538
+margin_top = 631.375
+margin_right = 524.538
+margin_bottom = 651.375
+text = "create embedded"
+
 [node name="Save" type="Button" parent="."]
 margin_left = 995.0
 margin_top = 640.0

@@ -1,0 +1,2 @@
+res://Levels/testEmbedded.scn
+[{"from":"DialogNode","from_port":0,"to":"EmbeddedDialogue","to_port":0},{"from":"EmbeddedDialogue","from_port":0,"to":"@DialogNode@242","to_port":0}]
