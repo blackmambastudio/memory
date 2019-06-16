@@ -1,4 +1,4 @@
-extends "res://Tools/DialogEditor/DialogNode.gd"
+extends GraphNode
 
 export (int) var option_selected = 0
 
@@ -25,21 +25,13 @@ func _on_set_option(id):
 func _to_string_node(next_nodes):
 	return self.name + \
 		"|option|" +  \
-		self.actors[self.actor_selected] + '|' + \
 		self.options[self.option_selected] + '|' + \
-		self.en_text + "|" + \
-		self.es_text  + "|" + \
-		str(self.timeout) + "|" + \
 		str(next_nodes)
 
 static func _to_tree(string):
 	var data = string.split("|")
 	return {
 		"type": data[1],
-		"actor": data[2],
-		"option": data[3],
-		"text_en": data[4],
-		"text_es": data[5],
-		"timeout": float(data[6]),
-		"next": data[7].replace("[", "").replace("]","").split(",")
+		"option": data[2],
+		"next": data[3].replace("[", "").replace("]","").split(",")
 	}

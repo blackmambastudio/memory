@@ -44,10 +44,9 @@ func _on_item_selected(item):
 		for next in block.next:
 			var item_candidate = self.get_text_object(next)
 			if item_candidate.option.to_lower() == item.to_lower():
-				ActionRouter.request({
-					"action":"Dialogue/display",
-					"text_id": next
-				})
+				self.set_current_block(next)
+				break
+		self.solve()
 
 
 func resume():
