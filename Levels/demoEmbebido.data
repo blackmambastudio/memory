@@ -1,0 +1,5 @@
+DialogNode|dialog|Cecilia|El doctor me dijo....|tu dialogo aquí|2|[EmbeddedDialogue]
+EmbeddedDialogue|embedded|res://Levels/demo.data|[@DialogNode@242]
+@EmbeddedDialogue@250|embedded|res://Levels/demo.data|[@DialogNode@279]
+@DialogNode@242|dialog|Cecilia|ya no me acuerdo, creo que fue....|tu dialogo aquí|2|[@EmbeddedDialogue@250]
+@DialogNode@279|dialog|Cecilia|si eso fue...|tu dialogo aquí|2|[]

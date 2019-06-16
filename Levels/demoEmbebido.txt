@@ -1,0 +1,2 @@
+res://Levels/demoEmbebido.scn
+[{"from":"DialogNode","from_port":0,"to":"EmbeddedDialogue","to_port":0},{"from":"EmbeddedDialogue","from_port":0,"to":"@DialogNode@242","to_port":0},{"from":"@DialogNode@242","from_port":0,"to":"@EmbeddedDialogue@250","to_port":0},{"from":"@EmbeddedDialogue@250","from_port":0,"to":"@DialogNode@279","to_port":0}]
