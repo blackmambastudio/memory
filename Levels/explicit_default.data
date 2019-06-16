@@ -1,0 +1,5 @@
+DialogNode|dialog|Cecilia|checking health|tu dialogo aquí|2|[FilterNode, @FilterNode@239]
+@DialogNode@268|dialog|Cecilia|greater than 20|tu dialogo aquí|2|[]
+FilterNode|filter|health|greater|20|[@DialogNode@268]
+@DialogNode@297|dialog|Cecilia|default catch|tu dialogo aquí|2|[]
+@FilterNode@239|filter||default||[@DialogNode@297]

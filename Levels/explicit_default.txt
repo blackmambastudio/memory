@@ -1,0 +1,2 @@
+res://Levels/explicit_default.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@239","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@268","to_port":0},{"from":"@FilterNode@239","from_port":0,"to":"@DialogNode@297","to_port":0}]

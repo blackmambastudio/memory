@@ -4,7 +4,7 @@ export (String) var variable = ''
 export (int) var condition_index = 0
 export (String) var value = ''
 
-var options = ["equals", "greater", "less"]
+var options = ["equals", "greater", "less", "default"]
 
 func _ready():
 	connect("close_request", self, "_on_control_close_request")

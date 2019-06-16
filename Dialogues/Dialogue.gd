@@ -42,12 +42,10 @@ func _on_item_selected(item):
 	if self.status == 'WAITING_INPUT':
 		var block = self.get_text_object(self.current_block_id)
 		var default = ''
-		var matched = false
 		for next in block.next:
 			var item_candidate = self.get_text_object(next)
 			if item_candidate.option.to_lower() == item.to_lower():
 				default = next
-				matched = true
 				break
 			if item_candidate.option.to_lower() == 'other':
 				default = next
@@ -93,23 +91,36 @@ func solve():
 		self.set_current_block(next_blocks[0])
 
 	if candidate.type == "filter":
+		var next_id = ''
 		for next in next_blocks:
 			var filter = self.get_text_object(next)
 			var variable_value = self.VariableBoard.get_value(filter.variable)
+			
+			# implicit default the first filter on list
+			if next_id.empty():
+				next_id = next
+			
+			# explicit default, the condition default is present on item
+			if filter.condition == 'default':
+				next_id = next
 
+			# variable is not registered, couldn't match any condition
 			if variable_value == null:
-				self.set_current_block(next)
-				break
+				print("variable ", filter.variable, " is not defined")
+				continue
 			
 			if filter.condition == 'equals' and str(variable_value) == filter.value:
-				self.set_current_block(next)
+				next_id = next
 				break
+
 			if filter.condition == 'greater' and variable_value > float(filter.value):
-				self.set_current_block(next)
+				next_id = next
 				break
 			if filter.condition == 'less' and variable_value < float(filter.value):
-				self.set_current_block(next)
+				next_id = next
 				break
+
+		self.set_current_block(next_id)
 		self.solve()
 
 
