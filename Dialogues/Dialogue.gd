@@ -41,12 +41,20 @@ func get_text_object(text_id):
 func _on_item_selected(item):
 	if self.status == 'WAITING_INPUT':
 		var block = self.get_text_object(self.current_block_id)
+		var default = ''
+		var matched = false
 		for next in block.next:
 			var item_candidate = self.get_text_object(next)
 			if item_candidate.option.to_lower() == item.to_lower():
-				self.set_current_block(next)
+				default = next
+				matched = true
 				break
-		self.solve()
+			if item_candidate.option.to_lower() == 'other':
+				default = next
+		
+		if not default.empty():
+			self.set_current_block(default)
+			self.solve()
 
 
 func resume():

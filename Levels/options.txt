@@ -1,0 +1,2 @@
+res://Levels/options.scn
+[{"from":"DialogNode","from_port":0,"to":"OptionElement","to_port":0},{"from":"OptionElement","from_port":0,"to":"@DialogNode@244","to_port":0},{"from":"DialogNode","from_port":0,"to":"@OptionElement@267","to_port":0},{"from":"@OptionElement@267","from_port":0,"to":"@DialogNode@296","to_port":0},{"from":"@DialogNode@296","from_port":0,"to":"EmbeddedDialogue","to_port":0}]

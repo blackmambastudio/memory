@@ -5,7 +5,8 @@ export (int) var option_selected = 0
 var options = [
 	"peluca",
 	"id",
-	"costume"
+	"costume",
+	"other"
 ]
 
 func _ready():
