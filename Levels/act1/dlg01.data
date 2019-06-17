@@ -1,0 +1,4 @@
+@DialogNode@221|dialog|Dr Nick|¿Recuerda su nombre?|tu dialogo aquí|2|[@DialogNode@243]
+DialogNode|dialog|Dr Nick|Hola. Soy el doctor Nick. Me encargaré de usted hasta que se recupere.|tu dialogo aquí|2|[@DialogNode@221]
+@DialogNode@243|dialog|Cecilia|Mi nombre…...|tu dialogo aquí|2|[ActionNode]
+ActionNode|action|{"action":"Memory/show"}|[]
