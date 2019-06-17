@@ -19,10 +19,12 @@ func _ready():
 	set_slot(0, true, 0, Color(1,1,1,1), true, 0, Color(0,1,1,1))
 	$dialog_en.text = self.en_text
 	$dialog_es.text = self.es_text
+	$timeout.value = self.timeout
+	
 	$dialog_en.connect("text_changed", self, "_on_update_text")
 	$dialog_es.connect("text_changed", self, "_on_update_text")
+	$timeout.connect("changed", self, "_on_update_text")	
 	
-	$timeout.value = self.timeout
 	$actor.clear()
 	for actor in actors:
 		$actor.add_item(actor)
@@ -41,6 +43,7 @@ func _on_resize_request(new_minsize):
 func _on_update_text():
 	self.en_text = $dialog_en.text
 	self.es_text = $dialog_es.text
+	self.timeout = $timeout.value
 
 func _on_set_actor(id):
 	self.actor_selected = id
