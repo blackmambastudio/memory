@@ -32,18 +32,25 @@ margin_right = 355.538
 margin_bottom = 651.375
 text = "create option"
 
-[node name="CreateEmbeddedNode" type="Button" parent="."]
-margin_left = 382.538
+[node name="CreateActionNode" type="Button" parent="."]
+margin_left = 371.538
 margin_top = 631.375
-margin_right = 522.538
+margin_right = 511.538
 margin_bottom = 651.375
+text = "create action"
+
+[node name="CreateEmbeddedNode" type="Button" parent="."]
+margin_left = 42.538
+margin_top = 663.375
+margin_right = 182.538
+margin_bottom = 683.375
 text = "create embedded"
 
 [node name="CreateFilterNode" type="Button" parent="."]
-margin_left = 543.538
-margin_top = 631.375
-margin_right = 683.538
-margin_bottom = 651.375
+margin_left = 219.538
+margin_top = 665.375
+margin_right = 359.538
+margin_bottom = 685.375
 text = "create filter"
 
 [node name="Save" type="Button" parent="."]

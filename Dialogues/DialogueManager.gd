@@ -15,7 +15,7 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/test.data")
+	self.add_dialogue_graph("res://Levels/actiondemo.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
@@ -29,6 +29,7 @@ func add_dialogue_graph(path_file):
 	self.dialogue_stack.append(dialogue_graph)
 	self.dialogue_instance = dialogue_graph
 	self.dialogue_instance.start()
+
 
 func _on_dialogue_finished():
 	print("the dialog is finished")

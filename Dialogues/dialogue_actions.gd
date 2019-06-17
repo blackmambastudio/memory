@@ -11,7 +11,7 @@ func handle(request):
 			self.Dialogue.set_text(request.text_id)
 		"Dialogue/clear":
 			self.Dialogue.cls()
-		"Dialogue/end":
+		"Dialogue/next":
 			self.Dialogue.solve_next()
 		"Dialogue/stack":
 			self.Dialogue.add_dialogue_graph(request.path)

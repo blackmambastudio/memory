@@ -29,10 +29,9 @@ func get_root():
 
 
 func start():
-	ActionRouter.request({
-		"action":"Dialogue/display",
-		"text_id": self.get_root()
-	})
+	self.set_current_block(self.get_root())
+	self.execute()
+
 
 func get_text_object(text_id):
 	return self.graph[text_id.strip_edges()]
@@ -83,6 +82,11 @@ func execute():
 		self.solve_next()
 		return
 	
+	if block.type == 'action':
+		var request = parse_json(block.action)
+		ActionRouter.request(request)
+		self.solve_next()
+	
 
 func solve_next():
 	var block = self.get_text_object(self.current_block_id)
@@ -103,6 +107,9 @@ func solve_next():
 		return
 	
 	if candidate.type == 'embedded':
+		self.set_current_block(next_blocks[0])
+
+	if candidate.type == 'action':
 		self.set_current_block(next_blocks[0])
 
 	if candidate.type == "filter":

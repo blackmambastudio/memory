@@ -1,0 +1,2 @@
+res://Levels/actiondemo.scn
+[{"from":"OptionElement","from_port":0,"to":"ActionNode","to_port":0},{"from":"DialogNode","from_port":0,"to":"OptionElement","to_port":0}]

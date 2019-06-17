@@ -3,6 +3,7 @@ var DialogNode = load("res://Tools/DialogEditor/DialogNode.tscn")
 var OptionNode = load("res://Tools/DialogEditor/OptionElement.tscn")
 var EmbeddedNode = load("res://Tools/DialogEditor/EmbeddedDialogue.tscn")
 var FilterNode = load("res://Tools/DialogEditor/FilterNode.tscn")
+var ActionNode = load("res://Tools/DialogEditor/ActionNode.tscn")
 
 var current_file = ''
 
@@ -14,6 +15,7 @@ func _ready():
 	$CreateOptionNode.connect("button_down", self, "create_node", [OptionNode])
 	$CreateEmbeddedNode.connect("button_down", self, "create_node", [EmbeddedNode])
 	$CreateFilterNode.connect("button_down", self, "create_node", [FilterNode])
+	$CreateActionNode.connect("button_down", self, "create_node", [ActionNode])
 	$Save.connect("button_down", self, "check_save")
 	$SaveAs.connect("button_down", $SaveDialog, "popup")
 	$Load.connect("button_down", $LoadDialog, "popup")

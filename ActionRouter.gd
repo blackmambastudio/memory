@@ -8,6 +8,7 @@ func _ready():
 # action: 'object/function'
 # and more data as needed
 func request(action):
+	print("requested: ", action)
 	for router in routers:
 		if router.handle(action):
 			return

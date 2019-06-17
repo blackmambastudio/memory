@@ -4,6 +4,7 @@ const DialogNode = preload("res://Tools/DialogEditor/DialogNode.gd")
 const OptionElement = preload("res://Tools/DialogEditor/OptionElement.gd")
 const EmbeddedGraph = preload("res://Tools/DialogEditor/EmbeddedDialogue.gd")
 const FilterNode = preload("res://Tools/DialogEditor/FilterNode.gd")
+const ActionNode = preload("res://Tools/DialogEditor/ActionNode.gd")
 
 static func _get_dialogue_schema(file):
 	var dialogue_data = File.new()
@@ -32,14 +33,15 @@ static func parse_dialogue(file):
 			object = EmbeddedGraph._to_tree(dialogue)
 		elif data[1] == 'filter':
 			object = FilterNode._to_tree(dialogue)
+		elif data[1] == 'action':
+			object = ActionNode._to_tree(dialogue)
 		object["id"] = data[0]
 		tree[data[0]] = object
 	
 	for key in tree.keys():
 		var object = tree[key]
 		object["on_timeout"] = {
-			"action": "Dialogue/end",
-			"text_id": key
+			"action": "Dialogue/next"
 		}
 	
 	return tree

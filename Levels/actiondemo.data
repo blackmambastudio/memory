@@ -1,0 +1,3 @@
+OptionElement|option|peluca|[ActionNode]
+ActionNode|action|{	"action": "Dialogue/clear"}|[]
+DialogNode|dialog|Cecilia|mi peluca...|tu dialogo aquí|2|[OptionElement]
