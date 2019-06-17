@@ -12,7 +12,7 @@ func handle(request):
 		"Dialogue/clear":
 			self.Dialogue.cls()
 		"Dialogue/end":
-			self.Dialogue.solve()
+			self.Dialogue.solve_next()
 		"Dialogue/stack":
 			self.Dialogue.add_dialogue_graph(request.path)
 		_:

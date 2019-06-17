@@ -15,7 +15,7 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/implicit_default.data")
+	self.add_dialogue_graph("res://Levels/test.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
@@ -54,8 +54,8 @@ func _on_item_selected(item):
 	if not $Timer.is_stopped(): return
 	self.dialogue_instance._on_item_selected(item)
 
-func solve():
-	self.dialogue_instance.solve()
+func solve_next():
+	self.dialogue_instance.solve_next()
 
 
 func timeout():

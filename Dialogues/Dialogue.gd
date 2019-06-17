@@ -52,15 +52,39 @@ func _on_item_selected(item):
 		
 		if not default.empty():
 			self.set_current_block(default)
-			self.solve()
+			self.execute()
 
 
 func resume():
 	self.status = 'NONE'
-	self.solve()
+	self.solve_next()
 	pass
 
-func solve():
+func execute():
+	var block = self.get_text_object(self.current_block_id)
+	if block.type == 'dialog':
+		ActionRouter.request({
+			"action":"Dialogue/display",
+			"text_id": block.id
+		})
+		self.status = 'DISPLAY'
+		return
+	if block.type == 'option':
+		self.solve_next()
+		return
+	if block.type == 'embedded':
+		ActionRouter.request({
+			"action":"Dialogue/stack",
+			"path": block.file
+		})
+		self.status = 'PAUSED'
+		return
+	if block.type == 'filter':
+		self.solve_next()
+		return
+	
+
+func solve_next():
 	var block = self.get_text_object(self.current_block_id)
 	var next_blocks = get_next_blocks(block)
 	if len(next_blocks) == 0:
@@ -72,22 +96,13 @@ func solve():
 
 	if candidate.type == 'dialog':
 		randomize()
-		var next = next_blocks[randi() % next_blocks.size()]
-		ActionRouter.request({
-			"action":"Dialogue/display",
-			"text_id": next
-		})
-		self.status = 'DISPLAY'
+		self.set_current_block(next_blocks[randi() % next_blocks.size()])
 
 	if candidate.type == 'option':
 		self.status = 'WAITING_INPUT'
+		return
 	
 	if candidate.type == 'embedded':
-		ActionRouter.request({
-			"action":"Dialogue/stack",
-			"path": candidate.file
-		})
-		self.status = 'PAUSED'
 		self.set_current_block(next_blocks[0])
 
 	if candidate.type == "filter":
@@ -119,10 +134,9 @@ func solve():
 			if filter.condition == 'less' and variable_value < float(filter.value):
 				next_id = next
 				break
-
 		self.set_current_block(next_id)
-		self.solve()
 
+	self.execute()
 
 func set_current_block(text_id):
 	self.current_block_id = text_id

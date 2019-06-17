@@ -32,6 +32,7 @@ static func parse_dialogue(file):
 			object = EmbeddedGraph._to_tree(dialogue)
 		elif data[1] == 'filter':
 			object = FilterNode._to_tree(dialogue)
+		object["id"] = data[0]
 		tree[data[0]] = object
 	
 	for key in tree.keys():
