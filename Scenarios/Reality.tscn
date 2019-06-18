@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="unknown" type="Sprite" parent="."]
-position = Vector2( 640.902, 350.548 )
-scale = Vector2( 1.07906, 1.07906 )
+position = Vector2( 651.834, 357.725 )
+scale = Vector2( 0.8028, 0.8028 )
 texture = ExtResource( 2 )
 
