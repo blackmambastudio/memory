@@ -1,0 +1,7 @@
+DialogNode|dialog|Lucia|(yawn)|(bostezo)|2|[@DialogNode@221]
+@DialogNode@221|dialog|Lucia|Sorry, I think I will take a nap.|Disculpa, creo que tomaré una siesta.|4|[]
+@DialogNode@277|dialog|Lucia|Why you say this things? are you trying to mock me?|¿Por qué dices esas cosas? ¿Tratas de burlarte de mí?|5|[@DialogNode@299]
+@DialogNode@299|dialog|Lucia|You're scaring me. I better get going.|Me estás asustando. Mejor me voy.|4|[]
+@FilterNode@331|filter|new_memories|less|30|[DialogNode]
+FilterNode|filter|new_memories|greater|30|[@DialogNode@277]
+@DialogNode@350|dialog|Lucia|||0|[@FilterNode@331, FilterNode]

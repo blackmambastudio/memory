@@ -1,0 +1,2 @@
+res://Levels/act3/dlg04.scn
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@221","to_port":0},{"from":"@DialogNode@277","from_port":0,"to":"@DialogNode@299","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@277","to_port":0},{"from":"@FilterNode@331","from_port":0,"to":"DialogNode","to_port":0},{"from":"@DialogNode@350","from_port":0,"to":"@FilterNode@331","to_port":0},{"from":"@DialogNode@350","from_port":0,"to":"FilterNode","to_port":0}]

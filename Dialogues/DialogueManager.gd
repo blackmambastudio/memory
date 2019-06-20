@@ -15,10 +15,11 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/act3/dlg03.data")
+	self.add_dialogue_graph("res://Levels/act3/dlg04.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
+	VariableBoard.register("new_memories", 45)
 
 
 func add_dialogue_graph(path_file):
