@@ -1,16 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenarios/Reality/Screen.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenarios/Reality/Room/Assets/HighresScreenshot00013.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Reality/Room/Assets/HighresScreenshot00014.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Reality/Room/Assets/HighresScreenshot00015.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Reality/Room/Assets/Frontal01.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Reality/Room/Assets/Frontal02.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Reality/Room/Assets/Frontal03.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Reality/Room/Assets/Frontal04.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
-resource_name = "hide"
-length = 1.5
-loop = true
+resource_name = "hideScreen"
+length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("HighresScreenshot00015:modulate")
+tracks/0/path = NodePath("Up3:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("HighresScreenshot00014:modulate")
+tracks/1/path = NodePath("Up2:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -33,26 +33,49 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("BackgroundImage:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Empty:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Front" index="0" instance=ExtResource( 1 )]
 
 [node name="BackgroundImage" parent="." index="0"]
-scale = Vector2( 0.7, 0.7 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
-[node name="HighresScreenshot00014" type="Sprite" parent="." index="1"]
-modulate = Color( 1, 1, 1, 0.525476 )
+[node name="Up2" type="Sprite" parent="." index="1"]
 position = Vector2( 651, 357 )
-scale = Vector2( 1.18, 1.18 )
 texture = ExtResource( 3 )
 
-[node name="HighresScreenshot00015" type="Sprite" parent="." index="2"]
-modulate = Color( 1, 1, 1, 0 )
+[node name="Up3" type="Sprite" parent="." index="2"]
 position = Vector2( 651, 357 )
-scale = Vector2( 1.18, 1.18 )
 texture = ExtResource( 4 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
-autoplay = "hide"
-anims/hide = SubResource( 1 )
+[node name="Empty" type="Sprite" parent="." index="3"]
+position = Vector2( 651, 357 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+anims/hideScreen = SubResource( 1 )
 

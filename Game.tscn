@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/Reality/Screen.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenarios/Memory/Memory.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Dialogues/DialogueManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenarios/Reality/Room/Front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenarios/Memory/Memory.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Dialogues/DialogueManager.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -11,9 +12,12 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="Reality" parent="." instance=ExtResource( 2 )]
+visible = false
 
-[node name="Memory" parent="." instance=ExtResource( 3 )]
+[node name="Front" parent="." instance=ExtResource( 3 )]
 
-[node name="DialogueManager" parent="." instance=ExtResource( 4 )]
+[node name="Memory" parent="." instance=ExtResource( 4 )]
+
+[node name="DialogueManager" parent="." instance=ExtResource( 5 )]
 mouse_filter = 2
 
