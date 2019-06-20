@@ -16,6 +16,9 @@ func _ready():
 func set_letter(index, letter):
 	$Key.text = letter
 	self.index = index
+	
+func set_text(letter):
+	$Key.text = letter
 
 func _on_hover():
 	if selected: return
