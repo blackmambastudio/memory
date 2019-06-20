@@ -10,7 +10,9 @@ var actors = [
 	'Cecilia',
 	'Dr Nick',
 	'Lucia',
-	'Claire'
+	'Claire',
+	'Customer',
+	'Monteasalvo CS'
 ]
 
 func _ready():

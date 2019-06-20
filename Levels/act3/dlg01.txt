@@ -1,0 +1,2 @@
+res://Levels/act3/dlg01.scn
+[]

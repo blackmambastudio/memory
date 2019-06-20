@@ -1,0 +1,7 @@
+DialogNode|dialog|Claire|Por aquí, por aquí.|Por aquí, por aquí.|3|[ActionNode]
+@DialogNode@221|dialog|Claire|¡Ven! ¡ven!|¡Ven! ¡ven!|2|[ActionNode]
+@DialogNode@243|dialog|Claire|Estamos cerca de la salida.|Estamos cerca de la salida.|4|[ActionNode]
+@DialogNode@319|dialog|Claire|¡Lo conseguiste!|¡Lo conseguiste!|2|[ActionNode]
+ActionNode|action|{	"action": "Dialogue/clear"}|[DialogNode, @DialogNode@221, @DialogNode@243, @DialogNode@287]
+@ActionNode@312|action|{	"action": "Dialogue/clear"}|[]
+@DialogNode@287|dialog|Claire|¡Corre! Aaaaaa|¡Corre! Aaaaaa|3|[@ActionNode@312]
