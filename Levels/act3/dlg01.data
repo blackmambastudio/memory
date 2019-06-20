@@ -1,1 +1,3 @@
-DialogNode|dialog|Lucia|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|5|[]
+DialogNode|dialog|Lucia|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|6|[@DialogNode@248]
+@DialogNode@248|dialog|Cecilia|Qué raro, me pasó lo mismo. ¿Recuerdas algo más?|Qué raro, me pasó lo mismo. ¿Recuerdas algo más?|4|[@DialogNode@270]
+@DialogNode@270|dialog|Lucia|Nada. Es como mirar una hoja en blanco.|Nada. Es como mirar una hoja en blanco.|4|[]

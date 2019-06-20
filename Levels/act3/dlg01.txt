@@ -1,2 +1,2 @@
 res://Levels/act3/dlg01.scn
-[]
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@248","to_port":0},{"from":"@DialogNode@248","from_port":0,"to":"@DialogNode@270","to_port":0}]
