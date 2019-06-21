@@ -30,9 +30,7 @@ __meta__ = {
 anims/rotate = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2( 824.817, 267.363 )
-rotation = 0.952851
 scale = Vector2( 1.00777, 1.59184 )
 color = Color( 1, 1, 1, 0.937255 )
-polygon = PoolVector2Array( -11.9089, 470.687, -552.432, 320.159, 12.485, -269.935, 437.771, 32.9161 )
+polygon = PoolVector2Array( 1280, 450, 0, 450, 0, 0, 1280, 0 )
 

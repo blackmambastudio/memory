@@ -1,2 +1,2 @@
 res://Levels/real/m01/cofre.scn
-[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@251","to_port":0}]
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@251","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@281","to_port":0},{"from":"@FilterNode@281","from_port":0,"to":"@DialogNode@310","to_port":0}]

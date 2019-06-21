@@ -6,10 +6,19 @@ var options = [
 	"nariz",
 	"id",
 	"costume",
-	"nariz",
 	"hijos",
 	"exesposo",
 	"cofre",
+	"windowleft",
+	"windowright",
+	"cockroach",
+	"doortag",
+	"luggage",
+	"newspaper",
+	"phone",
+	"poster",
+	"roomkey",
+	"tv",
 	"other"
 ]
 

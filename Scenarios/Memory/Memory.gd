@@ -19,6 +19,14 @@ func _process(delta):
 
 func handle(request):
 	match request.action:
+		"Memory/current":
+			match int(request.value):
+				1:
+					$Memory1.show()
+					$Memory2.hide()
+				2:
+					$Memory1.hide()
+					$Memory2.show()
 		"Memory/show":
 			open = request.value
 			$AnimationPlayer.play(

@@ -23,7 +23,7 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/real/m01.data")
+	self.add_dialogue_graph("res://Levels/real/m02.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("nariz", "modified")
@@ -38,15 +38,17 @@ func _ready():
 	VariableBoard.register("1-exesposo-deep", 0)
 	VariableBoard.register("1-cofre-deep", 0)
 	# ---- M02 - Real ----
-	VariableBoard.register("1-key-deep", 0)
-	VariableBoard.register("1-tv-deep", 0)
-	VariableBoard.register("1-window-deep", 0)
-	VariableBoard.register("1-cockroach-deep", 0)
-	VariableBoard.register("1-etiqueta-deep", 0)
-	VariableBoard.register("1-luggage-deep", 0)
-	VariableBoard.register("1-newspaper-deep", 0)
+	VariableBoard.register("1-windowleft-deep", 0)
 	VariableBoard.register("1-phone-deep", 0)
+	VariableBoard.register("1-newspaper-deep", 0)
 	VariableBoard.register("1-poster-deep", 0)
+	
+	VariableBoard.register("1-windowright-deep", 0)
+	VariableBoard.register("1-doortag-deep", 0)
+	VariableBoard.register("1-cockroach-deep", 0)
+	VariableBoard.register("1-roomkey-deep", 0)
+	VariableBoard.register("1-tv-deep", 0)
+	VariableBoard.register("1-luggage-deep", 0)
 
 
 func add_dialogue_graph(path_file):
