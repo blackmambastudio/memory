@@ -45,6 +45,15 @@ func set_text(text_id):
 	self.dialogue_instance.set_current_block(text_id)
 	var text_object = self.dialogue_instance.get_text_object(text_id)
 	self.set_text_object(text_object)
+	if not text_object.audio.empty():
+		play_sound("res://Audio/AudioAssets/"+text_object.audio)
+		pass
+
+func play_sound(audio_file):
+	var user_sample = load(audio_file)
+	$SoundObjectST.stream = user_sample
+	$SoundObjectST.play()
+
 
 func set_text_object(text_object):
 	$Panel/Text.text = text_object.actor + ": " + text_object.text_en
@@ -61,6 +70,7 @@ func solve_next():
 
 
 func timeout():
+	$SoundObjectST.stop()
 	ActionRouter.request(_on_timeout_action)
 
 func cls():

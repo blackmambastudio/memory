@@ -108,3 +108,4 @@ filters = PoolStringArray( "*.txt" )
 current_dir = "res://Levels"
 current_file = "dialogs.txt"
 current_path = "res://Levels/dialogs.txt"
+

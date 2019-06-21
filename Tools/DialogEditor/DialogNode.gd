@@ -3,6 +3,7 @@ extends GraphNode
 
 export (String) var en_text = 'put your dialogue here'
 export (String) var es_text = 'tu dialogo aquí'
+export (String) var audio_resource = ''
 export (int) var actor_selected = 0
 export (float) var timeout = 2.0
 
@@ -21,11 +22,13 @@ func _ready():
 	set_slot(0, true, 0, Color(1,1,1,1), true, 0, Color(0,1,1,1))
 	$dialog_en.text = self.en_text
 	$dialog_es.text = self.es_text
+	$audio_file.text = self.audio_resource
 	$timeout.value = self.timeout
 	
 	$dialog_en.connect("text_changed", self, "_on_update_text")
 	$dialog_es.connect("text_changed", self, "_on_update_text")
-	$timeout.connect("changed", self, "_on_update_text")	
+	$audio_file.connect("text_changed", self, "_on_update_text")
+	$timeout.connect("value_changed", self, "_on_update_timeout")
 	
 	$actor.clear()
 	for actor in actors:
@@ -45,7 +48,10 @@ func _on_resize_request(new_minsize):
 func _on_update_text():
 	self.en_text = $dialog_en.text
 	self.es_text = $dialog_es.text
-	self.timeout = $timeout.value
+	self.audio_resource = $audio_file.text
+
+func _on_update_timeout(value):
+	self.timeout = value
 
 func _on_set_actor(id):
 	self.actor_selected = id
@@ -58,6 +64,7 @@ func _to_string_node(next_nodes):
 		self.en_text + "|" + \
 		self.es_text + "|" + \
 		str(self.timeout)+ "|" + \
+		self.audio_resource + "|" + \
 		str(next_nodes)
 
 static func _to_tree(string):
@@ -68,5 +75,6 @@ static func _to_tree(string):
 		"text_en": data[3],
 		"text_es": data[4],
 		"timeout": float(data[5]),
-	"next": data[6].replace("[", "").replace("]","").split(",")
+		"audio": data[6],
+		"next": data[7].replace("[", "").replace("]","").split(",")
 	}
