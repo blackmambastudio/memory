@@ -1,4 +1,12 @@
 extends Control
+
+export(Color, RGB) var cecilia
+export(Color, RGB) var dr_nick
+export(Color, RGB) var claire
+export(Color, RGB) var lucia
+export(Color, RGB) var monteasalvo
+export(Color, RGB) var customer
+
 onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
 
@@ -15,7 +23,7 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/act1/dlg01.data")
+	self.add_dialogue_graph("res://Levels/act3/dlg03.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
@@ -75,7 +83,24 @@ func play_sound(audio_file):
 
 
 func set_text_object(text_object):
-	$Panel/Text.text = text_object.actor + ": " + text_object.text_en
+	# Change the color of the text so it matches the actor's one
+	var text_color
+	match text_object.actor:
+		'Cecilia':
+			text_color = cecilia
+		'Dr Nick':
+			text_color = dr_nick
+		'Claire':
+			text_color = claire
+		'Lucia':
+			text_color = lucia
+		'Customer':
+			text_color = customer
+		'Monteasalvo CS':
+			text_color = monteasalvo
+	$Panel/Text.add_color_override("font_color", text_color)
+	# TODO: show the text in the language selected by the jugador
+	$Panel/Text.text = text_object.text_en
 	$Timer.set_wait_time(text_object.timeout)
 	$Timer.start()
 	_on_timeout_action = text_object.on_timeout
@@ -87,11 +112,14 @@ func _on_item_selected(item):
 func solve_next():
 	self.dialogue_instance.solve_next()
 
-
 func timeout():
 	$SoundObjectST.stop()
 	ActionRouter.request(_on_timeout_action)
 
 func cls():
 	$Panel/Text.text = ""
+	$ColorRect.hide()
+	
+func toggle_text_background(show = true):
+	$ColorRect.set_visible(show)
 

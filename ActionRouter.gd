@@ -15,5 +15,6 @@ func request(action):
 	print("no action handler for ", action)
 
 func register_actions(router):
+	print("Mmmm: ", router)
 	routers.append(router)
 
