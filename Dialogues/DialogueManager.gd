@@ -19,7 +19,7 @@ func _ready():
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
-	VariableBoard.register("new_memories", 45)
+	VariableBoard.register("new_memories", 52)
 
 
 func add_dialogue_graph(path_file):

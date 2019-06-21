@@ -91,7 +91,7 @@ margin_left = 359.0
 margin_top = 321.0
 margin_right = 784.0
 margin_bottom = 522.0
-window_title = "Abrir un Archivo"
+window_title = "Open a File"
 resizable = true
 mode = 0
 filters = PoolStringArray( "*.txt" )
@@ -108,4 +108,3 @@ filters = PoolStringArray( "*.txt" )
 current_dir = "res://Levels"
 current_file = "dialogs.txt"
 current_path = "res://Levels/dialogs.txt"
-

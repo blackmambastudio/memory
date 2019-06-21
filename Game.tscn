@@ -20,4 +20,3 @@ visible = false
 
 [node name="DialogueManager" parent="." instance=ExtResource( 5 )]
 mouse_filter = 2
-
