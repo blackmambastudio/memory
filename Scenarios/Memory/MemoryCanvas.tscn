@@ -47,7 +47,7 @@ margin_top = 42.5644
 margin_right = -108.917
 margin_bottom = -92.4355
 
-[node name="Peluca" parent="Elements" instance=ExtResource( 3 )]
+[node name="Nariz" parent="Elements" instance=ExtResource( 3 )]
 margin_left = 198.393
 margin_top = 215.977
 margin_right = 362.393

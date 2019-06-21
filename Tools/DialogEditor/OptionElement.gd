@@ -6,10 +6,10 @@ var options = [
 	"peluca",
 	"id",
 	"costume",
-	"nariz payaso",
+	"nariz",
 	"hijos",
 	"exesposo",
-	"cofre y carta",
+	"cofre",
 	"other"
 ]
 

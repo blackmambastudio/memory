@@ -6,4 +6,5 @@ DialogNode|dialog|Lucia|Odd... suddenly I'm starting to remember.|Curioso...… 
 @DialogNode@309|dialog|Cecilia|...|...|2||[@DialogNode@331]
 @DialogNode@331|dialog|Lucia|Actually, your eyes are identical to my little daughter's. Valentina.|De hecho tus ojos son idénticos a los de mi pequeña. Valentina.|6||[@DialogNode@353]
 @DialogNode@353|dialog|Lucia|I remember how they treat me like garbage when I got here. I've never felt so miserable.|Recuerdo que me trataron como basura cuando llegué aquí. Nunca me sentí tan miserable.|8||[@DialogNode@375]
-@DialogNode@375|dialog|Lucia|Do you remember anything?|¿Tú recuerdas algo?|4||[]
+@DialogNode@375|dialog|Lucia|Do you remember anything?|¿Tú recuerdas algo?|4||[ActionNode]
+ActionNode|action|{	"action": "Memory/show",	"value": true}|[]

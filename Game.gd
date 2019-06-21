@@ -17,13 +17,13 @@ func _ready():
 	# Setup signal listeners
 	$Memory/Canvas.connect("item_selected", $DialogueManager, "_on_item_selected")
 
-#func _process(delta):
-#	if not click_pressed and not $Memory.open \
-#		and  Input.is_mouse_button_pressed(BUTTON_LEFT):
-#		print("NEXT!")
-#		click_pressed = true
-#		ActionRouter.request({
-#			"action": "Dialogue/next"
-#		})
-#		yield(get_tree().create_timer(0.1), "timeout")
-#		click_pressed = false
+func _process(delta):
+	if not click_pressed and not $Memory.open \
+		and  Input.is_mouse_button_pressed(BUTTON_LEFT):
+		print("NEXT!")
+		click_pressed = true
+		ActionRouter.request({
+			"action": "Dialogue/next"
+		})
+		yield(get_tree().create_timer(0.1), "timeout")
+		click_pressed = false

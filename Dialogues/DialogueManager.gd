@@ -15,11 +15,30 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/act2/dlg02.data")
+	self.add_dialogue_graph("res://Levels/act1/dlg01.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("peluca", "modified")
 	VariableBoard.register("new_memories", 52)
+
+	# Variables related with the progress of each memory
+	VariableBoard.register("id-deep", 0)
+	# ---- M01 - Real ----
+	VariableBoard.register("1-hijos-deep", 0)
+	VariableBoard.register("1-costume-deep", 0)
+	VariableBoard.register("1-nariz-deep", 0)
+	VariableBoard.register("1-exesposo-deep", 0)
+	VariableBoard.register("1-cofre-deep", 0)
+	# ---- M02 - Real ----
+	VariableBoard.register("1-key-deep", 0)
+	VariableBoard.register("1-tv-deep", 0)
+	VariableBoard.register("1-window-deep", 0)
+	VariableBoard.register("1-cockroach-deep", 0)
+	VariableBoard.register("1-etiqueta-deep", 0)
+	VariableBoard.register("1-luggage-deep", 0)
+	VariableBoard.register("1-newspaper-deep", 0)
+	VariableBoard.register("1-phone-deep", 0)
+	VariableBoard.register("1-poster-deep", 0)
 
 
 func add_dialogue_graph(path_file):
