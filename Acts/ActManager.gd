@@ -9,7 +9,7 @@ func _ready():
 	self.actionHandler.set_act_manager(self)
 	ActionRouter.register_actions(self.actionHandler)
 	
-	self.load_act("res://Acts/Act1/Act1.tscn")
+	self.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func load_act(act_name):
 	if current_act:
