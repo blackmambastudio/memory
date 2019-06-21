@@ -1,1 +1,5 @@
-DialogNode|dialog|Monteasalvo CS|Hola Cecilia. Soy Claire, seré su enfermera personal.|Hola Cecilia. Soy Claire, seré su enfermera personal.|5|[]
+DialogNode|dialog|Claire|Hi Cecilia. I'm Claire, I'll be your personal nurse.|Hola Cecilia. Soy Claire, seré su enfermera personal.|4||[@DialogNode@264]
+@DialogNode@264|dialog|Cecilia|Hi nurse. I'm feeling a bit dizzy.|Hola enfermera. Siento algo de mareo.|3||[@DialogNode@293]
+@DialogNode@293|dialog|Claire|Is normal after awakening.|Es normal después de despertar.|3||[@DialogNode@322]
+@DialogNode@322|dialog|Cecilia|(ugh)|(ugh)|2||[@DialogNode@351]
+@DialogNode@351|dialog|Claire|I'll take you to Dr. Nick for taking some tests. You know, routine stuff.|En un momento te llevaré con el Dr. Nick para que te haga unas pruebas. Ya sabes, cosas de rutina.|6||[]

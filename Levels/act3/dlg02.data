@@ -1,4 +1,4 @@
-DialogNode|dialog|Lucia|I can't stand this music anymore. Something calmer would help me to relax.|Ya no soporto esta música. Algo más calmado me ayudaría a relajarme.|6|[@DialogNode@221]
-@DialogNode@221|dialog|Lucia|I'm sick of this weather too.|Y estoy harta de este clima.|3|[@DialogNode@243]
-@DialogNode@243|dialog|Cecilia|But is a beautiful day.|Pero si hace un día hermoso.|3|[@DialogNode@265]
-@DialogNode@265|dialog|Lucia|I preffer rainy days...|Prefiero los días lluviosos….|3|[]
+DialogNode|dialog|Lucia|I can't stand this music anymore. Something calmer would help me to relax.|Ya no soporto esta música. Algo más calmado me ayudaría a relajarme.|6||[@DialogNode@221]
+@DialogNode@221|dialog|Lucia|I'm sick of this weather too.|Y estoy harta de este clima.|3||[@DialogNode@243]
+@DialogNode@243|dialog|Cecilia|But is a beautiful day.|Pero si hace un día hermoso.|3||[@DialogNode@265]
+@DialogNode@265|dialog|Lucia|I preffer rainy days...|Prefiero los días lluviosos….|3||[]
