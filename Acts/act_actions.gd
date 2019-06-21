@@ -10,9 +10,11 @@ func handle(request):
 		"Act/Views/change":
 			self.ActManager.change_view(request.view)
 		"Act/show":
-			pass
+			self.ActManager.load_act(request.act)
 		"Act/end":
 			pass
+		"Act/Views/setBackground":
+			self.ActManager.change_view_background(request.background)
 		_:
 			return false
 	

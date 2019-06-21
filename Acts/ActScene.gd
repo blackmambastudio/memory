@@ -17,3 +17,5 @@ func start():
 	print("start not implemented yet")
 	pass
 
+func change_view_background(background_name):
+	current_view.set_background(background_name)

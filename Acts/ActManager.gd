@@ -9,7 +9,7 @@ func _ready():
 	self.actionHandler.set_act_manager(self)
 	ActionRouter.register_actions(self.actionHandler)
 	
-	self.load_act("res://Acts/Act1/Act1_Room.tscn")
+	self.load_act("res://Acts/Act5/Act5_Hall.tscn")
 
 func load_act(act_name):
 	if current_act:
@@ -21,3 +21,6 @@ func load_act(act_name):
 
 func change_view(view_name):
 	current_act.change_view(view_name)
+
+func change_view_background(background):
+	current_act.change_view_background(background)

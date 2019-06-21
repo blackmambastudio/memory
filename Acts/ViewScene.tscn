@@ -6,6 +6,8 @@
 offset = Vector2( 640, 360 )
 script = ExtResource( 1 )
 
+[node name="Backgrounds" type="Node2D" parent="."]
+
 [node name="ChangeZones" type="Node2D" parent="."]
 
 [node name="Clickeables" type="Node2D" parent="."]

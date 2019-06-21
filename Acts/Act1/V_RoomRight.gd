@@ -9,6 +9,9 @@ func _on_clicked(clickeable_name):
 		set_soup_visible(true)
 	elif clickeable_name == 'ExitSoup':
 		set_soup_visible(false)
+	elif clickeable_name == 'Cajon':
+		self.toggle_background("Box_opened")
+
 
 func set_soup_visible(visible):
 	$SopaLetras.visible = visible
