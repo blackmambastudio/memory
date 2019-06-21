@@ -1,4 +1,4 @@
-@OptionElement@267|option|peluca|[@DialogNode@495]
+@OptionElement@267|option|nariz|[@DialogNode@495]
 DialogNode|dialog|Cecilia|I want to dress a...|tu dialogo aquí|2|[OptionElement, @OptionElement@267]
 FilterNode|filter|health|greater|50|[@DialogNode@466]
 @FilterNode@329|filter|health|less|50|[@DialogNode@406]

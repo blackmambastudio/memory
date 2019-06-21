@@ -1,11 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
 [ext_resource path="res://Assets/M01_BG_bn.png" type="Texture" id=2]
 [ext_resource path="res://Scenarios/Memory/Elements/Element.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/peluca.png" type="Texture" id=4]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/ID.png" type="Texture" id=5]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/traje_payaso.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/ID.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/traje_payaso.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/peluca.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/children_photo.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/coffee.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/husband_letter.png" type="Texture" id=9]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -47,27 +50,51 @@ margin_top = 42.5644
 margin_right = -108.917
 margin_bottom = -92.4355
 
+[node name="ID" parent="Elements" instance=ExtResource( 3 )]
+margin_left = -76.8144
+margin_top = 42.3817
+margin_right = 182.186
+margin_bottom = 220.381
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 4 )
+
+[node name="Costume" parent="Elements" instance=ExtResource( 3 )]
+margin_left = 854.263
+margin_top = -9.3627
+margin_right = 1141.27
+margin_bottom = 526.638
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+
 [node name="Nariz" parent="Elements" instance=ExtResource( 3 )]
 margin_left = 198.393
 margin_top = 215.977
 margin_right = 362.393
 margin_bottom = 440.977
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 4 )
-
-[node name="ID" parent="Elements" instance=ExtResource( 3 )]
-margin_left = 449.503
-margin_top = 17.1184
-margin_right = 708.503
-margin_bottom = 195.118
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 5 )
-
-[node name="Costume" parent="Elements" instance=ExtResource( 3 )]
-margin_left = 803.737
-margin_top = 6.42682
-margin_right = 1090.74
-margin_bottom = 542.427
-mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
+
+[node name="Hijos" parent="Elements" instance=ExtResource( 3 )]
+margin_left = 244.788
+margin_top = -21.9943
+margin_right = 504.788
+margin_bottom = 155.006
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+
+[node name="Exesposo" parent="Elements" instance=ExtResource( 3 )]
+margin_left = 712.158
+margin_top = 244.322
+margin_right = 907.158
+margin_bottom = 470.322
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 8 )
+
+[node name="Cofre" parent="Elements" instance=ExtResource( 3 )]
+margin_left = 406.894
+margin_top = 376.954
+margin_right = 663.894
+margin_bottom = 614.954
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 9 )
 

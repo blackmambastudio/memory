@@ -1,0 +1,7 @@
+@FilterNode@392|filter|1-hijos-deep|equals|0|[@DialogNode@1216]
+@FilterNode@428|filter|1-hijos-deep|equals|2|[@DialogNode@375]
+@DialogNode@1216|dialog|Cecilia|I have two children. Ricardo and Valentina.|Tengo dos hijos. Ricardo y Valentina.|4||[]
+@DialogNode@346|dialog|Cecilia|No... they left with their dad few years ago.|No...hace unos años se fueron con su padre.|4||[]
+@DialogNode@375|dialog|Cecilia|They live with their father, not with me... because of mi anxiety problems.|Viven con su padre, no conmigo... por mis problemas de ansiedad.|6||[]
+@FilterNode@411|filter|1-hijos-deep|equals|1|[@DialogNode@346]
+DialogNode|dialog|Cecilia|||0.1||[@FilterNode@392, @FilterNode@411, @FilterNode@428]

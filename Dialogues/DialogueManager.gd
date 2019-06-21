@@ -23,10 +23,10 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/act3/dlg03.data")
+	self.add_dialogue_graph("res://Levels/real/m01.data")
 	
 	VariableBoard.register("health", 5.5)
-	VariableBoard.register("peluca", "modified")
+	VariableBoard.register("nariz", "modified")
 	VariableBoard.register("new_memories", 52)
 
 	# Variables related with the progress of each memory

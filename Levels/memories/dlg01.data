@@ -1,7 +1,0 @@
-DialogNode|dialog|Cecilia|||0.1||[OptionElement]
-OptionElement|option|id|[@DialogNode@1184]
-@DialogNode@1184|dialog|Cecilia|I'm 42 years old. I was born in Platanal.|Tengo 42 años. Nací en Platanal.|3||[]
-@OptionElement@1187|option|hijos|[]
-@DialogNode@1216|dialog|Cecilia|I can tell you about my kids.|Puedo hablarle de mis hijos.|3||[]
-@DialogNode@1245|dialog|Cecilia|I have two children. Ricardo and Valentina.|Tengo dos hijos. Ricardo y Valentina.
-|4||[]

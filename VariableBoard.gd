@@ -18,6 +18,9 @@ func set_value(variable, value):
 	board[variable] = value
 	emit_signal("value_set_" + variable, value)
 
+func add_value(variable, value):
+	board[variable] += value
+	emit_signal("value_set_" + variable, board[variable])
 
 func get_value(variable):
 	if not board.has(variable):
@@ -34,6 +37,8 @@ func handle(request):
 			self.connect("value_set_"+request.variable, request.object, request.method)
 		"Board/unsuscribe":
 			self.disconnect("value_set_"+request.variable, request.object, request.method)
+		"Board/further":
+			self.add_value(request.variable, 1)
 		_:
 			return false
 	

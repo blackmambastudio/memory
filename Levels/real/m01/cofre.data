@@ -1,0 +1,3 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode]
+FilterNode|filter|1-cofre-deep|equals|0|[@DialogNode@251]
+@DialogNode@251|dialog|Cecilia|One day I received a letter and a chest from my ex-husband. The letter said I had to leave Platanal as soon as possible.|Un día recibí una carta y un cofre de mi ex-esposo. En la carta me advertía que tenía que dejar Platanal cuanto antes.|12||[]

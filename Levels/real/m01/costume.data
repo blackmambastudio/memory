@@ -1,0 +1,7 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@281, @FilterNode@356]
+@DialogNode@251|dialog|Cecilia|But I can tell you about my work.|Pero puedo hablarle de mi trabajo.|4||[]
+@FilterNode@281|filter|1-costume-deep|equals|0|[@DialogNode@310]
+@DialogNode@310|dialog|Cecilia|I used to work as a clown. I was the best. I did shows. Sometimes three to four per day.|Solía trabajar como payaso. Era la mejor. Realizaba espectáculos. A veces 3 o 4 por día.|10||[]
+FilterNode|filter|1-costume-deep|equals|-1|[@DialogNode@251]
+@FilterNode@356|filter|1-costume-deep|equals|1|[@DialogNode@339]
+@DialogNode@339|dialog|Cecilia|The pay was good and I enjoyed it more than anything in the world.|La paga era muy buena y lo disfrutaba como nada en el mundo.|8||[]

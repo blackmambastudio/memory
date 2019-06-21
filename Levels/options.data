@@ -1,6 +1,6 @@
 DialogNode|dialog|Cecilia|estaba pensando en:|tu dialogo aquí|2|[OptionElement, @OptionElement@267]
-OptionElement|option|peluca|[@DialogNode@244]
-@DialogNode@244|dialog|Cecilia|mi hermosa peluca|tu dialogo aquí|2|[]
+OptionElement|option|nariz|[@DialogNode@244]
+@DialogNode@244|dialog|Cecilia|mi hermosa nariz|tu dialogo aquí|2|[]
 @OptionElement@267|option|other|[@DialogNode@296]
 @DialogNode@296|dialog|Cecilia|nada particular realmente...|tu dialogo aquí|2|[EmbeddedDialogue]
 EmbeddedDialogue|embedded|res://Levels/options.data|[]

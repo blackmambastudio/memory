@@ -3,7 +3,7 @@ extends GraphNode
 export (int) var option_selected = 0
 
 var options = [
-	"peluca",
+	"nariz",
 	"id",
 	"costume",
 	"nariz",

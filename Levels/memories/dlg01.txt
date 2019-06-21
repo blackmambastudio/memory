@@ -1,2 +1,0 @@
-res://Levels/memories/dlg01.scn
-[{"from":"DialogNode","from_port":0,"to":"OptionElement","to_port":0},{"from":"OptionElement","from_port":0,"to":"@DialogNode@1184","to_port":0}]
