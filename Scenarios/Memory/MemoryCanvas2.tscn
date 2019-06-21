@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
+[ext_resource path="res://Assets/M01_BG_bn.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="Animation" id=2]
+length = 2.0
+loop = true
+
+[node name="MemoryCanvas" type="Control"]
+modulate = Color( 1, 1, 1, 0.870588 )
+material = SubResource( 1 )
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.792157 )
+
+[node name="M01_BG_bn" type="Sprite" parent="."]
+use_parent_material = true
+position = Vector2( 664.587, 293.972 )
+scale = Vector2( 0.826759, 0.826759 )
+texture = ExtResource( 2 )
+
+[node name="AnimationTest" type="AnimationPlayer" parent="."]
+autoplay = "Transition"
+anims/Transition = SubResource( 2 )
+
+[node name="Elements" type="Control" parent="."]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 98.0833
+margin_top = 42.5644
+margin_right = -108.917
+margin_bottom = -92.4355
+
