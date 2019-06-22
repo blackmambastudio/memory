@@ -26,6 +26,7 @@ func _ready():
 		center_element(Fictional)
 
 func _on_item_select(item):
+	print(item)
 	if item == real_item:
 		emit_signal("item_selected", real_item)
 		return

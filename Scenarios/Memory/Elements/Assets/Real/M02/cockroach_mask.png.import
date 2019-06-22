@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/cockroach_mask.png-b42f1d0d525add839bdac7f2ac649ed0.res"
+
+[deps]
+
+source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/cockroach_mask.png"
+dest_files=[ "res://.import/cockroach_mask.png-b42f1d0d525add839bdac7f2ac649ed0.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5
