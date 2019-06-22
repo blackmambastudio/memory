@@ -1,3 +1,3 @@
-DialogNode|dialog|Cecilia|||0.1||[FilterNode]
+DialogNode|dialog|Cecilia|||0.1||0|[FilterNode]
 FilterNode|filter|1-papelito-deep|default||[@DialogNode@251]
-@DialogNode@251|dialog|Cecilia|I knew about the rebels after talking to my ex-husband. He gave me the address where the meetings would take place. |Supe de los rebeldes tras hablar por teléfono con mi ex-esposo. Él me dio la dirección del lugar donde serían las reuniones.|12||[]
+@DialogNode@251|dialog|Cecilia|I knew about the rebels after talking to my ex-husband. He gave me the address where the meetings would take place. |Supe de los rebeldes tras hablar por teléfono con mi ex-esposo. Él me dio la dirección del lugar donde serían las reuniones.|12||0|[]

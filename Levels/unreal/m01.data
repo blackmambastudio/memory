@@ -1,4 +1,4 @@
-DialogNode|dialog|Cecilia|||0.1||[ActionNode]
+DialogNode|dialog|Cecilia|||0.1||0|[ActionNode]
 ActionNode|action|{	"action": "Memory/create",	"id": 1,	"memory": "Corset"}|[@ActionNode@234]
 @ActionNode@234|action|{	"action": "Memory/create",	"id": 1,	"memory": "Fufa_wig"}|[@ActionNode@242]
 @ActionNode@242|action|{	"action": "Memory/create",	"id": 1,	"memory": "Sola"}|[@ActionNode@250]

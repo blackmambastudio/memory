@@ -1,5 +1,5 @@
 FilterNode|filter|1-windowleft-deep|equals|0|[@DialogNode@251]
 @FilterNode@268|filter|1-windowleft-deep|equals|1|[@DialogNode@297]
-@DialogNode@251|dialog|Cecilia|I loved to sit by the window to see the dusk.|Me gustaba sentarme frente a la ventana y ver el anochecer.|3||[]
-@DialogNode@297|dialog|Cecilia|I miss the colors of the platanalian sky.|Extraño los colores del cielo platanero.|2||[]
-DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@268]
+@DialogNode@251|dialog|Cecilia|I loved to sit by the window to see the dusk.|Me gustaba sentarme frente a la ventana y ver el anochecer.|3||0|[]
+@DialogNode@297|dialog|Cecilia|I miss the colors of the platanalian sky.|Extraño los colores del cielo platanero.|2||0|[]
+DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@268]

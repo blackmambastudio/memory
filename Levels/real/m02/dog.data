@@ -1,5 +1,5 @@
-DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@1649]
+DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@1649]
 FilterNode|filter|1-dog-deep|default||[@DialogNode@1678]
 @FilterNode@1649|filter|1-dog-deep|equals|1|[@DialogNode@1707]
-@DialogNode@1678|dialog|Cecilia|The best was that I could take Richy with me everywhere.|Lo mejor de todo es que pude llevar a Richy conmigo.|3||[]
-@DialogNode@1707|dialog|Cecilia|I could take him to the park. He made friends and everything.|Allí sí podía sacarlo al parque a pasear. Hizo amigos y todo.|3||[]
+@DialogNode@1678|dialog|Cecilia|The best was that I could take Richy with me everywhere.|Lo mejor de todo es que pude llevar a Richy conmigo.|3||0|[]
+@DialogNode@1707|dialog|Cecilia|I could take him to the park. He made friends and everything.|Allí sí podía sacarlo al parque a pasear. Hizo amigos y todo.|3||0|[]

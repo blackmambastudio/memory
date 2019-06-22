@@ -1,5 +1,5 @@
-DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@1165]
+DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@1165]
 FilterNode|filter|1-windowright2-deep|default||[@DialogNode@1194]
 @FilterNode@1165|filter|1-windowright2-deep|equals|1|[@DialogNode@1223]
-@DialogNode@1194|dialog|Cecilia|The view from my flat in Hunuragha was incredible.|La vista desde mi apartamento en Hunuragha era increíble.|3||[]
-@DialogNode@1223|dialog|Cecilia|This was really paradise. I could see the whole city.|Ese sí era el paraíso. Podía ver toda la ciudad.|3||[]
+@DialogNode@1194|dialog|Cecilia|The view from my flat in Hunuragha was incredible.|La vista desde mi apartamento en Hunuragha era increíble.|3||0|[]
+@DialogNode@1223|dialog|Cecilia|This was really paradise. I could see the whole city.|Ese sí era el paraíso. Podía ver toda la ciudad.|3||0|[]

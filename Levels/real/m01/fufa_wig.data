@@ -1,3 +1,3 @@
-DialogNode|dialog|Cecilia|||0.1||[FilterNode]
+DialogNode|dialog|Cecilia|||0.1||0|[FilterNode]
 FilterNode|filter|1-fufa_wig-deep|default||[@DialogNode@485]
-@DialogNode@485|dialog|Cecilia|My only passion in life was acting, but I tried and failed.|Mi única pasión en la vida fue la actuación, pero lo intenté y fracasé.|7.3|DX_Assets/Cecilia/Memories/Cecilia_Fwig_01.ogg|[]
+@DialogNode@485|dialog|Cecilia|My only passion in life was acting, but I tried and failed.|Mi única pasión en la vida fue la actuación, pero lo intenté y fracasé.|7.3|DX_Assets/Cecilia/Memories/Cecilia_Fwig_01.ogg|0|[]

@@ -1,5 +1,5 @@
 ActionNode|action|{	"action": "Memory/enable_only",	"id": 1,	"memories": ["ID"]}|[@ActionNode@685]
 EmbeddedDialogue|embedded|res://Levels/real/m01.data|[]
 @ActionNode@685|action|{	"action": "Board/set_value",	"variable": "loop_memory",	"value": false}|[EmbeddedDialogue]
-DialogNode|dialog|Cecilia|||0.1||[@ActionNode@249]
+DialogNode|dialog|Cecilia|||0.1||0|[@ActionNode@249]
 @ActionNode@249|action|{	"action": "Memory/disable_all",	"id": 1}|[ActionNode]
