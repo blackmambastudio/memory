@@ -1,0 +1,7 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@596, @FilterNode@659]
+@DialogNode@251|dialog|Cecilia|The man on the next room had it's door labeled too.|El hombre de la habitación de al lado también tenía una puerta marcada.|5||[]
+@DialogNode@579|dialog|Cecilia|He said that because of hunuraghans everyone saw us as cockroaches.|Él decía que por culpa del virus los hunuraghos nos veían como cucarachas.|4||[]
+@DialogNode@642|dialog|Cecilia|It was a happy fat man.|Era un hombre gordo y bonachón.|3||[]
+@FilterNode@596|filter|1-cockroach-deep|equals|1|[@DialogNode@579]
+@FilterNode@659|filter|1-cockroach-deep|equals|2|[@DialogNode@642]
+FilterNode|filter|1-cockroach-deep|default||[@DialogNode@251]

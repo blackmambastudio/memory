@@ -1,2 +1,2 @@
 res://Levels/real/m02/newspaper.scn
-[]
+[{"from":"@DialogNode@249","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@278","to_port":0},{"from":"@DialogNode@249","from_port":0,"to":"@FilterNode@311","to_port":0},{"from":"@FilterNode@311","from_port":0,"to":"DialogNode","to_port":0}]

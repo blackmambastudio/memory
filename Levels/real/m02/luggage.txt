@@ -1,0 +1,2 @@
+res://Levels/real/m02/luggage.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@251","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@596","to_port":0},{"from":"@FilterNode@596","from_port":0,"to":"@DialogNode@579","to_port":0}]

@@ -1,1 +1,5 @@
-DialogNode|dialog|Cecilia|put your dialogue here|tu dialogo aquí|2||[]
+@DialogNode@465|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@527]
+FilterNode|filter|1-phone-deep|default||[DialogNode]
+@FilterNode@527|filter|1-phone-deep|equals|1|[@DialogNode@494]
+DialogNode|dialog|Cecilia|I talked to my mother the day I left Platanal.|Hablé con mi madre el día que dejé Platanal.|3||[]
+@DialogNode@494|dialog|Cecilia|It was the last time I knew about her.|Fue la última vez que supe de ella.|3||[]

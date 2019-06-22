@@ -1,2 +1,2 @@
 res://Levels/real/m02/phone.scn
-[]
+[{"from":"@DialogNode@465","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"DialogNode","to_port":0},{"from":"@DialogNode@465","from_port":0,"to":"@FilterNode@527","to_port":0},{"from":"@FilterNode@527","from_port":0,"to":"@DialogNode@494","to_port":0}]

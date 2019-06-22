@@ -1,0 +1,5 @@
+@DialogNode@251|dialog|Cecilia|It was unbelievable that all my life could fit inside a suitcase.|Entonces me parecía increíble que mi vida estuviera toda dentro de una maleta.|5||[]
+@DialogNode@579|dialog|Cecilia|The hostility agains our own could be felt from the moment I got to the airport. It was terrible.|La hostilidad hacia los nuestros la sentí en el mismo aeropuerto. Fue terrible.|6||[]
+@FilterNode@596|filter|1-luggage-deep|equals|1|[@DialogNode@579]
+FilterNode|filter|1-luggage-deep|default||[@DialogNode@251]
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@596]

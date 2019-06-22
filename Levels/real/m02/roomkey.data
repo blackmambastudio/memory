@@ -1,0 +1,5 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@596]
+@DialogNode@251|dialog|Cecilia|My room key had a red label.|La llave de mi habitación tenía una etiqueta roja.|3||[]
+@DialogNode@579|dialog|Cecilia|They labeled all the rooms where there were platanalians staying.|Habían marcado las habitaciones donde nos hospedábamos los plataneros.|4||[]
+FilterNode|filter|1-roomkey-deep|default||[@DialogNode@251]
+@FilterNode@596|filter|1-roomkey-deep|equals|1|[@DialogNode@579]

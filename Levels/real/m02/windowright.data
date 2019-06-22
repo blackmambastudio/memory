@@ -1,3 +1,3 @@
 DialogNode|dialog|Cecilia|||0.1||[FilterNode]
 @DialogNode@251|dialog|Cecilia|The amount of buildings I could see through the window were suffocating.|La cantidad de edificios que podía ver por la ventana era asfixiante.|6||[]
-FilterNode|filter|1-windowright-deep|equals|0|[@DialogNode@251]
+FilterNode|filter|1-windowright-deep|default||[@DialogNode@251]
