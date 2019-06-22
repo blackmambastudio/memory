@@ -30,7 +30,7 @@ func _ready():
 
 func start_game():
 	$IntroScene.hide()
-	$ActManager.load_act("res://Acts/Act2/Act2_Test.tscn")
+	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func _process(delta):
 	if skip_on_click and not click_pressed and not $Memory.open \

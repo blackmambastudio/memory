@@ -12,7 +12,7 @@
 [ext_resource path="res://Audio/AudioAssets/BG_CRoom_AC.ogg" type="AudioStream" id=10]
 
 [node name="Act1" instance=ExtResource( 1 )]
-starting_dialogue = "res://Levels/act3/dlg04.data"
+starting_dialogue = "res://Levels/act4/dlg02.data"
 
 [node name="Views" parent="." index="0"]
 editor/display_folded = true
