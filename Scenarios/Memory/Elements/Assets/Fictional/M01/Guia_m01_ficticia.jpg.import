@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mancha1.png-6336b42a5069a3c4bb047a54c43878c2.stex"
+path="res://.import/Guia_m01_ficticia.jpg-65d438089662e9fb48777fc529dd186c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/mancha1.png"
-dest_files=[ "res://.import/mancha1.png-6336b42a5069a3c4bb047a54c43878c2.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Fictional/M01/Guia_m01_ficticia.jpg"
+dest_files=[ "res://.import/Guia_m01_ficticia.jpg-65d438089662e9fb48777fc529dd186c.stex" ]
 
 [params]
 

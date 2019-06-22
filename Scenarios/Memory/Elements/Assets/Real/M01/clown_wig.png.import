@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex"
+path="res://.import/clown_wig.png-3e97474a3448f24cb663911d4ebb0609.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png"
-dest_files=[ "res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/clown_wig.png"
+dest_files=[ "res://.import/clown_wig.png-3e97474a3448f24cb663911d4ebb0609.stex" ]
 
 [params]
 

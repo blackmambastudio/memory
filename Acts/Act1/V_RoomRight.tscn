@@ -5,8 +5,8 @@
 [ext_resource path="res://Acts/Act1/V_RoomRight.gd" type="Script" id=3]
 [ext_resource path="res://Acts/Assets/Room/right_opened.png" type="Texture" id=4]
 [ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.391, 261.516 )
@@ -25,12 +25,16 @@ extents = Vector2( 639.52, 364.346 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
+[node name="Backgrounds" parent="." index="0"]
+editor/display_folded = true
+
 [node name="Box_opened" type="Sprite" parent="Backgrounds" index="0"]
 visible = false
 texture = ExtResource( 4 )
 offset = Vector2( 640, 360 )
 
 [node name="to_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 39.8892, 365.651 )
 to_view = "RoomFront"
 
@@ -38,7 +42,38 @@ to_view = "RoomFront"
 position = Vector2( 67.5901, 29.9169 )
 shape = SubResource( 1 )
 
-[node name="SopaLetras" parent="." index="2" instance=ExtResource( 6 )]
+[node name="pills" parent="Clickeables" index="0" instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 851.99, 485.3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/pills" index="1"]
+position = Vector2( -2.50946, 1.79242 )
+shape = SubResource( 2 )
+
+[node name="sopa" parent="Clickeables" index="1" instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 781.865, 487.583 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/sopa" index="1"]
+position = Vector2( 8.2453, 2.86786 )
+shape = SubResource( 3 )
+
+[node name="ExitSoup" parent="Clickeables" index="2" instance=ExtResource( 6 )]
+editor/display_folded = true
+visible = false
+position = Vector2( 640, 360 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/ExitSoup" index="1"]
+shape = SubResource( 4 )
+
+[node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 768.61, 606.525 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickeables/Cajon" index="1"]
+polygon = PoolVector2Array( -91.5157, -122.194, 127.544, -66.5452, 129.687, 117.352, -92.1459, 116.783 )
+
+[node name="SopaLetras" parent="." index="3" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( 468.874, 73.4803 )
 words = [ {
@@ -72,31 +107,4 @@ words = [ {
 "row": 4,
 "word": "peace"
 } ]
-
-[node name="pills" parent="Clickeables" index="0" instance=ExtResource( 7 )]
-position = Vector2( 851.99, 485.3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/pills" index="1"]
-position = Vector2( -2.50946, 1.79242 )
-shape = SubResource( 2 )
-
-[node name="sopa" parent="Clickeables" index="1" instance=ExtResource( 7 )]
-position = Vector2( 781.865, 487.583 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/sopa" index="1"]
-position = Vector2( 8.2453, 2.86786 )
-shape = SubResource( 3 )
-
-[node name="ExitSoup" parent="Clickeables" index="2" instance=ExtResource( 7 )]
-visible = false
-position = Vector2( 640, 360 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/ExitSoup" index="1"]
-shape = SubResource( 4 )
-
-[node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 7 )]
-position = Vector2( 768.61, 606.525 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickeables/Cajon" index="1"]
-polygon = PoolVector2Array( -91.5157, -122.194, 127.544, -66.5452, 129.687, 117.352, -92.1459, 116.783 )
 

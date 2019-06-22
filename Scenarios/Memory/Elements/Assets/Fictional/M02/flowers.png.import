@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex"
+path="res://.import/flowers.png-363a46ced834e49fdb3de78e94d3a3e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png"
-dest_files=[ "res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Fictional/M02/flowers.png"
+dest_files=[ "res://.import/flowers.png-363a46ced834e49fdb3de78e94d3a3e6.stex" ]
 
 [params]
 

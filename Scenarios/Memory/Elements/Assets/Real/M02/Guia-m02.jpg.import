@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex"
+path="res://.import/Guia-m02.jpg-db10e78b5ddc2bf4da5b222b9d4ba668.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png"
-dest_files=[ "res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/Guia-m02.jpg"
+dest_files=[ "res://.import/Guia-m02.jpg-db10e78b5ddc2bf4da5b222b9d4ba668.stex" ]
 
 [params]
 

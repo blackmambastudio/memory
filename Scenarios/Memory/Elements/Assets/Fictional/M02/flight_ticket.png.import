@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex"
+path="res://.import/flight_ticket.png-3dc06f9f150b47902118df041972db2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png"
-dest_files=[ "res://.import/window_1.png-2974ef3161a9fb6b4eb1b232f5cbe659.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Fictional/M02/flight_ticket.png"
+dest_files=[ "res://.import/flight_ticket.png-3dc06f9f150b47902118df041972db2b.stex" ]
 
 [params]
 

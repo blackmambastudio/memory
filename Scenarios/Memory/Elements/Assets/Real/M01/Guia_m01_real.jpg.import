@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/peluca.png-3ff8eba67298f074e764b65fb24812fd.stex"
+path="res://.import/Guia_m01_real.jpg-0dd247ee299d6cd83c14ff77bd36a2f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/peluca.png"
-dest_files=[ "res://.import/peluca.png-3ff8eba67298f074e764b65fb24812fd.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/Guia_m01_real.jpg"
+dest_files=[ "res://.import/Guia_m01_real.jpg-0dd247ee299d6cd83c14ff77bd36a2f5.stex" ]
 
 [params]
 

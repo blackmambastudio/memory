@@ -2,11 +2,8 @@
 
 [ext_resource path="res://Scenarios/Memory/Elements/Element.gd" type="Script" id=1]
 
-[node name="Element" type="TextureButton"]
+[node name="Element" type="Control"]
 use_parent_material = true
-margin_right = 50.0
-margin_bottom = 50.0
-expand = true
-stretch_mode = 4
+mouse_filter = 2
 script = ExtResource( 1 )
 

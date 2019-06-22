@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/traje_payaso.png-bf3a25dc155ad58fd683e6043b6648c2.stex"
+path="res://.import/window_2.png-ccab0e8f22f89c945b9c5c680d24d014.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/traje_payaso.png"
-dest_files=[ "res://.import/traje_payaso.png-bf3a25dc155ad58fd683e6043b6648c2.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Fictional/M02/window_2.png"
+dest_files=[ "res://.import/window_2.png-ccab0e8f22f89c945b9c5c680d24d014.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/children_photo.png-3118bc1a09b03bbd1de10c74ee3d58aa.stex"
+path="res://.import/whiskey.png-b7390307efe3272af991535bee2b3412.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Memory/Elements/Assets/Real/M01/children_photo.png"
-dest_files=[ "res://.import/children_photo.png-3118bc1a09b03bbd1de10c74ee3d58aa.stex" ]
+source_file="res://Scenarios/Memory/Elements/Assets/Fictional/M02/whiskey.png"
+dest_files=[ "res://.import/whiskey.png-b7390307efe3272af991535bee2b3412.stex" ]
 
 [params]
 
