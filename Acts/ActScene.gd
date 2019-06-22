@@ -3,6 +3,8 @@ extends Control
 var current_view
 onready var VariableBoard = get_node("/root/VariableBoard")
 
+export (String) var starting_dialogue = ""
+
 func _ready():
 	for child in $Views.get_children():
 		if child.visible:
@@ -15,7 +17,6 @@ func change_view(name):
 	current_view.show()
 
 func start():
-	print("start not implemented yet")
 	pass
 
 func change_view_background(background_name):

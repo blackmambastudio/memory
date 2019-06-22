@@ -33,7 +33,7 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})
 	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
 	
-	self.load_act(all_acts[0])
+	#self.load_act(all_acts[0])
 
 func load_act(act_name):
 	if current_act:
@@ -42,6 +42,8 @@ func load_act(act_name):
 	current_act = new_act
 	add_child(current_act)
 	current_act.start()
+	if not current_act.starting_dialogue.empty():
+		ActionRouter.request({"action": "Dialogue/stack", "path": current_act.starting_dialogue})
 
 func change_view(view_name):
 	current_act.change_view(view_name)

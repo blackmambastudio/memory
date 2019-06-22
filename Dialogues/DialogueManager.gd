@@ -23,8 +23,6 @@ func _ready():
 	self.actionHandler.set_dialogue(self)
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
-
-	self.add_dialogue_graph("res://Levels/nick_tests/dlg01.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("nariz", "modified")
@@ -69,6 +67,9 @@ func _ready():
 	VariableBoard.register("1-homesign-deep", 0)
 	VariableBoard.register("1-tv2-deep", 0)
 	VariableBoard.register("1-flowers-deep", 0)
+	
+	
+	#self.add_dialogue_graph("res://Levels/nick_tests/dlg01.data")
 
 
 func add_dialogue_graph(path_file):

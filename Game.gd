@@ -22,6 +22,9 @@ func _ready():
 	# Setup signal listeners
 	$Memory/Memory1.connect("item_selected", $DialogueManager, "_on_item_selected")
 	$Memory/Memory2.connect("item_selected", $DialogueManager, "_on_item_selected")
+	
+	# loading the first act
+	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func _process(delta):
 	if skip_on_click and not click_pressed and not $Memory.open \
