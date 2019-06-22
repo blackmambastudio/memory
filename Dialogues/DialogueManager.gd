@@ -123,6 +123,7 @@ func set_text_object(text_object):
 		'Monteasalvo CS':
 			text_color = monteasalvo
 	$Panel/Text.add_color_override("font_color", text_color)
+	$BackSubtitle.show()
 	# TODO: show the text in the language selected by the jugador
 	$Panel/Text.text = text_object.text_en
 	$Timer.set_wait_time(text_object.timeout)
@@ -138,11 +139,12 @@ func solve_next():
 	self.dialogue_instance.solve_next()
 
 func timeout():
+	$BackSubtitle.hide()
 	ActionRouter.request(_on_timeout_action)
 
 func cls():
 	$Panel/Text.text = ""
-	$ColorRect.hide()
+	$BackSubtitle.hide()
 	
 func toggle_text_background(show = true):
 	$ColorRect.set_visible(show)
