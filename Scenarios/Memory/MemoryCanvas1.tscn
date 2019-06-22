@@ -53,6 +53,7 @@ __meta__ = {
 }
 
 [node name="fictionalPlace" type="Sprite" parent="."]
+visible = false
 position = Vector2( 625.831, 357.036 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -64,7 +65,6 @@ autoplay = "Transition"
 anims/Transition = SubResource( 4 )
 
 [node name="Elements" type="Control" parent="."]
-editor/display_folded = true
 use_parent_material = true
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -98,7 +98,6 @@ real_item = "Costume"
 fictional_item = "Corset"
 
 [node name="Costume" type="TextureButton" parent="Elements/Costume"]
-visible = false
 margin_left = 1.39667
 margin_top = 0.698334
 margin_right = 185.397
@@ -106,6 +105,7 @@ margin_bottom = 355.698
 texture_normal = ExtResource( 6 )
 
 [node name="Corset" type="TextureButton" parent="Elements/Costume"]
+visible = false
 margin_left = 4.08093
 margin_top = 13.6037
 margin_right = 140.081
@@ -122,12 +122,12 @@ real_item = "Nariz"
 fictional_item = "Fufa_wig"
 
 [node name="Nariz" type="TextureButton" parent="Elements/Nariz"]
-visible = false
 margin_right = 108.0
 margin_bottom = 148.0
 texture_normal = ExtResource( 8 )
 
 [node name="Fufa_wig" type="TextureButton" parent="Elements/Nariz"]
+visible = false
 margin_right = 94.0
 margin_bottom = 135.0
 texture_normal = ExtResource( 9 )
@@ -142,12 +142,12 @@ real_item = "Hijos"
 fictional_item = "Sola"
 
 [node name="Hijos" type="TextureButton" parent="Elements/Hijos"]
-visible = false
 margin_right = 87.0
 margin_bottom = 60.0
 texture_normal = ExtResource( 10 )
 
 [node name="Sola" type="TextureButton" parent="Elements/Hijos"]
+visible = false
 margin_left = 1.71475
 margin_top = -5.14429
 margin_right = 88.7148
@@ -163,7 +163,6 @@ mouse_default_cursor_shape = 2
 real_item = "Exesposo"
 
 [node name="Exesposo" type="TextureButton" parent="Elements/Exesposo"]
-visible = false
 margin_right = 71.0
 margin_bottom = 80.0
 texture_normal = ExtResource( 12 )
@@ -178,12 +177,12 @@ real_item = "Cofre"
 fictional_item = "Cartel"
 
 [node name="Cofre" type="TextureButton" parent="Elements/Cofre"]
-visible = false
 margin_right = 158.0
 margin_bottom = 144.0
 texture_normal = ExtResource( 13 )
 
 [node name="Cartel" type="TextureButton" parent="Elements/Cofre"]
+visible = false
 margin_left = -260.223
 margin_top = -90.6166
 margin_right = -174.223

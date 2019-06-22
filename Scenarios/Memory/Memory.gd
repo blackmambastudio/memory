@@ -34,3 +34,15 @@ func handle(request):
 				-1, 1.0 if request.value else -1.0,
 				!request.value
 			)
+		"Memory/create":
+			match int(request.id):
+				1:
+					$Memory1.createMemory(request.memory)
+				2:
+					$Memory2.createMemory(request.memory)
+		"Memory/destroy":
+			match int(request.id):
+				1:
+					$Memory1.destroyMemory(request.memory)
+				2:
+					$Memory2.destroyMemory(request.memory)

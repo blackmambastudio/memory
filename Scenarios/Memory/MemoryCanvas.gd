@@ -9,3 +9,8 @@ func _ready():
 
 func selected_item(item):
 	emit_signal("item_selected", item)
+
+func createMemory(memory_name):
+	for element in $Elements.get_children():
+		element.create(memory_name)
+	
