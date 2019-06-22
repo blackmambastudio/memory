@@ -23,7 +23,13 @@ func _ready():
 	$Memory/Memory1.connect("item_selected", $DialogueManager, "_on_item_selected")
 	$Memory/Memory2.connect("item_selected", $DialogueManager, "_on_item_selected")
 	
+	# setup signal for intro
+	$IntroScene/Start.connect("button_down", self, "start_game")
 	# loading the first act
+	#
+
+func start_game():
+	$IntroScene.hide()
 	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func _process(delta):

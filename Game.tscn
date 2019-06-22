@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Acts/ActManager.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenarios/Memory/Memory.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Dialogues/DialogueManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IntroScene.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "FadeIn"
@@ -58,4 +59,6 @@ mouse_filter = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeIn = SubResource( 1 )
 anims/FadeOut = SubResource( 2 )
+
+[node name="IntroScene" parent="." instance=ExtResource( 5 )]
 
