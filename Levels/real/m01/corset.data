@@ -1,0 +1,5 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@382]
+@DialogNode@336|dialog|Cecilia|I used to work as a prostitute and I hated it.|Solía trabajar como prostituta y lo odiaba.|3||[]
+@DialogNode@365|dialog|Cecilia|I had no choice. I've never been good at anything else.|No tenía otra opción. Nunca fui buena en nada más.|4||[]
+FilterNode|filter|1-corset-deep|default||[@DialogNode@336]
+@FilterNode@382|filter|1-corset-deep|equals|1|[@DialogNode@365]

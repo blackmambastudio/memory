@@ -1,0 +1,2 @@
+res://Levels/real/m01/cartel.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@733","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@750","to_port":0},{"from":"@FilterNode@750","from_port":0,"to":"@DialogNode@779","to_port":0}]

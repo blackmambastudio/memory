@@ -105,6 +105,7 @@ margin_bottom = 355.698
 texture_normal = ExtResource( 6 )
 
 [node name="Corset" type="TextureButton" parent="Elements/Costume"]
+visible = false
 margin_left = 17.3493
 margin_top = 11.6135
 margin_right = 153.349
@@ -128,6 +129,7 @@ margin_bottom = 142.693
 texture_normal = ExtResource( 8 )
 
 [node name="Fufa_wig" type="TextureButton" parent="Elements/Nariz"]
+visible = false
 margin_left = 11.2782
 margin_top = 7.96106
 margin_right = 105.278
@@ -149,6 +151,7 @@ margin_bottom = 60.0
 texture_normal = ExtResource( 10 )
 
 [node name="Sola" type="TextureButton" parent="Elements/Hijos"]
+visible = false
 margin_left = 1.05133
 margin_top = 0.163083
 margin_right = 88.0514

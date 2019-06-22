@@ -1,0 +1,7 @@
+DialogNode|dialog|Cecilia|||0.1||[ActionNode]
+ActionNode|action|{	"action": "Memory/create",	"id": 1,	"memory": "Corset"}|[@ActionNode@234]
+@ActionNode@234|action|{	"action": "Memory/create",	"id": 1,	"memory": "Fufa_wig"}|[@ActionNode@242]
+@ActionNode@242|action|{	"action": "Memory/create",	"id": 1,	"memory": "Sola"}|[@ActionNode@250]
+@ActionNode@250|action|{	"action": "Memory/create",	"id": 1,	"memory": "Cartel"}|[@ActionNode@258]
+@ActionNode@258|action|{	"action": "Memory/destroy",	"id": 1,	"memory": "Exesposo"}|[EmbeddedDialogue]
+EmbeddedDialogue|embedded|res://Levels/real/m01.data|[]

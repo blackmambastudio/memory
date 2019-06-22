@@ -1,0 +1,2 @@
+res://Levels/real/m01/corset.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@336","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@382","to_port":0},{"from":"@FilterNode@382","from_port":0,"to":"@DialogNode@365","to_port":0}]

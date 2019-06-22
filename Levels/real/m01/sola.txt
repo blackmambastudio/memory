@@ -1,0 +1,2 @@
+res://Levels/real/m01/sola.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@589","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@618","to_port":0},{"from":"@FilterNode@589","from_port":0,"to":"@DialogNode@647","to_port":0}]

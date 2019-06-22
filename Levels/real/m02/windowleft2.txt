@@ -1,0 +1,2 @@
+res://Levels/real/m02/windowleft2.scn
+[]

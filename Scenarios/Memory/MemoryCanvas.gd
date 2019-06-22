@@ -12,4 +12,7 @@ func selected_item(item):
 func createMemory(memory_name):
 	for element in $Elements.get_children():
 		element.create_memory(memory_name)
-	
+
+func destroyMemory(memory_name):
+	for element in $Elements.get_children():
+		element.destroy_memory(memory_name)

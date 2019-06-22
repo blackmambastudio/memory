@@ -19,6 +19,20 @@ var options = [
 	"poster",
 	"roomkey",
 	"tv",
+	"papelito",
+	"corset",
+	"fufa_wig",
+	"sola",
+	"cartel",
+	"windowleft2",
+	"whiskey",
+	"tickets",
+	"guaricha",
+	"windowright2",
+	"dog",
+	"homesign",
+	"tv2",
+	"flowers",
 	"other"
 ]
 
