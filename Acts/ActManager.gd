@@ -30,10 +30,10 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"inv_control", "value": false})
 	
 	ActionRouter.request({"action":"Board/register", "variable":"view_monitor_status", "value": true})
-	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})	
+	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})
 	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
 	
-	self.load_act(all_acts[2])
+	self.load_act(all_acts[0])
 
 func load_act(act_name):
 	if current_act:
