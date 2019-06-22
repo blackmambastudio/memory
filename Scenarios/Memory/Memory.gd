@@ -29,6 +29,7 @@ func handle(request):
 				2:
 					$Memory1.hide()
 					$Memory2.show()
+					$Memory2.mouse_filter = Control.MOUSE_FILTER_STOP
 			current_memory = request.value
 		"Memory/show":
 			open = request.value
@@ -66,3 +67,10 @@ func handle(request):
 					$Memory1.disableAll()
 				2:
 					$Memory2.disableAll()
+		"Memory/clip_left":
+			$Memory2.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			$Memory2.clip_left()
+			
+		"Memory/clip_right":
+			$Memory2.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			$Memory2.clip_right()
