@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_left.png" type="Texture" id=2]
+[ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 89.6624, 308.053 )
+
+[node name="Front" instance=ExtResource( 1 )]
+texture = ExtResource( 2 )
+
+[node name="to_window" parent="ChangeZones" index="0" instance=ExtResource( 3 )]
+to_view = "KitchenWindow"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChangeZones/to_window" index="0"]
+polygon = PoolVector2Array( 353.375, 120.756, 589.386, 155.105, 591.602, 433.222, 363.347, 462.031 )
+
+[node name="to_front" parent="ChangeZones" index="1" instance=ExtResource( 3 )]
+position = Vector2( -9.97229, 189.474 )
+to_view = "KitchenFront"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
+position = Vector2( 1204.43, 169.529 )
+shape = SubResource( 1 )
+

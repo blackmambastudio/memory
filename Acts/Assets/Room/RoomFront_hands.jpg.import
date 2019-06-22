@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoomFront_hands.png-555cc5a387cefcd97a26331a906015e3.stex"
+path="res://.import/RoomFront_hands.jpg-14851690e6f2b81fe0ece9b0a8799f6a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Acts/Assets/Room/RoomFront_hands.png"
-dest_files=[ "res://.import/RoomFront_hands.png-555cc5a387cefcd97a26331a906015e3.stex" ]
+source_file="res://Acts/Assets/Room/RoomFront_hands.jpg"
+dest_files=[ "res://.import/RoomFront_hands.jpg-14851690e6f2b81fe0ece9b0a8799f6a.stex" ]
 
 [params]
 

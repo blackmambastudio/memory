@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoomRightFront.png-bca6128b3a05d55863d48f13d58c39fd.stex"
+path="res://.import/Hover_control.png-44e541528e7ff02a3cfc23f873a54f23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Acts/Assets/Room/RoomRightFront.png"
-dest_files=[ "res://.import/RoomRightFront.png-bca6128b3a05d55863d48f13d58c39fd.stex" ]
+source_file="res://Acts/Assets/Hovers/Hover_control.png"
+dest_files=[ "res://.import/Hover_control.png-44e541528e7ff02a3cfc23f873a54f23.stex" ]
 
 [params]
 

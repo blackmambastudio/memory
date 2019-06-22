@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoomRightFront_open_control.png-3695600927818de77da935defd24d440.stex"
+path="res://.import/RoomRight..png-3013af97f8f924f1aae648ab11ced95d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Acts/Assets/Room/RoomRightFront_open_control.png"
-dest_files=[ "res://.import/RoomRightFront_open_control.png-3695600927818de77da935defd24d440.stex" ]
+source_file="res://Acts/Assets/Room/RoomRight..png"
+dest_files=[ "res://.import/RoomRight..png-3013af97f8f924f1aae648ab11ced95d.stex" ]
 
 [params]
 

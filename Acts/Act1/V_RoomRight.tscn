@@ -1,108 +1,37 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Acts/Assets/Room/RoomRightFront.png" type="Texture" id=2]
-[ext_resource path="res://Acts/Act1/V_RoomRight.gd" type="Script" id=3]
-[ext_resource path="res://Acts/Assets/Room/right_opened.png" type="Texture" id=4]
+[ext_resource path="res://Acts/Act1/V_RoomRight.gd" type="Script" id=2]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Window.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Acts/Assets/Room/RoomRight..png" type="Texture" id=4]
 [ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/WindowControl.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.391, 261.516 )
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 15.9111
-height = 23.1193
+[node name="RoomRight" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 29.0374, 8.60364 )
+[node name="Window" parent="." index="0" instance=ExtResource( 3 )]
+position = Vector2( 533.2, 147.076 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 639.52, 364.346 )
-
-[node name="RoomRight" index="0" instance=ExtResource( 1 )]
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
-
-[node name="Backgrounds" parent="." index="0"]
-editor/display_folded = true
-
-[node name="Box_opened" type="Sprite" parent="Backgrounds" index="0"]
-visible = false
+[node name="RoomRight" type="Sprite" parent="Backgrounds" index="0"]
+position = Vector2( 640, 360 )
 texture = ExtResource( 4 )
-offset = Vector2( 640, 360 )
 
-[node name="to_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
+[node name="to_right_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
 position = Vector2( 39.8892, 365.651 )
-to_view = "RoomFront"
+to_view = "RoomRightFront"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_right_front" index="0"]
 position = Vector2( 67.5901, 29.9169 )
 shape = SubResource( 1 )
 
-[node name="pills" parent="Clickeables" index="0" instance=ExtResource( 6 )]
-position = Vector2( 557.252, 451.616 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/pills" index="1"]
-position = Vector2( -2.50946, 1.79242 )
-shape = SubResource( 2 )
-
-[node name="sopa" parent="Clickeables" index="1" instance=ExtResource( 6 )]
-position = Vector2( 496.601, 464.425 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/sopa" index="1"]
-position = Vector2( 1.9295, 3.92053 )
-shape = SubResource( 3 )
-
-[node name="ExitSoup" parent="Clickeables" index="2" instance=ExtResource( 6 )]
-editor/display_folded = true
+[node name="WindowControl" parent="." index="4" instance=ExtResource( 6 )]
 visible = false
-position = Vector2( 640, 360 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/ExitSoup" index="1"]
-shape = SubResource( 4 )
-
-[node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 6 )]
-position = Vector2( 471.767, 582.314 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickeables/Cajon" index="1"]
-position = Vector2( -3.1579, 9.50031 )
-scale = Vector2( 1, 1.01099 )
-polygon = PoolVector2Array( -91.5157, -122.194, 131.235, -94.876, 129.03, 123.828, -90.0623, 125.244 )
-
-[node name="SopaLetras" parent="." index="3" instance=ExtResource( 7 )]
-visible = false
-position = Vector2( 468.874, 73.4803 )
-words = [ {
-"col": 2,
-"direction": 2,
-"row": 2,
-"word": "remember"
-}, {
-"col": 0,
-"direction": 4,
-"row": 0,
-"word": "salvation"
-}, {
-"col": 2,
-"direction": 4,
-"row": 5,
-"word": "future"
-}, {
-"col": 2,
-"direction": 3,
-"row": 5,
-"word": "flower"
-}, {
-"col": 9,
-"direction": 6,
-"row": 4,
-"word": "past"
-}, {
-"col": 9,
-"direction": 4,
-"row": 4,
-"word": "peace"
-} ]
+margin_left = 352.771
+margin_top = 502.206
+margin_right = 351.771
+margin_bottom = 501.206
 

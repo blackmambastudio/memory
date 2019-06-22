@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia0.png" type="Texture" id=2]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia1.png" type="Texture" id=3]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia2.png" type="Texture" id=4]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia3.png" type="Texture" id=5]
+[ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 94.0946, 250.435 )
+
+[node name="Front" instance=ExtResource( 1 )]
+texture = ExtResource( 2 )
+
+[node name="Kitchen_lucia1" type="Sprite" parent="Backgrounds" index="0"]
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 3 )
+
+[node name="Kitchen_lucia2" type="Sprite" parent="Backgrounds" index="1"]
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 4 )
+
+[node name="Kitchen_lucia3" type="Sprite" parent="Backgrounds" index="2"]
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 5 )
+
+[node name="to_left" parent="ChangeZones" index="0" instance=ExtResource( 6 )]
+position = Vector2( 95.291, 342.383 )
+to_view = "KitchenLeft"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_left" index="0"]
+shape = SubResource( 1 )
+
+[node name="to_right" parent="ChangeZones" index="1" instance=ExtResource( 6 )]
+position = Vector2( 1185.6, 352.355 )
+to_view = "KitchenRight"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_right" index="0"]
+shape = SubResource( 1 )
+

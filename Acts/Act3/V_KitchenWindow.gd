@@ -1,4 +1,4 @@
-extends "res://Acts/ViewScene.gd"
+extends Sprite
 
 func _ready():
 	if $WindowControl:
@@ -7,3 +7,4 @@ func _ready():
 		$WindowControl.connect("main_to_left", $Window, "main_to_left")
 		$WindowControl.connect("main_to_right", $Window, "main_to_right")
 		$WindowControl.connect("toggle_item", $Window, "toggle_item")
+

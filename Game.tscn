@@ -46,6 +46,7 @@ skip_on_click = true
 visible = false
 
 [node name="Front" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="Memory" parent="." instance=ExtResource( 4 )]
 

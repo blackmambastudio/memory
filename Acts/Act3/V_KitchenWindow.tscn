@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Acts/Act3/V_KitchenWindow.gd" type="Script" id=2]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Window.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/ComedorWindow.png" type="Texture" id=4]
+[ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/WindowControl.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 107.391, 261.516 )
+
+[node name="KitchenWindow" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Window" parent="." index="0" instance=ExtResource( 3 )]
+position = Vector2( 508.645, 171.631 )
+
+[node name="ComedorWindow" type="Sprite" parent="Backgrounds" index="0"]
+position = Vector2( 640, 360 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="to_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
+position = Vector2( 39.8892, 365.651 )
+to_view = "KitchenFront"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
+position = Vector2( 67.5901, 29.9169 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ChangeZones/to_front" index="1"]
+position = Vector2( 1130.81, 16.4118 )
+shape = SubResource( 1 )
+
+[node name="WindowControl" parent="." index="4" instance=ExtResource( 6 )]
+margin_left = 891.749
+margin_top = 485.018
+margin_right = 890.749
+margin_bottom = 484.018
+
