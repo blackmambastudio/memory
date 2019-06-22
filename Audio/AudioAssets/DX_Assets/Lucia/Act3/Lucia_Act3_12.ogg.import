@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lucia_Act3_12.ogg-6627a9cf40cfb97429579b454852b73c.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Lucia/Act3/Lucia_Act3_12.ogg"
+dest_files=[ "res://.import/Lucia_Act3_12.ogg-6627a9cf40cfb97429579b454852b73c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

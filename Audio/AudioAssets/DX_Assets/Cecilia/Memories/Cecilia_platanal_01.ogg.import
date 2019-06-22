@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_platanal_01.ogg-b5add258d31bc1d2e384b558347c8283.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_platanal_01.ogg"
+dest_files=[ "res://.import/Cecilia_platanal_01.ogg-b5add258d31bc1d2e384b558347c8283.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

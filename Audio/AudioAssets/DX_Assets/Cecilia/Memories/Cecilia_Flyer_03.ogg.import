@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_Flyer_03.ogg-1b12dabd769ce9476bafa5151613a6f4.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_Flyer_03.ogg"
+dest_files=[ "res://.import/Cecilia_Flyer_03.ogg-1b12dabd769ce9476bafa5151613a6f4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

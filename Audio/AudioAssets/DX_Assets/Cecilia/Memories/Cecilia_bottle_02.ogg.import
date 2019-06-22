@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_bottle_02.ogg-73c0338990da28abb1d48fd439dad489.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_bottle_02.ogg"
+dest_files=[ "res://.import/Cecilia_bottle_02.ogg-73c0338990da28abb1d48fd439dad489.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

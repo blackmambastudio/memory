@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_Fsuit_02.ogg-7079dc743cdf0b74ec9905bd0f245501.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_Fsuit_02.ogg"
+dest_files=[ "res://.import/Cecilia_Fsuit_02.ogg-7079dc743cdf0b74ec9905bd0f245501.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

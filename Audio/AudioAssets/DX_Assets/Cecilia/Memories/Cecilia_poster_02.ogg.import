@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_poster_02.ogg-aad0a28864d88f1909edc212684db667.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_poster_02.ogg"
+dest_files=[ "res://.import/Cecilia_poster_02.ogg-aad0a28864d88f1909edc212684db667.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

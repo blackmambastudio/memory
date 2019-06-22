@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lucia_Gen_01_v2.ogg-ff2ab61e73826b5fe6860d5a3d80e4a8.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Lucia/Gen/Lucia_Gen_01_v2.ogg"
+dest_files=[ "res://.import/Lucia_Gen_01_v2.ogg-ff2ab61e73826b5fe6860d5a3d80e4a8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

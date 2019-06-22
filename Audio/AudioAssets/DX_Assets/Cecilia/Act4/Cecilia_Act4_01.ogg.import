@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_Act4_01.ogg-cf3a37336460ecc1abdbc42bc6e8b121.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Act4/Cecilia_Act4_01.ogg"
+dest_files=[ "res://.import/Cecilia_Act4_01.ogg-cf3a37336460ecc1abdbc42bc6e8b121.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

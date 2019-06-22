@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Claire_Act4_09_v2.ogg-dc4d49d2cbeed3e312ce8eb8c03c383a.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Claire/Act4/Claire_Act4_09_v2.ogg"
+dest_files=[ "res://.import/Claire_Act4_09_v2.ogg-dc4d49d2cbeed3e312ce8eb8c03c383a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

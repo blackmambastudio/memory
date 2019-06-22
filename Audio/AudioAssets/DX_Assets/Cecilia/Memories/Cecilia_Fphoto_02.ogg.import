@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_Fphoto_02.ogg-321a153e42f4d753db64627b48314631.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_Fphoto_02.ogg"
+dest_files=[ "res://.import/Cecilia_Fphoto_02.ogg-321a153e42f4d753db64627b48314631.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

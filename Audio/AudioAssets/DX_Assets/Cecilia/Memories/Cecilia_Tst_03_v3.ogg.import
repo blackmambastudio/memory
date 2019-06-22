@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_Tst_03_v3.ogg-d50baac85e5db8b7c720f51f26cbe067.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_Tst_03_v3.ogg"
+dest_files=[ "res://.import/Cecilia_Tst_03_v3.ogg-d50baac85e5db8b7c720f51f26cbe067.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

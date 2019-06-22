@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_roach_02.ogg-f0b5c8405099f7bf1bf57eb5eca40317.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_roach_02.ogg"
+dest_files=[ "res://.import/Cecilia_roach_02.ogg-f0b5c8405099f7bf1bf57eb5eca40317.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

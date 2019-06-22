@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cecilia_flowers_02.ogg-44239c99e86284e0c9ca95e3e9b4456b.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Cecilia/Memories/Cecilia_flowers_02.ogg"
+dest_files=[ "res://.import/Cecilia_flowers_02.ogg-44239c99e86284e0c9ca95e3e9b4456b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

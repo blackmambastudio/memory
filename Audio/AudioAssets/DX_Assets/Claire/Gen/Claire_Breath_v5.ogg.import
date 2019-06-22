@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Claire_Breath_v5.ogg-97069bfa574044f9a476ef53b8183e12.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Claire/Gen/Claire_Breath_v5.ogg"
+dest_files=[ "res://.import/Claire_Breath_v5.ogg-97069bfa574044f9a476ef53b8183e12.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Monteasalvo_05.ogg-6ec99c6fd626c1e57062bf39c1d23cdc.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Monteasalvo/Monteasalvo_05.ogg"
+dest_files=[ "res://.import/Monteasalvo_05.ogg-6ec99c6fd626c1e57062bf39c1d23cdc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

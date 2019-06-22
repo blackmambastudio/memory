@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Claire_Act2_22.ogg-73cef7537b1d608595fc91269869e8be.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Claire/Act2/Claire_Act2_22.ogg"
+dest_files=[ "res://.import/Claire_Act2_22.ogg-73cef7537b1d608595fc91269869e8be.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
