@@ -1,6 +1,7 @@
 extends Control
 
 var current_view
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 func _ready():
 	for child in $Views.get_children():

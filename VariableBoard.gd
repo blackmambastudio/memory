@@ -27,6 +27,13 @@ func get_value(variable):
 		return null
 	return board[variable]
 
+func suscribe(variable, object, method):
+	self.connect("value_set_"+variable, object, method)
+	return board[variable]
+
+func unsuscribe(variable, object, method):
+	self.disconnect("value_set_"+variable, object, method)
+
 func handle(request):
 	match request.action:
 		"Board/register":
@@ -34,9 +41,9 @@ func handle(request):
 		"Board/set_value":
 			self.set_value(request.variable, request.value)
 		"Board/suscribe":
-			self.connect("value_set_"+request.variable, request.object, request.method)
+			self.suscribe(request.variable, request.object, request.method)
 		"Board/unsuscribe":
-			self.disconnect("value_set_"+request.variable, request.object, request.method)
+			self.unsuscribe(request.variable, request.object, request.method)
 		"Board/further":
 			self.add_value(request.variable, 1)
 		_:

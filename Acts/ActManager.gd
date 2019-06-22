@@ -5,11 +5,35 @@ const ActActions = preload("act_actions.gd")
 onready var actionHandler = ActActions.new()
 
 var current_act
+var all_acts = [
+"res://Acts/Act1/Act1_Room.tscn",
+
+"res://Acts/Act2/Act2_Room1.tscn",
+"res://Acts/Act2/Act2_Test.tscn",
+"res://Acts/Act2/Act2_Room2.tscn",
+
+"res://Acts/Act3/Act3_Room1.tscn",
+"res://Acts/Act3/Act3_Test.tscn",
+"res://Acts/Act3/Act3_Kitchen.tscn",
+
+"res://Acts/Act4/Act4_Room.tscn",
+"res://Acts/Act4/Act4_Test.tscn",
+"res://Acts/Act4/Act4_Office.tscn",
+"res://Acts/Act4/Act4_Hall.tscn"
+
+]
 func _ready():
 	self.actionHandler.set_act_manager(self)
 	ActionRouter.register_actions(self.actionHandler)
 	
-	self.load_act("res://Acts/Act2/Act2_Room1.tscn")
+	ActionRouter.request({"action":"Board/register", "variable":"inv_key", "value": false})
+	ActionRouter.request({"action":"Board/register", "variable":"inv_control", "value": false})
+	
+	ActionRouter.request({"action":"Board/register", "variable":"view_monitor_status", "value": true})
+	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})	
+	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
+	
+	self.load_act(all_acts[0])
 
 func load_act(act_name):
 	if current_act:

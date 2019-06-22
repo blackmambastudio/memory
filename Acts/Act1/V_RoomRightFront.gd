@@ -1,5 +1,5 @@
 extends "res://Acts/ViewScene.gd"
-
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 
 func _on_clicked(clickeable_name):
@@ -12,6 +12,7 @@ func _on_clicked(clickeable_name):
 	elif clickeable_name == 'Cajon':
 		self.open_box()
 	elif clickeable_name == 'Control':
+		VariableBoard.set_value("inv_control", true)
 		self.close_box()
 
 
@@ -21,10 +22,12 @@ func set_soup_visible(visible):
 	$ChangeZones.visible = not visible
 
 func open_box():
-	# check if i can open the box
-	self.toggle_background("Box_opened")
-	$Clickeables/Cajon.visible = false
-	$Clickeables/Control.visible = true
+	if not VariableBoard.get_value("inv_key"):
+		return
+	else:
+		self.toggle_background("Box_opened")
+		$Clickeables/Cajon.visible = false
+		$Clickeables/Control.visible = true
 
 func close_box():
 	self.toggle_background("Box_opened")
