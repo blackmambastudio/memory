@@ -202,7 +202,7 @@ tracks/14/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="FrontRun" index="0" instance=ExtResource( 1 )]
+[node name="FrontRun" instance=ExtResource( 1 )]
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 

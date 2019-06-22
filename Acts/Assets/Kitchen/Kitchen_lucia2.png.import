@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/front.png-3c2dd312f9ff7299fd7255771a9e2a17.stex"
+path="res://.import/Kitchen_lucia2.png-9065a41a6eddc6bcc48e5a2cfe474784.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Acts/Assets/Room/front.png"
-dest_files=[ "res://.import/front.png-3c2dd312f9ff7299fd7255771a9e2a17.stex" ]
+source_file="res://Acts/Assets/Kitchen/Kitchen_lucia2.png"
+dest_files=[ "res://.import/Kitchen_lucia2.png-9065a41a6eddc6bcc48e5a2cfe474784.stex" ]
 
 [params]
 
