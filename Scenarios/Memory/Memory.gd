@@ -46,3 +46,15 @@ func handle(request):
 					$Memory1.destroyMemory(request.memory)
 				2:
 					$Memory2.destroyMemory(request.memory)
+		"Memory/enable_only":
+			match int(request.id):
+				1:
+					$Memory1.enableOnly(request.memories)
+				2:
+					$Memory2.enableOnly(request.memories)
+		"Memory/disable_all":
+			match int(request.id):
+				1:
+					$Memory1.disableAll()
+				2:
+					$Memory2.disableAll()

@@ -23,11 +23,13 @@ func _ready():
 	ActionRouter.register_actions(self.actionHandler)
 	$Timer.connect("timeout", self, "timeout")
 
-	self.add_dialogue_graph("res://Levels/unreal/m02.data")
+	self.add_dialogue_graph("res://Levels/act1/dlg01.data")
 	
 	VariableBoard.register("health", 5.5)
 	VariableBoard.register("nariz", "modified")
 	VariableBoard.register("new_memories", 52)
+	VariableBoard.register("loop_memory", true)
+	VariableBoard.register("last_option", "")
 
 	# Variables related with the progress of each memory
 	VariableBoard.register("id-deep", 0)
@@ -126,6 +128,7 @@ func set_text_object(text_object):
 
 func _on_item_selected(item):
 	if not $Timer.is_stopped(): return
+	VariableBoard.set_value("last_option", item)
 	self.dialogue_instance._on_item_selected(item)
 
 func solve_next():

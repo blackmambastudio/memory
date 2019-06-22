@@ -16,3 +16,11 @@ func createMemory(memory_name):
 func destroyMemory(memory_name):
 	for element in $Elements.get_children():
 		element.destroy_memory(memory_name)
+
+func enableOnly(memories):
+	for element in $Elements.get_children():
+		element.enable_if_is(memories)
+
+func disableAll():
+	for element in $Elements.get_children():
+		element.disable()

@@ -15,7 +15,6 @@ var time = randi()%1000
 
 
 func _ready():
-
 	if not real_item.empty():
 		Real = get_node(real_item)
 		Real.connect("button_down",self,"_on_item_select", [real_item])
@@ -56,6 +55,18 @@ func create_memory(memory):
 func destroy_memory(memory):
 	if memory != real_item: return
 	Real.hide()
+
+func enable_if_is(memories):
+	for memory in memories:
+		if memory == real_item:
+			Real.show()
+		elif memory == fictional_item:
+			Fictional.show()
+
+func disable():
+	Real.hide()
+	if not fictional_item.empty():
+		Fictional.hide()
 
 func reforce_fictional():
 	if fictional_item.empty(): return

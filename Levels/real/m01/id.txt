@@ -1,2 +1,2 @@
 res://Levels/real/m01/id.scn
-[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@1184","to_port":0}]
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@1184","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@689","to_port":0},{"from":"@FilterNode@689","from_port":0,"to":"@DialogNode@718","to_port":0}]

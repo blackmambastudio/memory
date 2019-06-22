@@ -86,6 +86,7 @@ margin_left = 113.986
 margin_top = 205.66
 margin_right = 270.986
 margin_bottom = 313.66
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 
 [node name="Costume" parent="Elements" instance=ExtResource( 4 )]
@@ -102,6 +103,7 @@ margin_left = 1.39667
 margin_top = 0.698334
 margin_right = 185.397
 margin_bottom = 355.698
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
 
 [node name="Corset" type="TextureButton" parent="Elements/Costume"]
@@ -110,6 +112,7 @@ margin_left = 17.3493
 margin_top = 11.6135
 margin_right = 153.349
 margin_bottom = 345.614
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 
 [node name="Nariz" parent="Elements" instance=ExtResource( 4 )]
@@ -126,6 +129,7 @@ margin_left = 2.65369
 margin_top = -5.30737
 margin_right = 110.654
 margin_bottom = 142.693
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 
 [node name="Fufa_wig" type="TextureButton" parent="Elements/Nariz"]
@@ -134,6 +138,7 @@ margin_left = 11.2782
 margin_top = 7.96106
 margin_right = 105.278
 margin_bottom = 142.961
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 9 )
 
 [node name="Hijos" parent="Elements" instance=ExtResource( 4 )]
@@ -148,6 +153,7 @@ fictional_item = "Sola"
 [node name="Hijos" type="TextureButton" parent="Elements/Hijos"]
 margin_right = 87.0
 margin_bottom = 60.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 10 )
 
 [node name="Sola" type="TextureButton" parent="Elements/Hijos"]
@@ -156,6 +162,7 @@ margin_left = 1.05133
 margin_top = 0.163083
 margin_right = 88.0514
 margin_bottom = 60.1631
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 11 )
 
 [node name="Exesposo" parent="Elements" instance=ExtResource( 4 )]
@@ -169,6 +176,7 @@ real_item = "Exesposo"
 [node name="Exesposo" type="TextureButton" parent="Elements/Exesposo"]
 margin_right = 71.0
 margin_bottom = 80.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 
 [node name="Cofre" parent="Elements" instance=ExtResource( 4 )]
@@ -183,6 +191,7 @@ fictional_item = "Cartel"
 [node name="Cofre" type="TextureButton" parent="Elements/Cofre"]
 margin_right = 158.0
 margin_bottom = 144.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 13 )
 
 [node name="Cartel" type="TextureButton" parent="Elements/Cofre"]
@@ -191,5 +200,6 @@ margin_left = -260.223
 margin_top = -90.6166
 margin_right = -174.223
 margin_bottom = -24.6166
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 14 )
 

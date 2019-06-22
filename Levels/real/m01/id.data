@@ -1,3 +1,5 @@
-DialogNode|dialog|Cecilia|||0.1||[FilterNode]
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@689]
 FilterNode|filter|id-deep|equals|1|[@DialogNode@1184]
 @DialogNode@1184|dialog|Cecilia|I'm 42 years old. I was born in Platanal.|Tengo 42 años. Nací en Platanal.|3||[]
+@FilterNode@689|filter|id-deep|default||[@DialogNode@718]
+@DialogNode@718|dialog|Cecilia|...my name is Cecilia Melano.|...mi nombre es Cecilia Melano.|3||[]
