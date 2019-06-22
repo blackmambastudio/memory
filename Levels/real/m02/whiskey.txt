@@ -1,2 +1,2 @@
 res://Levels/real/m02/whiskey.scn
-[]
+[{"from":"FilterNode","from_port":0,"to":"@DialogNode@544","to_port":0},{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@561","to_port":0},{"from":"@FilterNode@561","from_port":0,"to":"@DialogNode@590","to_port":0}]

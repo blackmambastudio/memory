@@ -1,2 +1,2 @@
 res://Levels/real/m02/tv2.scn
-[]
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@1442","to_port":0}]

@@ -1,2 +1,2 @@
 res://Levels/real/m02/windowleft2.scn
-[]
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@797","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@826","to_port":0},{"from":"@FilterNode@797","from_port":0,"to":"@DialogNode@855","to_port":0}]

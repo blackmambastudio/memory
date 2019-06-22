@@ -1,0 +1,3 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode]
+FilterNode|filter|1-guaricha-deep|default||[@DialogNode@1090]
+@DialogNode@1090|dialog|Cecilia|Cochera's. That was the name of the brothel. A fitting name for his owner.|La chochera. Ese era el nombre del burdel. Un nombre digno de su propietario.|4||[]

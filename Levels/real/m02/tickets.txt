@@ -1,2 +1,2 @@
 res://Levels/real/m02/tickets.scn
-[]
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@DialogNode@677","to_port":0},{"from":"@FilterNode@694","from_port":0,"to":"@DialogNode@723","to_port":0},{"from":"DialogNode","from_port":0,"to":"@FilterNode@694","to_port":0}]

@@ -1,0 +1,5 @@
+DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@797]
+@FilterNode@797|filter|1-windowleft2-deep|equals|1|[@DialogNode@855]
+FilterNode|filter|1-windowleft2-deep|default||[@DialogNode@826]
+@DialogNode@826|dialog|Cecilia|From my room in the brothel I just could see the old and poor buildings of the city.|Desde mi cuarto en el burdel sólo veía los edificios viejos y pobres de la ciudad.|5||[]
+@DialogNode@855|dialog|Cecilia|Everything was dark and grim. What a shitty life I had.|Todo era tan oscuro y lúgubre. Qué vida de mierda llevaba.|3||[]
