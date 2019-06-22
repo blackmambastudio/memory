@@ -1,3 +1,3 @@
-DialogNode|dialog|Lucia|I don't know. I just woke here. They told me I had an accident.|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|6||0|[@DialogNode@248]
-@DialogNode@248|dialog|Cecilia|That's weird, the same happened to me. Do you remember anything else?|Qué raro, me pasó lo mismo. ¿Recuerdas algo más?|6||0|[@DialogNode@270]
-@DialogNode@270|dialog|Lucia|Nothing. Is like looking at a blank page.|Nada. Es como mirar una hoja en blanco.|4||0|[]
+DialogNode|dialog|Lucia|I don't know. I just woke here. They told me I had an accident.|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|6.3|DX_Assets/Lucia/Act3/Lucia_Act3_05.ogg|-6.5|[@DialogNode@248]
+@DialogNode@248|dialog|Cecilia|That's weird, the same happened to me. Do you remember anything else?|Qué raro, me pasó lo mismo. ¿Recuerdas algo más?|5.4|DX_Assets/Cecilia/Act3/Cecilia_Act3_01.ogg|0|[@DialogNode@270]
+@DialogNode@270|dialog|Lucia|Nothing. Is like looking at a blank page.|Nada. Es como mirar una hoja en blanco.|3.6|DX_Assets/Lucia/Act3/Lucia_Act3_06.ogg|-6.5|[]

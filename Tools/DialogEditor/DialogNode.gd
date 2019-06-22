@@ -4,7 +4,7 @@ extends GraphNode
 export (String) var en_text = 'put your dialogue here'
 export (String) var es_text = 'tu dialogo aquí'
 export (String) var audio_resource = ''
-export (int) var dx_volume = 0
+export (float) var dx_volume = 0
 export (int) var actor_selected = 0
 export (float) var timeout = 2.0
 

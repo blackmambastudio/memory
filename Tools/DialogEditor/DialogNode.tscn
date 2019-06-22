@@ -191,11 +191,11 @@ focus_previous = NodePath("../actor")
 custom_styles/normal = ExtResource( 2 )
 wrap_enabled = true
 
-[node name="dx_volume" type="HSlider" parent="."]
+[node name="dx_volume" type="SpinBox" parent="."]
 margin_left = 9.0
 margin_top = 266.0
 margin_right = 233.0
-margin_bottom = 286.0
+margin_bottom = 290.0
 rect_min_size = Vector2( 0, 20 )
 focus_neighbour_left = NodePath("../actor")
 focus_neighbour_top = NodePath("../actor")
@@ -205,5 +205,5 @@ focus_next = NodePath("../dialog_en")
 focus_previous = NodePath("../actor")
 min_value = -80.0
 max_value = 6.0
-ticks_on_borders = false
+step = 0.5
 
