@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Nick_Gen_15.ogg-7a55f3b946a71a2f1192b2f424f8a6fa.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/DX_Assets/Dr.Nick/Gen/Nick_Gen_15.ogg"
+dest_files=[ "res://.import/Nick_Gen_15.ogg-7a55f3b946a71a2f1192b2f424f8a6fa.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
