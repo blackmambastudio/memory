@@ -42,13 +42,30 @@ func _ready():
 	VariableBoard.register("1-phone-deep", 0)
 	VariableBoard.register("1-newspaper-deep", 0)
 	VariableBoard.register("1-poster-deep", 0)
-	
 	VariableBoard.register("1-windowright-deep", 0)
 	VariableBoard.register("1-doortag-deep", 0)
 	VariableBoard.register("1-cockroach-deep", 0)
 	VariableBoard.register("1-roomkey-deep", 0)
 	VariableBoard.register("1-tv-deep", 0)
 	VariableBoard.register("1-luggage-deep", 0)
+	VariableBoard.register("1-papelito-deep", 0)
+
+
+	# ---- M01 - Fictional ----
+	VariableBoard.register("1-corset-deep", 0)
+	VariableBoard.register("1-fufa_wig-deep", 0)
+	VariableBoard.register("1-sola-deep", 0)
+	VariableBoard.register("1-cartel-deep", 0)
+	# ---- M02 - Fictional ----
+	VariableBoard.register("1-windowleft2-deep", 0)
+	VariableBoard.register("1-whiskey-deep", 0)
+	VariableBoard.register("1-tickets-deep", 0)
+	VariableBoard.register("1-guaricha-deep", 0)
+	VariableBoard.register("1-windowright2-deep", 0)
+	VariableBoard.register("1-dog-deep", 0)
+	VariableBoard.register("1-homesign-deep", 0)
+	VariableBoard.register("1-tv2-deep", 0)
+	VariableBoard.register("1-flowers-deep", 0)
 
 
 func add_dialogue_graph(path_file):
