@@ -1,16 +1,27 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/m02_BG.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/phone.png" type="Texture" id=4]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/newspaper.png" type="Texture" id=5]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/poster_1.png" type="Texture" id=6]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/door_tag.png" type="Texture" id=7]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/cockroach.png" type="Texture" id=8]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/room_key.png" type="Texture" id=9]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/tv_1.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/luggage.png" type="Texture" id=11]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/Guia-m02_2.jpg" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/m02_BG.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/m02_BG_2.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Memory/Elements/Element.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/phone.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/whiskey.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/newspaper.png" type="Texture" id=9]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/flight_ticket.png" type="Texture" id=10]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/poster_1.png" type="Texture" id=11]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/poster_2.png" type="Texture" id=12]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/door_tag.png" type="Texture" id=13]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/cockroach.png" type="Texture" id=14]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/dog.png" type="Texture" id=15]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/room_key.png" type="Texture" id=16]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/home_sign.png" type="Texture" id=17]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/tv_1.png" type="Texture" id=18]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/tv_2.png" type="Texture" id=19]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/address.png" type="Texture" id=20]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/luggage.png" type="Texture" id=21]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/flowers.png" type="Texture" id=22]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -27,27 +38,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
+[node name="Guia-m02" type="Sprite" parent="."]
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 2 )
+
 [node name="Spot" type="TextureRect" parent="."]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.843137 )
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Place" type="Sprite" parent="."]
 use_parent_material = true
-position = Vector2( 664.587, 293.972 )
-scale = Vector2( 0.826759, 0.826759 )
-texture = ExtResource( 2 )
+position = Vector2( 650, 375 )
+texture = ExtResource( 3 )
+
+[node name="PlaceFictional" type="Sprite" parent="."]
+visible = false
+use_parent_material = true
+position = Vector2( 665.512, 386.08 )
+texture = ExtResource( 4 )
 
 [node name="AnimationTest" type="AnimationPlayer" parent="."]
 autoplay = "Window"
 anims/Window = SubResource( 2 )
 
 [node name="Window" type="TextureRect" parent="."]
-margin_left = 491.095
-margin_top = 45.6089
-margin_right = 804.095
-margin_bottom = 265.609
-texture = ExtResource( 3 )
+margin_left = 493.68
+margin_top = 114.104
+margin_right = 806.68
+margin_bottom = 334.104
+texture = ExtResource( 5 )
 
 [node name="Elements" type="Control" parent="."]
 use_parent_material = true
@@ -57,81 +79,221 @@ margin_left = 98.0833
 margin_top = 42.5644
 margin_right = -108.917
 margin_bottom = -92.4355
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="WindowLeft" type="TextureButton" parent="Elements"]
+[node name="WindowLeft" parent="Elements" instance=ExtResource( 6 )]
+editor/display_folded = true
+
+[node name="WindowLeft" type="TextureButton" parent="Elements/WindowLeft"]
 margin_left = 392.0
 margin_right = 568.0
 margin_bottom = 221.0
 mouse_default_cursor_shape = 2
 
-[node name="Phone" type="TextureButton" parent="Elements"]
-margin_left = 222.3
-margin_top = 253.65
-margin_right = 338.3
-margin_bottom = 362.65
+[node name="WindowLeft2" type="TextureButton" parent="Elements/WindowLeft"]
+margin_left = 392.0
+margin_right = 568.0
+margin_bottom = 221.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 4 )
 
-[node name="Newspaper" type="TextureButton" parent="Elements"]
-margin_left = 319.2
-margin_top = 273.6
-margin_right = 506.2
-margin_bottom = 374.6
+[node name="Phone" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 137.005
+margin_top = 347.992
+margin_right = 137.005
+margin_bottom = 347.992
+real_item = "Phone"
+fictional_item = "Whiskey"
+
+[node name="Phone" type="TextureButton" parent="Elements/Phone"]
+margin_right = 116.0
+margin_bottom = 109.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 7 )
 
-[node name="Poster" type="TextureButton" parent="Elements"]
-margin_left = 229.9
-margin_top = 43.7
-margin_right = 375.9
-margin_bottom = 232.7
+[node name="Whiskey" type="TextureButton" parent="Elements/Phone"]
+visible = false
+margin_left = -4.43213
+margin_top = -44.3213
+margin_right = 46.5679
+margin_bottom = 103.679
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 8 )
 
-[node name="WindowRight" type="TextureButton" parent="Elements"]
+[node name="Newspaper" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 246.828
+margin_top = 382.158
+margin_right = 246.828
+margin_bottom = 382.158
+real_item = "Newspaper"
+fictional_item = "Tickets"
+
+[node name="Newspaper" type="TextureButton" parent="Elements/Newspaper"]
+margin_right = 187.0
+margin_bottom = 101.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 9 )
+
+[node name="Tickets" type="TextureButton" parent="Elements/Newspaper"]
+visible = false
+margin_left = 6.46179
+margin_top = 31.0165
+margin_right = 150.462
+margin_bottom = 77.0165
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 10 )
+
+[node name="Poster" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 207.93
+margin_top = 90.2248
+margin_right = 207.93
+margin_bottom = 90.2248
+real_item = "Poster"
+fictional_item = "Guaricha"
+
+[node name="Poster" type="TextureButton" parent="Elements/Poster"]
+margin_right = 146.0
+margin_bottom = 189.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 11 )
+
+[node name="Guaricha" type="TextureButton" parent="Elements/Poster"]
+visible = false
+margin_right = 146.0
+margin_bottom = 189.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 12 )
+
+[node name="WindowRight" parent="Elements" instance=ExtResource( 6 )]
+editor/display_folded = true
+
+[node name="WindowRight" type="TextureButton" parent="Elements/WindowRight"]
 margin_left = 578.0
 margin_top = 2.0
 margin_right = 708.0
 margin_bottom = 224.0
 mouse_default_cursor_shape = 2
 
-[node name="DoorTag" type="TextureButton" parent="Elements"]
-margin_left = 849.56
-margin_top = 158.648
-margin_right = 894.56
-margin_bottom = 258.648
+[node name="WindowRight2" type="TextureButton" parent="Elements/WindowRight"]
+margin_left = 578.0
+margin_top = 2.0
+margin_right = 708.0
+margin_bottom = 224.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 7 )
 
-[node name="Cockroach" type="TextureButton" parent="Elements"]
-margin_left = 751.375
-margin_top = 152.239
-margin_right = 995.375
-margin_bottom = 474.239
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 8 )
+[node name="DoorTag" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 888.331
+margin_top = 246.528
+margin_right = 888.331
+margin_bottom = 246.528
+real_item = "DoorTag"
 
-[node name="RoomKey" type="TextureButton" parent="Elements"]
-margin_left = 708.783
-margin_top = 75.8305
-margin_right = 837.783
-margin_bottom = 160.83
+[node name="DoorTag" type="TextureButton" parent="Elements/DoorTag"]
+margin_right = 45.0
+margin_bottom = 100.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 13 )
 
-[node name="Tv" type="TextureButton" parent="Elements"]
-margin_left = 579.562
-margin_top = 62.6762
-margin_right = 802.562
-margin_bottom = 299.676
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 10 )
+[node name="Cockroach" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 757.837
+margin_top = 291.813
+margin_right = 757.837
+margin_bottom = 291.813
+real_item = "Cockroach"
+fictional_item = "Dog"
 
-[node name="Luggage" type="TextureButton" parent="Elements"]
-margin_left = 565.634
-margin_top = 270.823
-margin_right = 720.634
-margin_bottom = 484.823
+[node name="Cockroach" type="TextureButton" parent="Elements/Cockroach"]
+margin_right = 244.0
+margin_bottom = 322.0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 14 )
+
+[node name="Dog" type="TextureButton" parent="Elements/Cockroach"]
+visible = false
+margin_left = 11.6311
+margin_top = 47.8172
+margin_right = 255.631
+margin_bottom = 369.817
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 15 )
+
+[node name="RoomKey" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 732.045
+margin_top = 97.8
+margin_right = 732.045
+margin_bottom = 97.8
+real_item = "RoomKey"
+
+[node name="RoomKey" type="TextureButton" parent="Elements/RoomKey"]
+margin_right = 129.0
+margin_bottom = 85.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 16 )
+
+[node name="HomeSign" type="TextureButton" parent="Elements/RoomKey"]
+visible = false
+margin_left = -13.2965
+margin_top = -5.54016
+margin_right = 122.703
+margin_bottom = 86.4598
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 17 )
+
+[node name="Tv" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 607.994
+margin_top = 151.849
+margin_right = 607.994
+margin_bottom = 151.849
+real_item = "Tv"
+fictional_item = "Tv2"
+
+[node name="Tv" type="TextureButton" parent="Elements/Tv"]
+margin_right = 223.0
+margin_bottom = 237.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 18 )
+
+[node name="Tv2" type="TextureButton" parent="Elements/Tv"]
+visible = false
+margin_right = 223.0
+margin_bottom = 237.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 19 )
+
+[node name="Papelito" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 682.237
+margin_top = 373.952
+margin_right = 682.237
+margin_bottom = 373.952
+real_item = "Papelito"
+
+[node name="Papelito" type="TextureButton" parent="Elements/Papelito"]
+margin_right = 67.0
+margin_bottom = 45.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 20 )
+
+[node name="Luggage" parent="Elements" instance=ExtResource( 6 )]
+margin_left = 557.88
+margin_top = 405.228
+margin_right = 557.88
+margin_bottom = 405.228
+real_item = "Luggage"
+fictional_item = "Flowers"
+
+[node name="Luggage" type="TextureButton" parent="Elements/Luggage"]
+margin_right = 155.0
+margin_bottom = 214.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 21 )
+
+[node name="Flowers" type="TextureButton" parent="Elements/Luggage"]
+visible = false
+margin_left = 9.04651
+margin_top = 14.2159
+margin_right = 89.0465
+margin_bottom = 238.216
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 22 )
 

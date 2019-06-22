@@ -64,6 +64,7 @@ autoplay = "Transition"
 anims/Transition = SubResource( 4 )
 
 [node name="Elements" type="Control" parent="."]
+editor/display_folded = true
 use_parent_material = true
 anchor_right = 1.0
 anchor_bottom = 1.0

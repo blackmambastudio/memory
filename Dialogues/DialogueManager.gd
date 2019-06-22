@@ -108,6 +108,7 @@ func set_text_object(text_object):
 	_on_timeout_action = text_object.on_timeout
 
 func _on_item_selected(item):
+	print(item)
 	if not $Timer.is_stopped(): return
 	self.dialogue_instance._on_item_selected(item)
 
