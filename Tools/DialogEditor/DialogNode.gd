@@ -30,7 +30,7 @@ func _ready():
 	$dialog_en.connect("text_changed", self, "_on_update_text")
 	$dialog_es.connect("text_changed", self, "_on_update_text")
 	$audio_file.connect("text_changed", self, "_on_update_text")
-	$dx_volume.connect("value_changed", self, "_on_update_timeout")
+	$dx_volume.connect("value_changed", self, "_on_update_volume")
 	$timeout.connect("value_changed", self, "_on_update_timeout")
 	
 	$actor.clear()
@@ -56,6 +56,9 @@ func _on_update_text():
 func _on_update_timeout(value):
 	self.timeout = value
 
+func _on_update_volume(value):
+	self.dx_volume = value
+
 func _on_set_actor(id):
 	self.actor_selected = id
 	self.title = 'conversation - ' + actors[id]
@@ -68,6 +71,7 @@ func _to_string_node(next_nodes):
 		self.es_text + "|" + \
 		str(self.timeout)+ "|" + \
 		self.audio_resource + "|" + \
+		str(self.dx_volume) + "|" + \
 		str(next_nodes)
 
 static func _to_tree(string):
@@ -79,5 +83,6 @@ static func _to_tree(string):
 		"text_es": data[4],
 		"timeout": float(data[5]),
 		"audio": data[6],
-		"next": data[7].replace("[", "").replace("]","").split(",")
+		"volume": float(data[7]),
+		"next": data[8].replace("[", "").replace("]","").split(",")
 	}

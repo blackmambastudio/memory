@@ -96,12 +96,13 @@ func set_text(text_id):
 	var text_object = self.dialogue_instance.get_text_object(text_id)
 	self.set_text_object(text_object)
 	if not text_object.audio.empty():
-		play_sound("res://Audio/AudioAssets/"+text_object.audio)
+		play_sound("res://Audio/AudioAssets/"+text_object.audio, text_object.volume)
 		pass
 
-func play_sound(audio_file):
+func play_sound(audio_file, volume):
 	var user_sample = load(audio_file)
 	$SoundObjectST.stream = user_sample
+	$SoundObjectST.set_volume_db(volume)
 	$SoundObjectST.play()
 
 

@@ -205,4 +205,5 @@ focus_next = NodePath("../dialog_en")
 focus_previous = NodePath("../actor")
 min_value = -80.0
 max_value = 6.0
+ticks_on_borders = false
 
