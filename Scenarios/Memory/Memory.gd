@@ -2,6 +2,8 @@ extends Control
 
 var speed = 200
 var open = false
+var current_memory = 1
+onready var memories = [$Memory1, $Memory2]
 
 func _ready():
 	var ActionRouter = get_node("/root/ActionRouter")
@@ -27,13 +29,19 @@ func handle(request):
 				2:
 					$Memory1.hide()
 					$Memory2.show()
+			current_memory = request.value
 		"Memory/show":
 			open = request.value
+			if open:
+				memories[current_memory-1].visible = true
 			$AnimationPlayer.play(
 				"Show",
 				-1, 1.0 if request.value else -1.0,
 				!request.value
 			)
+			yield($AnimationPlayer, "animation_finished")
+			if !open:
+				memories[current_memory-1].visible = false
 		"Memory/create":
 			match int(request.id):
 				1:
