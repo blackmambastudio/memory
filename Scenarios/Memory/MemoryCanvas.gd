@@ -4,7 +4,8 @@ signal item_selected
 
 func _ready():
 	for element in $Elements.get_children():
-		element.connect("button_down",self,"_on_item_select", [element])
+		element.connect("item_selected", self, "selected_item")
+	
 
-func _on_item_select(item):
-	emit_signal("item_selected", item.name)
+func selected_item(item):
+	emit_signal("item_selected", item)

@@ -1,17 +1,16 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/mancha4.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/m02_BG.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png" type="Texture" id=4]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/phone.png" type="Texture" id=5]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/newspaper.png" type="Texture" id=6]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/poster_1.png" type="Texture" id=7]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/door_tag.png" type="Texture" id=8]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/cockroach.png" type="Texture" id=9]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/room_key.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/tv_1.png" type="Texture" id=11]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/luggage.png" type="Texture" id=12]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/m02_BG.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/window_1.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/phone.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/newspaper.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/poster_1.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/door_tag.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/cockroach.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/room_key.png" type="Texture" id=9]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/tv_1.png" type="Texture" id=10]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/luggage.png" type="Texture" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -32,13 +31,12 @@ script = ExtResource( 1 )
 self_modulate = Color( 1, 1, 1, 0.843137 )
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 2 )
 
 [node name="Place" type="Sprite" parent="."]
 use_parent_material = true
 position = Vector2( 664.587, 293.972 )
 scale = Vector2( 0.826759, 0.826759 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="AnimationTest" type="AnimationPlayer" parent="."]
 autoplay = "Window"
@@ -49,7 +47,7 @@ margin_left = 491.095
 margin_top = 45.6089
 margin_right = 804.095
 margin_bottom = 265.609
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Elements" type="Control" parent="."]
 use_parent_material = true
@@ -72,7 +70,7 @@ margin_top = 253.65
 margin_right = 338.3
 margin_bottom = 362.65
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 4 )
 
 [node name="Newspaper" type="TextureButton" parent="Elements"]
 margin_left = 319.2
@@ -80,7 +78,7 @@ margin_top = 273.6
 margin_right = 506.2
 margin_bottom = 374.6
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 5 )
 
 [node name="Poster" type="TextureButton" parent="Elements"]
 margin_left = 229.9
@@ -88,7 +86,7 @@ margin_top = 43.7
 margin_right = 375.9
 margin_bottom = 232.7
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 6 )
 
 [node name="WindowRight" type="TextureButton" parent="Elements"]
 margin_left = 578.0
@@ -103,7 +101,7 @@ margin_top = 158.648
 margin_right = 894.56
 margin_bottom = 258.648
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 7 )
 
 [node name="Cockroach" type="TextureButton" parent="Elements"]
 margin_left = 751.375
@@ -111,7 +109,7 @@ margin_top = 152.239
 margin_right = 995.375
 margin_bottom = 474.239
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 8 )
 
 [node name="RoomKey" type="TextureButton" parent="Elements"]
 margin_left = 708.783
@@ -119,7 +117,7 @@ margin_top = 75.8305
 margin_right = 837.783
 margin_bottom = 160.83
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 10 )
+texture_normal = ExtResource( 9 )
 
 [node name="Tv" type="TextureButton" parent="Elements"]
 margin_left = 579.562
@@ -127,7 +125,7 @@ margin_top = 62.6762
 margin_right = 802.562
 margin_bottom = 299.676
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 10 )
 
 [node name="Luggage" type="TextureButton" parent="Elements"]
 margin_left = 565.634
@@ -135,5 +133,5 @@ margin_top = 270.823
 margin_right = 720.634
 margin_bottom = 484.823
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 11 )
 

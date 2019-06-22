@@ -1,20 +1,19 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/mancha1.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/m01_BG.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/m01_BG_2.png" type="Texture" id=4]
-[ext_resource path="res://Scenarios/Memory/Elements/Element.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/ID.png" type="Texture" id=6]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/clown_suit.png" type="Texture" id=7]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/corset.png" type="Texture" id=8]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/clown_wig.png" type="Texture" id=9]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/fufa_wig.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/picture_children.png" type="Texture" id=11]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/picture_ceci.png" type="Texture" id=12]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/coffee.png" type="Texture" id=13]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/chest.png" type="Texture" id=14]
-[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/monteasalvo_apply.png" type="Texture" id=15]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/m01_BG.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/m01_BG_2.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Memory/Elements/Element.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/ID.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/clown_suit.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/corset.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/clown_wig.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/fufa_wig.png" type="Texture" id=9]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/picture_children.png" type="Texture" id=10]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/picture_ceci.png" type="Texture" id=11]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/coffee.png" type="Texture" id=12]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M01/chest.png" type="Texture" id=13]
+[ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M01/monteasalvo_apply.png" type="Texture" id=14]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -43,20 +42,19 @@ self_modulate = Color( 1, 1, 1, 0.843137 )
 material = SubResource( 2 )
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 2 )
 
 [node name="Place" type="Sprite" parent="."]
 material = SubResource( 3 )
 use_parent_material = true
 position = Vector2( 626, 358 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="fictionalPlace" type="Sprite" parent="."]
 position = Vector2( 625.831, 357.036 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -74,7 +72,7 @@ margin_top = 42.5644
 margin_right = -108.917
 margin_bottom = -92.4355
 
-[node name="ID" parent="Elements" instance=ExtResource( 5 )]
+[node name="ID" parent="Elements" instance=ExtResource( 4 )]
 margin_left = -81.9586
 margin_top = 38.0948
 margin_right = -81.9586
@@ -87,9 +85,9 @@ margin_left = 113.986
 margin_top = 205.66
 margin_right = 270.986
 margin_bottom = 313.66
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 5 )
 
-[node name="Costume" parent="Elements" instance=ExtResource( 5 )]
+[node name="Costume" parent="Elements" instance=ExtResource( 4 )]
 margin_left = 757.456
 margin_top = 211.078
 margin_right = 757.456
@@ -104,16 +102,16 @@ margin_left = 1.39667
 margin_top = 0.698334
 margin_right = 185.397
 margin_bottom = 355.698
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 6 )
 
 [node name="Corset" type="TextureButton" parent="Elements/Costume"]
 margin_left = 4.08093
 margin_top = 13.6037
 margin_right = 140.081
 margin_bottom = 347.604
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 7 )
 
-[node name="Nariz" parent="Elements" instance=ExtResource( 5 )]
+[node name="Nariz" parent="Elements" instance=ExtResource( 4 )]
 margin_left = 299.658
 margin_top = 299.348
 margin_right = 299.658
@@ -126,14 +124,14 @@ fictional_item = "Fufa_wig"
 visible = false
 margin_right = 108.0
 margin_bottom = 148.0
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 8 )
 
 [node name="Fufa_wig" type="TextureButton" parent="Elements/Nariz"]
 margin_right = 94.0
 margin_bottom = 135.0
-texture_normal = ExtResource( 10 )
+texture_normal = ExtResource( 9 )
 
-[node name="Hijos" parent="Elements" instance=ExtResource( 5 )]
+[node name="Hijos" parent="Elements" instance=ExtResource( 4 )]
 margin_left = 325.412
 margin_top = 197.113
 margin_right = 325.412
@@ -146,16 +144,16 @@ fictional_item = "Sola"
 visible = false
 margin_right = 87.0
 margin_bottom = 60.0
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 10 )
 
 [node name="Sola" type="TextureButton" parent="Elements/Hijos"]
 margin_left = 1.71475
 margin_top = -5.14429
 margin_right = 88.7148
 margin_bottom = 54.8557
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 11 )
 
-[node name="Exesposo" parent="Elements" instance=ExtResource( 5 )]
+[node name="Exesposo" parent="Elements" instance=ExtResource( 4 )]
 margin_left = 617.684
 margin_top = 354.65
 margin_right = 617.684
@@ -167,31 +165,27 @@ real_item = "Exesposo"
 visible = false
 margin_right = 71.0
 margin_bottom = 80.0
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 12 )
 
-[node name="Cofre" parent="Elements" instance=ExtResource( 5 )]
+[node name="Cofre" parent="Elements" instance=ExtResource( 4 )]
 margin_left = 915.529
 margin_top = 410.824
 margin_right = 915.529
 margin_bottom = 410.824
 mouse_default_cursor_shape = 2
 real_item = "Cofre"
+fictional_item = "Cartel"
 
 [node name="Cofre" type="TextureButton" parent="Elements/Cofre"]
 visible = false
 margin_right = 158.0
 margin_bottom = 144.0
+texture_normal = ExtResource( 13 )
+
+[node name="Cartel" type="TextureButton" parent="Elements/Cofre"]
+margin_left = -260.223
+margin_top = -90.6166
+margin_right = -174.223
+margin_bottom = -24.6166
 texture_normal = ExtResource( 14 )
-
-[node name="Cartel" parent="Elements" instance=ExtResource( 5 )]
-margin_left = 655.306
-margin_top = 320.208
-margin_right = 655.306
-margin_bottom = 320.208
-fictional_item = "Cartel"
-
-[node name="Cartel" type="TextureButton" parent="Elements/Cartel"]
-margin_right = 40.0
-margin_bottom = 40.0
-texture_normal = ExtResource( 15 )
 
