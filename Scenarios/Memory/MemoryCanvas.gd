@@ -12,5 +12,5 @@ func selected_item(item):
 
 func createMemory(memory_name):
 	for element in $Elements.get_children():
-		element.create(memory_name)
+		element.create_memory(memory_name)
 	

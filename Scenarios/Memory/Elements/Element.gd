@@ -11,6 +11,7 @@ var Fictional
 var real_factor = 1.0
 var fictional_factor = 0.0
 var inception = false
+var time = randi()%1000
 
 
 func _ready():
@@ -25,9 +26,17 @@ func _ready():
 		center_element(Fictional)
 
 func _on_item_select(item):
-	emit_signal("item_selected", item)
-	if item == fictional_item and not self.inception:
+	if item == real_item:
+		emit_signal("item_selected", real_item)
+		return
+	if self.inception:
+		emit_signal("item_selected", fictional_item)
+		return
+	if Fictional.modulate.a>Real.modulate.a:
+		emit_signal("item_selected", fictional_item)
 		reforce_fictional()
+	else:
+		emit_signal("item_selected", real_item)
 
 func center_element(element):
 	var centerX = element.rect_size.x/2
@@ -38,8 +47,8 @@ func center_element(element):
 func create_memory(memory):
 	if fictional_item.empty(): return
 	if memory != fictional_item: return
-	fictional_factor = 0.2
-	real_factor = 0.6
+	fictional_factor = 0.4
+	real_factor = 0.7
 	Fictional.show()
 	reforce_fictional()
 
@@ -49,10 +58,22 @@ func destroy_memory(memory):
 
 func reforce_fictional():
 	if fictional_item.empty(): return
-	fictional_factor += 0.1
+	fictional_factor += 0.2
 	real_factor -= 0.1
-	Fictional.modulate = Color(1.0,1.0,1.0, fictional_factor + 0.3)
-	Real.modulate = Color(1.0,1.0,1.0, real_factor + 0.2)
-	if fictional_factor >= 0.5:
+	Fictional.modulate.a = fictional_factor
+	Real.modulate.a = real_factor
+	if fictional_factor >= 1.0:
 		Real.hide()
 		inception = true
+
+func _process(delta):
+	time += delta
+	if not inception and fictional_factor > 0:
+		var factor = (sin(time*1))*0.2
+		var alphaness = (factor*2.5)+0.5
+		Fictional.rect_position.x -= factor*(1.0-fictional_factor)
+		Fictional.rect_position.y -= factor*(1.0-fictional_factor)*0.5
+		Real.rect_position.x += factor*(1.0-real_factor)
+		Real.rect_position.y -= factor*(1.0-real_factor)*0.5
+		Fictional.modulate.a = alphaness
+		Real.modulate.a = 1-alphaness
