@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Monteasalvo_03.ogg-3465d6a09337958b0c6063789aac7c63.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

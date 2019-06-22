@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@589]
 FilterNode|filter|1-sola-deep|default||[@DialogNode@618]
 @FilterNode@589|filter|1-sola-deep|equals|1|[@DialogNode@647]
-@DialogNode@618|dialog|Cecilia|I had a dog for may years, it was called Richy.|Tuve un perro por varios años, se llamaba Richy.|3||[]
-@DialogNode@647|dialog|Cecilia|I've never had a stable partner, or kids. Richy was everything to me.|Nunca tuve una pareja estable, mucho menos hijos. Richy era todo para mí.|4||[]
+@DialogNode@618|dialog|Cecilia|I had a dog for may years, it was called Richy.|Tuve un perro por varios años, se llamaba Richy.|5.3|DX_Assets/Cecilia/Memories/Cecilia_Fphoto_01.ogg|[]
+@DialogNode@647|dialog|Cecilia|I've never had a stable partner, or kids. Richy was everything to me.|Nunca tuve una pareja estable, mucho menos hijos. Richy era todo para mí.|8.3|DX_Assets/Cecilia/Memories/Cecilia_Fphoto_03.ogg|[]

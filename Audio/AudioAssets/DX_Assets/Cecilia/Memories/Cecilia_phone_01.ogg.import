@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Cecilia_phone_01.ogg-96c0cd425de9e88bdd682076016d736
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

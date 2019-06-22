@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||[FilterNode, @FilterNode@281]
-@DialogNode@251|dialog|Cecilia|One day I received a letter and a chest from my ex-husband. The letter said I had to leave Platanal as soon as possible.|Un día recibí una carta y un cofre de mi ex-esposo. En la carta me advertía que tenía que dejar Platanal cuanto antes.|6||[]
-@DialogNode@310|dialog|Cecilia|Tuve que dejar Platanal para volver a ver a mis hijos.|Tuve que dejar Platanal para volver a ver a mis hijos.|4||[]
+@DialogNode@251|dialog|Cecilia|One day I received a letter and a chest from my ex-husband. The letter said I had to leave Platanal as soon as possible.|Un día recibí una carta y un cofre de mi ex-esposo. En la carta me advertía que tenía que dejar Platanal cuanto antes.|11.4|DX_Assets/Cecilia/Memories/Cecilia_letter_01.ogg|[]
 FilterNode|filter|1-cofre-deep|equals|1|[@DialogNode@251]
 @FilterNode@281|filter|1-cofre-deep|equals|0|[@DialogNode@310]
+@DialogNode@310|dialog|Cecilia|Tuve que dejar Platanal para volver a ver a mis hijos.|Tuve que dejar Platanal para volver a ver a mis hijos.|5.5|DX_Assets/Cecilia/Memories/Cecilia_letter_02.ogg|[]

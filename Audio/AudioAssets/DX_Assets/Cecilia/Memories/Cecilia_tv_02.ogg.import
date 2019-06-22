@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Cecilia_tv_02.ogg-32d59b18bdee6fdf7497b18cd0217e4c.o
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Claire_Breath_v1.ogg-b69e71610c5451ac2c4ff43b3d1606b
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

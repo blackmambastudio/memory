@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Lucia_Gen_06_v1.ogg-77b2a326faaf9b8b89304cfb12224659
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

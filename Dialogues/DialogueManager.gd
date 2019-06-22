@@ -18,6 +18,7 @@ var _on_timeout_action = {}
 var dialogue_instance
 var dialogue_stack = []
 
+
 func _ready():
 	self.actionHandler.set_dialogue(self)
 	ActionRouter.register_actions(self.actionHandler)
@@ -135,7 +136,6 @@ func solve_next():
 	self.dialogue_instance.solve_next()
 
 func timeout():
-	$SoundObjectST.stop()
 	ActionRouter.request(_on_timeout_action)
 
 func cls():

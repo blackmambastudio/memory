@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Claire_Act5_01.ogg-9a057f26db8fb38a4d2f5cc6898c67b4.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
