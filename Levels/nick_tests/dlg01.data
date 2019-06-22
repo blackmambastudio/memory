@@ -1,0 +1,6 @@
+DialogNode|dialog|Dr Nick|||0.1||[@DialogNode@235, @DialogNode@264]
+@DialogNode@235|dialog|Dr Nick|I hope you're feeling good Cecilia. Today I'll run some tests.|Espero que se encuentre bien Cecilia. Hoy le haré unas pruebas.|4||[@DialogNode@335]
+@DialogNode@264|dialog|Dr Nick|Welcome Cecilia. Have a seat.|Bienvenida Cecilia. Tome Asiento.|3||[@DialogNode@306]
+@DialogNode@335|dialog|Dr Nick|With this test we want to see if you can recover new memories.|Con esta prueba queremos ver si puede recuperar nuevos recuerdos.|4||[@DialogNode@364]
+@DialogNode@306|dialog|Dr Nick|It is the routine tests, you know.|Son las pruebas de rutina, ya sabe.|3||[@DialogNode@335]
+@DialogNode@364|dialog|Dr Nick|Let's start.|Empecemos.|2||[]

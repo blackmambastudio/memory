@@ -1,0 +1,2 @@
+res://Levels/nick_tests/dlg01.scn
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@235","to_port":0},{"from":"DialogNode","from_port":0,"to":"@DialogNode@264","to_port":0},{"from":"@DialogNode@264","from_port":0,"to":"@DialogNode@306","to_port":0},{"from":"@DialogNode@235","from_port":0,"to":"@DialogNode@335","to_port":0},{"from":"@DialogNode@306","from_port":0,"to":"@DialogNode@335","to_port":0},{"from":"@DialogNode@335","from_port":0,"to":"@DialogNode@364","to_port":0}]
