@@ -2,10 +2,21 @@ extends "res://Acts/ViewScene.gd"
 
 var auto_minigame = true
 onready var ActionRouter = get_node("/root/ActionRouter")
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 func _ready():
-	to_left()
-	pass
+	# TODO
+	# use the variable board to get notified and trigger
+	# when to clip to the left, or to the right
+	VariableBoard.suscribe("test_split_memory", self, "clip_test")
+
+func clip_test(value):
+	if value == "0":
+		to_center()
+	elif value == "-1":
+		to_left()
+	elif value == "1":
+		to_right()
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'Left_action':
@@ -26,14 +37,16 @@ func to_left():
 	self.position.x -= 1280/4
 	# open memory and clipped it to the left
 	
-	ActionRouter.request({"action":"Memory/current", "value": 2})
-	ActionRouter.request({"action":"Memory/clip_left"})
+	ActionRouter.request({"action":"Memory/M2/clip_left"})
 	#ActionRouter.request({"action":"Memory/show", "value": true})
 
 func to_right():
 	self.position.x += 1280/4
-	ActionRouter.request({"action":"Memory/current", "value": 2})
-	ActionRouter.request({"action":"Memory/clip_right"})
+	ActionRouter.request({"action":"Memory/M2/clip_right"})
 	#ActionRouter.request({"action":"Memory/show", "value": true})
 	# open memory and clipped it to the right
 	#to test
+
+func to_center():
+	self.position.x = 0
+	ActionRouter.request({"action":"Memory/M2/restore"})

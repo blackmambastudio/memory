@@ -28,6 +28,9 @@ func get_value(variable):
 	return board[variable]
 
 func suscribe(variable, object, method):
+	if not board.has(variable): 
+		print("variable is not registered")
+		return
 	self.connect("value_set_"+variable, object, method)
 	return board[variable]
 
