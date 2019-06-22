@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenarios/Reality/DinerRoom/WindowControl.gd" type="Script" id=1]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/remote.png" type="Texture" id=2]
 
 [node name="WindowControl" type="Control"]
 anchor_right = 1.0
@@ -9,84 +10,76 @@ margin_right = -1180.0
 margin_bottom = -525.0
 script = ExtResource( 1 )
 
-[node name="Panel" type="Panel" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="remote" type="Sprite" parent="."]
+position = Vector2( 53.4181, 100.585 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="BG_Left" type="Button" parent="."]
-margin_left = 16.0
-margin_top = 20.0
+[node name="BG_Left" type="TextureButton" parent="."]
+margin_left = 11.0
+margin_top = 17.0
+margin_right = 31.0
+margin_bottom = 46.0
+
+[node name="BG_Right" type="TextureButton" parent="."]
+margin_left = 74.7064
+margin_top = 16.1376
+margin_right = 95.7064
+margin_bottom = 48.1376
+
+[node name="Main_Left" type="TextureButton" parent="."]
+margin_left = 9.0
+margin_top = 62.0
+margin_right = 32.0
+margin_bottom = 93.0
+
+[node name="Main_Right" type="TextureButton" parent="."]
+margin_left = 76.0
+margin_top = 64.0
+margin_right = 96.0
+margin_bottom = 97.0
+
+[node name="Button01" type="TextureButton" parent="."]
+margin_left = 12.0
+margin_top = 137.0
 margin_right = 36.0
-margin_bottom = 40.0
-text = "<"
+margin_bottom = 152.0
 
-[node name="BG_Right" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 20.0
-margin_right = 84.0
-margin_bottom = 40.0
-text = ">"
+[node name="Button02" type="TextureButton" parent="."]
+margin_left = 42.0
+margin_top = 137.0
+margin_right = 65.0
+margin_bottom = 151.0
 
-[node name="Main_Left" type="Button" parent="."]
-margin_left = 16.0
-margin_top = 60.0
-margin_right = 36.0
-margin_bottom = 80.0
-text = "<"
+[node name="Button03" type="TextureButton" parent="."]
+margin_left = 71.0
+margin_top = 138.0
+margin_right = 94.0
+margin_bottom = 150.0
 
-[node name="Main_Right" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 60.0
-margin_right = 84.0
-margin_bottom = 80.0
-text = ">"
+[node name="Button04" type="TextureButton" parent="."]
+margin_left = 13.3235
+margin_top = 154.794
+margin_right = 35.3235
+margin_bottom = 167.794
 
-[node name="Button01" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 95.0
-margin_right = 30.0
-margin_bottom = 115.0
-text = "1"
-
-[node name="Button02" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 95.0
-margin_right = 60.0
-margin_bottom = 115.0
-text = "2"
-
-[node name="Button03" type="Button" parent="."]
-margin_left = 70.0
-margin_top = 95.0
-margin_right = 90.0
-margin_bottom = 115.0
-text = "3"
-
-[node name="Button04" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 125.0
-margin_right = 30.0
-margin_bottom = 145.0
-text = "4"
-
-[node name="Button05" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 125.0
-margin_right = 60.0
-margin_bottom = 145.0
-text = "5"
-
-[node name="Button06" type="Button" parent="."]
-margin_left = 70.0
-margin_top = 125.0
-margin_right = 90.0
-margin_bottom = 145.0
-text = "6"
-
-[node name="Button07" type="Button" parent="."]
-margin_left = 40.0
+[node name="Button05" type="TextureButton" parent="."]
+margin_left = 43.0
 margin_top = 155.0
-margin_right = 60.0
-margin_bottom = 175.0
-text = "7"
+margin_right = 64.0
+margin_bottom = 168.0
+
+[node name="Button06" type="TextureButton" parent="."]
+margin_left = 73.0
+margin_top = 155.0
+margin_right = 93.0
+margin_bottom = 168.0
+
+[node name="Button07" type="TextureButton" parent="."]
+margin_left = 22.0
+margin_top = 172.0
+margin_right = 82.0
+margin_bottom = 180.0
 
