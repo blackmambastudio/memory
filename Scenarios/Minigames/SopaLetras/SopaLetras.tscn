@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CustomResources/DynamicFont/kenney_pixel-password.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenarios/Minigames/SopaLetras/cover.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Minigames/SopaLetras/coverHover.png" type="Texture" id=4]
 
 [node name="SopaLetras" type="Control"]
 script = ExtResource( 1 )
@@ -16,6 +18,7 @@ margin_left = 18.0
 margin_top = 84.0
 margin_right = 390.0
 margin_bottom = 457.0
+mouse_filter = 2
 color = Color( 0.172549, 0.172549, 0.180392, 1 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
@@ -36,6 +39,7 @@ default_color = Color( 0.615686, 0.4, 1, 0.47451 )
 texture_mode = 266592599
 
 [node name="WordList" type="VBoxContainer" parent="."]
+editor/display_folded = true
 margin_left = 26.1067
 margin_top = 471.29
 margin_right = 95.1067
@@ -43,51 +47,51 @@ margin_bottom = 577.29
 
 [node name="word1" type="Label" parent="WordList"]
 modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
-margin_right = 69.0
+margin_right = 78.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "FINDINGS"
+text = "shovel"
 uppercase = true
 
 [node name="word2" type="Label" parent="WordList"]
 modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
 margin_top = 22.0
-margin_right = 69.0
+margin_right = 78.0
 margin_bottom = 40.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "FINDINGS"
+text = "gloves"
 uppercase = true
 
 [node name="word3" type="Label" parent="WordList"]
 modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
 margin_top = 44.0
-margin_right = 69.0
+margin_right = 78.0
 margin_bottom = 62.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "FINDINGS"
+text = "pruner"
 uppercase = true
 
 [node name="word4" type="Label" parent="WordList"]
 modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
 margin_top = 66.0
-margin_right = 69.0
+margin_right = 78.0
 margin_bottom = 84.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "FINDINGS"
+text = "shears"
 uppercase = true
 
 [node name="word5" type="Label" parent="WordList"]
 modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
 margin_top = 88.0
-margin_right = 69.0
+margin_right = 78.0
 margin_bottom = 106.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "FINDINGS"
+text = "strimmer"
 uppercase = true
 
 [node name="Label" type="Label" parent="."]
@@ -98,4 +102,25 @@ margin_bottom = 70.1174
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.172549, 0.172549, 0.180392, 1 )
 text = "Exercises to help to recover your memory"
+
+[node name="Cover" type="Sprite" parent="."]
+visible = false
+position = Vector2( 203, 266 )
+texture = ExtResource( 3 )
+
+[node name="MiniCover" type="TextureButton" parent="."]
+margin_left = 337.0
+margin_top = 542.0
+margin_right = 383.0
+margin_bottom = 588.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Turn" type="Button" parent="."]
+margin_left = 344.0
+margin_top = 460.0
+margin_right = 382.0
+margin_bottom = 480.0
+text = "turn"
 

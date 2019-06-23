@@ -31,22 +31,22 @@ var catetories = {
 	], 
 	"kitchen":[
 		{"word":"remember", "col": 11, "row": 2, "direction": 4},
-		{"word":"stove", "col": 2, "row": 4, "direction": 2},
-		{"word":"fridge", "col": 8, "row": 2, "direction": 6},
-		{"word":"toaster", "col": 3, "row": 9, "direction": 1},
-		{"word":"blender", "col": 1, "row": 9, "direction": 1},
-		{"word":"brush", "col": 6, "row": 8, "direction": 2}
+		{"word":"apron", "col": 6, "row": 4, "direction": 4},
+		{"word":"pan", "col": 7, "row": 4, "direction": 6},
+		{"word":"plates", "col": 11, "row": 1, "direction": 6},
+		{"word":"knife", "col": 4, "row": 4, "direction": 4},
+		{"word":"blender", "col": 1, "row": 8, "direction": 0}
 	]
 }
 
 var words =[
-	{"word":"remember", "col": 1, "row": 2, "direction": 2},
-	{"word":"laundry", "col": 0, "row": 1, "direction": 4},
-	{"word":"bleach", "col": 2, "row": 5, "direction": 2},
-	{"word":"wash", "col": 4, "row": 7, "direction": 2},
-	{"word":"mop", "col": 9, "row": 9, "direction": 2},
-	{"word":"remove", "col": 10, "row": 11, "direction": 6}
-]
+		{"word":"remember", "col": 1, "row": 6, "direction": 2},
+		{"word":"apron", "col": 9, "row": 2, "direction": 4},
+		{"word":"napkin", "col": 11, "row": 6, "direction": 4},
+		{"word":"plates", "col": 9, "row": 0, "direction": 5},
+		{"word":"knife", "col": 8, "row": 10, "direction": 7},
+		{"word":"blender", "col": 2, "row": 1, "direction": 4}
+	]
 
 var word_indexes = {}
 var pairs = []
@@ -70,6 +70,9 @@ func _ready():
 		if index>=limit:
 			break
 	insert_words()
+	
+	$MiniCover.connect("button_down", self, "show_cover")
+	$Turn.connect("button_down", self, "turn_cover")
 
 func letter_clicked(index):
 	if index == one_pair: return
@@ -158,6 +161,10 @@ func word_match(pair):
 	emit_signal("word_match", pair[2])
 
 
+func show_cover():
+	$Cover.visible = not $Cover.visible
 
+func turn_cover():
+	$Cover.rotate(PI/4)
 
 
