@@ -1,3 +1,3 @@
 DialogNode|dialog|Cecilia|||0.1||0|[FilterNode]
-@DialogNode@251|dialog|Cecilia|The amount of buildings I could see through the window were suffocating.|La cantidad de edificios que podía ver por la ventana era asfixiante.|6||0|[]
+@DialogNode@251|dialog|Cecilia|The amount of buildings I could see through the window were suffocating.|La cantidad de edificios que podía ver por la ventana era asfixiante.|6.2|DX_Assets/Cecilia/Memories/Cecilia_hunuragha_01.ogg|0|[]
 FilterNode|filter|1-windowright-deep|default||[@DialogNode@251]

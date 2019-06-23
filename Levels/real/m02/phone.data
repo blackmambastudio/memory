@@ -1,5 +1,5 @@
 @DialogNode@465|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@527]
 FilterNode|filter|1-phone-deep|default||[DialogNode]
 @FilterNode@527|filter|1-phone-deep|equals|1|[@DialogNode@494]
-DialogNode|dialog|Cecilia|I talked to my mother the day I left Platanal.|Hablé con mi madre el día que dejé Platanal.|3||0|[]
-@DialogNode@494|dialog|Cecilia|It was the last time I knew about her.|Fue la última vez que supe de ella.|3||0|[]
+DialogNode|dialog|Cecilia|I talked to my mother the day I left Platanal.|Hablé con mi madre el día que dejé Platanal.|4.1|DX_Assets/Cecilia/Memories/Cecilia_phone_01.ogg|0|[]
+@DialogNode@494|dialog|Cecilia|It was the last time I knew about her.|Fue la última vez que supe de ella.|3.2|DX_Assets/Cecilia/Memories/Cecilia_phone_03.ogg|0|[]

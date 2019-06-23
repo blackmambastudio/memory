@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@1516]
 FilterNode|filter|1-flowers-deep|default||[@DialogNode@1545]
 @FilterNode@1516|filter|1-flowers-deep|equals|1|[@DialogNode@1574]
-@DialogNode@1545|dialog|Cecilia|Every saturday a guy went to my apartment just to leave flowers.|Cada sábado un hombre iba al apartamento y me dejaba flores.|3||0|[]
-@DialogNode@1574|dialog|Cecilia|They were sent by Monteasalvo. I don't know why they spoil us so much, they were doing us a favour.|Las enviaba Monteasalvo. No sé por qué nos mimaban tanto si nos estaban haciendo un favor.|4||0|[]
+@DialogNode@1545|dialog|Cecilia|Every saturday a guy went to my apartment just to leave flowers.|Cada sábado un hombre iba al apartamento y me dejaba flores.|6.1|DX_Assets/Cecilia/Memories/Cecilia_flowers_01.ogg|0|[]
+@DialogNode@1574|dialog|Cecilia|They were sent by Monteasalvo. I don't know why they spoil us so much, they were doing us a favour.|Las enviaba Monteasalvo. No sé por qué nos mimaban tanto si nos estaban haciendo un favor.|9.2|DX_Assets/Cecilia/Memories/Cecilia_flowers_02.ogg|0|[]

@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@561]
-@DialogNode@544|dialog|Cecilia|I got addicted to alcohol after failing repeatedly in acting.|Me volvi adicta al alcohol tras fracasar una y otra vez en la actuación.|4||0|[]
+@DialogNode@544|dialog|Cecilia|I got addicted to alcohol after failing repeatedly in acting.|Me volvi adicta al alcohol tras fracasar una y otra vez en la actuación.|7.1|DX_Assets/Cecilia/Memories/Cecilia_bottle_01.ogg|0|[]
 @FilterNode@561|filter|1-whiskey-deep|equals|1|[@DialogNode@590]
 FilterNode|filter|1-whiskey-deep|default||[@DialogNode@544]
-@DialogNode@590|dialog|Cecilia|When I started working as a prostitute everything got worse.|Cuando empecé a trabajar como prostituta todo empeoró.|4||0|[]
+@DialogNode@590|dialog|Cecilia|When I started working as a prostitute everything got worse.|Cuando empecé a trabajar como prostituta todo empeoró.|5.2|DX_Assets/Cecilia/Memories/Cecilia_bottle_02.ogg|0|[]

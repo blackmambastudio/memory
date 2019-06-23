@@ -43,7 +43,7 @@ func _ready():
 
 func start_game():
 	$IntroScene.hide()
-	$ActManager.load_act("res://Acts/Act4/Act4_Office.tscn")
+	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func change_language():
 	var current = VariableBoard.get_value('language')

@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@1297]
 @FilterNode@1297|filter|1-homesign-deep|equals|1|[@DialogNode@1355]
 FilterNode|filter|1-homesign-deep|default||[@DialogNode@1326]
-@DialogNode@1355|dialog|Cecilia|Looking at it always got me into a good mood.|Verlo siempre me ponía de buen humor.|3||0|[]
-@DialogNode@1326|dialog|Cecilia|There was a pretty painting next to the door. It came with the apartment.|Había un cuadro hermoso junto a la puerta. Venía con el apartamento.|5||0|[]
+@DialogNode@1355|dialog|Cecilia|Looking at it always got me into a good mood.|Verlo siempre me ponía de buen humor.|3.2|DX_Assets/Cecilia/Memories/Cecilia_frame_03.ogg|0|[]
+@DialogNode@1326|dialog|Cecilia|There was a pretty painting next to the door. It came with the apartment.|Había un cuadro hermoso junto a la puerta. Venía con el apartamento.|7.2|DX_Assets/Cecilia/Memories/Cecilia_frame_01.ogg|0|[]

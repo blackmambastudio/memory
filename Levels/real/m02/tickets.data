@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@694]
-@DialogNode@677|dialog|Cecilia|The flight, housing, food. Everything. Monteasalvo paid for everything.|El viaje, la estadía, la alimentación. Todo. Todo lo pagaba Monteasalvo.|6||0|[]
+@DialogNode@677|dialog|Cecilia|The flight, housing, food. Everything. Monteasalvo paid for everything.|El viaje, la estadía, la alimentación. Todo. Todo lo pagaba Monteasalvo.|8.2|DX_Assets/Cecilia/Memories/Cecilia_tckts_01.ogg|0|[]
 @FilterNode@694|filter|1-tickets-deep|equals|1|[@DialogNode@723]
-@DialogNode@723|dialog|Cecilia|I didn't had much to pack. It was like leaving my old life behind.|No tuve que empacar mucho. Fue como dejar mi vida en el pasado.|5||0|[]
 FilterNode|filter|1-tickets-deep|default||[@DialogNode@677]
+@DialogNode@723|dialog|Cecilia|I didn't had much to pack. It was like leaving my old life behind.|No tuve que empacar mucho. Fue como dejar mi vida en el pasado.|5.1|DX_Assets/Cecilia/Memories/Cecilia_tckts_03.ogg|0|[]
