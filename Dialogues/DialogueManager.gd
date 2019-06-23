@@ -100,12 +100,16 @@ func set_text(text_id):
 	var text_object = self.dialogue_instance.get_text_object(text_id)
 	self.set_text_object(text_object)
 	if not text_object.audio.empty():
-		play_sound("res://Audio/AudioAssets/"+text_object.audio, text_object.volume)
+		play_sound("res://Audio/AudioAssets/"+text_object.audio, text_object.volume, text_object.actor)
 		pass
 
-func play_sound(audio_file, volume):
+func play_sound(audio_file, volume, actor):
 	var user_sample = load(audio_file)
 	$SoundObjectST.stream = user_sample
+	if actor == "Cecilia":
+		$SoundObjectST.set_bus('Master')
+	else:
+		$SoundObjectST.set_bus('NPC')
 	$SoundObjectST.set_volume_db(volume)
 	$SoundObjectST.play()
 

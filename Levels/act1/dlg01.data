@@ -1,4 +1,4 @@
-DialogNode|dialog|Dr Nick|Hi, I’'m Doctor nick. I'’ll take care of you until you’'re fully recover.|Hola. Soy el doctor Nick. Me encargaré de usted hasta que se recupere.|6.7|DX_Assets/Dr.Nick/Act1/Nick_Act1_01.ogg|0|[@DialogNode@221]
+DialogNode|dialog|Dr Nick|Hi, I’'m Doctor nick. I'’ll take care of you until you’'re fully recover.|Hola. Soy el doctor Nick. Me encargaré de usted hasta que se recupere.|6.7|DX_Assets/Dr.Nick/Act1/Nick_Act1_01.ogg|-2|[@DialogNode@221]
 @DialogNode@336|dialog|Dr Nick|But we will manage to recover it.|Pero nos encargaremos de recuperarla.|6.2|DX_Assets/Dr.Nick/Act1/Nick_Act1_04.ogg|0|[@DialogNode@358]
 @DialogNode@358|dialog|Cecilia|Where am I?|¿Dónde estoy?|1.6|DX_Assets/Cecilia/Act1/Cecilia_Act1_02.ogg|0|[@DialogNode@380]
 @DialogNode@380|dialog|Dr Nick|You are in a hospital.|Se encuentra en un hospital.|2.5|DX_Assets/Dr.Nick/Act1/Nick_Act1_05.ogg|0|[@DialogNode@415]

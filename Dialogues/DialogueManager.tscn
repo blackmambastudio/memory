@@ -56,4 +56,5 @@ autowrap = true
 one_shot = true
 
 [node name="SoundObjectST" parent="." instance=ExtResource( 3 )]
+Bus = "NPC"
 
