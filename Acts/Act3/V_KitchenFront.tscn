@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia0.png" type="Texture" id=2]
-[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia1.png" type="Texture" id=3]
-[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia2.png" type="Texture" id=4]
-[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia3.png" type="Texture" id=5]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia0.jpg" type="Texture" id=2]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia1.jpg" type="Texture" id=3]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia2.jpg" type="Texture" id=4]
+[ext_resource path="res://Acts/Assets/Kitchen/Kitchen_lucia3.jpg" type="Texture" id=5]
 [ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
