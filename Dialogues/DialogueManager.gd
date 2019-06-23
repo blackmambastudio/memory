@@ -17,6 +17,7 @@ const Dialogue = preload("Dialogue.gd")
 var _on_timeout_action = {}
 var dialogue_instance
 var dialogue_stack = []
+var language = 'text_en'
 
 
 func _ready():
@@ -71,6 +72,9 @@ func _ready():
 	
 	#self.add_dialogue_graph("res://Levels/nick_tests/dlg01.data")
 
+func set_language(language):
+	print('language updated!!!, ', language)
+	self.language = language
 
 func add_dialogue_graph(path_file):
 	var dialogue_graph = Dialogue.new(path_file)
@@ -125,7 +129,7 @@ func set_text_object(text_object):
 	$Panel/Text.add_color_override("font_color", text_color)
 	$BackSubtitle.show()
 	# TODO: show the text in the language selected by the jugador
-	$Panel/Text.text = text_object.text_en
+	$Panel/Text.text = text_object[self.language]
 	$Timer.set_wait_time(text_object.timeout)
 	$Timer.start()
 	_on_timeout_action = text_object.on_timeout

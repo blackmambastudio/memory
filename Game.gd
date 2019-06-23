@@ -5,11 +5,15 @@ export(bool) var skip_on_click = false
 onready var arrow = load('res://Assets/Cursor/Arrow.png')
 onready var pointing_hand = load('res://Assets/Cursor/PointingHand.png')
 onready var ActionRouter = get_node("/root/ActionRouter")
+onready var VariableBoard = get_node("/root/VariableBoard")
+
 var click_pressed = false
 
 func _ready():
 	# Setup actions
 	ActionRouter.register_actions(self)
+	VariableBoard.register("language", "text_en")
+	VariableBoard.suscribe('language', $DialogueManager, 'set_language')
 
 	# Setup the mouse cursor for the game
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW)
@@ -25,12 +29,25 @@ func _ready():
 	
 	# setup signal for intro
 	$IntroScene/Start.connect("button_down", self, "start_game")
+	$IntroScene/Language.connect("button_down", self, "change_language")
 	# loading the first act
 	#
 
 func start_game():
 	$IntroScene.hide()
 	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
+
+func change_language():
+	var current = VariableBoard.get_value('language')
+	if current == 'text_en':
+		current = 'text_es'
+		$IntroScene/Language.text = '< Español >'
+		$IntroScene/Start.text = '< Comenzar >'
+	elif current == 'text_es':
+		current = 'text_en'
+		$IntroScene/Language.text = '< English >'
+		$IntroScene/Start.text = '< Start >'
+	VariableBoard.set_value('language', current)
 
 func _process(delta):
 	if skip_on_click and not click_pressed and not $Memory.open \
