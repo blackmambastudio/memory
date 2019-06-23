@@ -4,6 +4,8 @@ export(bool) var skip_on_click = false
 
 onready var arrow = load('res://Assets/Cursor/Arrow.png')
 onready var pointing_hand = load('res://Assets/Cursor/PointingHand.png')
+onready var pc_arrow = load('res://Assets/Cursor/pc_arrow.png')
+onready var pc_pointing_hand = load('res://Assets/Cursor/pc_pointing_hand.png')
 onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
 
@@ -22,6 +24,12 @@ func _ready():
 		Input.CURSOR_POINTING_HAND,
 		Vector2(6.0, 0.0)
 	)
+	Input.set_custom_mouse_cursor(pc_arrow, Input.CURSOR_CROSS)
+	Input.set_custom_mouse_cursor(
+		pc_pointing_hand,
+		Input.CURSOR_DRAG,
+		Vector2(7.0, 0.0)
+	)
 
 	# Setup signal listeners
 	$Memory/Memory1.connect("item_selected", $DialogueManager, "_on_item_selected")
@@ -35,7 +43,7 @@ func _ready():
 
 func start_game():
 	$IntroScene.hide()
-	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
+	$ActManager.load_act("res://Acts/Act4/Act4_Office.tscn")
 
 func change_language():
 	var current = VariableBoard.get_value('language')

@@ -3,8 +3,8 @@
 [ext_resource path="res://Acts/ActScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acts/Act4/FrontRun.tscn" type="PackedScene" id=2]
 
-
 [node name="ActScene" instance=ExtResource( 1 )]
+starting_dialogue = "res://Levels/act4/dlg02.data"
 
 [node name="FrontRun" parent="Views" index="0" instance=ExtResource( 2 )]
 

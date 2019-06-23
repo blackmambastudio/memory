@@ -69,7 +69,7 @@ func _ready():
 	VariableBoard.register("1-tv2-deep", 0)
 	VariableBoard.register("1-flowers-deep", 0)
 	
-	
+	cls()
 	#self.add_dialogue_graph("res://Levels/nick_tests/dlg01.data")
 
 func set_language(language):
@@ -131,6 +131,7 @@ func set_text_object(text_object):
 		'Monteasalvo CS':
 			text_color = monteasalvo
 	$Panel/Text.add_color_override("font_color", text_color)
+	$Panel/Text.show()
 	$BackSubtitle.show()
 	# TODO: show the text in the language selected by the jugador
 	$Panel/Text.text = text_object[self.language]
@@ -155,5 +156,5 @@ func cls():
 	$BackSubtitle.hide()
 	
 func toggle_text_background(show = true):
-	$ColorRect.set_visible(show)
+	pass
 

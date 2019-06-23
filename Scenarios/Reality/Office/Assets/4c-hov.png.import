@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/4C.png-6af4a659e5a173145dcb36efb7d3b7ad.stex"
+path="res://.import/4c-hov.png-ff22cafcfee251115975f776cc6abe74.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenarios/Reality/Office/Assets/4C.png"
-dest_files=[ "res://.import/4C.png-6af4a659e5a173145dcb36efb7d3b7ad.stex" ]
+source_file="res://Scenarios/Reality/Office/Assets/4c-hov.png"
+dest_files=[ "res://.import/4c-hov.png-ff22cafcfee251115975f776cc6abe74.stex" ]
 
 [params]
 
