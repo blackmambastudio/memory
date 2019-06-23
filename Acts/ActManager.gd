@@ -34,6 +34,8 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
 	
 	ActionRouter.request({"action":"Board/register", "variable":"test_split_memory", "value": 0})
+	# valid values: auto and reflexes
+	ActionRouter.request({"action":"Board/register", "variable":"view_active_minigame", "value": 'auto'})
 	
 	#self.load_act(all_acts[0])
 

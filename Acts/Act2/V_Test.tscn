@@ -1,13 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acts/Act2/V_Test.gd" type="Script" id=2]
-[ext_resource path="res://Scenarios/Minigames/Auto.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Acts/Assets/TestRoom/Test.png" type="Texture" id=4]
-[ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Acts/Assets/Hovers/Hover_test_1.png" type="Texture" id=6]
-[ext_resource path="res://Acts/Assets/Hovers/Hover_Test_2.png" type="Texture" id=7]
-[ext_resource path="res://Acts/Assets/Hovers/Hover_test_3.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Minigames/Reflexes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenarios/Minigames/Auto.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Acts/Assets/TestRoom/Test.png" type="Texture" id=5]
+[ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Acts/Assets/Hovers/Hover_test_1.png" type="Texture" id=7]
+[ext_resource path="res://Acts/Assets/Hovers/Hover_Test_2.png" type="Texture" id=8]
+[ext_resource path="res://Acts/Assets/Hovers/Hover_test_3.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 57.3563, 60.0624 )
@@ -33,23 +34,32 @@ color = Color( 0.788235, 0.741176, 0.807843, 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Auto" parent="minigames" index="0" instance=ExtResource( 3 )]
+[node name="Reflexes" parent="minigames" index="0" instance=ExtResource( 3 )]
+visible = false
+margin_left = 331.592
+margin_top = 8.0
+margin_right = 922.592
+margin_bottom = 684.0
+mouse_filter = 2
+
+[node name="Auto" parent="minigames" index="1" instance=ExtResource( 4 )]
+visible = false
 margin_left = 417.433
 margin_top = 132.596
 margin_right = 858.432
 margin_bottom = 521.596
 
-[node name="Backgrounds" parent="." index="2"]
-editor/display_folded = true
-
 [node name="Test" type="Sprite" parent="Backgrounds" index="0"]
 position = Vector2( 640, 360 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Clickeables" parent="." index="4"]
 editor/display_folded = true
 
-[node name="Left_action" parent="Clickeables" index="0" instance=ExtResource( 5 )]
+[node name="Left_action" parent="Clickeables" index="0" instance=ExtResource( 6 )]
 position = Vector2( 469.33, 633.935 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/Left_action" index="0"]
@@ -58,9 +68,9 @@ shape = SubResource( 1 )
 [node name="Outline" type="Sprite" parent="Clickeables/Left_action" index="1"]
 visible = false
 position = Vector2( 4.84137, -10.1229 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
-[node name="Middle_action" parent="Clickeables" index="1" instance=ExtResource( 5 )]
+[node name="Middle_action" parent="Clickeables" index="1" instance=ExtResource( 6 )]
 position = Vector2( 666.584, 652.98 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/Middle_action" index="0"]
@@ -70,9 +80,9 @@ shape = SubResource( 2 )
 [node name="Outline" type="Sprite" parent="Clickeables/Middle_action" index="1"]
 visible = false
 position = Vector2( -16.8042, -31.6885 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
-[node name="Right_action" parent="Clickeables" index="2" instance=ExtResource( 5 )]
+[node name="Right_action" parent="Clickeables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 798.54, 624.412 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Clickeables/Right_action" index="0"]
@@ -82,5 +92,5 @@ shape = SubResource( 3 )
 [node name="Outline" type="Sprite" parent="Clickeables/Right_action" index="1"]
 visible = false
 position = Vector2( 16.8857, -3.48059 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
