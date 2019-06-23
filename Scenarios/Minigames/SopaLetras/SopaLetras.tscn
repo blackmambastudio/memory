@@ -1,51 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.gd" type="Script" id=1]
+[ext_resource path="res://Assets/CustomResources/DynamicFont/kenney_pixel-password.tres" type="DynamicFont" id=2]
 
-[node name="SopaLetras" type="Node2D"]
+[node name="SopaLetras" type="Control"]
 script = ExtResource( 1 )
-words = [ {
-"col": 2,
-"direction": 2,
-"row": 2,
-"word": "remember"
-}, {
-"col": 0,
-"direction": 4,
-"row": 0,
-"word": "salvation"
-}, {
-"col": 2,
-"direction": 4,
-"row": 5,
-"word": "future"
-}, {
-"col": 2,
-"direction": 3,
-"row": 5,
-"word": "flower"
-}, {
-"col": 9,
-"direction": 6,
-"row": 4,
-"word": "past"
-}, {
-"col": 9,
-"direction": 4,
-"row": 4,
-"word": "peace"
-} ]
 
-[node name="Panel" type="Panel" parent="."]
-margin_top = -1.0
-margin_right = 403.0
-margin_bottom = 572.0
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 409.0
+margin_bottom = 604.0
+color = Color( 0.972549, 0.968627, 0.952941, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 18.0
+margin_top = 84.0
+margin_right = 390.0
+margin_bottom = 457.0
+color = Color( 0.172549, 0.172549, 0.180392, 1 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 380.0
-margin_bottom = 380.0
+margin_left = 25.0
+margin_top = 90.0
+margin_right = 385.0
+margin_bottom = 450.0
 mouse_filter = 2
 custom_constants/vseparation = 0
 custom_constants/hseparation = 0
@@ -56,4 +33,69 @@ visible = false
 points = PoolVector2Array( 50, 50, 306, 51 )
 width = 30.0
 default_color = Color( 0.615686, 0.4, 1, 0.47451 )
+texture_mode = 266592599
+
+[node name="WordList" type="VBoxContainer" parent="."]
+margin_left = 26.1067
+margin_top = 471.29
+margin_right = 95.1067
+margin_bottom = 577.29
+
+[node name="word1" type="Label" parent="WordList"]
+modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
+margin_right = 69.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/shadow_offset_x = 2
+text = "FINDINGS"
+uppercase = true
+
+[node name="word2" type="Label" parent="WordList"]
+modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
+margin_top = 22.0
+margin_right = 69.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/shadow_offset_x = 2
+text = "FINDINGS"
+uppercase = true
+
+[node name="word3" type="Label" parent="WordList"]
+modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
+margin_top = 44.0
+margin_right = 69.0
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/shadow_offset_x = 2
+text = "FINDINGS"
+uppercase = true
+
+[node name="word4" type="Label" parent="WordList"]
+modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
+margin_top = 66.0
+margin_right = 69.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/shadow_offset_x = 2
+text = "FINDINGS"
+uppercase = true
+
+[node name="word5" type="Label" parent="WordList"]
+modulate = Color( 0.172549, 0.172549, 0.180392, 1 )
+margin_top = 88.0
+margin_right = 69.0
+margin_bottom = 106.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/shadow_offset_x = 2
+text = "FINDINGS"
+uppercase = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.6541
+margin_top = 52.1174
+margin_right = 344.654
+margin_bottom = 70.1174
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.172549, 0.172549, 0.180392, 1 )
+text = "Exercises to help to recover your memory"
 

@@ -113,36 +113,4 @@ texture = ExtResource( 10 )
 
 [node name="SopaLetras" parent="." index="3" instance=ExtResource( 11 )]
 visible = false
-position = Vector2( 468.874, 73.4803 )
-words = [ {
-"col": 2,
-"direction": 2,
-"row": 2,
-"word": "remember"
-}, {
-"col": 0,
-"direction": 4,
-"row": 0,
-"word": "salvation"
-}, {
-"col": 2,
-"direction": 4,
-"row": 5,
-"word": "future"
-}, {
-"col": 2,
-"direction": 3,
-"row": 5,
-"word": "flower"
-}, {
-"col": 9,
-"direction": 6,
-"row": 4,
-"word": "past"
-}, {
-"col": 9,
-"direction": 4,
-"row": 4,
-"word": "peace"
-} ]
 

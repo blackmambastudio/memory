@@ -1,16 +1,51 @@
 tool
-extends Node2D
+extends Control
 
 const Letter = preload("res://Scenarios/Minigames/SopaLetras/Letter.tscn")
 signal word_match
 
-export (Array) var words = [
-	{"word":"remember", "col": 2, "row": 2, "direction": 2},
-	{"word":"salvation", "col": 0, "row": 0, "direction": 4},
-	{"word":"future", "col": 2, "row": 5, "direction": 4},
-	{"word":"flower", "col": 2, "row": 5, "direction": 3},
-	{"word":"past", "col": 9, "row": 4, "direction": 6},
-	{"word":"peace", "col": 9, "row": 4, "direction": 4},
+var catetories = {
+	"laundry": [
+		{"word":"remember", "col": 1, "row": 2, "direction": 2},
+		{"word":"laundry", "col": 0, "row": 1, "direction": 4},
+		{"word":"bleach", "col": 2, "row": 5, "direction": 2},
+		{"word":"wash", "col": 4, "row": 7, "direction": 2},
+		{"word":"mop", "col": 9, "row": 9, "direction": 2},
+		{"word":"remove", "col": 10, "row": 11, "direction": 6}
+	],
+	"appliances": [
+		{"word":"remember", "col": 0, "row": 1, "direction": 4},
+		{"word":"frypan", "col": 2, "row": 9, "direction": 2},
+		{"word":"toaster", "col": 9, "row": 3, "direction": 5},
+		{"word":"dryer", "col": 6, "row": 8, "direction": 2},
+		{"word":"vacuum", "col": 3, "row": 1, "direction": 2},
+		{"word":"pump", "col": 8, "row": 3, "direction": 0}
+	],
+	"gardentools": [
+		{"word":"remember", "col": 8, "row": 10, "direction": 6},
+		{"word":"shovel", "col": 9, "row": 2, "direction": 4},
+		{"word":"gloves", "col": 2, "row": 2, "direction": 4},
+		{"word":"pruner", "col": 4, "row": 9, "direction": 2},
+		{"word":"shears", "col": 9, "row": 2, "direction": 6},
+		{"word":"strimmer", "col": 3, "row": 0, "direction": 3}
+	], 
+	"kitchen":[
+		{"word":"remember", "col": 11, "row": 2, "direction": 4},
+		{"word":"stove", "col": 2, "row": 4, "direction": 2},
+		{"word":"fridge", "col": 8, "row": 2, "direction": 6},
+		{"word":"toaster", "col": 3, "row": 9, "direction": 1},
+		{"word":"blender", "col": 1, "row": 9, "direction": 1},
+		{"word":"brush", "col": 6, "row": 8, "direction": 2}
+	]
+}
+
+var words =[
+	{"word":"remember", "col": 1, "row": 2, "direction": 2},
+	{"word":"laundry", "col": 0, "row": 1, "direction": 4},
+	{"word":"bleach", "col": 2, "row": 5, "direction": 2},
+	{"word":"wash", "col": 4, "row": 7, "direction": 2},
+	{"word":"mop", "col": 9, "row": 9, "direction": 2},
+	{"word":"remove", "col": 10, "row": 11, "direction": 6}
 ]
 
 var word_indexes = {}
@@ -43,14 +78,14 @@ func letter_clicked(index):
 	if initiaded:
 		letter.select()
 		one_pair = index
-		$Selector.points[0].x = $GridContainer.rect_position.x + letter.rect_position.x + 15
-		$Selector.points[0].y = $GridContainer.rect_position.x + letter.rect_position.y + 15
+		$Selector.points[0].x = $GridContainer.rect_position.x + letter.rect_position.x + $GridContainer.margin_left - 10
+		$Selector.points[0].y = $GridContainer.rect_position.x + letter.rect_position.y +  $GridContainer.margin_top - 10
 	else:
 		# search pair
 		for pair in pairs:
 			if (pair[0] == one_pair or pair[0] == index) and \
 			   (pair[1] == one_pair or pair[1] == index):
-				emit_signal("word_match", pair[2])
+				word_match(pair)
 				for index_letter in word_indexes[pair[2]]:
 					$GridContainer.get_child(index_letter).set_matched()
 		
@@ -64,8 +99,8 @@ func set_hovered(letter):
 
 func _process(delta):
 	if hovered and one_pair!=-1:
-		$Selector.points[1].x = $GridContainer.rect_position.x + hovered.rect_position.x + 15
-		$Selector.points[1].y = $GridContainer.rect_position.x + hovered.rect_position.y + 15
+		$Selector.points[1].x = $GridContainer.rect_position.x + hovered.rect_position.x +  $GridContainer.margin_left - 10
+		$Selector.points[1].y = $GridContainer.rect_position.x + hovered.rect_position.y +  $GridContainer.margin_top - 10
 
 func populate():
 	var vocals = 'aeiou'
@@ -84,8 +119,8 @@ func populate():
 
 
 func insert_words():
+	var word_list_index = 0
 	for w in words:
-		print(w)
 		var text = w["word"]
 		var col = w["col"]
 		var row = w["row"]
@@ -107,9 +142,20 @@ func insert_words():
 				col -= 1
 
 		word_indexes[text] = _word
-		pairs.append([_word[0], _word[-1], text])
+		pairs.append([_word[0], _word[-1], text, word_list_index])
+		
+		# insert word in the wordlist
+		if text != 'remember':
+			$WordList.get_child(word_list_index).text = text
+			word_list_index += 1
+		else:
+			pairs[-1][3] = -1
 
-
+func word_match(pair):
+	var word_list_index = pair[3]
+	if word_list_index != -1:
+		$WordList.get_child(word_list_index).modulate = Color(0.7,0.2,0.2)
+	emit_signal("word_match", pair[2])
 
 
 

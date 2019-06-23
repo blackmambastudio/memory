@@ -1,6 +1,12 @@
 extends "res://Acts/ViewScene.gd"
 onready var VariableBoard = get_node("/root/VariableBoard")
 
+func _ready():
+	$SopaLetras.connect("word_match", self, "word_found")
+	
+func word_found(word):
+	if word == 'remember':
+		print("displays a flash!!")
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':
