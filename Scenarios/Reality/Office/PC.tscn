@@ -1,21 +1,30 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenarios/Reality/Office/PC.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/Reality/Office/Assets/screen.png" type="Texture" id=2]
 [ext_resource path="res://Scenarios/Reality/Office/Assets/login.png" type="Texture" id=3]
-[ext_resource path="res://Assets/CustomResources/DynamicFont/kenney_pixel-24.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/desktop.png" type="Texture" id=5]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/nrg-nor.png" type="Texture" id=6]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/nrg-sel.png" type="Texture" id=7]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/reports-nor.png" type="Texture" id=8]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/reports-sel.png" type="Texture" id=9]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/window_map.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4a-nor.png" type="Texture" id=11]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4a-hov.png" type="Texture" id=12]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4b-nor.png" type="Texture" id=13]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4b-hov.png" type="Texture" id=14]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4c-nor.png" type="Texture" id=15]
-[ext_resource path="res://Scenarios/Reality/Office/Assets/4c-hov.png" type="Texture" id=16]
+[ext_resource path="res://Assets/CustomResources/DynamicFont/kenney_pixel-password.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/CustomResources/DynamicFont/kenney_pixel-24.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/desktop.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/nrg-nor.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/nrg-sel.png" type="Texture" id=8]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/reports-nor.png" type="Texture" id=9]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/reports-sel.png" type="Texture" id=10]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/window_map.png" type="Texture" id=11]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4a-nor.png" type="Texture" id=12]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4a-hov.png" type="Texture" id=13]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4b-nor.png" type="Texture" id=14]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4b-hov.png" type="Texture" id=15]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4c-nor.png" type="Texture" id=16]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/4c-hov.png" type="Texture" id=17]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/file_manager.png" type="Texture" id=18]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/melano_rpt-nor.png" type="Texture" id=19]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/melano_rpt-hov.png" type="Texture" id=20]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/sutano_rpt-nor.png" type="Texture" id=21]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/sutano_rpt-hov.png" type="Texture" id=22]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/tulema_rpt-nor.png" type="Texture" id=23]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/tulema_rpt-hov.png" type="Texture" id=24]
+[ext_resource path="res://Scenarios/Reality/Office/Assets/cecilia_rpt.png" type="Texture" id=25]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Desktop"
@@ -87,6 +96,84 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=4]
+resource_name = "OpenFileMan"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Desktop/FileManager:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( -0.5, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.4, 0.4 ), Vector2( 0.6, 0.6 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Desktop/FileManager:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00567399, 0.2, 0.5, 0.987953 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.12549 ), Color( 1, 1, 1, 0.572549 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "OpenReport"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Desktop/CeciliaReport:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.7 ),
+"transitions": PoolRealArray( 2, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 20, 335 ), Vector2( 20, 308.796 ), Vector2( 20, 190.878 ), Vector2( 20, 72.9592 ), Vector2( 20, 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Desktop/CeciliaReport:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.7 ),
+"transitions": PoolRealArray( 2, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 454, 23 ), Vector2( 454, 49.2041 ), Vector2( 454, 167.122 ), Vector2( 454, 285.041 ), Vector2( 454, 344 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Desktop/CeciliaReport/Report:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3, 0.9 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Desktop/CeciliaReport:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.00594574, 0.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="PC" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -94,6 +181,8 @@ script = ExtResource( 1 )
 anims/Desktop = SubResource( 1 )
 anims/Login = SubResource( 2 )
 anims/OpenApp = SubResource( 3 )
+anims/OpenFileMan = SubResource( 4 )
+anims/OpenReport = SubResource( 5 )
 
 [node name="Screen" type="TextureRect" parent="."]
 margin_right = 40.0
@@ -102,7 +191,6 @@ mouse_default_cursor_shape = 3
 texture = ExtResource( 2 )
 
 [node name="Login" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Backgrounf" type="Sprite" parent="Login"]
 position = Vector2( 633.285, 256.407 )
@@ -115,6 +203,13 @@ editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 2
+
+[node name="Delete" type="TextureButton" parent="Login/Keys"]
+margin_left = 369.0
+margin_top = 230.0
+margin_right = 432.0
+margin_bottom = 261.0
+mouse_default_cursor_shape = 6
 
 [node name="P" type="TextureButton" parent="Login/Keys"]
 margin_left = 162.0
@@ -298,14 +393,85 @@ margin_right = 415.0
 margin_bottom = 356.0
 mouse_default_cursor_shape = 6
 
-[node name="Password" type="Label" parent="Login"]
-margin_left = 119.0
+[node name="Password" type="Control" parent="Login"]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="P1" type="Label" parent="Login/Password"]
+margin_left = 148.0
 margin_top = 154.0
-margin_right = 379.0
+margin_right = 174.0
 margin_bottom = 176.0
+mouse_default_cursor_shape = 3
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
-text = "password"
+text = "p"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="P2" type="Label" parent="Login/Password"]
+margin_left = 184.0
+margin_top = 154.0
+margin_right = 210.0
+margin_bottom = 176.0
+mouse_default_cursor_shape = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "s"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="P3" type="Label" parent="Login/Password"]
+margin_left = 220.0
+margin_top = 154.0
+margin_right = 246.0
+margin_bottom = 176.0
+mouse_default_cursor_shape = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "s"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="P4" type="Label" parent="Login/Password"]
+margin_left = 256.0
+margin_top = 154.0
+margin_right = 282.0
+margin_bottom = 176.0
+mouse_default_cursor_shape = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "w"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="P5" type="Label" parent="Login/Password"]
+margin_left = 292.0
+margin_top = 154.0
+margin_right = 318.0
+margin_bottom = 176.0
+mouse_default_cursor_shape = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "r"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="P6" type="Label" parent="Login/Password"]
+margin_left = 328.0
+margin_top = 154.0
+margin_right = 354.0
+margin_bottom = 176.0
+mouse_default_cursor_shape = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
+text = "d"
 align = 1
 valign = 1
 uppercase = true
@@ -316,19 +482,20 @@ margin_left = 119.0
 margin_top = 177.0
 margin_right = 379.0
 margin_bottom = 201.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.133333, 0.12549, 0.203922, 1 )
 text = "wrong  password"
 align = 1
 valign = 1
 
 [node name="Desktop" type="Node2D" parent="."]
+editor/display_folded = true
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 
 [node name="Background" type="Sprite" parent="Desktop"]
 position = Vector2( 20, 180 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 centered = false
 
 [node name="NrgSys" type="TextureButton" parent="Desktop"]
@@ -338,10 +505,13 @@ margin_right = 122.0
 margin_bottom = 118.0
 rect_pivot_offset = Vector2( 45, 47 )
 mouse_default_cursor_shape = 6
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 7 )
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
 expand = true
 stretch_mode = 3
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Reports" type="TextureButton" parent="Desktop"]
 margin_left = 48.0
@@ -350,10 +520,13 @@ margin_right = 112.0
 margin_bottom = 209.0
 rect_pivot_offset = Vector2( 32, 41 )
 mouse_default_cursor_shape = 6
-texture_normal = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 expand = true
 stretch_mode = 3
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="EnergyApp" type="TextureRect" parent="Desktop"]
 editor/display_folded = true
@@ -364,7 +537,10 @@ margin_right = 498.0
 margin_bottom = 432.0
 rect_scale = Vector2( 0, 0 )
 mouse_default_cursor_shape = 3
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="4A" type="TextureButton" parent="Desktop/EnergyApp"]
 visible = false
@@ -373,8 +549,8 @@ margin_top = 30.0
 margin_right = 428.0
 margin_bottom = 321.0
 mouse_default_cursor_shape = 6
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
 
 [node name="4B" type="TextureButton" parent="Desktop/EnergyApp"]
 visible = false
@@ -383,8 +559,8 @@ margin_top = 175.0
 margin_right = 314.0
 margin_bottom = 321.0
 mouse_default_cursor_shape = 6
-texture_normal = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
 
 [node name="4C" type="TextureButton" parent="Desktop/EnergyApp"]
 visible = false
@@ -393,6 +569,92 @@ margin_top = 30.0
 margin_right = 150.0
 margin_bottom = 321.0
 mouse_default_cursor_shape = 6
-texture_normal = ExtResource( 15 )
-texture_hover = ExtResource( 16 )
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+
+[node name="FileManager" type="TextureRect" parent="Desktop"]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 20.0
+margin_top = 14.0
+margin_right = 476.0
+margin_bottom = 361.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 228, 173 )
+mouse_default_cursor_shape = 3
+texture = ExtResource( 18 )
+stretch_mode = 4
+
+[node name="MelanoFile" type="TextureButton" parent="Desktop/FileManager"]
+margin_left = 76.0
+margin_top = 66.0
+margin_right = 193.0
+margin_bottom = 161.0
+mouse_default_cursor_shape = 6
+disabled = true
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 20 )
+
+[node name="SutanoFile" type="TextureButton" parent="Desktop/FileManager"]
+margin_left = 254.0
+margin_top = 66.0
+margin_right = 372.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 6
+disabled = true
+texture_normal = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
+
+[node name="TulemaFile" type="TextureButton" parent="Desktop/FileManager"]
+margin_left = 76.0
+margin_top = 210.0
+margin_right = 194.0
+margin_bottom = 303.0
+mouse_default_cursor_shape = 6
+disabled = true
+texture_normal = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+
+[node name="Close" type="TextureButton" parent="Desktop/FileManager"]
+margin_left = 434.0
+margin_right = 455.0
+margin_bottom = 25.0
+mouse_default_cursor_shape = 6
+disabled = true
+
+[node name="CeciliaReport" type="NinePatchRect" parent="Desktop"]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0.000993821 )
+margin_left = 20.0
+margin_top = 335.0
+margin_right = 474.0
+margin_bottom = 358.0
+mouse_filter = 0
+mouse_default_cursor_shape = 3
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 454, 344 )
+patch_margin_top = 23
+
+[node name="Report" type="Label" parent="Desktop/CeciliaReport"]
+self_modulate = Color( 1, 1, 1, 6.54512e-005 )
+margin_left = 44.0
+margin_top = 50.0
+margin_right = 412.0
+margin_bottom = 322.0
+custom_fonts/font = ExtResource( 5 )
+text = "Nombre: Cecilia Melano
+Edad: 42
+Hijos: 2
+Estado civil: Separado
+Perfil recomendado:
+  - Profesión: Payaso
+  - Pasiones: Actuación, lectura.
+  - Blablabla."
+uppercase = true
+
+[node name="Close" type="TextureButton" parent="Desktop/CeciliaReport"]
+margin_left = 428.0
+margin_right = 454.0
+margin_bottom = 24.0
+mouse_default_cursor_shape = 6
 
