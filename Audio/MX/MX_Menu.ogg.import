@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MX_Menu.ogg-22074a9297f534ef679ec2b01c846848.oggstr"
+
+[deps]
+
+source_file="res://Audio/MX/MX_Menu.ogg"
+dest_files=[ "res://.import/MX_Menu.ogg-22074a9297f534ef679ec2b01c846848.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

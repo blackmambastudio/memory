@@ -30,6 +30,10 @@ config/name="Memory"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+mix_rate=48000
+
 [autoload]
 
 ActionRouter="*res://ActionRouter.tscn"

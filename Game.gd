@@ -43,6 +43,7 @@ func _ready():
 
 func start_game():
 	$IntroScene.hide()
+	$IntroScene/Music/MX_Menu.stop()
 	$ActManager.load_act("res://Acts/Act1/Act1_Room.tscn")
 
 func change_language():

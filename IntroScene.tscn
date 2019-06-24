@@ -1,7 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/start.jpg" type="Texture" id=1]
 [ext_resource path="res://Assets/CustomResources/DynamicFont/Questrial-24.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Language.gd" type="Script" id=3]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/AudioAssets/SFX/UI_Hover.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Audio/RandomTool.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/AudioAssets/SFX/UI_Lang_01.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/AudioAssets/SFX/UI_Lang_02.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Start.gd" type="Script" id=9]
+[ext_resource path="res://Audio/AudioAssets/SFX/UI_Start.ogg" type="AudioStream" id=10]
+[ext_resource path="res://MX_Menu.gd" type="Script" id=11]
+[ext_resource path="res://Audio/MX/MX_Menu.ogg" type="AudioStream" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "intro"
@@ -57,6 +67,29 @@ margin_right = 76.0
 margin_bottom = 497.0
 custom_fonts/font = ExtResource( 2 )
 text = "< English >"
+script = ExtResource( 3 )
+
+[node name="Hover" parent="Language" instance=ExtResource( 4 )]
+stream = ExtResource( 5 )
+Volume = -4.0
+minPitch = 1.0
+maxPitch = -1.0
+
+[node name="Click" parent="Language" instance=ExtResource( 6 )]
+editor/display_folded = true
+Volume = -2.0
+
+[node name="Click_01" parent="Language/Click" instance=ExtResource( 4 )]
+stream = ExtResource( 7 )
+Volume = -3.0
+minPitch = 1.0
+maxPitch = -1.0
+
+[node name="Click_02" parent="Language/Click" instance=ExtResource( 4 )]
+stream = ExtResource( 8 )
+Volume = -3.0
+minPitch = 1.0
+maxPitch = -1.0
 
 [node name="Start" type="Button" parent="."]
 anchor_left = 0.5
@@ -67,4 +100,26 @@ margin_right = 76.0
 margin_bottom = 559.0
 custom_fonts/font = ExtResource( 2 )
 text = "Start"
+script = ExtResource( 9 )
 
+[node name="Hover" parent="Start" instance=ExtResource( 4 )]
+stream = ExtResource( 5 )
+Volume = -4.0
+
+[node name="Click" parent="Start" instance=ExtResource( 4 )]
+stream = ExtResource( 10 )
+Volume = -5.0
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="MX_Menu" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 12 )
+
+[node name="Fade" type="Tween" parent="Music"]
+playback_process_mode = 0
+
+[connection signal="button_down" from="Language" to="Language" method="_on_Language_button_down"]
+[connection signal="mouse_entered" from="Language" to="Language" method="_on_Language_mouse_entered"]
+[connection signal="button_down" from="Start" to="Start" method="_on_Start_button_down"]
+[connection signal="mouse_entered" from="Start" to="Start" method="_on_Start_mouse_entered"]
