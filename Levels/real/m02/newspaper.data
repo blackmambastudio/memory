@@ -1,5 +1,5 @@
-DialogNode|dialog|Cecilia|The newspapers were swarmed with news about the virus.|Los periódicos estaban plagados de noticias sobre el virus.|6.1|DX_Assets/Cecilia/Memories/Cecilia_news_01.ogg|0|[]
+DialogNode|dialog|Cecilia|0|The newspapers were swarmed with news about the virus.|Los periódicos estaban plagados de noticias sobre el virus.|6.1|DX_Assets/Cecilia/Memories/Cecilia_news_01.ogg|0|[]
 FilterNode|filter|1-newspaper-deep|default||[@DialogNode@278]
 @FilterNode@311|filter|1-newspaper-deep|equals|1|[DialogNode]
-@DialogNode@249|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@311]
-@DialogNode@278|dialog|Cecilia|I never thought I would be scared to live in platanal.|Nunca pensé que tendría miedo de vivir en Platanal.|5.2|DX_Assets/Cecilia/Memories/Cecilia_news_03.ogg|0|[]
+@DialogNode@249|dialog|Cecilia|0|||0.1||0|[FilterNode, @FilterNode@311]
+@DialogNode@278|dialog|Cecilia|0|I never thought I would be scared to live in platanal.|Nunca pensé que tendría miedo de vivir en Platanal.|5.2|DX_Assets/Cecilia/Memories/Cecilia_news_03.ogg|0|[]

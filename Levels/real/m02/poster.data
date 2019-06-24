@@ -1,5 +1,5 @@
-DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@675]
+DialogNode|dialog|Cecilia|0|||0.1||0|[FilterNode, @FilterNode@675]
 @FilterNode@675|filter|1-poster-deep|equals|1|[@DialogNode@642]
 FilterNode|filter|1-poster-deep|default||[@DialogNode@613]
-@DialogNode@642|dialog|Cecilia|It remind me of the happiest days in my life.|Me recordaba algunos de los días más felices de mi vida.|6.2|DX_Assets/Cecilia/Memories/Cecilia_poster_02.ogg|0|[]
-@DialogNode@613|dialog|Cecilia|I used to keep the poster of my first show.|Guardaba el cartel de mi primera presentación.|5.1|DX_Assets/Cecilia/Memories/Cecilia_poster_01.ogg|0|[]
+@DialogNode@642|dialog|Cecilia|0|It remind me of the happiest days in my life.|Me recordaba algunos de los días más felices de mi vida.|6.2|DX_Assets/Cecilia/Memories/Cecilia_poster_02.ogg|0|[]
+@DialogNode@613|dialog|Cecilia|0|I used to keep the poster of my first show.|Guardaba el cartel de mi primera presentación.|5.1|DX_Assets/Cecilia/Memories/Cecilia_poster_01.ogg|0|[]

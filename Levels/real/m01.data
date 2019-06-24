@@ -31,7 +31,7 @@ ActionNode|action|{	"action": "Board/further",	"variable": "id-deep"}|[@ActionNo
 @OptionElement@422|option|cartel|[@EmbeddedDialogue@430]
 @EmbeddedDialogue@430|embedded|res://Levels/real/m01/cartel.data|[@ActionNode@438]
 @ActionNode@438|action|{	"action": "Board/further",	"variable": "1-cartel-deep"}|[@ActionNode@439]
-DialogNode|dialog|Cecilia|||0.1||0|[@ActionNode@344]
+DialogNode|dialog|Cecilia|0|||0.1||0|[@ActionNode@344]
 FilterNode|filter|loop_memory|equals|true|[EmbeddedDialogue]
 @FilterNode@831|filter|loop_memory|default||[@ActionNode@1095]
 @ActionNode@1095|action|{	"action": "Board/set_value",	"variable": "loop_memory",	"value": true}|[]

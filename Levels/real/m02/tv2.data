@@ -1,3 +1,3 @@
-DialogNode|dialog|Cecilia|||0.1||0|[FilterNode]
+DialogNode|dialog|Cecilia|0|||0.1||0|[FilterNode]
 FilterNode|filter|1-tv2-deep|default||[@DialogNode@1442]
-@DialogNode@1442|dialog|Cecilia|The celebrate Monteasalvo achievements and felt sorry for the failure.|Se celebraba cada logro hecho por Monteasalvo y se lamentaban los fracasos.|7.1|DX_Assets/Cecilia/Memories/Cecilia_Ftv_02.ogg|0|[]
+@DialogNode@1442|dialog|Cecilia|0|The celebrate Monteasalvo achievements and felt sorry for the failure.|Se celebraba cada logro hecho por Monteasalvo y se lamentaban los fracasos.|7.1|DX_Assets/Cecilia/Memories/Cecilia_Ftv_02.ogg|0|[]

@@ -30,7 +30,7 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"inv_key", "value": false})
 	ActionRouter.request({"action":"Board/register", "variable":"inv_control", "value": false})
 	
-	ActionRouter.request({"action":"Board/register", "variable":"view_monitor_status", "value": true})
+	ActionRouter.request({"action":"Board/register", "variable":"view_monitor_status", "value": "0"})
 	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})
 	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
 	

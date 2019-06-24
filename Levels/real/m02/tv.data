@@ -1,5 +1,5 @@
-@DialogNode@251|dialog|Cecilia|When the quarantine centers were announced I was scared like never before.|Cuando se anunciaron los centros de cuarentena sentí miedo como nunca antes.|7.2|DX_Assets/Cecilia/Memories/Cecilia_tv_01.ogg|0|[]
+@DialogNode@251|dialog|Cecilia|0|When the quarantine centers were announced I was scared like never before.|Cuando se anunciaron los centros de cuarentena sentí miedo como nunca antes.|7.2|DX_Assets/Cecilia/Memories/Cecilia_tv_01.ogg|0|[]
 @FilterNode@596|filter|1-tv-deep|equals|1|[@DialogNode@579]
 FilterNode|filter|1-tv-deep|default||[@DialogNode@251]
-DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@596]
-@DialogNode@579|dialog|Cecilia|I couldn't beleive they wanted to have us isolated.|No podía creer que quisieran tenernos aislados.|4.2|DX_Assets/Cecilia/Memories/Cecilia_tv_02.ogg|0|[]
+DialogNode|dialog|Cecilia|0|||0.1||0|[FilterNode, @FilterNode@596]
+@DialogNode@579|dialog|Cecilia|0|I couldn't beleive they wanted to have us isolated.|No podía creer que quisieran tenernos aislados.|4.2|DX_Assets/Cecilia/Memories/Cecilia_tv_02.ogg|0|[]

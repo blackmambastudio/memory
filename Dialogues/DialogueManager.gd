@@ -125,12 +125,16 @@ func set_text_object(text_object):
 	match text_object.actor:
 		'Cecilia':
 			text_color = cecilia
+			VariableBoard.set_value("view_hands_status", text_object.view_status)
 		'Dr Nick':
 			text_color = dr_nick
+			VariableBoard.set_value("view_monitor_status", text_object.view_status)
 		'Claire':
 			text_color = claire
+			VariableBoard.set_value("view_claire_status", text_object.view_status)
 		'Lucia':
 			text_color = lucia
+			VariableBoard.set_value("view_lucia_status", text_object.view_status)
 		'Customer':
 			text_color = customer
 		'Monteasalvo CS':

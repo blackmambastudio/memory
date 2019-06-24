@@ -7,6 +7,7 @@ export (String) var audio_resource = ''
 export (float) var dx_volume = 0
 export (int) var actor_selected = 0
 export (float) var timeout = 2.0
+export (int) var view_status = 0
 
 var actors = [
 	'Cecilia',
@@ -27,12 +28,14 @@ func _ready():
 	$audio_file.text = self.audio_resource
 	$dx_volume.value = self.dx_volume
 	$timeout.value = self.timeout
+	$view_status.value = self.view_status
 	
 	$dialog_en.connect("text_changed", self, "_on_update_text")
 	$dialog_es.connect("text_changed", self, "_on_update_text")
 	$audio_file.connect("text_changed", self, "_on_update_text")
 	$dx_volume.connect("value_changed", self, "_on_update_volume")
 	$timeout.connect("value_changed", self, "_on_update_timeout")
+	$view_status.connect("value_changed", self, "_on_update_view_status")
 	
 	$actor.clear()
 	for actor in actors:
@@ -60,6 +63,9 @@ func _on_update_timeout(value):
 func _on_update_volume(value):
 	self.dx_volume = value
 
+func _on_update_view_status(value):
+	self.view_status = value
+
 func _on_set_actor(id):
 	self.actor_selected = id
 	self.title = 'conversation - ' + actors[id]
@@ -68,6 +74,7 @@ func _to_string_node(next_nodes):
 	return self.name + \
 		"|dialog|" + \
 		actors[self.actor_selected] + '|' + \
+		str(self.view_status) + '|' + \
 		self.en_text + "|" + \
 		self.es_text + "|" + \
 		str(self.timeout)+ "|" + \
@@ -80,10 +87,11 @@ static func _to_tree(string):
 	return {
 		"type": data[1],
 		"actor": data[2],
-		"text_en": data[3],
-		"text_es": data[4],
-		"timeout": float(data[5]),
-		"audio": data[6],
-		"volume": float(data[7]),
-		"next": data[8].replace("[", "").replace("]","").split(",")
+		"view_status": data[3],
+		"text_en": data[4],
+		"text_es": data[5],
+		"timeout": float(data[6]),
+		"audio": data[7],
+		"volume": float(data[8]),
+		"next": data[9].replace("[", "").replace("]","").split(",")
 	}

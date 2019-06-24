@@ -1,5 +1,5 @@
-DialogNode|dialog|Cecilia|||0.1||0|[FilterNode, @FilterNode@689]
+DialogNode|dialog|Cecilia|0|||0.1||0|[FilterNode, @FilterNode@689]
 FilterNode|filter|id-deep|equals|1|[@DialogNode@1184]
-@DialogNode@1184|dialog|Cecilia|I'm 42 years old. I was born in Platanal.|Tengo 42 años. Nací en Platanal.|5.8|DX_Assets/Cecilia/Memories/Cecilia_id_02.ogg|0|[]
+@DialogNode@1184|dialog|Cecilia|0|I'm 42 years old. I was born in Platanal.|Tengo 42 años. Nací en Platanal.|5.8|DX_Assets/Cecilia/Memories/Cecilia_id_02.ogg|0|[]
 @FilterNode@689|filter|id-deep|default||[@DialogNode@718]
-@DialogNode@718|dialog|Cecilia|...my name is Cecilia Melano.|...mi nombre es Cecilia Melano.|3|DX_Assets/Cecilia/Memories/Cecilia_id_01.ogg|0|[]
+@DialogNode@718|dialog|Cecilia|0|...my name is Cecilia Melano.|...mi nombre es Cecilia Melano.|3|DX_Assets/Cecilia/Memories/Cecilia_id_01.ogg|0|[]
