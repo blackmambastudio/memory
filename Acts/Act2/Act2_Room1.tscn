@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Acts/Act1/Act1_Room.tscn" type="PackedScene" id=1]
 
-[node name="Act2_Room1" instance=ExtResource( 1 )]
-starting_dialogue = "res://Levels/act2/dlg03.data"
+[node name="Act2_Room1" index="0" instance=ExtResource( 1 )]
+starting_dialogue = "res://Levels/act2/dlg01.data"
 
 [node name="RoomLeft" parent="Views" index="0"]
 visible = true
