@@ -84,7 +84,10 @@ func execute():
 	
 	if block.type == 'action':
 		var request = parse_json(block.action)
-		ActionRouter.request(request)
+		if request.has("pause"):
+			yield(ActionRouter.request(request), "completed")
+		else:
+			ActionRouter.request(request)
 		self.solve_next()
 
 func solve_next():

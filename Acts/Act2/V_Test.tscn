@@ -56,11 +56,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Clickeables" parent="." index="4"]
-editor/display_folded = true
-
 [node name="Left_action" parent="Clickeables" index="0" instance=ExtResource( 6 )]
 position = Vector2( 469.33, 633.935 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/Left_action" index="0"]
 shape = SubResource( 1 )
@@ -72,6 +70,7 @@ texture = ExtResource( 7 )
 
 [node name="Middle_action" parent="Clickeables" index="1" instance=ExtResource( 6 )]
 position = Vector2( 666.584, 652.98 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/Middle_action" index="0"]
 position = Vector2( -19.0453, -20.4055 )
@@ -84,6 +83,7 @@ texture = ExtResource( 8 )
 
 [node name="Right_action" parent="Clickeables" index="2" instance=ExtResource( 6 )]
 position = Vector2( 798.54, 624.412 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Clickeables/Right_action" index="0"]
 position = Vector2( 16.3245, 6.80194 )

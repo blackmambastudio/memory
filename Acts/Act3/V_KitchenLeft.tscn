@@ -12,6 +12,7 @@ texture = ExtResource( 2 )
 
 [node name="to_window" parent="ChangeZones" index="0" instance=ExtResource( 3 )]
 to_view = "KitchenWindow"
+cursor_type = "hand"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ChangeZones/to_window" index="0"]
 polygon = PoolVector2Array( 353.375, 120.756, 589.386, 155.105, 591.602, 433.222, 363.347, 462.031 )

@@ -77,10 +77,20 @@ func handle(request):
 		"Game/ToBlack":
 			$Overlay.show()
 			$AnimationPlayer.play("FadeIn")
+			yield($AnimationPlayer, "animation_finished")
 		"Game/ToNormal":
 			$AnimationPlayer.play("FadeOut")
 			yield($AnimationPlayer, "animation_finished")
 			$Overlay.hide()
+		"Game/Inyected":
+			$Overlay.show()
+			$AnimationPlayer.play("FadeIn")
+			yield($AnimationPlayer, "animation_finished")
+			yield(get_tree().create_timer(2.0), "timeout")
+			$AnimationPlayer.play("FadeOut")
+			yield($AnimationPlayer, "animation_finished")
+		"Game/Wait":
+			yield(get_tree().create_timer(request.wait), "timeout")
 		_:
 			return false
 #warning-ignore:unreachable_code

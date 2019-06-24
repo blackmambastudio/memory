@@ -49,7 +49,7 @@ func load_act(act_name):
 	current_act.start()
 	if not current_act.starting_dialogue.empty():
 		ActionRouter.request({"action": "Dialogue/stack", "path": current_act.starting_dialogue})
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1.5), "timeout")
 		ActionRouter.request({"action": "Game/ToNormal"})
 
 func change_view(view_name):
