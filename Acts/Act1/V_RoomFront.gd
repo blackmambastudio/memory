@@ -8,7 +8,6 @@ func _ready():
 	
 
 func display_monitor(display):
-	print("display", display)
 	if display:
 		$AnimationPlayer.play("show")
 	else:

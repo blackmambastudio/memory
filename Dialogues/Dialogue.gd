@@ -86,7 +86,6 @@ func execute():
 		var request = parse_json(block.action)
 		ActionRouter.request(request)
 		self.solve_next()
-	
 
 func solve_next():
 	var block = self.get_text_object(self.current_block_id)

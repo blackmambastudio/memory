@@ -159,9 +159,9 @@ func timeout():
 	ActionRouter.request(_on_timeout_action)
 
 func cls():
+	$SoundObjectST.stop()
 	$Panel/Text.text = ""
 	$BackSubtitle.hide()
 	
 func toggle_text_background(show = true):
 	pass
-

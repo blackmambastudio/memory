@@ -26,10 +26,12 @@ func disableAll():
 	for element in $Elements.get_children():
 		element.disable()
 
+func enableReal():
+	for element in $Elements.get_children():
+		element.enable(true)
+
 # should hide elements on the left
 func clip_left():
-	
-	
 	$Elements/WindowLeft.visible = false
 	$Elements/Phone.visible = false
 	$Elements/Newspaper.visible = false

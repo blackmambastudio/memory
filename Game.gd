@@ -2,8 +2,10 @@ extends Control
 
 export(bool) var skip_with_s = false
 
-onready var arrow = load('res://Assets/Cursor/Arrow.png')
-onready var pointing_hand = load('res://Assets/Cursor/PointingHand.png')
+onready var arrow = load('res://Assets/Cursor/arrow.png')
+onready var pointing_hand = load('res://Assets/Cursor/pointing_hand.png')
+onready var turn_left = load('res://Assets/Cursor/turn_left.png')
+onready var turn_right = load('res://Assets/Cursor/turn_right.png')
 onready var pc_arrow = load('res://Assets/Cursor/pc_arrow.png')
 onready var pc_pointing_hand = load('res://Assets/Cursor/pc_pointing_hand.png')
 onready var ActionRouter = get_node("/root/ActionRouter")
@@ -30,6 +32,8 @@ func _ready():
 		Input.CURSOR_DRAG,
 		Vector2(7.0, 0.0)
 	)
+	Input.set_custom_mouse_cursor(turn_left, Input.CURSOR_BDIAGSIZE)
+	Input.set_custom_mouse_cursor(turn_right, Input.CURSOR_FDIAGSIZE)
 
 	# Setup signal listeners
 	$Memory/Memory1.connect("item_selected", $DialogueManager, "_on_item_selected")
@@ -72,8 +76,12 @@ func handle(request):
 	match request.action:
 		"Game/ToBlack":
 			$Overlay.show()
-			$DialogueManager.toggle_text_background(false)
-			# $AnimationPlayer.play("FadeIn")
+			$AnimationPlayer.play("FadeIn")
 		"Game/ToNormal":
+			$AnimationPlayer.play("FadeOut")
+			yield($AnimationPlayer, "animation_finished")
 			$Overlay.hide()
-			# $AnimationPlayer.play("FadeOut")
+		_:
+			return false
+#warning-ignore:unreachable_code
+	return true

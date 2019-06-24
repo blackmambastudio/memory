@@ -19,6 +19,7 @@ polygon = PoolVector2Array( 353.375, 120.756, 589.386, 155.105, 591.602, 433.222
 [node name="to_front" parent="ChangeZones" index="1" instance=ExtResource( 3 )]
 position = Vector2( -9.97229, 189.474 )
 to_view = "KitchenFront"
+cursor_type = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
 position = Vector2( 1204.43, 169.529 )

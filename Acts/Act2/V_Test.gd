@@ -12,7 +12,7 @@ func _ready():
 	VariableBoard.suscribe("test_split_memory", self, "clip_test")
 	VariableBoard.suscribe("view_active_minigame", self, "display_game")
 	
-	display_game(1)
+	display_game('auto')
 
 func display_game(game_type):
 	if game_type == 'auto':

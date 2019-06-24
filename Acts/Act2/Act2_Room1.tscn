@@ -5,3 +5,9 @@
 [node name="Act2_Room1" instance=ExtResource( 1 )]
 starting_dialogue = "res://Levels/act2/dlg01.data"
 
+[node name="RoomLeft" parent="Views" index="0"]
+visible = true
+
+[node name="RoomFront" parent="Views" index="1"]
+visible = false
+

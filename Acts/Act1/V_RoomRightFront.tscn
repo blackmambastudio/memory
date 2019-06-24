@@ -25,7 +25,7 @@ extents = Vector2( 29.0374, 8.60364 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 639.52, 364.346 )
 
-[node name="RoomRightFront" instance=ExtResource( 1 )]
+[node name="RoomRightFront" index="0" instance=ExtResource( 1 )]
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
@@ -37,6 +37,7 @@ offset = Vector2( 640, 360 )
 [node name="to_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
 position = Vector2( 39.8892, 365.651 )
 to_view = "RoomFront"
+cursor_type = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
 position = Vector2( 67.5901, 29.9169 )
@@ -45,6 +46,7 @@ shape = SubResource( 1 )
 [node name="to_right" parent="ChangeZones" index="1" instance=ExtResource( 5 )]
 position = Vector2( 1099.55, 357.059 )
 to_view = "RoomRight"
+cursor_type = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_right" index="0"]
 position = Vector2( 67.5901, 29.9169 )
@@ -53,6 +55,7 @@ shape = SubResource( 1 )
 [node name="pills" parent="Clickeables" index="0" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 557.252, 451.616 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/pills" index="0"]
 position = Vector2( -2.50946, 1.79242 )
@@ -66,6 +69,7 @@ texture = ExtResource( 7 )
 [node name="sopa" parent="Clickeables" index="1" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 496.601, 464.425 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/sopa" index="0"]
 position = Vector2( -0.526188, 3.73392 )
@@ -80,6 +84,7 @@ texture = ExtResource( 8 )
 editor/display_folded = true
 visible = false
 position = Vector2( 640, 360 )
+cursor_type = "hand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickeables/ExitSoup" index="0"]
 shape = SubResource( 4 )
@@ -87,6 +92,7 @@ shape = SubResource( 4 )
 [node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 471.767, 582.314 )
+cursor_type = "hand"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickeables/Cajon" index="0"]
 position = Vector2( -3.1579, 9.50031 )
@@ -102,6 +108,7 @@ texture = ExtResource( 9 )
 editor/display_folded = true
 visible = false
 position = Vector2( 471.767, 582.314 )
+cursor_type = "hand"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickeables/Control" index="0"]
 position = Vector2( -58.222, 41.3446 )

@@ -12,7 +12,7 @@ func handle(request):
 		"Act/show":
 			self.ActManager.load_act(request.act)
 		"Act/end":
-			pass
+			self.ActManager.finish_act(request.next)
 		"Act/Views/setBackground":
 			self.ActManager.change_view_background(request.background)
 		_:

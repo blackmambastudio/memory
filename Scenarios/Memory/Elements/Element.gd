@@ -68,6 +68,12 @@ func disable():
 	if not fictional_item.empty():
 		Fictional.hide()
 
+func enable(real):
+	if real:
+		Real.show()
+	else:
+		Fictional.show()
+
 func reforce_fictional():
 	if fictional_item.empty(): return
 	fictional_factor += 0.2

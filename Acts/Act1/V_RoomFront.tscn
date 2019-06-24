@@ -68,6 +68,7 @@ texture = ExtResource( 6 )
 [node name="to_left" parent="ChangeZones" index="0" instance=ExtResource( 7 )]
 position = Vector2( 0, 370 )
 to_view = "RoomLeft"
+cursor_type = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_left" index="0"]
 position = Vector2( 100, 0 )
@@ -76,6 +77,7 @@ shape = SubResource( 1 )
 [node name="to_right_front" parent="ChangeZones" index="1" instance=ExtResource( 7 )]
 position = Vector2( 1280, 360 )
 to_view = "RoomRightFront"
+cursor_type = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_right_front" index="0"]
 position = Vector2( -100, 0 )

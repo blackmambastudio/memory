@@ -77,3 +77,16 @@ func handle(request):
 		
 		"Memory/M2/restore":
 			$Memory2.clip_restore()
+		
+		"Memory/enable_real":
+			match int(request.id):
+				1:
+					$Memory1.enableReal()
+				2:
+					$Memory2.enableReal()
+
+		_:
+			return false
+			
+#warning-ignore:unreachable_code
+	return true

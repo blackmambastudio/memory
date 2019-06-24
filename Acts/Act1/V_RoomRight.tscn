@@ -23,6 +23,7 @@ texture = ExtResource( 4 )
 [node name="to_right_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
 position = Vector2( 39.8892, 365.651 )
 to_view = "RoomRightFront"
+cursor_type = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_right_front" index="0"]
 position = Vector2( 67.5901, 29.9169 )

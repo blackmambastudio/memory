@@ -13,6 +13,7 @@ texture = ExtResource( 2 )
 [node name="ChangeViewZone" parent="ChangeZones" index="0" instance=ExtResource( 3 )]
 position = Vector2( 121.884, 362.327 )
 to_view = "KitchenFront"
+cursor_type = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/ChangeViewZone" index="0"]
 shape = SubResource( 1 )

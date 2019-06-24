@@ -10,7 +10,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.391, 261.516 )
 
-[node name="KitchenWindow" instance=ExtResource( 1 )]
+[node name="KitchenWindow" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="Window" parent="." index="0" instance=ExtResource( 3 )]
@@ -26,6 +26,7 @@ __meta__ = {
 [node name="to_front" parent="ChangeZones" index="0" instance=ExtResource( 5 )]
 position = Vector2( 39.8892, 365.651 )
 to_view = "KitchenFront"
+cursor_type = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeZones/to_front" index="0"]
 position = Vector2( 67.5901, 29.9169 )
