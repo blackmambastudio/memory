@@ -10,7 +10,10 @@ func word_found(word):
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':
-		print("say something about the pills")
+		VariableBoard.set_value("clicked", clickeable_name)
+		ActionRouter.request({
+		    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
+		})
 	elif clickeable_name == 'sopa':
 		set_soup_visible(true)
 	elif clickeable_name == 'ExitSoup':
@@ -21,6 +24,16 @@ func _on_clicked(clickeable_name):
 		VariableBoard.set_value("inv_control", true)
 		self.close_box()
 
+func _on_looked(clickeable_name):
+	VariableBoard.set_value("looked", clickeable_name)
+	ActionRouter.request({
+	    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
+	})
+
+func _on_exit():
+	ActionRouter.request({"action": "Dialogue/clear"})
+	VariableBoard.set_value("looked", "")
+	VariableBoard.set_value("clicked", "")
 
 func set_soup_visible(visible):
 	$SopaLetras.visible = visible
@@ -29,6 +42,10 @@ func set_soup_visible(visible):
 
 func open_box():
 	if not VariableBoard.get_value("inv_key"):
+		VariableBoard.set_value("clicked", "Cajon")
+		ActionRouter.request({
+		    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
+		})
 		return
 	else:
 		self.toggle_background("Box_opened")

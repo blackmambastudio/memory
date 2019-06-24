@@ -1,6 +1,6 @@
 extends Control
 
-export(bool) var skip_on_click = false
+export(bool) var skip_with_s = false
 
 onready var arrow = load('res://Assets/Cursor/Arrow.png')
 onready var pointing_hand = load('res://Assets/Cursor/PointingHand.png')
@@ -58,8 +58,8 @@ func change_language():
 	VariableBoard.set_value('language', current)
 
 func _process(delta):
-	if skip_on_click and not click_pressed and not $Memory.open \
-		and  Input.is_mouse_button_pressed(BUTTON_LEFT):
+	if skip_with_s and not $IntroScene.is_visible() \
+		and not click_pressed and Input.is_key_pressed(KEY_S):
 		click_pressed = true
 		ActionRouter.request({
 			"action": "Dialogue/next"

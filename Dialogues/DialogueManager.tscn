@@ -24,6 +24,7 @@ claire = Color( 0.592157, 0.803922, 0.878431, 1 )
 lucia = Color( 0.647059, 1, 0.662745, 1 )
 monteasalvo = Color( 0.517647, 0.517647, 0.917647, 1 )
 customer = Color( 0.6, 0.619608, 0.698039, 1 )
+pensamiento = Color( 0.913725, 0.815686, 0.929412, 1 )
 
 [node name="BackSubtitle" type="ColorRect" parent="."]
 margin_left = -30.0

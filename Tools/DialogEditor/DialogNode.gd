@@ -14,7 +14,8 @@ var actors = [
 	'Lucia',
 	'Claire',
 	'Customer',
-	'Monteasalvo CS'
+	'Monteasalvo CS',
+	'Pensamiento'
 ]
 
 func _ready():

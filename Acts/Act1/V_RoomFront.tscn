@@ -46,11 +46,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="RoomFront" index="0" instance=ExtResource( 1 )]
+[node name="RoomFront" instance=ExtResource( 1 )]
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="RoomFrontTV" type="Sprite" parent="Backgrounds" index="0"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 638, 359 )
 texture = ExtResource( 4 )
 

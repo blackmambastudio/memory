@@ -6,6 +6,7 @@ export(Color, RGB) var claire
 export(Color, RGB) var lucia
 export(Color, RGB) var monteasalvo
 export(Color, RGB) var customer
+export(Color, RGB) var pensamiento
 
 onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
@@ -69,6 +70,10 @@ func _ready():
 	VariableBoard.register("1-tv2-deep", 0)
 	VariableBoard.register("1-flowers-deep", 0)
 	
+	# General purpose variables
+	VariableBoard.register("clicked", "")
+	VariableBoard.register("looked", "")
+	
 	cls()
 	#self.add_dialogue_graph("res://Levels/nick_tests/dlg01.data")
 
@@ -130,6 +135,8 @@ func set_text_object(text_object):
 			text_color = customer
 		'Monteasalvo CS':
 			text_color = monteasalvo
+		'Pensamiento':
+			text_color = pensamiento
 	$Panel/Text.add_color_override("font_color", text_color)
 	$Panel/Text.show()
 	$BackSubtitle.show()

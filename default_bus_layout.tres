@@ -4,6 +4,7 @@
 resource_name = "Panner"
 
 [resource]
+bus/0/mute = true
 bus/1/name = "NPC"
 bus/1/solo = false
 bus/1/mute = false
