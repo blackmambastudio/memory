@@ -9,6 +9,12 @@ func _ready():
 func _on_clicked(clickeable_name):
 	print(clickeable_name)
 
+func _on_looked(clickeable_name):
+	print(clickeable_name)
+
+func _on_exit():
+	print("exitado")
+
 func set_background(background):
 	for child in $Backgrounds.get_children():
 		child.visible = child.name == background

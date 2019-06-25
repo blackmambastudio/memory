@@ -6,13 +6,14 @@ onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
 
 func _ready():
-	# TODO
-	# use the variable board to get notified and trigger
-	# when to clip to the left, or to the right
+	# Set listeners for board variables
 	VariableBoard.suscribe("test_split_memory", self, "clip_test")
 	VariableBoard.suscribe("view_active_minigame", self, "display_game")
-	
-	display_game('auto')
+	VariableBoard.suscribe("start_active_minigame", self, "start_minigame")
+
+	# Connect signal listeners
+	$minigames/Auto.connect("test_done", self, "_on_minigame_finish")
+	$minigames/Reflexes.connect("test_done", self, "_on_minigame_finish")
 
 func display_game(game_type):
 	if game_type == 'auto':
@@ -20,13 +21,19 @@ func display_game(game_type):
 		$minigames/Reflexes.visible = false
 		auto_minigame = true
 		$minigames/Auto.visible = true
-		$minigames/Auto.run_car()
+		# $minigames/Auto.run_car()
 	elif game_type == 'reflexes':
 		reflexes_minigame = true
 		$minigames/Reflexes.visible = true
 		auto_minigame = false
 		$minigames/Auto.visible = false
-		$minigames/Reflexes.emit_light()
+		# $minigames/Reflexes.emit_light()
+
+func start_minigame(value):
+	if auto_minigame:
+		$minigames/Auto.run_car()
+	elif reflexes_minigame:
+		$minigames/Reflexes.start_emitting()
 
 func clip_test(value):
 	if value == "0":
@@ -38,18 +45,15 @@ func clip_test(value):
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'Left_action':
-		print("do left")
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 		elif reflexes_minigame:
 			$minigames/Reflexes.choose_light(0)
 			$minigames/Reflexes.emit_light()
 	elif clickeable_name == 'Middle_action':
-		print("do middle")
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 	elif clickeable_name == 'Right_action':
-		print("do action")
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 		elif reflexes_minigame:
@@ -74,3 +78,16 @@ func to_right():
 func to_center():
 	self.position.x = 0
 	ActionRouter.request({"action":"Memory/M2/restore"})
+
+func _on_minigame_finish(win):
+	if win:
+		ActionRouter.request({
+			"action": "Dialogue/stack",
+			"path": "res://Levels/nick_tests/question.data"
+		})
+	else:
+		# TODO: Trigger a regaño
+		if auto_minigame:
+			$minigames/Auto.run_car()
+		elif reflexes_minigame:
+			$minigames/Reflexes.emit_light()

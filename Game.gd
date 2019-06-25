@@ -18,6 +18,7 @@ func _ready():
 	ActionRouter.register_actions(self)
 	VariableBoard.register("language", "text_en")
 	VariableBoard.suscribe('language', $DialogueManager, 'set_language')
+	VariableBoard.register("random", randi())
 
 	# Setup the mouse cursor for the game
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW)
@@ -91,6 +92,9 @@ func handle(request):
 			yield($AnimationPlayer, "animation_finished")
 		"Game/Wait":
 			yield(get_tree().create_timer(request.wait), "timeout")
+		"Game/Random":
+			randomize()
+			VariableBoard.set_value("random", randi() % 100 + 1)
 		_:
 			return false
 #warning-ignore:unreachable_code

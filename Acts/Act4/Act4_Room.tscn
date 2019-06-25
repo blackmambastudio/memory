@@ -6,12 +6,13 @@
 [ext_resource path="res://Acts/Act1/V_RoomRightFront.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Acts/Act1/V_RoomRight.tscn" type="PackedScene" id=5]
 
-[node name="Act1" index="0" instance=ExtResource( 1 )]
+[node name="Act1" instance=ExtResource( 1 )]
+starting_dialogue = "res://Levels/act4/dlg01.data"
 
 [node name="RoomLeft" parent="Views" index="0" instance=ExtResource( 2 )]
-visible = false
 
 [node name="RoomFront" parent="Views" index="1" instance=ExtResource( 3 )]
+visible = false
 
 [node name="RoomRightFront" parent="Views" index="2" instance=ExtResource( 4 )]
 visible = false

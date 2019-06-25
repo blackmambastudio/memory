@@ -69,6 +69,11 @@ func execute():
 		self.status = 'DISPLAY'
 		return
 	if block.type == 'option':
+		ActionRouter.request({
+			"action":"Board/set_value",
+			"variable":"last_option",
+    		"value": block.option
+		})
 		self.solve_next()
 		return
 	if block.type == 'embedded':

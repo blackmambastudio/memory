@@ -1,5 +1,7 @@
 extends Control
 
+signal test_done(win)
+
 var colliding = false
 var car_speed = 100
 
@@ -20,19 +22,18 @@ func run_car():
 	self.car_speed = randi()%150 + 100
 
 func _process(delta):
-	
 	$Car.position.x += self.car_speed*delta
 	if car_speed > 0 and Input.is_action_just_pressed("ui_accept"):
 		self.stop_car()
 
 func stop_car():
-	print(colliding)
 	$Hidden.hide()
 	car_speed = 0
 	if colliding:
 		$AnimationPlayer.play("End_good")
+		emit_signal("test_done", true)
 	else:
 		$AnimationPlayer.play("End")
+		emit_signal("test_done", false)
 	yield($AnimationPlayer, "animation_finished")
-	self.run_car()
-	
+	# self.run_car()

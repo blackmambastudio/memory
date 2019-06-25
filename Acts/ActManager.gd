@@ -37,6 +37,7 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"test_split_memory", "value": 0})
 	# valid values: auto and reflexes
 	ActionRouter.request({"action":"Board/register", "variable":"view_active_minigame", "value": 'auto'})
+	ActionRouter.request({"action":"Board/register", "variable":"start_active_minigame", "value": false})
 	
 	#self.load_act(all_acts[0])
 
@@ -48,8 +49,11 @@ func load_act(act_name):
 	add_child(current_act)
 	current_act.start()
 	if not current_act.starting_dialogue.empty():
-		ActionRouter.request({"action": "Dialogue/stack", "path": current_act.starting_dialogue})
-		yield(get_tree().create_timer(1.5), "timeout")
+		ActionRouter.request({
+			"action": "Dialogue/stack",
+			"path": current_act.starting_dialogue
+		})
+		yield(get_tree().create_timer(1.0), "timeout")
 		ActionRouter.request({"action": "Game/ToNormal"})
 
 func change_view(view_name):
