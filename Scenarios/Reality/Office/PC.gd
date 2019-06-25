@@ -27,11 +27,15 @@ func clear_password():
 		field.set_text("")
 
 func key_pressed(letter):
+	
 	if letter == "Delete":
+		$SFX_Erase.playsound()
 		if password.length() > 0:
 			$Login/Password.get_child(password.length() - 1).set_text("")
 			password.erase(password.length() - 1, 1)
 		return
+	else:
+		$SFX_Input.playsound()
 
 	password += letter
 	$Login/Alert.hide()
@@ -45,21 +49,27 @@ func key_pressed(letter):
 			$Desktop.show()
 			$AnimationPlayer.stop()
 			$AnimationPlayer.play("Login")
+			$Login/SFX_Login.playsound()
 			yield($AnimationPlayer, "animation_finished")
 			$Login.hide()
 			$AnimationPlayer.play("Desktop")
 		else:
 			clear_password()
+			$SFX_Alert.playsound()
 			$Login/Alert.show()
 
 func open_nrg_app():
 	$AnimationPlayer.play("OpenApp")
+	$Desktop/SFX_Open.playsound()
+	$Desktop/SFX_Energy.playsound()
 	yield($AnimationPlayer, "animation_finished")
 	for sector in $Desktop/EnergyApp.get_children():
 		sector.show()
 
 func open_reports_folder():
 	$Desktop/FileManager.show()
+	$Desktop/SFX_Open.playsound()
+	$Desktop/SFX_Docs.playsound()
 	$AnimationPlayer.play("OpenFileMan")
 	yield($AnimationPlayer, "animation_finished")
 	for button in $Desktop/FileManager.get_children():
@@ -70,11 +80,13 @@ func click_default_sector():
 	pass
 
 func click_target():
+	$Desktop/SFX_EnergySelect.playsound()
 	ActionRouter.request({
 		"action":"Act/show", "act": "res://Acts/Act4/Act4_Hall.tscn"
 	})
 
 func close_fileman():
+	$Desktop/SFX_Close.playsound()
 	for button in $Desktop/FileManager.get_children():
 		button.set_disabled(true)
 	$Desktop/FileManager.hide()
@@ -85,8 +97,11 @@ func click_default_report():
 	pass
 
 func click_target_report():
+	$Desktop/SFX_Open.playsound()
 	$Desktop/CeciliaReport.show()
+	$Desktop/SFX_DocsOp.playsound()
 	$AnimationPlayer.play("OpenReport")
 
 func close_report():
+	$Desktop/SFX_Close.playsound()
 	$Desktop/CeciliaReport.hide()

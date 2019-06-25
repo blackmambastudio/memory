@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_PC_EnergyHover.ogg-c658e6239563d35eeba26a6e9dd7505a.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_PC_EnergyHover.ogg"
+dest_files=[ "res://.import/SFX_PC_EnergyHover.ogg-c658e6239563d35eeba26a6e9dd7505a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

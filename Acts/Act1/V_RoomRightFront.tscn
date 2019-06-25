@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acts/Assets/Room/RoomRightFront.jpg" type="Texture" id=2]
@@ -7,10 +7,17 @@
 [ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Acts/ElementHoverZone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Acts/Assets/Hovers/hover_pills.png" type="Texture" id=7]
-[ext_resource path="res://Acts/Assets/Hovers/hover_wordsearch.png" type="Texture" id=8]
-[ext_resource path="res://Acts/Assets/Hovers/hover_drawer.png" type="Texture" id=9]
-[ext_resource path="res://Acts/Assets/Hovers/Hover_control.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Pills.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Acts/Assets/Hovers/hover_wordsearch.png" type="Texture" id=10]
+[ext_resource path="res://Acts/Assets/Hovers/hover_drawer.png" type="Texture" id=11]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Cajon_Unlock.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Cajon_Locked.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Audio/SequenceTool.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Cajon_Open.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Cajon_Close.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Acts/Assets/Hovers/Hover_control.png" type="Texture" id=17]
+[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.391, 261.516 )
@@ -53,7 +60,6 @@ position = Vector2( 67.5901, 29.9169 )
 shape = SubResource( 1 )
 
 [node name="pills" parent="Clickeables" index="0" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 557.252, 451.616 )
 cursor_type = "hand"
 
@@ -65,6 +71,9 @@ shape = SubResource( 2 )
 visible = false
 position = Vector2( -1.67249, 2.09058 )
 texture = ExtResource( 7 )
+
+[node name="SFX_Pills" parent="Clickeables/pills" index="2" instance=ExtResource( 8 )]
+stream = ExtResource( 9 )
 
 [node name="sopa" parent="Clickeables" index="1" instance=ExtResource( 6 )]
 editor/display_folded = true
@@ -78,7 +87,7 @@ shape = SubResource( 3 )
 [node name="Outline" type="Sprite" parent="Clickeables/sopa" index="1"]
 visible = false
 position = Vector2( 0.500732, 4.00552 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 
 [node name="ExitSoup" parent="Clickeables" index="2" instance=ExtResource( 6 )]
 editor/display_folded = true
@@ -90,7 +99,6 @@ cursor_type = "hand"
 shape = SubResource( 4 )
 
 [node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 471.767, 582.314 )
 cursor_type = "hand"
 
@@ -102,7 +110,21 @@ polygon = PoolVector2Array( -91.0748, -58.6819, 129.454, -12.8744, 128.718, 67.1
 [node name="Outline" type="Sprite" parent="Clickeables/Cajon" index="1"]
 visible = false
 position = Vector2( 16.1319, 14.3395 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
+
+[node name="SFX_Unlock" parent="Clickeables/Cajon" index="2" instance=ExtResource( 8 )]
+stream = ExtResource( 12 )
+
+[node name="SFX_Locked" parent="Clickeables/Cajon" index="3" instance=ExtResource( 8 )]
+stream = ExtResource( 13 )
+
+[node name="SFX_OC" parent="Clickeables/Cajon" index="4" instance=ExtResource( 14 )]
+
+[node name="Open" parent="Clickeables/Cajon/SFX_OC" index="0" instance=ExtResource( 8 )]
+stream = ExtResource( 15 )
+
+[node name="Close" parent="Clickeables/Cajon/SFX_OC" index="1" instance=ExtResource( 8 )]
+stream = ExtResource( 16 )
 
 [node name="Control" parent="Clickeables" index="4" instance=ExtResource( 6 )]
 editor/display_folded = true
@@ -118,8 +140,8 @@ polygon = PoolVector2Array( 69.1347, -30.1777, 91.6911, -19.0222, 92.3545, -10.4
 [node name="Outline" type="Sprite" parent="Clickeables/Control" index="1"]
 visible = false
 position = Vector2( -29.6443, 39.5496 )
-texture = ExtResource( 10 )
+texture = ExtResource( 17 )
 
-[node name="SopaLetras" parent="." index="3" instance=ExtResource( 11 )]
+[node name="SopaLetras" parent="." index="3" instance=ExtResource( 18 )]
 visible = false
 

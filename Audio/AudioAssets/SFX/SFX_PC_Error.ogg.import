@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_PC_Error.ogg-4d24b7a4ca14e844cd9000a7de8d6420.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_PC_Error.ogg"
+dest_files=[ "res://.import/SFX_PC_Error.ogg-4d24b7a4ca14e844cd9000a7de8d6420.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -8,6 +8,7 @@ func _ready():
 		element.connect("item_selected", self, "selected_item")
 
 func selected_item(item):
+	$SFX_Select.playsound()
 	emit_signal("item_selected", item)
 
 func createMemory(memory_name):

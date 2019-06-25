@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenarios/Memory/MemoryCanvas.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/Guia-m02_2.jpg" type="Texture" id=2]
@@ -29,6 +29,8 @@
 [ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/address.png" type="Texture" id=27]
 [ext_resource path="res://Scenarios/Memory/Elements/Assets/Real/M02/luggage.png" type="Texture" id=28]
 [ext_resource path="res://Scenarios/Memory/Elements/Assets/Fictional/M02/flowers.png" type="Texture" id=29]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Audio/AudioAssets/SFX/UI_Memory_Select.ogg" type="AudioStream" id=31]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -325,4 +327,7 @@ margin_right = 109.047
 margin_bottom = 201.374
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 29 )
+
+[node name="SFX_Select" parent="." instance=ExtResource( 30 )]
+stream = ExtResource( 31 )
 

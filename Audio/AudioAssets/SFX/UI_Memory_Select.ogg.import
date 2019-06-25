@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/UI_Memory_Select.ogg-8fafb7b30ba3b9c703ba3fab0b69c0c1.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/UI_Memory_Select.ogg"
+dest_files=[ "res://.import/UI_Memory_Select.ogg-8fafb7b30ba3b9c703ba3fab0b69c0c1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

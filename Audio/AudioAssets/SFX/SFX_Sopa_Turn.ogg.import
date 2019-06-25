@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_Sopa_Turn.ogg-acdbe4e17354a1252a4db7d908b0d816.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_Sopa_Turn.ogg"
+dest_files=[ "res://.import/SFX_Sopa_Turn.ogg-acdbe4e17354a1252a4db7d908b0d816.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

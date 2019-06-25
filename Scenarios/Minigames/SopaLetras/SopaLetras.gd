@@ -155,6 +155,7 @@ func insert_words():
 			pairs[-1][3] = -1
 
 func word_match(pair):
+	$SFX_Select.playsound()
 	var word_list_index = pair[3]
 	if word_list_index != -1:
 		$WordList.get_child(word_list_index).modulate = Color(0.7,0.2,0.2)
@@ -162,9 +163,12 @@ func word_match(pair):
 
 
 func show_cover():
+	$SFX_Card.playsound()
 	$Cover.visible = not $Cover.visible
 
 func turn_cover():
-	$Cover.rotate(PI/4)
+	if $Cover.visible:
+		$SFX_Turn.playsound()
+		$Cover.rotate(PI/4)
 
 

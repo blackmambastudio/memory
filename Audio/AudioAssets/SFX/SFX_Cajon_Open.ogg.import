@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_Cajon_Open.ogg-485822aae53b3e0cb0c07070142e7930.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_Cajon_Open.ogg"
+dest_files=[ "res://.import/SFX_Cajon_Open.ogg-485822aae53b3e0cb0c07070142e7930.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

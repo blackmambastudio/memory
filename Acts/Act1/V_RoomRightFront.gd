@@ -10,14 +10,17 @@ func word_found(word):
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':
+		$Clickeables/pills/SFX_Pills.playsound()
 		VariableBoard.set_value("clicked", clickeable_name)
 		ActionRouter.request({
 		    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
 		})
 	elif clickeable_name == 'sopa':
 		set_soup_visible(true)
+		$SopaLetras/SFX_Sopa_OC.playsound()
 	elif clickeable_name == 'ExitSoup':
 		set_soup_visible(false)
+		$SopaLetras/SFX_Sopa_OC.playsound()
 	elif clickeable_name == 'Cajon':
 		self.open_box()
 	elif clickeable_name == 'Control':
@@ -42,6 +45,7 @@ func set_soup_visible(visible):
 
 func open_box():
 	if not VariableBoard.get_value("inv_key"):
+		$Clickeables/Cajon/SFX_Locked.playsound()
 		VariableBoard.set_value("clicked", "Cajon")
 		ActionRouter.request({
 		    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
@@ -49,10 +53,12 @@ func open_box():
 		return
 	else:
 		self.toggle_background("Box_opened")
+		$Clickeables/Cajon/SFX_OC.playsound()
 		$Clickeables/Cajon.visible = false
 		$Clickeables/Control.visible = true
 
 func close_box():
 	self.toggle_background("Box_opened")
+	$Clickeables/Cajon/SFX_OC.playsound()
 	$Clickeables/Cajon.visible = false
 	$Clickeables/Control.visible = false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_Sopa_Close.ogg-9789d10e5dacbe9f29aa3cef3772e366.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_Sopa_Close.ogg"
+dest_files=[ "res://.import/SFX_Sopa_Close.ogg-9789d10e5dacbe9f29aa3cef3772e366.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
