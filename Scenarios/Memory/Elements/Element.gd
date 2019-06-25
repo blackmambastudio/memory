@@ -4,6 +4,7 @@ export (String) var real_item = ''
 export (String) var fictional_item = ''
 
 signal item_selected
+signal memory_replaced
 
 var Real
 var Fictional
@@ -12,6 +13,9 @@ var real_factor = 1.0
 var fictional_factor = 0.0
 var inception = false
 var time = randi()%1000
+
+
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 
 func _ready():
@@ -83,6 +87,7 @@ func reforce_fictional():
 	if fictional_factor >= 1.0:
 		Real.hide()
 		inception = true
+		VariableBoard.add_value("memories_replaced", 1)
 
 func _process(delta):
 	time += delta

@@ -3,6 +3,7 @@ extends Control
 signal item_selected
 var clipped_to_left = false
 
+
 func _ready():
 	for element in $Elements.get_children():
 		element.connect("item_selected", self, "selected_item")
