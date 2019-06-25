@@ -45,8 +45,8 @@ position = Vector2( 1130.81, 16.4118 )
 shape = SubResource( 1 )
 
 [node name="WindowControl" parent="." index="4" instance=ExtResource( 6 )]
-margin_left = 891.749
-margin_top = 485.018
-margin_right = 890.749
-margin_bottom = 484.018
+margin_left = 929.391
+margin_top = 449.201
+margin_right = 1037.39
+margin_bottom = 647.201
 

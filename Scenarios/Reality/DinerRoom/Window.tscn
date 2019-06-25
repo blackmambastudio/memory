@@ -47,7 +47,6 @@ texture = ExtResource( 6 )
 centered = false
 
 [node name="mountain_2" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 7 )
 centered = false
 

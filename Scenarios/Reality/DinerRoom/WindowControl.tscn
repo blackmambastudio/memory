@@ -6,8 +6,8 @@
 [node name="WindowControl" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1180.0
-margin_bottom = -525.0
+margin_right = -1173.0
+margin_bottom = -520.0
 script = ExtResource( 1 )
 
 [node name="remote" type="Sprite" parent="."]
@@ -49,21 +49,21 @@ margin_bottom = 152.0
 
 [node name="Button02" type="TextureButton" parent="."]
 margin_left = 42.0
-margin_top = 137.0
+margin_top = 138.0
 margin_right = 65.0
 margin_bottom = 151.0
 
 [node name="Button03" type="TextureButton" parent="."]
 margin_left = 71.0
-margin_top = 138.0
+margin_top = 137.0
 margin_right = 94.0
 margin_bottom = 150.0
 
 [node name="Button04" type="TextureButton" parent="."]
-margin_left = 13.3235
-margin_top = 154.794
-margin_right = 35.3235
-margin_bottom = 167.794
+margin_left = 13.0
+margin_top = 155.0
+margin_right = 35.0
+margin_bottom = 169.0
 
 [node name="Button05" type="TextureButton" parent="."]
 margin_left = 43.0
@@ -78,8 +78,8 @@ margin_right = 93.0
 margin_bottom = 168.0
 
 [node name="Button07" type="TextureButton" parent="."]
-margin_left = 22.0
-margin_top = 172.0
-margin_right = 82.0
-margin_bottom = 180.0
+margin_left = 23.2865
+margin_top = 170.476
+margin_right = 83.2865
+margin_bottom = 180.476
 
