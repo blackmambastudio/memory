@@ -7,4 +7,5 @@
 starting_dialogue = "res://Levels/nick_tests/dlg01.data"
 
 [node name="Test" parent="Views" index="0" instance=ExtResource( 2 )]
+next_act = "Act2/Act2_Room2"
 

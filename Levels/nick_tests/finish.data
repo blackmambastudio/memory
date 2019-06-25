@@ -1,0 +1,5 @@
+@DialogNode@262|dialog|Dr Nick|0|We can stop now.|Podemos parar aquí.|1.9|DX_Assets/Dr.Nick/Gen/Nick_Gen_12.ogg|0|[@ActionNode@291]
+DialogNode|dialog|Dr Nick|0|I think we are done for the day.|Creo que por hoy hemos terminado.|2.5|DX_Assets/Dr.Nick/Gen/Nick_Gen_10.ogg|0|[@ActionNode@291]
+@ActionNode@291|action|{    "action":"Board/set_value",    "variable":"finish_test",    "value": true}|[]
+ActionNode|action|{"action":"Game/Wait","pause":true,"wait":2.0}|[DialogNode, @DialogNode@262]
+@DialogNode@935|dialog|Dr Nick|0|||0.1||0|[ActionNode]

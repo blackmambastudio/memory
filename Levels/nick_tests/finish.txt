@@ -1,0 +1,2 @@
+res://Levels/nick_tests/finish.scn
+[{"from":"DialogNode","from_port":0,"to":"@ActionNode@291","to_port":0},{"from":"@DialogNode@262","from_port":0,"to":"@ActionNode@291","to_port":0},{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@DialogNode@262","to_port":0},{"from":"@DialogNode@935","from_port":0,"to":"ActionNode","to_port":0}]

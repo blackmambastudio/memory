@@ -10,12 +10,12 @@ var well_done = 0
 var emitting = false
 
 func _ready():
-	$Left.visible = false
-	$Right.visible = false
 	self.emit_light()
 
 func start_emitting():
 	emitting = true
+	$Left.hide()
+	$Right.hide()
 	self.emit_light()
 
 func emit_light():
@@ -33,26 +33,26 @@ func emit_light():
 	else:
 		current_light = $Right
 	
-	current_light.visible = true
+	current_light.show()
 	self.current_time = 0
 	$Timer.start(0.5)
 	yield($Timer, "timeout")
-	current_light.visible = false
+	current_light.hide()
 
 func choose_light(side):
-	print(self.current_time - self.action_time)
+	var reflex_time = self.current_time - self.action_time
 	var correct = side_emitted == side
-	if correct:
+	print("Reflex time: ", reflex_time)
+	if correct and reflex_time <= 1.5:
 		well_done += 1
 		if well_done >= 3:
-			emit_signal("test_done", true)
 			emitting = false
 			well_done = 0
+			emit_signal("test_done", true)
 	else:
-		emit_signal("test_done", false)
 		emitting = false
 		well_done = 0
-	# return correct
+		emit_signal("test_done", false)
 
 func _process(delta):
 	self.current_time += delta

@@ -1,27 +1,14 @@
 extends Control
-onready var ActionRouter = get_node("/root/ActionRouter")
+
+export(String, "Act1/Act1_Room", "Act2/Act2_Room1", "Act2/Act2_Test", "Act2/Act2_Room2", "Act3/Act3_Room1", "Act3/Act3_Test", "Act3/Act3_Kitchen", "Act4/Act4_Room", "Act4/Act4_Test", "Act4/Act4_Office", "Act4/Act4_Hall") var first_act = "Act1/Act1_Room"
 
 const ActActions = preload("act_actions.gd")
-onready var actionHandler = ActActions.new()
 
 var current_act
-var all_acts = [
-	"res://Acts/Act1/Act1_Room.tscn",
-	
-	"res://Acts/Act2/Act2_Room1.tscn",
-	"res://Acts/Act2/Act2_Test.tscn",
-	"res://Acts/Act2/Act2_Room2.tscn",
-	
-	"res://Acts/Act3/Act3_Room1.tscn",
-	"res://Acts/Act3/Act3_Test.tscn",
-	"res://Acts/Act3/Act3_Kitchen.tscn",
-	
-	"res://Acts/Act4/Act4_Room.tscn",
-	"res://Acts/Act4/Act4_Test.tscn",
-	"res://Acts/Act4/Act4_Office.tscn",
-	"res://Acts/Act4/Act4_Hall.tscn"
-]
 var fade_out_on_load = false
+
+onready var actionHandler = ActActions.new()
+onready var ActionRouter = get_node("/root/ActionRouter")
 
 func _ready():
 	self.actionHandler.set_act_manager(self)
@@ -38,10 +25,14 @@ func _ready():
 	# valid values: auto and reflexes
 	ActionRouter.request({"action":"Board/register", "variable":"view_active_minigame", "value": 'auto'})
 	ActionRouter.request({"action":"Board/register", "variable":"start_active_minigame", "value": false})
+
+	ActionRouter.request({"action":"Board/register", "variable":"finish_test", "value": false})
 	
 	#self.load_act(all_acts[0])
 
-func load_act(act_name):
+func load_act(act_name = null):
+	if not act_name and first_act:
+		act_name = "res://Acts/" + first_act + ".tscn"
 	if current_act:
 		current_act.queue_free()
 	var new_act = load(act_name).instance()
