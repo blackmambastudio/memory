@@ -62,21 +62,33 @@ func _on_clicked(clickeable_name):
 
 # display memories on the left
 func to_left():
-	self.position.x -= 1280/4
+	var tween = get_node("Tween")
+	tween.interpolate_property(self, "position",
+	        Vector2(0,0), Vector2(-1280/4, 0), 0.3,
+	        Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
 	# open memory and clipped it to the left
 	
 	ActionRouter.request({"action":"Memory/M2/clip_left"})
 	#ActionRouter.request({"action":"Memory/show", "value": true})
 
 func to_right():
-	self.position.x += 1280/4
+	var tween = get_node("Tween")
+	tween.interpolate_property(self, "position",
+	        Vector2(0,0), Vector2(1280/4, 0), 0.3,
+	        Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
 	ActionRouter.request({"action":"Memory/M2/clip_right"})
 	#ActionRouter.request({"action":"Memory/show", "value": true})
 	# open memory and clipped it to the right
 	#to test
 
 func to_center():
-	self.position.x = 0
+	var tween = get_node("Tween")
+	tween.interpolate_property(self, "position",
+	        Vector2(self.position.x, 0), Vector2(0, 0), 0.3,
+	        Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
 	ActionRouter.request({"action":"Memory/M2/restore"})
 
 func _on_minigame_finish(win):

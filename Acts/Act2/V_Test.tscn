@@ -19,7 +19,7 @@ extents = Vector2( 57.3563, 60.0624 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 57.3563, 60.0624 )
 
-[node name="Test" instance=ExtResource( 1 )]
+[node name="Test" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
@@ -96,4 +96,6 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Clickeables/Right_action" index="1"]
 position = Vector2( 16.3245, 6.80194 )
 shape = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="." index="5"]
 
