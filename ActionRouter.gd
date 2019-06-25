@@ -8,14 +8,6 @@ func _ready():
 # action: 'object/function'
 # and more data as needed
 func request(action):
-	# print("requested: ", action)
-	# if action.has("pause"):
-	# 	for router in routers:
-	# 		var y = router.handle(action)
-	# 		if y:
-	# 			yield(router.handle(action), "completed")
-	# 			return
-	# else:
 	for router in routers:
 		var handled = router.handle(action)
 		if handled:
