@@ -7,6 +7,7 @@ func _ready():
 func word_found(word):
 	if word == 'remember':
 		print("displays a flash!!")
+		VariableBoard.add_value("remember_times", 1)
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':

@@ -86,7 +86,7 @@ func letter_clicked(index):
 	else:
 		# search pair
 		for pair in pairs:
-			if (pair[0] == one_pair or pair[0] == index) and \
+			if !pair[4] and (pair[0] == one_pair or pair[0] == index) and \
 			   (pair[1] == one_pair or pair[1] == index):
 				word_match(pair)
 				for index_letter in word_indexes[pair[2]]:
@@ -145,7 +145,7 @@ func insert_words():
 				col -= 1
 
 		word_indexes[text] = _word
-		pairs.append([_word[0], _word[-1], text, word_list_index])
+		pairs.append([_word[0], _word[-1], text, word_list_index, false])
 		
 		# insert word in the wordlist
 		if text != 'remember':
@@ -155,6 +155,7 @@ func insert_words():
 			pairs[-1][3] = -1
 
 func word_match(pair):
+	pair[4] = true
 	$SFX_Select.playsound()
 	var word_list_index = pair[3]
 	if word_list_index != -1:

@@ -19,6 +19,7 @@ func _ready():
 	VariableBoard.register("language", "text_en")
 	VariableBoard.suscribe('language', $DialogueManager, 'set_language')
 	VariableBoard.register("random", randi())
+	VariableBoard.register("remember_times", 0)
 
 	# Setup the mouse cursor for the game
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW)
