@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenarios/Reality/DinerRoom/WindowControl.gd" type="Script" id=1]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/remote.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_bg.png" type="Texture" id=2]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_lig_off.png" type="Texture" id=3]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_lig_on.png" type="Texture" id=4]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_arrow_normal.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_arrow_pressed.png" type="Texture" id=6]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_but_normal.png" type="Texture" id=7]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/control/ctrl_but_pressed.png" type="Texture" id=8]
 
 [node name="WindowControl" type="Control"]
 anchor_right = 1.0
@@ -17,69 +23,120 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="ctrl_lig_off" type="Sprite" parent="remote"]
+position = Vector2( -28.9105, 15 )
+texture = ExtResource( 3 )
+
+[node name="ctrl_lig_on" type="Sprite" parent="remote"]
+position = Vector2( -28.4581, 15 )
+texture = ExtResource( 4 )
+
+[node name="ctrl_lig_off2" type="Sprite" parent="remote"]
+position = Vector2( 0, 15 )
+texture = ExtResource( 3 )
+
+[node name="ctrl_lig_on2" type="Sprite" parent="remote"]
+position = Vector2( 0, 15 )
+texture = ExtResource( 4 )
+
+[node name="ctrl_lig_off3" type="Sprite" parent="remote"]
+position = Vector2( 31.0895, 15 )
+texture = ExtResource( 3 )
+
+[node name="ctrl_lig_on3" type="Sprite" parent="remote"]
+position = Vector2( 31, 15 )
+texture = ExtResource( 4 )
+
 [node name="BG_Left" type="TextureButton" parent="."]
-margin_left = 11.0
-margin_top = 17.0
-margin_right = 31.0
-margin_bottom = 46.0
+margin_left = 10.0
+margin_top = 14.0
+margin_right = 30.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
 [node name="BG_Right" type="TextureButton" parent="."]
-margin_left = 74.7064
-margin_top = 16.1376
-margin_right = 95.7064
-margin_bottom = 48.1376
+margin_left = 75.0
+margin_top = 14.0
+margin_right = 96.0
+margin_bottom = 50.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 10, 18 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
 [node name="Main_Left" type="TextureButton" parent="."]
-margin_left = 9.0
+margin_left = 10.0
 margin_top = 62.0
-margin_right = 32.0
-margin_bottom = 93.0
+margin_right = 33.0
+margin_bottom = 98.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
 [node name="Main_Right" type="TextureButton" parent="."]
 margin_left = 76.0
-margin_top = 64.0
+margin_top = 62.0
 margin_right = 96.0
-margin_bottom = 97.0
+margin_bottom = 98.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 10, 18 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
 [node name="Button01" type="TextureButton" parent="."]
 margin_left = 12.0
-margin_top = 137.0
+margin_top = 135.0
 margin_right = 36.0
-margin_bottom = 152.0
+margin_bottom = 155.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="Button02" type="TextureButton" parent="."]
 margin_left = 42.0
-margin_top = 138.0
-margin_right = 65.0
-margin_bottom = 151.0
+margin_top = 135.0
+margin_right = 66.0
+margin_bottom = 155.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="Button03" type="TextureButton" parent="."]
-margin_left = 71.0
-margin_top = 137.0
-margin_right = 94.0
-margin_bottom = 150.0
+margin_left = 72.0
+margin_top = 135.0
+margin_right = 96.0
+margin_bottom = 155.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="Button04" type="TextureButton" parent="."]
-margin_left = 13.0
+margin_left = 12.0
 margin_top = 155.0
-margin_right = 35.0
-margin_bottom = 169.0
+margin_right = 36.0
+margin_bottom = 175.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+stretch_mode = 2
 
 [node name="Button05" type="TextureButton" parent="."]
-margin_left = 43.0
+margin_left = 42.0
 margin_top = 155.0
-margin_right = 64.0
-margin_bottom = 168.0
+margin_right = 66.0
+margin_bottom = 175.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="Button06" type="TextureButton" parent="."]
-margin_left = 73.0
+margin_left = 72.0
 margin_top = 155.0
-margin_right = 93.0
-margin_bottom = 168.0
+margin_right = 96.0
+margin_bottom = 175.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="Button07" type="TextureButton" parent="."]
-margin_left = 23.2865
-margin_top = 170.476
-margin_right = 83.2865
-margin_bottom = 180.476
+margin_left = 42.245
+margin_top = 176.0
+margin_right = 66.245
+margin_bottom = 196.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
