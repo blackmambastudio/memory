@@ -52,6 +52,7 @@ margin_left = 10.0
 margin_top = 14.0
 margin_right = 30.0
 margin_bottom = 50.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
@@ -62,6 +63,7 @@ margin_right = 96.0
 margin_bottom = 50.0
 rect_rotation = 180.0
 rect_pivot_offset = Vector2( 10, 18 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
@@ -70,6 +72,7 @@ margin_left = 10.0
 margin_top = 62.0
 margin_right = 33.0
 margin_bottom = 98.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
@@ -80,6 +83,7 @@ margin_right = 96.0
 margin_bottom = 98.0
 rect_rotation = 180.0
 rect_pivot_offset = Vector2( 10, 18 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
@@ -88,6 +92,7 @@ margin_left = 12.0
 margin_top = 135.0
 margin_right = 36.0
 margin_bottom = 155.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -96,6 +101,7 @@ margin_left = 42.0
 margin_top = 135.0
 margin_right = 66.0
 margin_bottom = 155.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -104,6 +110,7 @@ margin_left = 72.0
 margin_top = 135.0
 margin_right = 96.0
 margin_bottom = 155.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -112,6 +119,7 @@ margin_left = 12.0
 margin_top = 155.0
 margin_right = 36.0
 margin_bottom = 175.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 stretch_mode = 2
@@ -121,6 +129,7 @@ margin_left = 42.0
 margin_top = 155.0
 margin_right = 66.0
 margin_bottom = 175.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -129,6 +138,7 @@ margin_left = 72.0
 margin_top = 155.0
 margin_right = 96.0
 margin_bottom = 175.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -137,6 +147,7 @@ margin_left = 42.245
 margin_top = 176.0
 margin_right = 66.245
 margin_bottom = 196.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 

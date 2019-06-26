@@ -1,0 +1,2 @@
+res://Levels/act2/thoughts.scn
+[{"from":"DialogNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"@FilterNode@288","to_port":0},{"from":"@FilterNode@288","from_port":0,"to":"@DialogNode@327","to_port":0}]

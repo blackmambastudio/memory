@@ -86,13 +86,11 @@ func handle(request):
 			$AnimationPlayer.play("FadeOut")
 			yield($AnimationPlayer, "animation_finished")
 			$Overlay.hide()
-		"Game/Inyected":
+		"Game/Inyection":
 			$Overlay.show()
-			$AnimationPlayer.play("FadeIn")
+			$AnimationPlayer.play("Inyection")
 			yield($AnimationPlayer, "animation_finished")
-			yield(get_tree().create_timer(2.0), "timeout")
-			$AnimationPlayer.play("FadeOut")
-			yield($AnimationPlayer, "animation_finished")
+			$Overlay.hide()
 		"Game/Wait":
 			yield(get_tree().create_timer(request.wait), "timeout")
 		"Game/Random":

@@ -14,6 +14,9 @@ func _ready():
 	self.actionHandler.set_act_manager(self)
 	ActionRouter.register_actions(self.actionHandler)
 	
+	ActionRouter.request({"action":"Board/register", "variable":"current_act_id", "value": ""})
+
+	ActionRouter.request({"action":"Board/register", "variable":"took_pills", "value": false})
 	ActionRouter.request({"action":"Board/register", "variable":"inv_key", "value": false})
 	ActionRouter.request({"action":"Board/register", "variable":"inv_control", "value": false})
 	
@@ -28,6 +31,7 @@ func _ready():
 	ActionRouter.request({"action":"Board/register", "variable":"start_active_minigame", "value": false})
 
 	ActionRouter.request({"action":"Board/register", "variable":"finish_test", "value": false})
+	ActionRouter.request({"action":"Board/register", "variable":"leave_test", "value": false})
 	
 	#self.load_act(all_acts[0])
 
@@ -38,6 +42,11 @@ func load_act(act_name = null):
 		current_act.queue_free()
 	var new_act = load(act_name).instance()
 	current_act = new_act
+	ActionRouter.request({
+		"action":"Board/set_value",
+		"variable":"current_act_id",
+		"value": act_name.split("/", false)[2].to_lower()
+	})
 	add_child(current_act)
 	current_act.start()
 	if not current_act.starting_dialogue.empty():

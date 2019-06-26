@@ -1,0 +1,4 @@
+DialogNode|dialog|Cecilia|1|||0.1||0|[FilterNode]
+FilterNode|filter|clicked|equals|pills|[@FilterNode@288]
+@FilterNode@288|filter|inv_control|equals|"false"|[@DialogNode@327]
+@DialogNode@327|dialog|Pensamiento|0|I won't sleep until I understand what Claire said.|No dormiré hasta que comprenda qué quiso decir Claire.|2||0|[]

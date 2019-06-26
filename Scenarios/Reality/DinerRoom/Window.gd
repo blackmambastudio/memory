@@ -3,6 +3,7 @@ extends Node2D
 var index_BG = 0
 var index_Main = 0
 onready var items = [$mountains, $mountain_2, $stars, $moon, $clouds, $birds, $rain]
+onready var VariableBoard = get_node("/root/VariableBoard")
 
 signal mood_match
 signal mood_unmatch
@@ -57,13 +58,22 @@ func toggle_item(index):
 	check_match()
 
 func check_match():
-	var all_match = true
-	for key in win_configuration:
-		all_match = all_match and get_node(key).visible
-	
-	if all_match:
-		emit_signal("mood_match")
-	elif matched:
-		emit_signal("mood_unmatch")
-	
-	matched = all_match
+	var act = VariableBoard.get_value("current_act_id")
+	if act == "act2":
+		# Trigger the dialog of Cecilia's astonishment.
+		ActionRouter.request({
+			"action": "Dialogue/stack",
+			"path": "res://Levels/act2/thoughts.data"
+		})
+		pass
+	elif act == "act3":
+		var all_match = true
+		for key in win_configuration:
+			all_match = all_match and get_node(key).visible
+		
+		if all_match:
+			emit_signal("mood_match")
+		elif matched:
+			emit_signal("mood_unmatch")
+		
+		matched = all_match

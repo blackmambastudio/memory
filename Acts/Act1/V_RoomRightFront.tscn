@@ -60,6 +60,7 @@ position = Vector2( 67.5901, 29.9169 )
 shape = SubResource( 1 )
 
 [node name="pills" parent="Clickeables" index="0" instance=ExtResource( 6 )]
+editor/display_folded = true
 position = Vector2( 557.252, 451.616 )
 cursor_type = "hand"
 
@@ -99,6 +100,7 @@ cursor_type = "hand"
 shape = SubResource( 4 )
 
 [node name="Cajon" parent="Clickeables" index="3" instance=ExtResource( 6 )]
+editor/display_folded = true
 position = Vector2( 471.767, 582.314 )
 cursor_type = "hand"
 

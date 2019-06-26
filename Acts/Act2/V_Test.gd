@@ -14,7 +14,7 @@ func _ready():
 	VariableBoard.suscribe("test_split_memory", self, "clip_test")
 	VariableBoard.suscribe("view_active_minigame", self, "display_game")
 	VariableBoard.suscribe("start_active_minigame", self, "start_minigame")
-	VariableBoard.suscribe("finish_test", self, "finish")
+	VariableBoard.suscribe("leave_test", self, "leave")
 
 	# Connect signal listeners
 	$minigames/Auto.connect("test_done", self, "_on_minigame_finish")
@@ -35,17 +35,10 @@ func display_game(game_type):
 		# $minigames/Reflexes.emit_light()
 
 func start_minigame(value):
-	if done_minigames == 1:
-		# Finish the tests (or change the current one?)
-		ActionRouter.request({
-			"action": "Dialogue/stack",
-			"path": "res://Levels/nick_tests/finish.data"
-		})
-	else:
-		if auto_minigame:
-			$minigames/Auto.run_car()
-		elif reflexes_minigame:
-			$minigames/Reflexes.start_emitting()
+	if auto_minigame:
+		$minigames/Auto.run_car()
+	elif reflexes_minigame:
+		$minigames/Reflexes.start_emitting()
 
 func clip_test(value):
 	if value == "0":
@@ -105,6 +98,12 @@ func to_center():
 
 func _on_minigame_finish(win):
 	done_minigames += 1
+	if done_minigames == 1:
+		ActionRouter.request({
+			"action":"Board/set_value",
+			"variable":"finish_test",
+			"value": "true"
+		})
 	if win:
 		ActionRouter.request({
 			"action": "Dialogue/stack",
@@ -116,9 +115,8 @@ func _on_minigame_finish(win):
 			"action": "Dialogue/stack",
 			"path": "res://Levels/nick_tests/scowl.data"
 		})
-		self.start_minigame(null)
 
-func finish(value):
+func leave(value):
 	ActionRouter.request({
 		"action": "Act/end",
 		"next": "res://Acts/" + next_act + ".tscn"

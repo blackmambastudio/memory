@@ -6,16 +6,27 @@ func _ready():
 	
 func word_found(word):
 	if word == 'remember':
-		print("displays a flash!!")
+		# TODO: Display a flash
 		VariableBoard.add_value("remember_times", 1)
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':
-		$Clickeables/pills/SFX_Pills.playsound()
 		VariableBoard.set_value("clicked", clickeable_name)
-		ActionRouter.request({
-		    "action": "Dialogue/stack", "path": "res://Levels/act1/thoughts.data"
-		})
+		var pills_taken = VariableBoard.get_value("took_pills")
+		if not pills_taken:
+			# (pills_taken and VariableBoard.get_value("inv_control")):
+			# Take the pills the very first time or once Cecilia has used the
+			# remote control.
+			$Clickeables/pills/SFX_Pills.playsound()
+			ActionRouter.request({
+			    "action": "Dialogue/stack",
+				"path": "res://Levels/act1/thoughts.data"
+			})
+		else:
+			ActionRouter.request({
+			    "action": "Dialogue/stack",
+				"path": "res://Levels/act2/thoughts.data"
+			})
 	elif clickeable_name == 'sopa':
 		set_soup_visible(true)
 		$SopaLetras/SFX_Sopa_OC.playsound()
