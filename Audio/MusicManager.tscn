@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Audio/MusicManager.gd" type="Script" id=1]
+[ext_resource path="res://Audio/MX/Mx_Payaso_01.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Audio/MX/Mx_Payaso_02.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=4]
+
+[node name="MusicManager" type="Control"]
+script = ExtResource( 1 )
+Payaso1 = ExtResource( 2 )
+Payaso2 = ExtResource( 3 )
+
+[node name="MX_Voice_1" parent="." instance=ExtResource( 4 )]
+stream = ExtResource( 2 )
+Bus = "MxMemory"
+
+[node name="MX_Voice_2" parent="." instance=ExtResource( 4 )]
+stream = ExtResource( 2 )
+Bus = "MxMemory"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 403.0
+margin_top = 235.0
+margin_right = 808.0
+margin_bottom = 489.0
+
+[connection signal="finished" from="MX_Voice_1" to="." method="_on_MX_Voice_finished"]
+[connection signal="finished" from="MX_Voice_2" to="." method="_on_MX_Voice_2_finished"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

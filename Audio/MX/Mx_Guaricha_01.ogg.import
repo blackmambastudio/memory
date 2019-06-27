@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mx_Guaricha_01.ogg-0ea45c47e9affb352c394d29d67b908d.oggstr"
+
+[deps]
+
+source_file="res://Audio/MX/Mx_Guaricha_01.ogg"
+dest_files=[ "res://.import/Mx_Guaricha_01.ogg-0ea45c47e9affb352c394d29d67b908d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

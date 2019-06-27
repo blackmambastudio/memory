@@ -63,10 +63,10 @@ func check_match():
 		matched = true
 		# Trigger the dialog of Cecilia's astonishment.
 		VariableBoard.set_value("clicked", "window")
-		ActionRouter.request({
-			"action": "Dialogue/stack",
-			"path": "res://Levels/act2/thoughts.data"
-		})
+#		ActionRouter.request({
+#			"action": "Dialogue/stack",
+#			"path": "res://Levels/act2/thoughts.data"
+#		})
 	elif act == "act3":
 		var all_match = true
 		for key in win_configuration:
