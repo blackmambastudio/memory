@@ -16,8 +16,8 @@ var win_configuration = {
 }
 
 func _ready():
+	matched = false
 	pass # Replace with function body.
-
 
 func bg_to_left():
 	$BG.get_child(index_BG).visible = false
@@ -44,7 +44,7 @@ func main_to_left():
 	
 	$Main.get_child(index_Main).visible = true
 	check_match()
-	
+
 func main_to_right():
 	$Main.get_child(index_Main).visible = false
 	index_Main += 1
@@ -59,13 +59,14 @@ func toggle_item(index):
 
 func check_match():
 	var act = VariableBoard.get_value("current_act_id")
-	if act == "act2":
+	if act == "act2" and not matched:
+		matched = true
 		# Trigger the dialog of Cecilia's astonishment.
+		VariableBoard.set_value("clicked", "window")
 		ActionRouter.request({
 			"action": "Dialogue/stack",
 			"path": "res://Levels/act2/thoughts.data"
 		})
-		pass
 	elif act == "act3":
 		var all_match = true
 		for key in win_configuration:

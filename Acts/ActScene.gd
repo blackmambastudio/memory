@@ -14,7 +14,6 @@ func _ready():
 			current_view = child
 
 func change_view(name):
-	
 	if current_view:
 		current_view.hide()
 	current_view = $Views.get_node(name)
