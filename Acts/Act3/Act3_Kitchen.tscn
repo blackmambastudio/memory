@@ -11,7 +11,7 @@
 
 [node name="ActKitchen" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-starting_dialogue = "res://Levels/act3/dlg01.data"
+starting_dialogue = "res://Levels/act3/dlg03.data"
 
 [node name="KitchenFront" parent="Views" index="0" instance=ExtResource( 3 )]
 

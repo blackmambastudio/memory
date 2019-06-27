@@ -1,0 +1,3 @@
+ActionNode|action|{"action":"Game/Random"}|[DialogNode, @DialogNode@262]
+DialogNode|dialog|Lucia|0|(argh)|(argh)|0.7|DX_Assets/Lucia/Gen/Lucia_Gen_06_v1.ogg|0|[]
+@DialogNode@262|dialog|Lucia|0|(argh)|(argh)|1.1|DX_Assets/Lucia/Gen/Lucia_Gen_06_v2.ogg|0|[]

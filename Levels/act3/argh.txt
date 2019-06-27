@@ -1,0 +1,2 @@
+res://Levels/act3/argh.scn
+[{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@DialogNode@262","to_port":0}]

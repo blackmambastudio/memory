@@ -144,6 +144,7 @@ margin_bottom = 299.348
 mouse_default_cursor_shape = 2
 real_item = "Nariz"
 fictional_item = "Fufa_wig"
+needed_attempts = 0
 
 [node name="Nariz" type="TextureButton" parent="Elements/Nariz"]
 margin_left = 2.65369
@@ -208,6 +209,7 @@ margin_bottom = 410.824
 mouse_default_cursor_shape = 2
 real_item = "Cofre"
 fictional_item = "Cartel"
+needed_attempts = 0
 
 [node name="Cofre" type="TextureButton" parent="Elements/Cofre"]
 margin_right = 158.0

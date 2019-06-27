@@ -33,11 +33,12 @@ func handle(request):
 			current_memory = request.value
 		"Memory/show":
 			open = request.value
-			if open:
+			if open and not memories[current_memory-1].is_visible():
 				$SFX_Memory_Open.playsound()
 				memories[current_memory-1].visible = true
-			else:
+			elif not open and memories[current_memory-1].is_visible():
 				$SFX_Memory_Close.playsound()
+				pass
 			$AnimationPlayer.play(
 				"Show",
 				-1, 1.0 if request.value else -1.0,
@@ -73,23 +74,24 @@ func handle(request):
 		"Memory/M2/clip_left":
 			$Memory2.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			$Memory2.clip_left()
-			
 		"Memory/M2/clip_right":
 			$Memory2.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			$Memory2.clip_right()
-		
 		"Memory/M2/restore":
 			$Memory2.clip_restore()
-		
 		"Memory/enable_real":
 			match int(request.id):
 				1:
 					$Memory1.enableReal()
 				2:
 					$Memory2.enableReal()
-
+		"Memory/enable_unreal":
+			match int(request.id):
+				1:
+					$Memory1.enableReal()
+				2:
+					$Memory2.enableReal()
 		_:
 			return false
-			
 #warning-ignore:unreachable_code
 	return true

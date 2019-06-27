@@ -74,6 +74,7 @@ func execute():
 			"variable":"last_option",
     		"value": block.option
 		})
+		ActionRouter.request({ "action":"Memory/show", "value":false })
 		self.solve_next()
 		return
 	if block.type == 'embedded':

@@ -2,6 +2,8 @@ extends Control
 
 export (String) var real_item = ''
 export (String) var fictional_item = ''
+enum NamedEnum {ONE, TWO}
+export (NamedEnum) var needed_attempts = NamedEnum.TWO
 
 signal item_selected
 signal memory_replaced
@@ -29,7 +31,6 @@ func _ready():
 		center_element(Fictional)
 
 func _on_item_select(item):
-	print(item)
 	if item == real_item:
 		emit_signal("item_selected", real_item)
 		return
@@ -41,6 +42,7 @@ func _on_item_select(item):
 		reforce_fictional()
 	else:
 		emit_signal("item_selected", real_item)
+		reforce_real()
 
 func center_element(element):
 	var centerX = element.rect_size.x/2
@@ -51,6 +53,7 @@ func center_element(element):
 func create_memory(memory):
 	if fictional_item.empty(): return
 	if memory != fictional_item: return
+	if Fictional.is_visible(): return
 	fictional_factor = 0.4
 	real_factor = 0.7
 	Fictional.show()
@@ -81,13 +84,27 @@ func enable(real):
 func reforce_fictional():
 	if fictional_item.empty(): return
 	fictional_factor += 0.2
-	real_factor -= 0.1
+	real_factor -= 0.2
 	Fictional.modulate.a = fictional_factor
 	Real.modulate.a = real_factor
-	if fictional_factor >= 1.0:
+	if fictional_factor >= (1.0 if needed_attempts == NamedEnum.TWO else 0.8):
 		Real.hide()
 		inception = true
 		VariableBoard.add_value("memories_replaced", 1)
+
+func reforce_real():
+	if fictional_item.empty(): return
+	fictional_factor -= 0.4
+	real_factor += 0.1
+	Fictional.modulate.a = fictional_factor
+	Real.modulate.a = real_factor
+	if real_factor >= (1.0 if needed_attempts == NamedEnum.TWO else 0.6):
+		Fictional.hide()
+		inception = false
+		fictional_factor = 0
+		Fictional.modulate.a = fictional_factor
+		real_factor = 1.0
+		Real.modulate.a = real_factor
 
 func _process(delta):
 	time += delta
@@ -98,5 +115,5 @@ func _process(delta):
 		Fictional.rect_position.y -= factor*(1.0-fictional_factor)*0.5
 		Real.rect_position.x += factor*(1.0-real_factor)
 		Real.rect_position.y -= factor*(1.0-real_factor)*0.5
-		Fictional.modulate.a = alphaness
-		Real.modulate.a = 1-alphaness
+		Fictional.modulate.a = min(alphaness, fictional_factor)
+		Real.modulate.a = real_factor-alphaness

@@ -63,18 +63,18 @@ func check_match():
 		matched = true
 		# Trigger the dialog of Cecilia's astonishment.
 		VariableBoard.set_value("clicked", "window")
-#		ActionRouter.request({
-#			"action": "Dialogue/stack",
-#			"path": "res://Levels/act2/thoughts.data"
-#		})
-	elif act == "act3":
+		ActionRouter.request({
+			"action": "Dialogue/stack",
+			"path": "res://Levels/act2/thoughts.data"
+		})
+	elif act == "act3" and not matched:
 		var all_match = true
 		for key in win_configuration:
 			all_match = all_match and get_node(key).visible
 		
 		if all_match:
 			emit_signal("mood_match")
-		elif matched:
+		elif not matched:
 			emit_signal("mood_unmatch")
-		
+
 		matched = all_match

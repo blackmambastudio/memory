@@ -32,6 +32,10 @@ func enableReal():
 	for element in $Elements.get_children():
 		element.enable(true)
 
+func enableUnreal():
+	for element in $Elements.get_children():
+		element.enable(false)
+
 # should hide elements on the left
 func clip_left():
 	$Elements/WindowLeft.visible = false

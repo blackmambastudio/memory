@@ -1,0 +1,3 @@
+ActionNode|action|{"action":"Game/Wait","pause":true,"wait":2.0}|[DialogNode, @DialogNode@277]
+@DialogNode@277|dialog|Lucia|2|Why you say this things? are you trying to mock me?|¿Por qué dices esas cosas? ¿Tratas de burlarte de mí?|3.7|DX_Assets/Lucia/Act3/Lucia_Act3_18.ogg|0|[]
+DialogNode|dialog|Lucia|2|Are you playing with me?|¿Me estás tomando el pelo?|1.7|DX_Assets/Lucia/Act3/Lucia_Act3_04.ogg|0|[]
