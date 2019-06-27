@@ -11,6 +11,7 @@
 
 [node name="ActKitchen" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+starting_dialogue = "res://Levels/act3/dlg01.data"
 
 [node name="KitchenFront" parent="Views" index="0" instance=ExtResource( 3 )]
 
@@ -18,6 +19,7 @@ script = ExtResource( 2 )
 visible = false
 
 [node name="KitchenWindow" parent="Views" index="2" instance=ExtResource( 5 )]
+visible = false
 
 [node name="KitchenLeft" parent="Views" index="3" instance=ExtResource( 6 )]
 visible = false

@@ -1,3 +1,6 @@
 DialogNode|dialog|Lucia|0|I don't know. I just woke here. They told me I had an accident.|No lo sé. Sólo desperté aquí. Me dijeron que sufrí un accidente.|6.3|DX_Assets/Lucia/Act3/Lucia_Act3_05.ogg|-6.5|[@DialogNode@248]
 @DialogNode@248|dialog|Cecilia|0|That's weird, the same happened to me. Do you remember anything else?|Qué raro, me pasó lo mismo. ¿Recuerdas algo más?|5.4|DX_Assets/Cecilia/Act3/Cecilia_Act3_01.ogg|0|[@DialogNode@270]
-@DialogNode@270|dialog|Lucia|0|Nothing. Is like looking at a blank page.|Nada. Es como mirar una hoja en blanco.|3.6|DX_Assets/Lucia/Act3/Lucia_Act3_06.ogg|-6.5|[]
+@DialogNode@270|dialog|Lucia|2|Nothing. Is like looking at a blank page.|Nada. Es como mirar una hoja en blanco.|3.6|DX_Assets/Lucia/Act3/Lucia_Act3_06.ogg|-6.5|[ActionNode]
+ActionNode|action|{"action":"Board/set_value","variable":"view_lucia_status","value":"0"}|[@ActionNode@321]
+@ActionNode@321|action|{"action":"Game/Wait","pause":true,"wait":4.0}|[EmbeddedDialogue]
+EmbeddedDialogue|embedded|res://Levels/act3/dlg02.data|[]

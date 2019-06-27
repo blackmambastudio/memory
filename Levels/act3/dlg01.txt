@@ -1,2 +1,2 @@
 res://Levels/act3/dlg01.scn
-[{"from":"DialogNode","from_port":0,"to":"@DialogNode@248","to_port":0},{"from":"@DialogNode@248","from_port":0,"to":"@DialogNode@270","to_port":0}]
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@248","to_port":0},{"from":"@DialogNode@248","from_port":0,"to":"@DialogNode@270","to_port":0},{"from":"@DialogNode@270","from_port":0,"to":"ActionNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@ActionNode@321","to_port":0},{"from":"@ActionNode@321","from_port":0,"to":"EmbeddedDialogue","to_port":0}]

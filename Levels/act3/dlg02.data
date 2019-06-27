@@ -1,4 +1,4 @@
-@DialogNode@221|dialog|Lucia|0|I'm sick of this weather too.|Y estoy harta de este clima.|2.5|DX_Assets/Lucia/Act3/Lucia_Act3_08.ogg|-6.5|[@DialogNode@243]
+@DialogNode@221|dialog|Lucia|3|I'm sick of this weather too.|Y estoy harta de este clima.|2.5|DX_Assets/Lucia/Act3/Lucia_Act3_08.ogg|-6.5|[@DialogNode@243]
 @DialogNode@243|dialog|Cecilia|0|But is a beautiful day.|Pero si hace un día hermoso.|3|DX_Assets/Cecilia/Act3/Cecilia_Act3_02.ogg|0|[@DialogNode@265]
-@DialogNode@265|dialog|Lucia|0|I preffer rainy days...|Prefiero los días lluviosos….|2.5|DX_Assets/Lucia/Act3/Lucia_Act3_09.ogg|-6.5|[]
-DialogNode|dialog|Lucia|0|I can't stand this music anymore. Something calmer would help me to relax.|Ya no soporto esta música. Algo más calmado me ayudaría a relajarme.|5.3|DX_Assets/Lucia/Act3/Lucia_Act3_07.ogg|-6.5|[@DialogNode@221]
+@DialogNode@265|dialog|Lucia|3|I preffer rainy days...|Prefiero los días lluviosos….|2.5|DX_Assets/Lucia/Act3/Lucia_Act3_09.ogg|-6.5|[]
+DialogNode|dialog|Lucia|1|I can't stand this music anymore. Something calmer would help me to relax.|Ya no soporto esta música. Algo más calmado me ayudaría a relajarme.|5.3|DX_Assets/Lucia/Act3/Lucia_Act3_07.ogg|-6.5|[@DialogNode@221]

@@ -56,7 +56,6 @@ func load_act(act_name = null):
 		})
 		yield(get_tree().create_timer(1.0), "timeout")
 		ActionRouter.request({"action": "Game/ToNormal"})
-		print("Wuuuuuuuuuuuuuuuuuuuuuuu")
 
 func change_view(view_name):
 	current_act.change_view(view_name)
