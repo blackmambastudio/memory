@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Mx_Guaricha_01.ogg-0ea45c47e9affb352c394d29d67b908d.
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

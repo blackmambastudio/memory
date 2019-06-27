@@ -1,29 +1,57 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Audio/MusicManager.gd" type="Script" id=1]
 [ext_resource path="res://Audio/MX/Mx_Payaso_01.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Audio/MX/Mx_Payaso_02.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/MX/Mx_Guaricha_01.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Audio/MX/Mx_Guaricha_02.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/Fonts/Kenney Future.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
 
 [node name="MusicManager" type="Control"]
 script = ExtResource( 1 )
 Payaso1 = ExtResource( 2 )
 Payaso2 = ExtResource( 3 )
+Guaricha1 = ExtResource( 4 )
+Guaricha2 = ExtResource( 5 )
+real = false
+fadeout_duration = 9
 
-[node name="MX_Voice_1" parent="." instance=ExtResource( 4 )]
+[node name="MX_Voice_1" parent="." instance=ExtResource( 6 )]
 stream = ExtResource( 2 )
+Volume = -80.0
 Bus = "MxMemory"
 
-[node name="MX_Voice_2" parent="." instance=ExtResource( 4 )]
+[node name="MX_Voice_2" parent="." instance=ExtResource( 6 )]
 stream = ExtResource( 2 )
 Bus = "MxMemory"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 403.0
-margin_top = 235.0
-margin_right = 808.0
-margin_bottom = 489.0
+margin_left = 89.0
+margin_top = 139.0
+margin_right = 534.0
+margin_bottom = 226.0
+custom_fonts/font = SubResource( 2 )
+text = "START/CHANGE"
+
+[node name="End" type="Button" parent="."]
+margin_left = 88.1709
+margin_top = 308.972
+margin_right = 533.171
+margin_bottom = 395.972
+custom_fonts/font = SubResource( 2 )
+text = "STOP"
+
+[node name="Fade" type="Tween" parent="."]
 
 [connection signal="finished" from="MX_Voice_1" to="." method="_on_MX_Voice_finished"]
 [connection signal="finished" from="MX_Voice_2" to="." method="_on_MX_Voice_2_finished"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="End" to="." method="_on_End_button_down"]
+[connection signal="tween_completed" from="Fade" to="." method="_on_Fade_tween_completed"]

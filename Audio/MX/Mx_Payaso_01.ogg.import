@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Mx_Payaso_01.ogg-b11946f5ba4e9834df5977bceae7bfd4.og
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
