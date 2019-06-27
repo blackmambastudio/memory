@@ -1,6 +1,6 @@
 extends Control
 
-export(String, "Act1/Act1_Room", "Act2/Act2_Room1", "Act2/Act2_Test", "Act2/Act2_Room2", "Act3/Act3_Room1", "Act3/Act3_Test", "Act3/Act3_Kitchen", "Act4/Act4_Room", "Act4/Act4_Test", "Act4/Act4_Office", "Act4/Act4_Hall") var first_act = "Act1/Act1_Room"
+export(String, "Act1/Act1_Room", "Act2/Act2_Room1", "Act2/Act2_Test", "Act2/Act2_Room2", "Act3/Act3_Room1", "Act3/Act3_Test", "Act3/Act3_Kitchen", "Act4/Act4_Room", "Act4/Act4_Test", "Act4/Act4_Office", "Act4/Act4_Hall", "Act5/Act5") var first_act = "Act1/Act1_Room"
 
 const ActActions = preload("act_actions.gd")
 
