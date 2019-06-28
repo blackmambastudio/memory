@@ -1,0 +1,2 @@
+res://Levels/act5/escape01.scn
+[{"from":"DialogNode","from_port":0,"to":"@DialogNode@255","to_port":0},{"from":"@DialogNode@255","from_port":0,"to":"@DialogNode@294","to_port":0},{"from":"@DialogNode@294","from_port":0,"to":"@DialogNode@333","to_port":0},{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0}]

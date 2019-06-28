@@ -7,6 +7,7 @@ export(Color, RGB) var lucia
 export(Color, RGB) var monteasalvo
 export(Color, RGB) var customer
 export(Color, RGB) var pensamiento
+export(Color, RGB) var panoptics
 
 onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
@@ -139,6 +140,8 @@ func set_text_object(text_object):
 			text_color = monteasalvo
 		'Pensamiento':
 			text_color = pensamiento
+		'Panoptics':
+			text_color = panoptics
 	$Panel/Text.add_color_override("font_color", text_color)
 	$Panel/Text.show()
 	$BackSubtitle.show()

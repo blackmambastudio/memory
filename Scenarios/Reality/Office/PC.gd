@@ -113,6 +113,7 @@ func click_target_report():
 	$Desktop/SFX_DocsOp.playsound()
 	$AnimationPlayer.play("OpenReport")
 	VariableBoard.set_value("clicked", "cecilia_report")
+	VariableBoard.set_value("end_code", "escape")
 	ActionRouter.request({
 	    "action": "Dialogue/stack",
 		"path": "res://Levels/act4/thoughts.data"

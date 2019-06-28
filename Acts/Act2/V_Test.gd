@@ -1,13 +1,14 @@
 extends "res://Acts/ViewScene.gd"
 
 export(String) var next_act
+export(int) var minigame_sessions = 3
 
 var auto_minigame = false
 var reflexes_minigame = false
-var done_minigames = 0
 
 onready var ActionRouter = get_node("/root/ActionRouter")
 onready var VariableBoard = get_node("/root/VariableBoard")
+onready var done_minigames = 0
 
 func _ready():
 	# Set listeners for board variables
@@ -101,7 +102,7 @@ func to_center():
 
 func _on_minigame_finish(win):
 	done_minigames += 1
-	if done_minigames == 3:
+	if done_minigames == minigame_sessions:
 		ActionRouter.request({
 			"action":"Board/set_value",
 			"variable":"finish_test",

@@ -1,0 +1,2 @@
+res://Levels/act5/the_end.scn
+[{"from":"ActionNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"FilterNode","from_port":0,"to":"EmbeddedDialogue","to_port":0},{"from":"EmbeddedDialogue","from_port":0,"to":"@EmbeddedDialogue@971","to_port":0},{"from":"ActionNode","from_port":0,"to":"@FilterNode@259","to_port":0},{"from":"ActionNode","from_port":0,"to":"@FilterNode@276","to_port":0},{"from":"@FilterNode@259","from_port":0,"to":"@EmbeddedDialogue@458","to_port":0},{"from":"@FilterNode@276","from_port":0,"to":"@EmbeddedDialogue@285","to_port":0}]

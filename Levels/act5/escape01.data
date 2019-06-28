@@ -1,0 +1,5 @@
+DialogNode|dialog|Panoptics|0|In other news, a platanial has escaped from one of Monteasalvo's quarentine centers.|Y en otras noticias, un platanero ha escapado de uno de los centros de cuarentena de Monteasalvo.|4||0|[@DialogNode@255]
+@DialogNode@294|dialog|Panoptics|0|The fugitive, identified as Cecilia Melano, has declared that the treatment in the laboratories is inhumane.|La fugitiva, identificada como Cecilia Melano, ha declarado que el trato en los laboratorios es inhumano.|8||0|[@DialogNode@333]
+@DialogNode@255|dialog|Panoptics|0|The escape took place on the night of June 22nd.|La fuga tuvo lugar la noche del pasado 22 de junio.|3||0|[@DialogNode@294]
+@DialogNode@333|dialog|Panoptics|0|The pharma company denies what the fugitive says.|La farmacéutica niega lo que dice la fugitiva.|4||0|[]
+ActionNode|action|{"action":"Game/Wait","pause":true,"wait":4.0}|[DialogNode]

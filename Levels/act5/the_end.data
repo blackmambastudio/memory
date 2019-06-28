@@ -1,0 +1,8 @@
+ActionNode|action|{"action":"Game/Wait","pause":true,"wait":1.0}|[FilterNode, @FilterNode@259, @FilterNode@276]
+FilterNode|filter|end_code|equals|domestic|[EmbeddedDialogue]
+EmbeddedDialogue|embedded|res://Levels/act5/domestic01.data|[@EmbeddedDialogue@971]
+@EmbeddedDialogue@971|embedded|res://Levels/act5/domestic02.data|[]
+@FilterNode@259|filter|end_code|equals|escape|[@EmbeddedDialogue@458]
+@FilterNode@276|filter|end_code|equals|repeat|[@EmbeddedDialogue@285]
+@EmbeddedDialogue@458|embedded|res://Levels/act5/escape01.data|[]
+@EmbeddedDialogue@285|embedded|res://Levels/act5/repeat01.data|[]

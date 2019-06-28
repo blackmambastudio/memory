@@ -4,7 +4,7 @@
 [ext_resource path="res://Acts/Act5/V_BlackBackground.tscn" type="PackedScene" id=2]
 
 [node name="Act5" instance=ExtResource( 1 )]
-starting_dialogue = "res://Levels/act5/dlg01.data"
+starting_dialogue = "res://Levels/act5/the_end.data"
 
 [node name="BlackBackground" parent="Views" index="0" instance=ExtResource( 2 )]
 

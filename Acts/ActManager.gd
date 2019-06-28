@@ -67,6 +67,11 @@ func _ready():
 		"action":"Board/register", "variable":"leave_test", "value": false
 	})
 	
+	# Create variables for handling the final
+	ActionRouter.request({
+		"action":"Board/register", "variable":"end_code", "value": "domestic"
+	})
+	
 	#self.load_act(all_acts[0])
 
 func load_act(act_name = null):
