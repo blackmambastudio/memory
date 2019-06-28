@@ -1,0 +1,4 @@
+@DialogNode@269|dialog|Lucia|2|Tell me more.|Cuéntame más.|1.1|DX_Assets/Lucia/Gen/Lucia_Gen_03_v2.ogg|0|[]
+@DialogNode@328|dialog|Lucia|2|What else you remember?|¿Qué más recuerdas?|1.3|DX_Assets/Lucia/Gen/Lucia_Gen_04.ogg|0|[]
+DialogNode|dialog|Lucia|1|Tell me more.|Cuéntame más.|1|DX_Assets/Lucia/Gen/Lucia_Gen_03_v1.ogg|0|[]
+ActionNode|action|{"action":"Game/Wait","pause":true,"wait":1.0}|[DialogNode, @DialogNode@269, @DialogNode@328]

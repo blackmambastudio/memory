@@ -1,0 +1,4 @@
+FilterNode|filter|current_act_id|equals|act4|[EmbeddedDialogue]
+@FilterNode@1396|filter|current_act_id|default||[]
+ActionNode|action|{"action":"Dialogue/clear"}|[FilterNode, @FilterNode@1396]
+EmbeddedDialogue|embedded|res://Levels/nick_tests/kof.data|[]

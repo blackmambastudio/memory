@@ -1,0 +1,4 @@
+ActionNode|action|{"action":"Dialogue/clear"}|[DialogNode, @DialogNode@262, @DialogNode@314]
+DialogNode|dialog|Dr Nick|0|(kof kof)|(kof kof)|0.8|DX_Assets/Dr.Nick/Gen/Nick_Gen_20_v1.ogg|0|[]
+@DialogNode@262|dialog|Dr Nick|0|(kof kof)|(kof kof)|1.1|DX_Assets/Dr.Nick/Gen/Nick_Gen_20_v2.ogg|0|[]
+@DialogNode@314|dialog|Dr Nick|0|(kof kof)|(kof kof)|2.7|DX_Assets/Dr.Nick/Gen/Nick_Gen_20_v3.ogg|0|[]

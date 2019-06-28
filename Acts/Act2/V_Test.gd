@@ -101,7 +101,7 @@ func to_center():
 
 func _on_minigame_finish(win):
 	done_minigames += 1
-	if done_minigames == 1:
+	if done_minigames == 3:
 		ActionRouter.request({
 			"action":"Board/set_value",
 			"variable":"finish_test",

@@ -10,13 +10,17 @@
 starting_dialogue = "res://Levels/act4/dlg01.data"
 
 [node name="RoomLeft" parent="Views" index="0" instance=ExtResource( 2 )]
+modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
 [node name="RoomFront" parent="Views" index="1" instance=ExtResource( 3 )]
 visible = false
+modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
 [node name="RoomRightFront" parent="Views" index="2" instance=ExtResource( 4 )]
 visible = false
+modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
 [node name="RoomRight" parent="Views" index="3" instance=ExtResource( 5 )]
 visible = false
+modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 

@@ -15,6 +15,7 @@ var real_factor = 1.0
 var fictional_factor = 0.0
 var inception = false
 var time = randi()%1000
+var fixed = false
 
 
 onready var VariableBoard = get_node("/root/VariableBoard")
@@ -54,6 +55,7 @@ func create_memory(memory):
 	if fictional_item.empty(): return
 	if memory != fictional_item: return
 	if Fictional.is_visible(): return
+	if fixed or inception: return
 	fictional_factor = 0.4
 	real_factor = 0.7
 	Fictional.show()
@@ -101,6 +103,7 @@ func reforce_real():
 	if real_factor >= (1.0 if needed_attempts == NamedEnum.TWO else 0.6):
 		Fictional.hide()
 		inception = false
+		fixed = true
 		fictional_factor = 0
 		Fictional.modulate.a = fictional_factor
 		real_factor = 1.0

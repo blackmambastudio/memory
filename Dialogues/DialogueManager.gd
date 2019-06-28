@@ -53,7 +53,6 @@ func _ready():
 	VariableBoard.register("1-luggage-deep", 0)
 	VariableBoard.register("1-papelito-deep", 0)
 
-
 	# ---- M01 - Fictional ----
 	VariableBoard.register("1-corset-deep", 0)
 	VariableBoard.register("1-fufa_wig-deep", 0)

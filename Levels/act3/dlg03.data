@@ -10,7 +10,7 @@ DialogNode|dialog|Lucia|3|Odd... suddenly I'm starting to remember.|Curioso...â€
 @DialogNode@587|dialog|Lucia|0|(laugh)|(risa)|0.8|DX_Assets/Lucia/Gen/Lucia_Gen_05_v1.ogg|0|[ActionNode]
 @DialogNode@632|dialog|Lucia|0|(laugh)|(risa)|1.4|DX_Assets/Lucia/Gen/Lucia_Gen_05_v2.ogg|0|[ActionNode]
 @DialogNode@671|dialog|Lucia|0|(laugh)|(risa)|0.6|DX_Assets/Lucia/Gen/Lucia_Gen_05_v3.ogg|0|[ActionNode]
-@ActionNode@677|action|{"action":"Game/Random"}|[@DialogNode@587, @DialogNode@632, @DialogNode@671]
+@ActionNode@677|action|{"action":"Act/Views/change","view":"KitchenWindow"}|[@DialogNode@587, @DialogNode@632, @DialogNode@671]
 @ActionNode@595|action|{"action":"Act/Views/change","view":"KitchenFront"}|[DialogNode]
 ActionNode|action|{"action":"Dialogue/clear"}|[@ActionNode@684]
 @ActionNode@684|action|{"action":"Game/Wait","pause":true,"wait":2.0}|[@ActionNode@595]

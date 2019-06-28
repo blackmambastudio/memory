@@ -95,7 +95,9 @@ func handle(request):
 			yield(get_tree().create_timer(request.wait), "timeout")
 		"Game/Random":
 			randomize()
-			VariableBoard.set_value("random", randi() % 100 + 1)
+			var new_random = randi() % 100 + 1
+			print("new_random >> ", new_random)
+			VariableBoard.set_value("random", new_random)
 		_:
 			return false
 #warning-ignore:unreachable_code

@@ -11,4 +11,5 @@ ActionNode|action|{"action":"Board/set_value","variable":"start_active_minigame"
 @FilterNode@1038|filter|finish_test|equals|true|[EmbeddedDialogue]
 EmbeddedDialogue|embedded|res://Levels/nick_tests/finish.data|[]
 FilterNode|filter|finish_test|default||[ActionNode]
-@ActionNode@1053|action|{"action":"Dialogue/clear"}|[FilterNode, @FilterNode@1038]
+@ActionNode@1053|action|{"action":"Dialogue/clear"}|[@EmbeddedDialogue@1651]
+@EmbeddedDialogue@1651|embedded|res://Levels/nick_tests/poisoned.data|[FilterNode, @FilterNode@1038]

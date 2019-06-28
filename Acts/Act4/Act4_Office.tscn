@@ -6,6 +6,7 @@
 [ext_resource path="res://Audio/AudioAssets/BG_Office.ogg" type="AudioStream" id=4]
 
 [node name="Act4_Office" instance=ExtResource( 1 )]
+starting_dialogue = "res://Levels/act4/thoughts.data"
 
 [node name="ViewScene" parent="Views" index="0" instance=ExtResource( 2 )]
 

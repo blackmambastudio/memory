@@ -1,0 +1,2 @@
+res://Levels/nick_tests/kof.scn
+[{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@DialogNode@262","to_port":0},{"from":"ActionNode","from_port":0,"to":"@DialogNode@314","to_port":0}]

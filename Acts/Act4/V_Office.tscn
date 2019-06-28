@@ -9,9 +9,6 @@
 [node name="PC" parent="." index="0" instance=ExtResource( 2 )]
 position = Vector2( 263, 155 )
 
-[node name="Backgrounds" parent="." index="1"]
-editor/display_folded = true
-
 [node name="Computer" type="Sprite" parent="Backgrounds" index="0"]
 position = Vector2( 640, 360 )
 texture = ExtResource( 3 )

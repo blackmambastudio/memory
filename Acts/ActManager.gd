@@ -14,24 +14,58 @@ func _ready():
 	self.actionHandler.set_act_manager(self)
 	ActionRouter.register_actions(self.actionHandler)
 	
-	ActionRouter.request({"action":"Board/register", "variable":"current_act_id", "value": ""})
+	# Create variables for handling the actos
+	ActionRouter.request({
+		"action":"Board/register", "variable":"current_act_id", "value": ""
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"lucia_patience", "value": 0
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"lucia_sleepiness", "value": 0
+	})
 
-	ActionRouter.request({"action":"Board/register", "variable":"took_pills", "value": false})
-	ActionRouter.request({"action":"Board/register", "variable":"inv_key", "value": false})
-	ActionRouter.request({"action":"Board/register", "variable":"inv_control", "value": false})
+	# Create variables for handling the inventario
+	ActionRouter.request({
+		"action":"Board/register", "variable":"took_pills", "value": false
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"inv_key", "value": false
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"inv_control", "value": false
+	})
 	
-	ActionRouter.request({"action":"Board/register", "variable":"view_monitor_status", "value": "0"})
-	ActionRouter.request({"action":"Board/register", "variable":"view_claire_status", "value": "0"})
-	ActionRouter.request({"action":"Board/register", "variable":"view_hands_status", "value": "0"})
-	ActionRouter.request({"action":"Board/register", "variable":"view_lucia_status", "value": "0"})
+	# Create variables for handling the personajes
+	ActionRouter.request({
+		"action":"Board/register", "variable":"view_monitor_status", "value": "0"
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"view_claire_status", "value": "0"
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"view_hands_status", "value": "0"
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"view_lucia_status", "value": "0"
+	})
 	
-	ActionRouter.request({"action":"Board/register", "variable":"test_split_memory", "value": 0})
-	# valid values: auto and reflexes
-	ActionRouter.request({"action":"Board/register", "variable":"view_active_minigame", "value": 'auto'})
-	ActionRouter.request({"action":"Board/register", "variable":"start_active_minigame", "value": false})
-
-	ActionRouter.request({"action":"Board/register", "variable":"finish_test", "value": false})
-	ActionRouter.request({"action":"Board/register", "variable":"leave_test", "value": false})
+	# Create variables for handling the pruebas
+	ActionRouter.request({
+		"action":"Board/register", "variable":"test_split_memory", "value": 0
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"view_active_minigame", "value": 'auto'
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"start_active_minigame", "value": false
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"finish_test", "value": false
+	})
+	ActionRouter.request({
+		"action":"Board/register", "variable":"leave_test", "value": false
+	})
 	
 	#self.load_act(all_acts[0])
 

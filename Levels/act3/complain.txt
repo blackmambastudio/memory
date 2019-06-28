@@ -1,2 +1,2 @@
 res://Levels/act3/complain.scn
-[{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@DialogNode@277","to_port":0}]
+[{"from":"ActionNode","from_port":0,"to":"DialogNode","to_port":0}]

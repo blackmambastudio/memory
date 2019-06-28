@@ -20,6 +20,10 @@ func _ready():
 	$Desktop/FileManager/SutanoFile.connect("button_up", self, "click_default_report")
 	$Desktop/FileManager/MelanoFile.connect("button_up", self, "click_target_report")
 	$Desktop/CeciliaReport/Close.connect("button_up", self, "close_report")
+	
+	# Check if the player should have access to the Reports
+	if VariableBoard.get_value("remember_times") < 3:
+		$Desktop/Reports.hide()
 
 func clear_password():
 	password = ""
@@ -27,7 +31,6 @@ func clear_password():
 		field.set_text("")
 
 func key_pressed(letter):
-	
 	if letter == "Delete":
 		$SFX_Erase.playsound()
 		if password.length() > 0:
@@ -76,13 +79,18 @@ func open_reports_folder():
 		button.set_disabled(false)
 	
 func click_default_sector():
-	# TODO: Show a dialog?
-	pass
+	VariableBoard.set_value("clicked", "wrong_sector")
+	ActionRouter.request({
+	    "action": "Dialogue/stack",
+		"path": "res://Levels/act4/thoughts.data"
+	})
 
 func click_target():
 	$Desktop/SFX_EnergySelect.playsound()
+	VariableBoard.set_value("clicked", "escape_sector")
 	ActionRouter.request({
-		"action":"Act/show", "act": "res://Acts/Act4/Act4_Hall.tscn"
+	    "action": "Dialogue/stack",
+		"path": "res://Levels/act4/thoughts.data"
 	})
 
 func close_fileman():
@@ -93,14 +101,22 @@ func close_fileman():
 	$AnimationPlayer.get_animation("OpenFileMan").clear()
 
 func click_default_report():
-	# TODO: Show a dialog
-	pass
+	VariableBoard.set_value("clicked", "wrong_report")
+	ActionRouter.request({
+	    "action": "Dialogue/stack",
+		"path": "res://Levels/act4/thoughts.data"
+	})
 
 func click_target_report():
 	$Desktop/SFX_Open.playsound()
 	$Desktop/CeciliaReport.show()
 	$Desktop/SFX_DocsOp.playsound()
 	$AnimationPlayer.play("OpenReport")
+	VariableBoard.set_value("clicked", "cecilia_report")
+	ActionRouter.request({
+	    "action": "Dialogue/stack",
+		"path": "res://Levels/act4/thoughts.data"
+	})
 
 func close_report():
 	$Desktop/SFX_Close.playsound()

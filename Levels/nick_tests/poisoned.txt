@@ -1,0 +1,2 @@
+res://Levels/nick_tests/poisoned.scn
+[{"from":"ActionNode","from_port":0,"to":"FilterNode","to_port":0},{"from":"ActionNode","from_port":0,"to":"@FilterNode@1396","to_port":0},{"from":"FilterNode","from_port":0,"to":"EmbeddedDialogue","to_port":0}]

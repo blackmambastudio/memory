@@ -506,7 +506,6 @@ position = Vector2( 238.899, 216.221 )
 stream = ExtResource( 7 )
 
 [node name="Desktop" type="Node2D" parent="."]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
 
 [node name="Background" type="Sprite" parent="Desktop"]
@@ -545,6 +544,7 @@ __meta__ = {
 }
 
 [node name="EnergyApp" type="TextureRect" parent="Desktop"]
+editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 44.0
 margin_top = 88.0
@@ -657,7 +657,7 @@ region_rect = Rect2( 0, 0, 454, 344 )
 patch_margin_top = 23
 
 [node name="Report" type="Label" parent="Desktop/CeciliaReport"]
-self_modulate = Color( 1, 1, 1, 6.54512e-05 )
+self_modulate = Color( 1, 1, 1, 6.54512e-005 )
 margin_left = 44.0
 margin_top = 50.0
 margin_right = 412.0
