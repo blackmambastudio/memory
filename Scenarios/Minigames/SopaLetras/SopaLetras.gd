@@ -4,7 +4,7 @@ extends Control
 const Letter = preload("res://Scenarios/Minigames/SopaLetras/Letter.tscn")
 signal word_match
 
-var catetories = {
+var categories = {
 	"laundry": [
 		{"word":"remember", "col": 1, "row": 2, "direction": 2},
 		{"word":"laundry", "col": 0, "row": 1, "direction": 4},
@@ -39,15 +39,9 @@ var catetories = {
 	]
 }
 
-var words =[
-		{"word":"remember", "col": 1, "row": 6, "direction": 2},
-		{"word":"apron", "col": 9, "row": 2, "direction": 4},
-		{"word":"napkin", "col": 11, "row": 6, "direction": 4},
-		{"word":"plates", "col": 9, "row": 0, "direction": 5},
-		{"word":"knife", "col": 8, "row": 10, "direction": 7},
-		{"word":"blender", "col": 2, "row": 1, "direction": 4}
-	]
+var words =[]
 
+export(String, "laundry", "appliances", "gardentools", "kitchen") var level = "laundry"
 var word_indexes = {}
 var pairs = []
 
@@ -59,6 +53,7 @@ func _ready():
 	var limit = 12*12
 	var index = 0
 	var text = populate()
+	words = categories[level]
 	
 	for character in text:
 		var letra = Letter.instance()

@@ -116,10 +116,12 @@ text = "Exercises to help to recover your memory"
 
 [node name="Cover" type="Sprite" parent="."]
 visible = false
-position = Vector2( 203, 266 )
+modulate = Color( 0.392157, 0.333333, 0.494118, 1 )
+position = Vector2( 202, 306 )
 texture = ExtResource( 3 )
 
 [node name="MiniCover" type="TextureButton" parent="."]
+modulate = Color( 0.392157, 0.333333, 0.494118, 1 )
 margin_left = 337.0
 margin_top = 544.0
 margin_right = 383.0
