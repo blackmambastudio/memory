@@ -15,6 +15,7 @@
 
 [node name="Act1" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+starting_dialogue = "res://Levels/act1/dlg01.data"
 
 [node name="RoomLeft" parent="Views" index="0" instance=ExtResource( 3 )]
 visible = false

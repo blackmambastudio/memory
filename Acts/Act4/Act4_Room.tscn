@@ -1,29 +1,22 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Acts/ActScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Acts/Act1/Act1_Room.gd" type="Script" id=2]
-[ext_resource path="res://Acts/Act1/V_RoomLeft.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Acts/Act1/V_RoomFront.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Acts/Act1/V_RoomRightFront.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Acts/Act1/V_RoomRight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Acts/Act1/Act1_Room.tscn" type="PackedScene" id=1]
 
 [node name="Act1" instance=ExtResource( 1 )]
-script = ExtResource( 2 )
 starting_dialogue = "res://Levels/act4/dlg01.data"
 level = "kitchen"
 
-[node name="RoomLeft" parent="Views" index="0" instance=ExtResource( 3 )]
+[node name="RoomLeft" parent="Views" index="0"]
+visible = true
 modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
-[node name="RoomFront" parent="Views" index="1" instance=ExtResource( 4 )]
+[node name="RoomFront" parent="Views" index="1"]
 visible = false
 modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
-[node name="RoomRightFront" parent="Views" index="2" instance=ExtResource( 5 )]
-visible = false
+[node name="RoomRightFront" parent="Views" index="2"]
 modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
-[node name="RoomRight" parent="Views" index="3" instance=ExtResource( 6 )]
-visible = false
+[node name="RoomRight" parent="Views" index="3"]
 modulate = Color( 0.905882, 0.823529, 0.627451, 1 )
 
