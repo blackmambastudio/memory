@@ -53,7 +53,7 @@ func _ready():
 	var limit = 12*12
 	var index = 0
 	var text = populate()
-	words = categories[level]
+	
 	
 	for character in text:
 		var letra = Letter.instance()
@@ -64,10 +64,15 @@ func _ready():
 		index+=1
 		if index>=limit:
 			break
-	insert_words()
 	
 	$MiniCover.connect("button_down", self, "show_cover")
 	$Turn.connect("button_down", self, "turn_cover")
+
+func load_level(level):
+	self.level = level
+	words = categories[level]
+	insert_words()
+
 
 func letter_clicked(index):
 	if index == one_pair: return

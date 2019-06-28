@@ -72,12 +72,11 @@ script = ExtResource( 1 )
 skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
-first_act = "Act5/Act5"
+first_act = "Act2/Act2_Room1"
 
 [node name="Memory" parent="." instance=ExtResource( 3 )]
 
 [node name="Overlay" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -93,10 +92,10 @@ lucia = Color( 0.611765, 0.941176, 0.623529, 1 )
 monteasalvo = Color( 0.223529, 0.360784, 0.827451, 1 )
 customer = Color( 0.564706, 0.584314, 0.658824, 1 )
 
+[node name="IntroScene" parent="." instance=ExtResource( 5 )]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeIn = SubResource( 1 )
 anims/FadeOut = SubResource( 2 )
 anims/Inyection = SubResource( 3 )
-
-[node name="IntroScene" parent="." instance=ExtResource( 5 )]
 

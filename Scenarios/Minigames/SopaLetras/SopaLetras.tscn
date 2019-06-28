@@ -44,7 +44,6 @@ visible = false
 points = PoolVector2Array( 50, 50, 306, 51 )
 width = 30.0
 default_color = Color( 0.615686, 0.4, 1, 0.47451 )
-texture_mode = 266592599
 
 [node name="WordList" type="Control" parent="."]
 margin_left = 22.0
@@ -61,7 +60,7 @@ margin_right = 69.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "apron"
+text = "laundry"
 uppercase = true
 
 [node name="word2" type="Label" parent="WordList"]
@@ -71,7 +70,7 @@ margin_right = 69.0
 margin_bottom = 40.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "napkin"
+text = "bleach"
 uppercase = true
 
 [node name="word3" type="Label" parent="WordList"]
@@ -81,28 +80,28 @@ margin_right = 69.0
 margin_bottom = 62.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "plates"
+text = "wash"
 uppercase = true
 
 [node name="word4" type="Label" parent="WordList"]
 modulate = Color( 0.266667, 0.266667, 0.439216, 1 )
-margin_left = 65.0
-margin_right = 134.0
+margin_left = 113.0
+margin_right = 182.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "knife"
+text = "mop"
 uppercase = true
 
 [node name="word5" type="Label" parent="WordList"]
 modulate = Color( 0.266667, 0.266667, 0.439216, 1 )
-margin_left = 65.0
+margin_left = 113.0
 margin_top = 23.0
-margin_right = 134.0
+margin_right = 182.0
 margin_bottom = 41.0
 custom_fonts/font = ExtResource( 2 )
 custom_constants/shadow_offset_x = 2
-text = "blender"
+text = "remove"
 uppercase = true
 
 [node name="Label" type="Label" parent="."]
