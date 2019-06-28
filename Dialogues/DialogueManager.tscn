@@ -1,14 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Dialogues/DialogueManager.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Fonts/Questrial-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
 outline_color = Color( 0.388235, 0.027451, 0.027451, 1 )
 use_filter = true
-extra_spacing_char = 1
 extra_spacing_space = 1
 font_data = ExtResource( 2 )
 
@@ -53,6 +52,7 @@ text = "Dr Nick: Parece que su memoria está comprometida"
 align = 1
 valign = 1
 autowrap = true
+uppercase = true
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
