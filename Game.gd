@@ -50,6 +50,8 @@ func _ready():
 	#
 
 func start_game():
+	$IntroScene/AnimationPlayer.play("close")
+	yield($IntroScene/AnimationPlayer, "animation_finished")
 	$IntroScene.hide()
 	$IntroScene/Music/MX_Menu.stop()
 	$ActManager.load_act()
@@ -58,12 +60,12 @@ func change_language():
 	var current = VariableBoard.get_value('language')
 	if current == 'text_en':
 		current = 'text_es'
-		$IntroScene/Language.text = '< Español >'
-		$IntroScene/Start.text = '< Comenzar >'
+		$IntroScene/Language.text = '< ESPAÑOL >'
+		$IntroScene/Start.text = 'INICIAR'
 	elif current == 'text_es':
 		current = 'text_en'
-		$IntroScene/Language.text = '< English >'
-		$IntroScene/Start.text = '< Start >'
+		$IntroScene/Language.text = '< ENGLISH >'
+		$IntroScene/Start.text = 'START'
 	VariableBoard.set_value('language', current)
 
 func _process(delta):
