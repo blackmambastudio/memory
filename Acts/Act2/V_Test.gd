@@ -121,6 +121,7 @@ func _on_minigame_finish(win):
 		})
 
 func leave(value):
+	done_minigames = 0
 	ActionRouter.request({
 		"action": "Act/end",
 		"next": "res://Acts/" + next_act + ".tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Acts/ActManager.tscn" type="PackedScene" id=2]
@@ -36,6 +36,34 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "Inyection"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3, 3.99994 ),
+"transitions": PoolRealArray( 2, 1, 1, 2 ),
+"update": 0,
+"values": [ Color( 0.0117647, 0.0156863, 0.0980392, 1 ), Color( 0.807843, 0.94902, 0.94902, 1 ), Color( 0.807843, 0.94902, 0.94902, 1 ), Color( 0.0117647, 0.0156863, 0.0980392, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Overlay:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -44,7 +72,6 @@ script = ExtResource( 1 )
 skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
-first_act = "Act5/Act5"
 
 [node name="Memory" parent="." instance=ExtResource( 3 )]
 
@@ -54,7 +81,7 @@ modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 0, 0.027451, 0.0666667, 1 )
+color = Color( 0.0117647, 0.0156863, 0.0980392, 1 )
 
 [node name="DialogueManager" parent="." instance=ExtResource( 4 )]
 mouse_filter = 2
@@ -62,6 +89,7 @@ mouse_filter = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeIn = SubResource( 1 )
 anims/FadeOut = SubResource( 2 )
+anims/Inyection = SubResource( 3 )
 
 [node name="IntroScene" parent="." instance=ExtResource( 5 )]
 

@@ -7,8 +7,6 @@ func _ready():
 
 func change_act(animation):
 	ActionRouter.request({
-		"action": "Act/show",
-		"act": "res://Acts/Act1/Act1_Room.tscn"
+		"action": "Act/end",
+		"next": "res://Acts/Act5/Act5.tscn"
 	})
-	
-

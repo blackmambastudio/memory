@@ -12,7 +12,8 @@ func mood_matched():
 	})
 
 func mood_unmatched():
-	ActionRouter.request({
-	    "action": "Dialogue/stack",
-		"path": "res://Levels/act3/argh.data"
-	})
+	# ActionRouter.request({
+	#     "action": "Dialogue/stack",
+	# 	"path": "res://Levels/act3/argh.data"
+	# })
+	pass
