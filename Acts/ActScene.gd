@@ -19,13 +19,17 @@ func change_view(name):
 	current_view = $Views.get_node(name)
 	current_view.show()
 	if name == 'RoomLeft':
-		 Pan.set_pan(0.4)
+		Pan.set_pan(0.4)
+		$WindowSound.position.x = 1350
 	if name == 'RoomFront':
-		 Pan.set_pan(0)
+		Pan.set_pan(0)
+		$WindowSound.position.x = 1138
 	if name == 'RoomRightFront':
-		 Pan.set_pan(-0.4)
+		Pan.set_pan(-0.4)
+		$WindowSound.position.x = 900
 	if name == 'RoomRight':
-		 Pan.set_pan(-0.7)
+		Pan.set_pan(-0.7)
+		$WindowSound.position.x = 620
 
 func start():
 	pass

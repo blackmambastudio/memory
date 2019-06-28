@@ -37,6 +37,7 @@ func _on_clicked(clickeable_name):
 		self.open_box()
 	elif clickeable_name == 'Control':
 		VariableBoard.set_value("inv_control", true)
+		$Clickeables/Control/SFX_Grab.playsound()
 		self.close_box()
 
 func _on_looked(clickeable_name):

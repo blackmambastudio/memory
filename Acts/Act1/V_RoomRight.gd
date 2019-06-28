@@ -11,4 +11,5 @@ func _ready():
 	$WindowControl.connect("toggle_item", $Window, "toggle_item")
 
 func unlock_control(value):
+	$WindowControl/SFX_Use.playsound()
 	$WindowControl.visible = value

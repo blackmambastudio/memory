@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_ButtonA_Down.ogg-b3fe19edcaf3278586e1dba2f9823db5.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_ButtonA_Down.ogg"
+dest_files=[ "res://.import/SFX_ButtonA_Down.ogg-b3fe19edcaf3278586e1dba2f9823db5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

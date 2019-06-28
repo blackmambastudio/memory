@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_Remote_Grab.ogg-007ac55768601a2992a2d9845bfcf30a.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_Remote_Grab.ogg"
+dest_files=[ "res://.import/SFX_Remote_Grab.ogg-007ac55768601a2992a2d9845bfcf30a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

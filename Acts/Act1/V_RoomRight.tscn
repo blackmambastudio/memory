@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Acts/ViewScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acts/Act1/V_RoomRight.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Acts/Assets/Room/RoomRight.png" type="Texture" id=4]
 [ext_resource path="res://Acts/ChangeViewZone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenarios/Reality/DinerRoom/WindowControl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Remote_Use.ogg" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.391, 261.516 )
@@ -30,8 +32,11 @@ position = Vector2( 67.5901, 29.9169 )
 shape = SubResource( 1 )
 
 [node name="WindowControl" parent="." index="4" instance=ExtResource( 6 )]
-margin_left = 352.771
-margin_top = 502.206
-margin_right = 351.771
-margin_bottom = 501.206
+margin_left = 345.624
+margin_top = 412.158
+margin_right = 344.624
+margin_bottom = 411.158
+
+[node name="SFX_Use" parent="WindowControl" index="12" instance=ExtResource( 7 )]
+stream = ExtResource( 8 )
 

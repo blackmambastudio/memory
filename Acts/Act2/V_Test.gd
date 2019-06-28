@@ -50,15 +50,18 @@ func clip_test(value):
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'Left_action':
+		$Clickeables/Left_action/SFX_Button.playsound()
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 		elif reflexes_minigame:
 			$minigames/Reflexes.choose_light(0)
 			$minigames/Reflexes.emit_light()
 	elif clickeable_name == 'Middle_action':
+		$Clickeables/Middle_action/SFX_Button.playsound()
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 	elif clickeable_name == 'Right_action':
+		$Clickeables/Right_action/SFX_Button.playsound()
 		if auto_minigame:
 			$minigames/Auto.stop_car()
 		elif reflexes_minigame:

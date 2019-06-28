@@ -6,10 +6,10 @@
 [ext_resource path="res://Acts/Act1/V_RoomRightFront.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Acts/Act1/V_RoomRight.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Acts/Assets/Room/RoomRight.png" type="Texture" id=6]
-[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Base.ogg" type="AudioStream" id=8]
-[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Birds.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Birds.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Base.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Audio/AudioAssets/BG_CRoom_AC.ogg" type="AudioStream" id=11]
 
 [node name="Act1" index="0" instance=ExtResource( 1 )]
@@ -27,17 +27,17 @@ visible = false
 visible = false
 texture = ExtResource( 6 )
 
-[node name="BG_Room" parent="." index="1" instance=ExtResource( 7 )]
+[node name="WindowSound" parent="." index="1" instance=ExtResource( 7 )]
+position = Vector2( 1138, 391.036 )
 stream = ExtResource( 8 )
+autoplay = true
+
+[node name="BG_Room" parent="." index="2" instance=ExtResource( 9 )]
+stream = ExtResource( 10 )
 autoplay = true
 Volume = 6.0
 
-[node name="Birds" parent="BG_Room" index="0" instance=ExtResource( 9 )]
-position = Vector2( 1138.37, 362.728 )
-stream = ExtResource( 10 )
-autoplay = true
-
-[node name="AC" parent="BG_Room" index="1" instance=ExtResource( 9 )]
+[node name="AC" parent="BG_Room" index="0" instance=ExtResource( 7 )]
 position = Vector2( 348.358, 159.846 )
 stream = ExtResource( 11 )
 autoplay = true

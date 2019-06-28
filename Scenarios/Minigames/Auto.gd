@@ -16,6 +16,7 @@ func car_exited(area):
 	colliding = false
 
 func run_car():
+	$SFX_Engine.playsound()
 	$Hidden.show()
 	$Car.position.x = 50
 	randomize()
@@ -28,11 +29,14 @@ func _process(delta):
 
 func stop_car():
 	$Hidden.hide()
+	$SFX_Engine.stopsound()
 	car_speed = 0
 	if colliding:
+		$SFX_Pos.playsound()
 		$AnimationPlayer.play("End_good")
 		emit_signal("test_done", true)
 	else:
+		$SFX_Neg.playsound()
 		$AnimationPlayer.play("End")
 		emit_signal("test_done", false)
 	yield($AnimationPlayer, "animation_finished")

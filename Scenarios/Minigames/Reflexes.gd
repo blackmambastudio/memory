@@ -21,7 +21,6 @@ func start_emitting():
 func emit_light():
 	if not emitting:
 		return
-
 	side_emitted = -1
 	$Timer.start(1.5)
 	yield($Timer, "timeout")
@@ -34,6 +33,7 @@ func emit_light():
 		current_light = $Right
 	
 	current_light.show()
+	$SFX_Emit.playsound()
 	self.current_time = 0
 	$Timer.start(0.5)
 	yield($Timer, "timeout")
@@ -48,8 +48,10 @@ func choose_light(side):
 		if well_done >= 3:
 			emitting = false
 			well_done = 0
+			$SFX_Pos.playsound()
 			emit_signal("test_done", true)
 	else:
+		$SFX_Neg.playsound()
 		emitting = false
 		well_done = 0
 		emit_signal("test_done", false)

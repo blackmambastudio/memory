@@ -1,9 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenarios/Minigames/Auto.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/Minigames/Assets/arrow_test_car.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Minigames/Assets/car_test_car.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Minigames/Assets/tunel_test_car.png" type="Texture" id=4]
+[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Car.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Scenarios/Minigames/Assets/car_test_car.png" type="Texture" id=5]
+[ext_resource path="res://Scenarios/Minigames/Assets/tunel_test_car.png" type="Texture" id=6]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Test_Pos.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Test_Neg.ogg" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.70331, 42.1573 )
@@ -66,8 +70,11 @@ position = Vector2( 426.025, 191.454 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
+[node name="SFX_Engine" parent="." instance=ExtResource( 3 )]
+position = Vector2( 296.82, 199.898 )
+stream = ExtResource( 4 )
+
 [node name="Car" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 62.0498, 211.302 )
 __meta__ = {
 "_edit_group_": true
@@ -80,7 +87,7 @@ shape = SubResource( 2 )
 [node name="CarSprite" type="Sprite" parent="Car"]
 position = Vector2( 13.2352, 23.3192 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -88,9 +95,17 @@ __meta__ = {
 [node name="Hidden" type="Sprite" parent="."]
 position = Vector2( 393.474, 229.587 )
 scale = Vector2( 0.618963, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/End = SubResource( 3 )
 anims/End_good = SubResource( 4 )
+
+[node name="SFX_Pos" parent="." instance=ExtResource( 3 )]
+position = Vector2( 297.82, 199.898 )
+stream = ExtResource( 7 )
+
+[node name="SFX_Neg" parent="." instance=ExtResource( 3 )]
+position = Vector2( 297.82, 199.898 )
+stream = ExtResource( 8 )
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SFX_ButtonB_Up.ogg-a2949fa3fce0ed3336e1c0206b123fa5.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/SFX/SFX_ButtonB_Up.ogg"
+dest_files=[ "res://.import/SFX_ButtonB_Up.ogg-a2949fa3fce0ed3336e1c0206b123fa5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

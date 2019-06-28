@@ -36,6 +36,8 @@ func handle(request):
 			if open:
 				$SFX_Memory_Open.playsound()
 				memories[current_memory-1].visible = true
+			else:
+				$SFX_Memory_Close.playsound()
 			$AnimationPlayer.play(
 				"Show",
 				-1, 1.0 if request.value else -1.0,

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenarios/Minigames/Reflexes.gd" type="Script" id=1]
+[ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Test_LightOn.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Test_Pos.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Audio/AudioAssets/SFX/SFX_Test_Neg.ogg" type="AudioStream" id=5]
 
 [node name="Reflexes" type="Control"]
 anchor_right = 1.0
@@ -22,4 +26,16 @@ color = Color( 0.0980392, 0.768627, 1, 1 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="SFX_Emit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 313.659, 332.2 )
+stream = ExtResource( 3 )
+
+[node name="SFX_Pos" parent="." instance=ExtResource( 2 )]
+position = Vector2( 313.659, 332.2 )
+stream = ExtResource( 4 )
+
+[node name="SFX_Neg" parent="." instance=ExtResource( 2 )]
+position = Vector2( 313.659, 332.2 )
+stream = ExtResource( 5 )
 

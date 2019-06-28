@@ -20,7 +20,6 @@ Payaso1 = ExtResource( 2 )
 Payaso2 = ExtResource( 3 )
 Guaricha1 = ExtResource( 4 )
 Guaricha2 = ExtResource( 5 )
-real = false
 fadeout_duration = 9
 
 [node name="MX_Voice_1" parent="." instance=ExtResource( 6 )]
