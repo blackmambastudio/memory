@@ -188,7 +188,6 @@ tracks/3/keys = {
 }
 
 [node name="PC" type="Node2D"]
-editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -503,7 +502,7 @@ align = 1
 valign = 1
 
 [node name="SFX_Login" parent="Login" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 238.899, 216.221 )
 stream = ExtResource( 7 )
 
 [node name="Desktop" type="Node2D" parent="."]
@@ -591,7 +590,7 @@ texture_hover = ExtResource( 20 )
 
 [node name="SFX_EnergyHover" parent="Desktop/EnergyApp" instance=ExtResource( 6 )]
 position = Vector2( 554, 300 )
-scale = Vector2( 0, 0 )
+scale = Vector2( 1e-05, 1e-05 )
 stream = ExtResource( 21 )
 
 [node name="FileManager" type="TextureRect" parent="Desktop"]
@@ -681,39 +680,39 @@ margin_bottom = 24.0
 mouse_default_cursor_shape = 6
 
 [node name="SFX_Open" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 30 )
 
 [node name="SFX_Close" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 31 )
 
 [node name="SFX_Docs" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 32 )
 
 [node name="SFX_DocsOp" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 33 )
 
 [node name="SFX_Energy" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 34 )
 
 [node name="SFX_EnergySelect" parent="Desktop" instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240, 215 )
 stream = ExtResource( 35 )
 
 [node name="SFX_Input" parent="." instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 238.899, 216.221 )
 stream = ExtResource( 36 )
 
 [node name="SFX_Erase" parent="." instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 238.899, 216.221 )
 stream = ExtResource( 37 )
 
 [node name="SFX_Alert" parent="." instance=ExtResource( 6 )]
-position = Vector2( 554.667, 299.631 )
+position = Vector2( 240.091, 215.029 )
 stream = ExtResource( 38 )
 
 [connection signal="mouse_entered" from="Desktop/EnergyApp/4A" to="Desktop/EnergyApp" method="_on_4A_mouse_entered"]

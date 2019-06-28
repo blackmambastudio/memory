@@ -72,7 +72,7 @@ script = ExtResource( 1 )
 skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
-first_act = "Act3/Act3_Test"
+first_act = "Act3/Act3_Kitchen"
 
 [node name="Memory" parent="." instance=ExtResource( 3 )]
 

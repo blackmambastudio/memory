@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BG_TestRoom.ogg-93098b67081dbb20a5a403ef77137083.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/BG_TestRoom.ogg"
+dest_files=[ "res://.import/BG_TestRoom.ogg-93098b67081dbb20a5a403ef77137083.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
