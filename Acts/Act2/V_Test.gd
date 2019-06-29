@@ -121,7 +121,13 @@ func _on_minigame_finish(win):
 		})
 
 func leave(value):
+	# Reset variables to their defaults
 	done_minigames = 0
+	ActionRouter.request({
+		"action":"Board/set_value",
+		"variable":"finish_test",
+		"value": "false"
+	})
 	ActionRouter.request({
 		"action": "Act/end",
 		"next": "res://Acts/" + next_act + ".tscn"

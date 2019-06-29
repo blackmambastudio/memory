@@ -3,7 +3,7 @@ extends Control
 export (String) var real_item = ''
 export (String) var fictional_item = ''
 enum NamedEnum {ONE, TWO}
-export (NamedEnum) var needed_attempts = NamedEnum.TWO
+export (NamedEnum) var needed_attempts = NamedEnum.ONE
 
 signal item_selected
 signal memory_replaced
@@ -34,6 +34,8 @@ func _ready():
 func _on_item_select(item):
 	if item == real_item:
 		emit_signal("item_selected", real_item)
+		if self.name == "Cofre" and Fictional.is_visible():
+			reforce_real()
 		return
 	if self.inception:
 		emit_signal("item_selected", fictional_item)
@@ -96,10 +98,12 @@ func reforce_fictional():
 
 func reforce_real():
 	if fictional_item.empty(): return
+	print(">>>>>>> ", self.name, real_factor)
 	fictional_factor -= 0.4
 	real_factor += 0.1
 	Fictional.modulate.a = fictional_factor
 	Real.modulate.a = real_factor
+	print(">>>>>>>>>>>>>> ", self.name, real_factor)
 	if real_factor >= (1.0 if needed_attempts == NamedEnum.TWO else 0.6):
 		Fictional.hide()
 		inception = false

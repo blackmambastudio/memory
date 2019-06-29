@@ -1,5 +1,5 @@
 DialogNode|dialog|Cecilia|0|||0.1||0|[FilterNode, @FilterNode@750]
-@DialogNode@733|dialog|Cecilia|0|The virus outbreak only got things worse. I got it soon because of my work. Then I knew Monteasalvo was looking for test subjects.|El brote del virus platanero sólo empeoró las cosas. Lo contraje pronto por culpa de mi trabajo. Luego supe lo de los sujetos de prueba que buscaba Monteasalvo.|16.4|DX_Assets/Cecilia/Memories/Cecilia_Flyer_01.ogg|0|[]
-@DialogNode@779|dialog|Cecilia|0|They not only offered accommodation in Hunuragha, it was posible that they could cure me.|No sólo ofrecían una acomodación en Hunuragha sino que además era posible que pudieran curarme.|10|DX_Assets/Cecilia/Memories/Cecilia_Flyer_03.ogg|0|[]
 FilterNode|filter|1-cartel-deep|default||[@DialogNode@733]
 @FilterNode@750|filter|1-cartel-deep|equals|1|[@DialogNode@779]
+@DialogNode@733|dialog|Cecilia|0|The virus outbreak took me to leave Platanal. I got it soon because of my work. Then I knew Monteasalvo was looking for test subjects.|El brote del virus me llevó a dejar Platanal. Lo contraje pronto por culpa de mi trabajo. Luego supe lo de los sujetos de prueba que buscaba Monteasalvo.|16.4|DX_Assets/Cecilia/Memories/Cecilia_Flyer_01.ogg|0|[]
+@DialogNode@779|dialog|Cecilia|0|They not only offered accommodation in Hunuragha, it was posible that they could cure me.|No sólo ofrecían una acomodación en Hunuragha sino que además era posible que pudieran curarme.|10|DX_Assets/Cecilia/Memories/Cecilia_Flyer_03.ogg|0|[]

@@ -46,8 +46,6 @@ func _ready():
 	# setup signal for intro
 	$IntroScene/Start.connect("button_down", self, "start_game")
 	$IntroScene/Language.connect("button_down", self, "change_language")
-	# loading the first act
-	#
 
 func start_game():
 	$IntroScene/AnimationPlayer.play("close")

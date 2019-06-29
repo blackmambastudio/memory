@@ -10,8 +10,8 @@ signal mood_unmatch
 var matched = false
 
 var win_configuration = {
-	'BG/night_BG': true, 
-	'Main/city': true,
+#	'BG/night_BG': true, 
+#	'Main/city': true,
 	'rain': true
 }
 
