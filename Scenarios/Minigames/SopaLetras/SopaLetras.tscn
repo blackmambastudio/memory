@@ -118,6 +118,7 @@ text = "Exercises to help to recover your memory"
 visible = false
 modulate = Color( 0.392157, 0.333333, 0.494118, 1 )
 position = Vector2( 202, 306 )
+rotation = 1.5708
 texture = ExtResource( 3 )
 
 [node name="MiniCover" type="TextureButton" parent="."]

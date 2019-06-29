@@ -27,7 +27,7 @@ func _ready():
 	
 	ActionRouter.request({
 	    "action": "Game/Wordsearch/visible",
-		"visible": "true"
+		"visible": true
 	})
 	
 
@@ -64,7 +64,7 @@ func key_pressed(letter):
 			$AnimationPlayer.play("Desktop")
 			ActionRouter.request({
 			    "action": "Game/Wordsearch/visible",
-				"visible": true
+				"visible": false
 			})
 		else:
 			clear_password()

@@ -33,18 +33,18 @@ var categories = {
 		{"word":"strimmer", "col": 3, "row": 0, "direction": 3}
 	], 
 	"kitchen":[
-		{"word":"remember", "col": 11, "row": 2, "direction": 4},
-		{"word":"apron", "col": 6, "row": 4, "direction": 4},
-		{"word":"pan", "col": 7, "row": 4, "direction": 6},
-		{"word":"plates", "col": 11, "row": 1, "direction": 6},
-		{"word":"knife", "col": 4, "row": 4, "direction": 4},
-		{"word":"blender", "col": 1, "row": 8, "direction": 0}
+		{"word":"remember", "col": 1, "row": 6, "direction": 2},
+		{"word":"apron", "col": 9, "row": 2, "direction": 4},
+		{"word":"napkin", "col": 11, "row": 6, "direction": 4},
+		{"word":"plates", "col": 9, "row": 0, "direction": 5},
+		{"word":"knife", "col": 8, "row": 10, "direction": 7},
+		{"word":"blender", "col": 2, "row": 1, "direction": 4}
 	]
 }
 
 var words =[]
 
-export(String, "laundry", "appliances", "gardentools", "kitchen") var level = "laundry"
+export(String, "laundry", "appliances", "gardentools", "kitchen") var level = "kitchen"
 var word_indexes = {}
 var pairs = []
 
@@ -71,7 +71,7 @@ func _ready():
 	$Turn.connect("button_down", self, "turn_cover")
 	level = VariableBoard.get_value("wordsearch_level")
 	if level == null:
-		level = "laundry"
+		level = "kitchen"
 
 	words = categories[level]
 	insert_words()
@@ -82,6 +82,8 @@ func load_level(level):
 	if self.level == level:
 		return
 	self.level = level
+	$Turn.visible = level == 'kitchen'
+	$MiniCover.visible = level == 'kitchen'
 	var text = populate()
 	var index = 0
 	for letra in $GridContainer.get_children():

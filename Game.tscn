@@ -73,6 +73,7 @@ script = ExtResource( 1 )
 skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
+first_act = "Act1/Act1_Room"
 
 [node name="SopaLetras" parent="." instance=ExtResource( 3 )]
 visible = false
@@ -80,6 +81,7 @@ margin_left = 786.297
 margin_top = 72.0999
 margin_right = 786.297
 margin_bottom = 72.0999
+level = "laundry"
 
 [node name="Memory" parent="." instance=ExtResource( 4 )]
 

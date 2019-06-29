@@ -19,6 +19,9 @@ func set_value(variable, value):
 	emit_signal("value_set_" + variable, value)
 
 func add_value(variable, value):
+	if not board.has(variable):
+		print("no variable set")
+		return
 	board[variable] += value
 	emit_signal("value_set_" + variable, board[variable])
 
