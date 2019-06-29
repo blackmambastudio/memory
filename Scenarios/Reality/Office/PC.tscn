@@ -590,7 +590,7 @@ texture_hover = ExtResource( 20 )
 
 [node name="SFX_EnergyHover" parent="Desktop/EnergyApp" instance=ExtResource( 6 )]
 position = Vector2( 554, 300 )
-scale = Vector2( 1e-05, 1e-05 )
+scale = Vector2( 1e-005, 1e-005 )
 stream = ExtResource( 21 )
 
 [node name="FileManager" type="TextureRect" parent="Desktop"]

@@ -24,6 +24,12 @@ func _ready():
 	# Check if the player should have access to the Reports
 	if VariableBoard.get_value("remember_times") < 3:
 		$Desktop/Reports.hide()
+	
+	ActionRouter.request({
+	    "action": "Game/Wordsearch/visible",
+		"visible": "true"
+	})
+	
 
 func clear_password():
 	password = ""
@@ -56,6 +62,10 @@ func key_pressed(letter):
 			yield($AnimationPlayer, "animation_finished")
 			$Login.hide()
 			$AnimationPlayer.play("Desktop")
+			ActionRouter.request({
+			    "action": "Game/Wordsearch/visible",
+				"visible": true
+			})
 		else:
 			clear_password()
 			$SFX_Alert.playsound()

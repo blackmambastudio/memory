@@ -42,3 +42,6 @@ func unselect():
 	
 func set_matched():
 	$Key.modulate = Color(0.7,0.2,0.2)
+
+func unmatched():
+	$Key.modulate = Color("444470")

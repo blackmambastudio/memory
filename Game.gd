@@ -21,8 +21,8 @@ func _ready():
 	VariableBoard.register("random", randi())
 	VariableBoard.register("remember_times", 0)
 	VariableBoard.register("memories_replaced", 0)
+	VariableBoard.register("wordsearch_level", "laundry")
 	
-
 	# Setup the mouse cursor for the game
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(
@@ -46,6 +46,8 @@ func _ready():
 	# setup signal for intro
 	$IntroScene/Start.connect("button_down", self, "start_game")
 	$IntroScene/Language.connect("button_down", self, "change_language")
+	
+	$ActManager.connect("finish_act", self, "hide_wordsearch")
 
 func start_game():
 	$IntroScene/AnimationPlayer.play("close")
@@ -98,7 +100,15 @@ func handle(request):
 			var new_random = randi() % 100 + 1
 			print("new_random >> ", new_random)
 			VariableBoard.set_value("random", new_random)
+		"Game/Wordsearch/visible":
+			$SopaLetras.visible = bool(request.visible)
+			$SopaLetras/SFX_Sopa_OC.playsound()
+		"Game/Wordsearch/load":
+			$SopaLetras.load_level(request.level)
 		_:
 			return false
 #warning-ignore:unreachable_code
 	return true
+
+func hide_wordsearch():
+	$SopaLetras.visible = false

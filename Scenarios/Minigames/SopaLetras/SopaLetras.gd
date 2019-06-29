@@ -1,8 +1,11 @@
 tool
 extends Control
 
+onready var VariableBoard = get_node("/root/VariableBoard")
+
 const Letter = preload("res://Scenarios/Minigames/SopaLetras/Letter.tscn")
 signal word_match
+
 
 var categories = {
 	"laundry": [
@@ -54,7 +57,6 @@ func _ready():
 	var index = 0
 	var text = populate()
 	
-	
 	for character in text:
 		var letra = Letter.instance()
 		letra.set_letter(index, character)
@@ -67,12 +69,30 @@ func _ready():
 	
 	$MiniCover.connect("button_down", self, "show_cover")
 	$Turn.connect("button_down", self, "turn_cover")
+	level = VariableBoard.get_value("wordsearch_level")
+	if level == null:
+		level = "laundry"
 
-func load_level(level):
-	self.level = level
 	words = categories[level]
 	insert_words()
 
+func load_level(level):
+	print("load level", level)
+	print("previous level vs ", self.level, " - ", level)
+	if self.level == level:
+		return
+	self.level = level
+	var text = populate()
+	var index = 0
+	for letra in $GridContainer.get_children():
+		letra.set_text(text[index])
+		letra.unmatched()
+		index += 1
+	pairs = []
+	words = []
+	one_pair = -1
+	words = categories[level]
+	insert_words()
 
 func letter_clicked(index):
 	if index == one_pair: return
@@ -134,6 +154,7 @@ func insert_words():
 		for letter in text:
 			var index = col + row*12
 			_word.append(index)
+			print("set letter: ", index, "-", letter)
 			$GridContainer.get_child(index).set_text(letter)
 			if direction == 7 || direction == 0 || direction == 1:
 				row -= 1
@@ -150,6 +171,7 @@ func insert_words():
 		# insert word in the wordlist
 		if text != 'remember':
 			$WordList.get_child(word_list_index).text = text
+			$WordList.get_child(word_list_index).modulate = Color('#444470')
 			word_list_index += 1
 		else:
 			pairs[-1][3] = -1
@@ -160,6 +182,10 @@ func word_match(pair):
 	var word_list_index = pair[3]
 	if word_list_index != -1:
 		$WordList.get_child(word_list_index).modulate = Color(0.7,0.2,0.2)
+	
+	if pair[2] == 'remember':
+		VariableBoard.add_value("remember_times", 1)
+	
 	emit_signal("word_match", pair[2])
 
 

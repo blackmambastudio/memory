@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Acts/ActManager.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenarios/Memory/Memory.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Dialogues/DialogueManager.tscn" type="PackedScene" id=4]
-[ext_resource path="res://IntroScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenarios/Minigames/SopaLetras/SopaLetras.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenarios/Memory/Memory.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Dialogues/DialogueManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://IntroScene.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "FadeIn"
@@ -73,7 +74,14 @@ skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
 
-[node name="Memory" parent="." instance=ExtResource( 3 )]
+[node name="SopaLetras" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = 786.297
+margin_top = 72.0999
+margin_right = 786.297
+margin_bottom = 72.0999
+
+[node name="Memory" parent="." instance=ExtResource( 4 )]
 
 [node name="Overlay" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -82,7 +90,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0.0117647, 0.0156863, 0.0980392, 1 )
 
-[node name="DialogueManager" parent="." instance=ExtResource( 4 )]
+[node name="DialogueManager" parent="." instance=ExtResource( 5 )]
 mouse_filter = 2
 cecilia = Color( 0.831373, 0.619608, 0.862745, 1 )
 dr_nick = Color( 0.694118, 0.623529, 0.980392, 1 )
@@ -91,7 +99,7 @@ lucia = Color( 0.611765, 0.941176, 0.623529, 1 )
 monteasalvo = Color( 0.223529, 0.360784, 0.827451, 1 )
 customer = Color( 0.564706, 0.584314, 0.658824, 1 )
 
-[node name="IntroScene" parent="." instance=ExtResource( 5 )]
+[node name="IntroScene" parent="." instance=ExtResource( 6 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeIn = SubResource( 1 )

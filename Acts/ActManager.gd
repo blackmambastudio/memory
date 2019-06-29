@@ -3,6 +3,7 @@ extends Control
 export(String, "Act1/Act1_Room", "Act2/Act2_Room1", "Act2/Act2_Test", "Act2/Act2_Room2", "Act3/Act3_Room1", "Act3/Act3_Test", "Act3/Act3_Kitchen", "Act4/Act4_Room", "Act4/Act4_Test", "Act4/Act4_Office", "Act4/Act4_Hall", "Act5/Act5") var first_act = "Act1/Act1_Room"
 
 const ActActions = preload("act_actions.gd")
+signal finish_act
 
 var current_act
 var fade_out_on_load = false
@@ -103,6 +104,7 @@ func change_view_background(background):
 	current_act.change_view_background(background)
 
 func finish_act(next):
+	emit_signal("finish_act")
 	ActionRouter.request({"action": "Game/ToBlack"})
 	yield(get_tree().create_timer(2.0), "timeout")
 	fade_out_on_load = true

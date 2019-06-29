@@ -44,6 +44,7 @@ visible = false
 points = PoolVector2Array( 50, 50, 306, 51 )
 width = 30.0
 default_color = Color( 0.615686, 0.4, 1, 0.47451 )
+texture_mode = 1919380323
 
 [node name="WordList" type="Control" parent="."]
 margin_left = 22.0

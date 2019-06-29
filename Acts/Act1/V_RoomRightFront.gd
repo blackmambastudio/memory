@@ -2,12 +2,9 @@ extends "res://Acts/ViewScene.gd"
 onready var VariableBoard = get_node("/root/VariableBoard")
 
 func _ready():
-	$SopaLetras.connect("word_match", self, "word_found")
-	
-func word_found(word):
-	if word == 'remember':
-		# TODO: Display a flash
-		VariableBoard.add_value("remember_times", 1)
+	#$SopaLetras.connect("word_match", self, "word_found")
+	pass
+
 
 func _on_clicked(clickeable_name):
 	if clickeable_name == 'pills':
@@ -29,10 +26,8 @@ func _on_clicked(clickeable_name):
 			})
 	elif clickeable_name == 'sopa':
 		set_soup_visible(true)
-		$SopaLetras/SFX_Sopa_OC.playsound()
 	elif clickeable_name == 'ExitSoup':
 		set_soup_visible(false)
-		$SopaLetras/SFX_Sopa_OC.playsound()
 	elif clickeable_name == 'Cajon':
 		self.open_box()
 	elif clickeable_name == 'Control':
@@ -52,7 +47,10 @@ func _on_exit():
 	VariableBoard.set_value("clicked", "")
 
 func set_soup_visible(visible):
-	$SopaLetras.visible = visible
+	ActionRouter.request({
+		"action": "Game/Wordsearch/visible",
+		"visible": visible
+	})
 	$Clickeables/ExitSoup.visible = visible
 	$ChangeZones.visible = not visible
 
