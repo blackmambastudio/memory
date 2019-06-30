@@ -4,7 +4,7 @@ var current_view
 onready var VariableBoard = get_node("/root/VariableBoard")
 
 export (String) var starting_dialogue = ''
-export (Array) var pan_values
+export (Array) var pan_values 
 export (bool) var behind = false
 
 var Pan
@@ -27,6 +27,9 @@ func change_view(name):
 		current_view.hide()
 	current_view = $Views.get_node(name)
 	current_view.show()
+	if name == 'Test':
+		Filter.set_cutoff(11000)
+		Pan.set_pan(0)
 	if name == 'RoomLeft':
 		if behind:
 			Filter.set_cutoff(11000)
@@ -40,7 +43,6 @@ func change_view(name):
 	if name == 'RoomRightFront':
 		if behind:
 			Filter.set_cutoff(9000)
-		Pan.set_pan(pan_values[3])
 		Pan.set_pan(pan_values[2])
 		$WindowSound.position.x = 900
 	if name == 'RoomRight':
@@ -62,7 +64,6 @@ func change_view(name):
 	if name == 'KitchenRight':
 		if behind:
 			Filter.set_cutoff(9000)
-		Pan.set_pan(pan_values[3])
 		Pan.set_pan(pan_values[2])
 		#$WindowSound.position.x = 900
 	if name == 'KitchenWindow':

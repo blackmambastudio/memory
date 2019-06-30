@@ -5,6 +5,7 @@
 
 [node name="ActScene" instance=ExtResource( 1 )]
 starting_dialogue = "res://Levels/nick_tests/dlg01.data"
+pan_values = [ 0.0, 0.0, 0.0, 0.0 ]
 
 [node name="Test" parent="Views" index="0" instance=ExtResource( 2 )]
 next_act = "Act2/Act2_Room2"
