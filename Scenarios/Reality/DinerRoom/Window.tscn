@@ -1,21 +1,43 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scenarios/Reality/DinerRoom/Window.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/dawn_BG.png" type="Texture" id=2]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/night_BG.png" type="Texture" id=3]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/sunset_BG.png" type="Texture" id=4]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/day_BG.png" type="Texture" id=5]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/mountains.png" type="Texture" id=6]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/mountain_2.png" type="Texture" id=7]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/trees.png" type="Texture" id=8]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/city.png" type="Texture" id=9]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/lake.png" type="Texture" id=10]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/lake_boat.png" type="Texture" id=11]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/stars.png" type="Texture" id=12]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/moon.png" type="Texture" id=13]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/clouds.png" type="Texture" id=14]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/birds.png" type="Texture" id=15]
-[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/rain.png" type="Texture" id=16]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/WindowLayer.gd" type="Script" id=3]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Dawn.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/night_BG.png" type="Texture" id=5]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Night.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/sunset_BG.png" type="Texture" id=7]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Sunset.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/day_BG.png" type="Texture" id=9]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Day.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/mountains.png" type="Texture" id=11]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/mountain_2.png" type="Texture" id=12]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/trees.png" type="Texture" id=13]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Birds.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/city.png" type="Texture" id=15]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_City.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/lake.png" type="Texture" id=17]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Lake.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/lake_boat.png" type="Texture" id=19]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_LakeBoat.ogg" type="AudioStream" id=20]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/stars.png" type="Texture" id=21]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/moon.png" type="Texture" id=22]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/clouds.png" type="Texture" id=23]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/birds.png" type="Texture" id=24]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/WindowToggleLayer.gd" type="Script" id=25]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_ExtraBirds.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Scenarios/Reality/DinerRoom/Assets/rain.png" type="Texture" id=27]
+[ext_resource path="res://Audio/AudioAssets/WindowSystem/BG_Rain.ogg" type="AudioStream" id=28]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"res://Scenarios/Reality/DinerRoom/WindowLayer.gd\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+"
 
 [node name="Window" type="Node2D"]
 script = ExtResource( 1 )
@@ -25,73 +47,118 @@ script = ExtResource( 1 )
 [node name="dawn_BG" type="Sprite" parent="BG"]
 texture = ExtResource( 2 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="BG/dawn_BG"]
+position = Vector2( 155.462, 175.309 )
+stream = ExtResource( 4 )
 
 [node name="night_BG" type="Sprite" parent="BG"]
 visible = false
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="BG/night_BG"]
+stream = ExtResource( 6 )
+volume_db = -5.0
 
 [node name="sunset_BG" type="Sprite" parent="BG"]
 visible = false
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="BG/sunset_BG"]
+stream = ExtResource( 8 )
 
 [node name="day_BG" type="Sprite" parent="BG"]
 visible = false
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="BG/day_BG"]
+stream = ExtResource( 10 )
 
 [node name="mountains" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
 centered = false
 
 [node name="mountain_2" type="Sprite" parent="."]
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 centered = false
 
 [node name="Main" type="Node2D" parent="."]
 
 [node name="trees" type="Sprite" parent="Main"]
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Main/trees"]
+position = Vector2( 155.462, 175.309 )
+stream = ExtResource( 14 )
 
 [node name="city" type="Sprite" parent="Main"]
 visible = false
-texture = ExtResource( 9 )
+texture = ExtResource( 15 )
 centered = false
+script = SubResource( 1 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Main/city"]
+stream = ExtResource( 16 )
 
 [node name="lake" type="Sprite" parent="Main"]
 visible = false
-texture = ExtResource( 10 )
+texture = ExtResource( 17 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Main/lake"]
+stream = ExtResource( 18 )
 
 [node name="lake_boat" type="Sprite" parent="Main"]
 visible = false
-texture = ExtResource( 11 )
+texture = ExtResource( 19 )
 centered = false
+script = ExtResource( 3 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Main/lake_boat"]
+stream = ExtResource( 20 )
 
 [node name="stars" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 12 )
+texture = ExtResource( 21 )
 centered = false
 
 [node name="moon" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 13 )
+texture = ExtResource( 22 )
 centered = false
 
 [node name="clouds" type="Sprite" parent="."]
-texture = ExtResource( 14 )
+texture = ExtResource( 23 )
 centered = false
 
 [node name="birds" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 15 )
+texture = ExtResource( 24 )
 centered = false
+script = ExtResource( 25 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="birds"]
+stream = ExtResource( 26 )
+volume_db = -3.0
 
 [node name="rain" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 centered = false
+script = ExtResource( 25 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="rain"]
+stream = ExtResource( 28 )
+volume_db = -4.0
 

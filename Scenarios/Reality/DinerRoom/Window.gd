@@ -17,40 +17,49 @@ var win_configuration = {
 
 func _ready():
 	matched = false
+	$Main.get_child(index_Main).playsound()
 	pass # Replace with function body.
 
 func bg_to_left():
 	$BG.get_child(index_BG).visible = false
+	$BG.get_child(index_BG).stopsound()
 	index_BG -= 1
 	if index_BG < 0:
 		index_BG = 3
 	
 	$BG.get_child(index_BG).visible = true
+	$BG.get_child(index_BG).playsound()
 	check_match()
 
 func bg_to_right():
 	$BG.get_child(index_BG).visible = false
+	$BG.get_child(index_BG).stopsound()
 	index_BG += 1
 	if index_BG > 3:
 		index_BG = 0
 	$BG.get_child(index_BG).visible = true
+	$BG.get_child(index_BG).playsound()
 	check_match()
 
 func main_to_left():
 	$Main.get_child(index_Main).visible = false
+	$Main.get_child(index_Main).stopsound()
 	index_Main -= 1
 	if index_Main < 0:
 		index_Main = 3
 	
 	$Main.get_child(index_Main).visible = true
+	$Main.get_child(index_Main).playsound()
 	check_match()
 
 func main_to_right():
 	$Main.get_child(index_Main).visible = false
+	$Main.get_child(index_Main).stopsound()
 	index_Main += 1
 	if index_Main > 3:
 		index_Main = 0
 	$Main.get_child(index_Main).visible = true
+	$Main.get_child(index_Main).playsound()
 	check_match()
 	
 func toggle_item(index):

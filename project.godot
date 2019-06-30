@@ -33,6 +33,7 @@ config/icon="res://icon.png"
 [audio]
 
 mix_rate=48000
+channel_disable_threshold_db=-70.0
 
 [autoload]
 

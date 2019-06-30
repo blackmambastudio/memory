@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Acts/ActScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Acts/Act1/Act1_Room.gd" type="Script" id=2]
@@ -9,13 +9,15 @@
 [ext_resource path="res://Acts/Assets/Room/RoomRight.png" type="Texture" id=7]
 [ext_resource path="res://Audio/SoundObject.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audio/AudioAssets/BG_CRoom_Birds.ogg" type="AudioStream" id=9]
-[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Base.ogg" type="AudioStream" id=11]
-[ext_resource path="res://Audio/AudioAssets/BG_CRoom_AC.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Audio/SoundObject.gd" type="Script" id=10]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Audio/AudioAssets/BG_CRoom_Base.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Audio/AudioAssets/BG_CRoom_AC.ogg" type="AudioStream" id=13]
 
 [node name="Act1" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 starting_dialogue = "res://Levels/act1/dlg01.data"
+pan_values = [ 0.4, 0.0, -0.4, -0.7 ]
 
 [node name="RoomLeft" parent="Views" index="0" instance=ExtResource( 3 )]
 visible = false
@@ -30,17 +32,18 @@ visible = false
 texture = ExtResource( 7 )
 
 [node name="WindowSound" parent="." index="1" instance=ExtResource( 8 )]
-position = Vector2( 1138, 391.036 )
+position = Vector2( 2240.71, 719.273 )
 stream = ExtResource( 9 )
 autoplay = true
+script = ExtResource( 10 )
 
-[node name="BG_Room" parent="." index="2" instance=ExtResource( 10 )]
-stream = ExtResource( 11 )
+[node name="BG_Room" parent="." index="2" instance=ExtResource( 11 )]
+stream = ExtResource( 12 )
 autoplay = true
 Volume = 6.0
 
 [node name="AC" parent="BG_Room" index="0" instance=ExtResource( 8 )]
 position = Vector2( 348.358, 159.846 )
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 autoplay = true
 

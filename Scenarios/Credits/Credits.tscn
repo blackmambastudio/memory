@@ -172,6 +172,7 @@ modulate = Color( 1, 1, 1, 0 )
 icon = ExtResource( 6 )
 character = "claire / lucia"
 actor = "itzel gonzalez"
+nickname = "@noisypanda"
 
 [node name="Customer" parent="elements" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 1, 0 )
@@ -200,7 +201,7 @@ left_side = false
 [node name="quietgecko" parent="elements" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 1, 0 )
 icon = ExtResource( 10 )
-character = "Audio"
+character = "Audio/Language"
 actor = "Juan Garcia"
 nickname = "@quietgecko"
 voice = false

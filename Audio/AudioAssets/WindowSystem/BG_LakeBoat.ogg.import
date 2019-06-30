@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BG_LakeBoat.ogg-766c6024e91cdd1760f7d58bb32197cc.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/WindowSystem/BG_LakeBoat.ogg"
+dest_files=[ "res://.import/BG_LakeBoat.ogg-766c6024e91cdd1760f7d58bb32197cc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

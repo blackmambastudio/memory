@@ -12,6 +12,8 @@
 [node name="ActKitchen" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 starting_dialogue = "res://Levels/act3/dlg01.data"
+pan_values = [ 0.3, 0.0, -0.4, 0.2 ]
+behind = true
 
 [node name="KitchenFront" parent="Views" index="0" instance=ExtResource( 3 )]
 
@@ -27,5 +29,5 @@ visible = false
 [node name="BG_Kitchen" parent="." index="1" instance=ExtResource( 7 )]
 stream = ExtResource( 8 )
 autoplay = true
-Volume = -7.0
+Volume = -10.0
 

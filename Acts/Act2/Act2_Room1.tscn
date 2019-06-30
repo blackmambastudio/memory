@@ -4,6 +4,8 @@
 
 [node name="Act2_Room1" instance=ExtResource( 1 )]
 starting_dialogue = "res://Levels/act2/dlg01.data"
+pan_values = [ 0.0, -0.4, -0.7, -0.2 ]
+behind = true
 level = "appliances"
 
 [node name="RoomLeft" parent="Views" index="0"]

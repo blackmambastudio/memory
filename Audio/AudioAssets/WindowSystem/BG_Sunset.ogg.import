@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BG_Sunset.ogg-f54a719f47fdcdc005ab0dd231b8122f.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/WindowSystem/BG_Sunset.ogg"
+dest_files=[ "res://.import/BG_Sunset.ogg-f54a719f47fdcdc005ab0dd231b8122f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

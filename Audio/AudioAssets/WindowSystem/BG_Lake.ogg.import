@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BG_Lake.ogg-89e7c0b3e4d4948b2dfdc7ce1b2c2d4e.oggstr"
+
+[deps]
+
+source_file="res://Audio/AudioAssets/WindowSystem/BG_Lake.ogg"
+dest_files=[ "res://.import/BG_Lake.ogg-89e7c0b3e4d4948b2dfdc7ce1b2c2d4e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
