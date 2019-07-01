@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mx_Platanal.ogg-65c31148445cf267e6d34dcbd3ea36fa.oggstr"
+
+[deps]
+
+source_file="res://Audio/MX/Mx_Platanal.ogg"
+dest_files=[ "res://.import/Mx_Platanal.ogg-65c31148445cf267e6d34dcbd3ea36fa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

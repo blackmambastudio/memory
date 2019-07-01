@@ -73,7 +73,7 @@ script = ExtResource( 1 )
 skip_with_s = true
 
 [node name="ActManager" parent="." instance=ExtResource( 2 )]
-first_act = "Act1/Act1_Room"
+first_act = "Act4/Act4_Hall"
 
 [node name="SopaLetras" parent="." instance=ExtResource( 3 )]
 visible = false

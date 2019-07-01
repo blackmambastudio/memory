@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MX_Credits.ogg-7d74eeeddcc3e270e2fd0ae545938d59.oggstr"
+
+[deps]
+
+source_file="res://Audio/MX/MX_Credits.ogg"
+dest_files=[ "res://.import/MX_Credits.ogg-7d74eeeddcc3e270e2fd0ae545938d59.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

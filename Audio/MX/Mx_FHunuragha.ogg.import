@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mx_FHunuragha.ogg-a9e1f48d5edffc5432bfc6819c60e0bf.oggstr"
+
+[deps]
+
+source_file="res://Audio/MX/Mx_FHunuragha.ogg"
+dest_files=[ "res://.import/Mx_FHunuragha.ogg-a9e1f48d5edffc5432bfc6819c60e0bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

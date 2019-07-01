@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenarios/Credits/Credits.gd" type="Script" id=1]
 [ext_resource path="res://Scenarios/AnimBackgrounds.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Scenarios/Credits/Assets/coffee.png" type="Texture" id=10]
 [ext_resource path="res://Assets/start/game_title.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Audio/SoundObjectST.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Audio/MX/MX_Credits.ogg" type="AudioStream" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "presentation"
@@ -172,7 +174,7 @@ modulate = Color( 1, 1, 1, 0 )
 icon = ExtResource( 6 )
 character = "claire / lucia"
 actor = "itzel gonzalez"
-nickname = "@noisypanda"
+nickname = "@noisypandasound"
 
 [node name="Customer" parent="elements" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 1, 0 )
@@ -238,4 +240,9 @@ custom_colors/font_color = Color( 0.796078, 0.67451, 1, 1 )
 text = "thanks for playing"
 align = 1
 uppercase = true
+
+[node name="MX" parent="." instance=ExtResource( 13 )]
+stream = ExtResource( 14 )
+autoplay = true
+Volume = -6.0
 
